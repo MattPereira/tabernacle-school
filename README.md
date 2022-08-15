@@ -1,7 +1,7 @@
 # [**Tabernacle.School**](https://tabernacle.school)
 
 <a href="https://tabernacle.school">
-<img src="public/images/svgs/TS_LOGO_DARK.svg" style="height: 200px; width: 200px;">
+<img src="public/TS_LOGO_DARK.svg" style="height: 200px; width: 200px;">
 </a>
 
 ---
