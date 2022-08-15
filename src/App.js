@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+
+import "./App.scss";
+import "./custom.scss";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import NavBar from "./common/NavBar/NavBar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Admissions from "./pages/Admissions";
+import Academics from "./pages/Academics";
+import Campus from "./pages/Campus";
+import Contact from "./pages/Contact";
+import Footer from "./common/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App page-container">
+      <NavBar />
+      <div className="content-wrap">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/admissions" element={<Admissions />} />
+          <Route path="/academics" element={<Academics />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 }

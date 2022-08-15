@@ -1,0 +1,17 @@
+.App.page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+
+  .content-wrap {
+    padding-top: 80px; /* Navbar height */
+    // padding-bottom: 2.5rem; /* Footer height */
+  }
+
+
+  .section-hr {
+    width: 150px;
+    margin: auto;
+    border-top: 3px solid;
+  }
