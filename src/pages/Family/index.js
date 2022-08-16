@@ -1,7 +1,9 @@
+import Showcase from "../../common/Showcase/Showcase";
+
 const Family = () => {
   return (
     <div>
-      <h1>Family Page</h1>
+      <Showcase title="FAMILY" />
     </div>
   );
 };

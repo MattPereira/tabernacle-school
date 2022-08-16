@@ -84,3 +84,29 @@
   .nav-link.active {
     color: #74b9ff !important;
   }
+
+
+  // .nav-link:hover {
+  //   transition: border 0.2s;
+  //   border-bottom: 1px solid white;
+  // }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    // margin-top: 0; // remove the gap so it doesn't close
+  }
+
+  .navbar-nav {
+    li {
+      .dropdown-menu {
+        background-color: white;
+        opacity: 0.9;
+      }
+      .dropdown-item {
+        color: black !important;
+      }
+      .dropdown-item:hover {
+        background-color: #212529 !important;
+        color: white !important;
+      }
+    }
+  }

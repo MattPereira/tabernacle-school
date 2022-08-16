@@ -10,6 +10,7 @@ import Admissions from "./pages/Admissions";
 import Academics from "./pages/Academics";
 import Campus from "./pages/Campus";
 import Contact from "./pages/Contact";
+import Family from "./pages/Family";
 import Footer from "./common/Footer";
 
 function App() {
@@ -24,10 +25,12 @@ function App() {
           <Route path="/academics" element={<Academics />} />
           <Route path="/campus" element={<Campus />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/family" element={<Family />} />
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

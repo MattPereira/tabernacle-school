@@ -1,7 +1,11 @@
+import Showcase from "../../common/Showcase/Showcase";
+import PageNav from "../../common/PageNav";
+
 const Admissions = () => {
   return (
     <div>
-      <h1>Admissions Page</h1>
+      <Showcase title="ADMISSIONS" />
+      <PageNav sections={["Tuition & Fees", "Schedule Visit"]} />
     </div>
   );
 };

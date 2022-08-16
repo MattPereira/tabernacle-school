@@ -1,7 +1,19 @@
+import Showcase from "../../common/Showcase/Showcase";
+import PageNav from "../../common/PageNav";
+import Introduction from "./Introduction";
+import History from "./History";
+import Faculty from "./Faculty";
+
 const About = () => {
   return (
     <div>
-      <h1>About Page</h1>
+      <Showcase title="ABOUT" />
+      <PageNav
+        sections={["History", "Faculty", "Values", "Vision", "Programs"]}
+      />
+      <Introduction />
+      <History />
+      <Faculty />
     </div>
   );
 };

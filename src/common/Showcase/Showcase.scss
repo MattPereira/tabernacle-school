@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@800&family=Montserrat:ital,wght@0,100;1,500&family=Raleway:wght@900&display=swap');
+
+
+.showcase {
+    min-height: 350px;
+    position: relative;
+    .showcase-header {
+      z-index: 2;
+      h1 {
+        font-family: 'Raleway', sans-serif;
+      }
+    }
+    .showcase-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+
+#about-showcase {
+    background: url("/assets/images/about/showcase.jpg") center / cover no-repeat;
+}
+
+#admissions-showcase {
+    background: url("/assets/images/admissions/showcase.jpg") center / cover no-repeat;
+}
+
+#academics-showcase {
+    background: url("/assets/images/academics/showcase.jpg") center / cover no-repeat;
+}
+
+#campus-showcase {
+    background: url("/assets/images/campus/showcase.jpg") center / cover no-repeat;
+}
+
+#family-showcase {
+    background: url("/assets/images/family/showcase.jpg") center / cover no-repeat;
+}

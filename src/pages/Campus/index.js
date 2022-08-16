@@ -1,7 +1,9 @@
+import Showcase from "../../common/Showcase/Showcase";
+
 const Campus = () => {
   return (
     <div>
-      <h1>Campus Page</h1>
+      <Showcase title="CAMPUS" />
     </div>
   );
 };

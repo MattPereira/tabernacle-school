@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="text-center py-3 bg-secondary">
         <a
           href="https://mattpereira.github.io/personal-portfolio/"
-          class="text-decoration-none link-light"
+          className="text-decoration-none link-light"
         >
           Website by Matt Pereira
         </a>
