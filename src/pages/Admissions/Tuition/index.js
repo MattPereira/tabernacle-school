@@ -2,7 +2,7 @@ import { Container, Row, Col, Table } from "react-bootstrap";
 
 const Tuition = () => {
   return (
-    <section id="charges" className="py-5">
+    <section id="Tuition" className="py-5">
       <Container className="py-5">
         <h2 className="text-center section-title display-3">Tuition & Fees</h2>
         <hr className="section-hr mb-5" />
@@ -25,7 +25,7 @@ const Tuition = () => {
               </thead>
               <tbody>
                 <tr className="">
-                  <td colspan="4" className="table-secondary">
+                  <td colSpan="4" className="table-secondary">
                     Junior & Transitional Kindergarten
                   </td>
                 </tr>
@@ -48,7 +48,7 @@ const Tuition = () => {
                   <td>$695</td>
                 </tr>
                 <tr className="table-secondary">
-                  <td colspan="4">Grades K-5</td>
+                  <td colSpan="4">Grades K-5</td>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
@@ -69,7 +69,7 @@ const Tuition = () => {
                   <td>$660</td>
                 </tr>
                 <tr className="table-secondary">
-                  <td colspan="4">Grades 6-8</td>
+                  <td colSpan="4">Grades 6-8</td>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>

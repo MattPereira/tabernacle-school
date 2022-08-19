@@ -7,7 +7,7 @@ import Tuition from "./Tuition";
 const Admissions = () => {
   return (
     <div>
-      <Showcase title="ADMISSIONS" />
+      <Showcase title="Admissions" />
       <PageNav sections={["Tuition & Fees", "Schedule Tour"]} />
       <Tuition />
       <Tour />

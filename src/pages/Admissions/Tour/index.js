@@ -31,7 +31,7 @@ const Visit = () => {
 
   return (
     <>
-      <section id="visit" className="py-5 bg-light">
+      <section id="Schedule" className="py-5 bg-light">
         <h2 className="text-center section-title display-2 pt-5">
           Schedule Tour
         </h2>

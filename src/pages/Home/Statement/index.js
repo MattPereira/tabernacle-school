@@ -11,14 +11,14 @@ const Statement = () => {
           className="text-center p-5"
         >
           <Carousel.Item>
-            <h3>MISSION</h3>
+            <h3 className="fw-bold">Mission</h3>
             <p className="lead">
               Teaching in all areas of life, the Truth, as centered in the Lord
               Jesus of the Bible.
             </p>
           </Carousel.Item>
           <Carousel.Item>
-            <h3>VISION</h3>
+            <h3 className="fw-bold">Vision</h3>
             <p className="lead">
               To see children grow up and reach their full potential. We seek to
               provide an environment that will help students blossom as unique
@@ -28,7 +28,7 @@ const Statement = () => {
             </p>
           </Carousel.Item>
           <Carousel.Item>
-            <h3>PHILOSOPHY</h3>
+            <h3 className="fw-bold">Philosophy</h3>
             <p className="lead">
               All children are gifted, and that our responsibility is to help
               students discover and develop the unique abilities with which God

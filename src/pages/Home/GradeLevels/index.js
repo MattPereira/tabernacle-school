@@ -6,7 +6,7 @@ const GradeLevels = () => {
       <Container>
         <Row className="g-5 justify-content-center">
           <Col md={10} lg={4}>
-            <h4 className="display-6 my-4 text-center">Preschool</h4>
+            <h2 className="display-6 my-4 text-center">Preschool</h2>
             <p className="lead">
               Tiny Tigers Preschool provides a warm, nurturing, family
               atmosphere that is conducive to learning at an early age. Our
@@ -24,7 +24,7 @@ const GradeLevels = () => {
             </div>
           </Col>
           <Col md={10} lg={4}>
-            <h4 className="display-6 my-4 text-center">Elementary</h4>
+            <h2 className="display-6 my-4 text-center">Elementary</h2>
             <p className="lead">
               At Tabernacle, we provide an elementary education that prepares
               children to think clearly, act responsibly, and live ethically.
@@ -42,7 +42,7 @@ const GradeLevels = () => {
             </div>
           </Col>
           <Col md={10} lg={4}>
-            <h4 className="display-6 my-4 text-center">Middle School</h4>
+            <h2 className="display-6 my-4 text-center">Middle School</h2>
             <p className="lead">
               At Tabernacle Middle School, we help our students navigate the
               early teen years and prepare to excel in high school and beyond.

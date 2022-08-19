@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Copse&family=Didact+Gothic&family=Fredoka+One&family=Paytone+One&display=swap');
 
 .showcase {
-    min-height: 350px;
+    min-height: 275px;
     position: relative;
     .showcase-header {
       z-index: 2;
       h1 {
-        font-family: 'Paytone One', sans-serif;
+        font-family: 'Fredoka One', sans-serif;
       }
     }
     .showcase-overlay {

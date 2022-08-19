@@ -11,7 +11,9 @@ const Accreditations = () => {
         <hr className="section-hr mb-5" />
         <Row className="py-5">
           <Col lg={8}>
-            <h5>ASSOCIATION OF CHRISTIAN SCHOOLS INTERNATIONAL</h5>
+            <h5 className="fw-bold">
+              ASSOCIATION OF CHRISTIAN SCHOOLS INTERNATIONAL
+            </h5>
             <p>
               Tabernacle School is accredited by the Association of Christian
               Schools International (ACSI). ACSI endeavors to "strengthen
@@ -30,7 +32,9 @@ const Accreditations = () => {
         </Row>
         <Row className="py-5">
           <Col lg={8}>
-            <h5>WESTERN ASSOCIATION OF SCHOOLS AND COLLEGES</h5>
+            <h5 className="fw-bold">
+              WESTERN ASSOCIATION OF SCHOOLS AND COLLEGES
+            </h5>
             <p>
               Tabernacle School is also accredited by the Western Association of
               Schools and Colleges (WASC). WASC fosters "excellence in

@@ -98,17 +98,17 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/admissions#Visit"
+                        to="/admissions#Tuition"
                       >
-                        Visit Us!
+                        Tuition & Fees
                       </HashLink>
                     </li>
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/admissions#charges"
+                        to="/admissions#Schedule"
                       >
-                        Tuition & Fees
+                        Schedule Tour
                       </HashLink>
                     </li>
                   </ul>
@@ -126,7 +126,7 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/academics#preschool"
+                        to="/academics#Preschool"
                       >
                         Preschool
                       </HashLink>
@@ -134,7 +134,7 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/academics#elementary"
+                        to="/academics#Elementary"
                       >
                         Elementary
                       </HashLink>
@@ -142,7 +142,7 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/academics#juniorHigh"
+                        to="/academics#Junior"
                       >
                         Junior High
                       </HashLink>
@@ -150,7 +150,7 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/academics#distanceLearning"
+                        to="/academics#Distance"
                       >
                         Distance Learning
                       </HashLink>
@@ -158,7 +158,7 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/academics#commonCore"
+                        to="/academics#Common"
                       >
                         Common Core
                       </HashLink>
@@ -234,30 +234,24 @@ const NavBar = () => {
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/tsFamily#portals"
+                        to="/family#Information"
                       >
+                        Information
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink className="dropdown-item" to="/family#Portals">
                         Portals
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink className="dropdown-item" to="/tsFamily#forms">
+                      <HashLink className="dropdown-item" to="/family#Forms">
                         Forms
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/tsFamily#tigerLife"
-                      >
+                      <HashLink className="dropdown-item" to="/family#Tiger">
                         Tiger Life
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/tsFamily#schoolInfo"
-                      >
-                        Information
                       </HashLink>
                     </li>
                   </ul>
