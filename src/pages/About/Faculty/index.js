@@ -7,7 +7,7 @@ const Faculty = () => {
     <section id="Faculty" className="py-5">
       <h2 className="display-3 text-center pt-5">Faculty</h2>
       <hr className="section-hr mb-5" />
-      <Container>
+      <Container className="py-5">
         <Slides />
         <Accordion />
       </Container>

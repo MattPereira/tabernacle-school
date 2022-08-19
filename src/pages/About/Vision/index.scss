@@ -1,0 +1,15 @@
+#Vision {
+    .center-cropped {
+      object-fit: cover; /* Do not scale the image */
+      object-position: center; /* Center the image within the element */
+      height: 550px;
+      width: 550px;
+    }
+
+    @media (max-width: 768px) {
+        .center-cropped {
+            height: 300px;
+            width: 300px;
+        }
+    }
+  }

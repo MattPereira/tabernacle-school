@@ -6,6 +6,14 @@ const Information = () => {
           <div className="col-md-4 mb-3 mb-md-0 lead">
             <div>
               <a
+                className="text-white text-decoration-none"
+                href="mailto:info@tbs.org"
+              >
+                info@tbs.org
+              </a>
+            </div>
+            <div>
+              <a
                 className="text-white  text-decoration-none"
                 href="/employment"
               >
@@ -18,14 +26,6 @@ const Information = () => {
                 href="https://www.facebook.com/Tabernacle-School-145610978797440/"
               >
                 Facebook
-              </a>
-            </div>
-            <div>
-              <a
-                className="text-white text-decoration-none"
-                href="https://www.facebook.com/Tabernacle-School-145610978797440/"
-              >
-                Connect
               </a>
             </div>
           </div>

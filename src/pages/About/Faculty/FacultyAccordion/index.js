@@ -4,7 +4,6 @@ import { facultyData } from "../../../../data/facultyData.js";
 import "./index.scss";
 
 const FacultyAccordion = () => {
-  console.log(facultyData);
   return (
     <Accordion>
       {facultyData.map((level, idx) => (
@@ -13,22 +12,29 @@ const FacultyAccordion = () => {
           <Accordion.Body>
             <Row>
               {level["staff"].map((staff, idx) => (
-                <Col md={4} lg={3} className="text-center mb-3">
-                  <h5>{staff["name"]}</h5>
-                  {staff["title"] ? (
-                    <div>
-                      <span className="text-muted">{staff["title"]}</span>
-                    </div>
-                  ) : null}
+                <Col
+                  md={4}
+                  lg={3}
+                  className="text-center mb-3"
+                  key={staff["name"]}
+                >
+                  <h5 className="fw-bold">{staff["name"]}</h5>
+                  {/* <p className="mb-0">{staff["email"]}</p> */}
+
                   {staff["image"] ? (
                     <img
                       src={staff["image"]}
                       className="img-fluid rounded-circle"
                       alt={staff["name"]}
+                      style={{ width: "150px" }}
                     />
                   ) : null}
+                  {staff["title"] ? (
+                    <div>
+                      <span className="">{staff["title"]}</span>
+                    </div>
+                  ) : null}
                   <br />
-                  <p>{staff["email"]}</p>
                 </Col>
               ))}
             </Row>

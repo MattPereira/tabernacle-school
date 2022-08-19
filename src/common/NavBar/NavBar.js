@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./NavBar.scss";
 
 import { NavLink as RRNavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 import { BsFillPersonFill } from "react-icons/bs";
@@ -16,7 +17,7 @@ const NavBar = () => {
   const [navColour, updateNavbar] = useState(false);
 
   function scrollHandler() {
-    if (window.scrollY >= 20) {
+    if (window.scrollY >= 75) {
       updateNavbar(true);
     } else {
       updateNavbar(false);
@@ -29,7 +30,7 @@ const NavBar = () => {
       <Navbar
         collapseOnSelect
         expand="xl"
-        className={navColour ? "sticky main" : "navbar main"}
+        className={navColour ? "sticky" : "navbar"}
         variant="dark"
         bg="dark"
         fixed="top"
@@ -58,29 +59,29 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/about#history">
+                      <HashLink className="dropdown-item" to="/about#History">
                         History
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/about#faculty">
+                      <HashLink className="dropdown-item" to="/about#Faculty">
                         Faculty
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/about#values">
+                      <HashLink className="dropdown-item" to="/about#Values">
                         Values
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/about#vision">
+                      <HashLink className="dropdown-item" to="/about#Vision">
                         Vision
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/about#programs">
+                      <HashLink className="dropdown-item" to="/about#Programs">
                         Programs
-                      </a>
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
@@ -95,14 +96,20 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/admissions#visit">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/admissions#Visit"
+                      >
                         Visit Us!
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/admissions#charges">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/admissions#charges"
+                      >
                         Tuition & Fees
-                      </a>
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
@@ -117,37 +124,49 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/academics#preschool">
-                        Preschool
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="/academics#elementary">
-                        Elementary
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="/academics#juniorHigh">
-                        Junior High
-                      </a>
-                    </li>
-                    <li>
-                      <a
+                      <HashLink
                         className="dropdown-item"
-                        href="/academics#distanceLearning"
+                        to="/academics#preschool"
+                      >
+                        Preschool
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/academics#elementary"
+                      >
+                        Elementary
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/academics#juniorHigh"
+                      >
+                        Junior High
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/academics#distanceLearning"
                       >
                         Distance Learning
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/academics#commonCore">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/academics#commonCore"
+                      >
                         Common Core
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/academics#eslr">
+                      <HashLink className="dropdown-item" to="/academics#eslr">
                         ESLR
-                      </a>
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
@@ -162,39 +181,36 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/campus#calendar">
+                      <HashLink className="dropdown-item" to="/campus#calendar">
                         Calendar
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/campus#athletics">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/campus#athletics"
+                      >
                         Athletics
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/campus#daycare">
+                      <HashLink className="dropdown-item" to="/campus#daycare">
                         Daycare
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/campus#safety">
+                      <HashLink className="dropdown-item" to="/campus#safety">
                         Safety
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/campus#outreach">
+                      <HashLink className="dropdown-item" to="/campus#outreach">
                         Outreach
-                      </a>
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
-                  <Nav.Item>
-                    <Nav.Link eventkey={6} as={RRNavLink} to="/contact">
-                      <GrMail style={{ marginBottom: "2px" }} /> Contact
-                    </Nav.Link>
-                  </Nav.Item>
-                </li>
+
                 <li className="nav-item dropdown">
                   <Nav.Item>
                     <Nav.Link eventkey={7} as={RRNavLink} to="/family">
@@ -216,68 +232,44 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/tsFamily#portals">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/tsFamily#portals"
+                      >
                         Portals
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/tsFamily#forms">
+                      <HashLink className="dropdown-item" to="/tsFamily#forms">
                         Forms
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/tsFamily#tigerLife">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/tsFamily#tigerLife"
+                      >
                         Tiger Life
-                      </a>
+                      </HashLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/tsFamily#schoolInfo">
+                      <HashLink
+                        className="dropdown-item"
+                        to="/tsFamily#schoolInfo"
+                      >
                         Information
-                      </a>
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
+                <li className="nav-item">
+                  <Nav.Item>
+                    <Nav.Link eventkey={6} as={RRNavLink} to="/contact">
+                      <GrMail style={{ marginBottom: "2px" }} /> Contact
+                    </Nav.Link>
+                  </Nav.Item>
+                </li>
               </ul>
-              {/* <Nav.Item>
-                <Nav.Link eventkey={2} as={RRNavLink} to="/about">
-                  <BsFillPersonFill style={{ marginBottom: "2px" }} /> About
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventkey={3} as={RRNavLink} to="/admissions">
-                  <IoSchool style={{ marginBottom: "2px" }} /> Admissions
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventkey={4} as={RRNavLink} to="/academics">
-                  <IoBookSharp style={{ marginBottom: "2px" }} /> Academics
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventkey={5} as={RRNavLink} to="/campus">
-                  <FaSchool style={{ marginBottom: "2px" }} /> Campus
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventkey={6} as={RRNavLink} to="/contact">
-                  <GrMail style={{ marginBottom: "2px" }} /> Contact
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventkey={7} as={RRNavLink} to="/family">
-                  <img
-                    src={ts_logo}
-                    alt="Tabernacle School logo"
-                    className="img-fluid"
-                    style={{
-                      width: "1.25rem",
-                      marginBottom: "2px",
-                      marginRight: "7px",
-                    }}
-                  />
-                  Family
-                </Nav.Link>
-              </Nav.Item> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

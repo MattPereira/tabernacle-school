@@ -1,6 +1,6 @@
 import "./Showcase.scss";
 
-const Showcase = ({ title }) => {
+const Showcase = ({ title, extra }) => {
   return (
     <section
       id={`${title.toLowerCase()}-showcase`}
@@ -8,7 +8,9 @@ const Showcase = ({ title }) => {
     >
       <div className="showcase-overlay"></div>
       <div className="showcase-header">
-        <h1 className="display-1 text-white">{title}</h1>
+        <h1 className="display-1 text-white">
+          {title} {extra}
+        </h1>
       </div>
     </section>
   );
