@@ -7,7 +7,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoSchool, IoBookSharp } from "react-icons/io5";
-
 import { GrMail } from "react-icons/gr";
 import { FaSchool } from "react-icons/fa";
 
@@ -181,30 +180,25 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
-                      <HashLink className="dropdown-item" to="/campus#calendar">
+                      <HashLink className="dropdown-item" to="/campus#Calendar">
                         Calendar
                       </HashLink>
                     </li>
                     <li>
                       <HashLink
                         className="dropdown-item"
-                        to="/campus#athletics"
+                        to="/campus#Athletics"
                       >
                         Athletics
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink className="dropdown-item" to="/campus#daycare">
+                      <HashLink className="dropdown-item" to="/campus#Daycare">
                         Daycare
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink className="dropdown-item" to="/campus#safety">
-                        Safety
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/campus#outreach">
+                      <HashLink className="dropdown-item" to="/campus#Outreach">
                         Outreach
                       </HashLink>
                     </li>
@@ -232,6 +226,11 @@ const NavBar = () => {
                     aria-labelledby="mainNavbarDropdown"
                   >
                     <li>
+                      <HashLink className="dropdown-item" to="/family#Portals">
+                        Portals
+                      </HashLink>
+                    </li>
+                    <li>
                       <HashLink
                         className="dropdown-item"
                         to="/family#Information"
@@ -240,8 +239,8 @@ const NavBar = () => {
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink className="dropdown-item" to="/family#Portals">
-                        Portals
+                      <HashLink className="dropdown-item" to="/family#Tiger">
+                        Tiger Life
                       </HashLink>
                     </li>
                     <li>
@@ -249,17 +248,12 @@ const NavBar = () => {
                         Forms
                       </HashLink>
                     </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/family#Tiger">
-                        Tiger Life
-                      </HashLink>
-                    </li>
                   </ul>
                 </li>
                 <li className="nav-item">
                   <Nav.Item>
-                    <Nav.Link eventkey={6} as={RRNavLink} to="/contact">
-                      <GrMail style={{ marginBottom: "2px" }} /> Contact
+                    <Nav.Link eventkey={6} as={RRNavLink} to="/connect">
+                      <GrMail style={{ marginBottom: "2px" }} /> Connect
                     </Nav.Link>
                   </Nav.Item>
                 </li>

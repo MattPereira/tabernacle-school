@@ -2,7 +2,7 @@ import { Container, Row, Table } from "react-bootstrap";
 
 const Daycare = () => {
   return (
-    <section id="daycare" className="py-5">
+    <section id="Daycare" className="py-5">
       <h2 className="display-4 text-center pt-5">Daycare</h2>
       <hr className="section-hr mb-md-5" />
       <Container className="py-5">

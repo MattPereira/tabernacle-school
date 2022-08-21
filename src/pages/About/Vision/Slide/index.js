@@ -13,7 +13,7 @@ const Slide = ({ image, paragraphs }) => {
       <Col xl={6}>
         {paragraphs.map((paragraph) => (
           <div key={paragraph["title"]}>
-            <h4 className="text-center fs-3">{paragraph["title"]}</h4>
+            <h4 className="text-center fs-3 fw-bold">{paragraph["title"]}</h4>
             <p className="lead">{paragraph["text"]}</p>
           </div>
         ))}

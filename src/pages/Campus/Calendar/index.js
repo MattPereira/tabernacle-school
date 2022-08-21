@@ -2,11 +2,11 @@ import { Container } from "react-bootstrap";
 
 const Calendar = () => {
   return (
-    <section id="calendar" className="py-5">
-      <Container className="mb-5 text-center">
-        <h2 className="display-4 text-center mb-3 pt-5">Calendar</h2>
-        <hr className="section-hr mb-md-5" />
-        <div className="d-none d-md-flex justify-content-center py-5">
+    <section id="Calendar" className="py-5">
+      <h2 className="display-4 text-center mb-3 pt-5">Calendar</h2>
+      <hr className="section-hr mb-md-5" />
+      <Container className="py-5 text-center">
+        <div className="d-none d-md-flex justify-content-center">
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showCalendars=0&showPrint=0&showNav=1&showTitle=0&showTabs=1&showTz=0&src=dGFiZXJuYWNsZS5zY2hvb2wxQGdtYWlsLmNvbQ&color=%23F09300"
             style={{ borderWidth: "0" }}

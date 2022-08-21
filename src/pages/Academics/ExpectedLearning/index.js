@@ -9,7 +9,7 @@ const ExpectedLearning = () => {
         <Row>
           <Col xl={6}>
             <div className="mb-5">
-              <h5 className="text-center fs-3">Lifelong Learner</h5>
+              <h5 className="text-center fs-3 fw-bold">Lifelong Learner</h5>
               <p className="lead">
                 Is accountable for exerting personal effort towards his/her
                 educational responsibility to be self-controlled and productive
@@ -23,7 +23,9 @@ const ExpectedLearning = () => {
               </p>
             </div>
             <div className="mb-5">
-              <h5 className="text-center fs-3">Faithful Follower of Jesus</h5>
+              <h5 className="text-center fs-3 fw-bold">
+                Faithful Follower of Jesus
+              </h5>
               <p className="lead">
                 After accepting the Lord Jesus Christ as personal Savior,
                 demonstrates an on-going, deepening love relationship with the
@@ -39,7 +41,7 @@ const ExpectedLearning = () => {
           </Col>
           <Col xl={6}>
             <div className="mb-5">
-              <h5 className="text-center fs-3">Academic Achiever</h5>
+              <h5 className="text-center fs-3 fw-bold">Academic Achiever</h5>
               <p className="lead">
                 Reads with good comprehension and writes with clear expression,
                 meaningful vocabulary, and organization of thought.Applies
@@ -52,7 +54,7 @@ const ExpectedLearning = () => {
               </p>
             </div>
             <div className="mb-5">
-              <h5 className="text-center fs-3">Citizen of Character</h5>
+              <h5 className="text-center fs-3 fw-bold">Citizen of Character</h5>
               <p className="lead">
                 Demonstrates respectful and responsive behavior towards others,
                 with the right heart attitude. Exhibits responsible conduct in

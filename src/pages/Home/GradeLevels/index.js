@@ -1,5 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 
+import { HashLink } from "react-router-hash-link";
+
 const GradeLevels = () => {
   return (
     <section id="grade-levels" className="bg-success py-5 text-white">
@@ -15,12 +17,12 @@ const GradeLevels = () => {
               education since 1971.
             </p>
             <div className="text-center mt-4">
-              <a
-                href="/academics#preschool"
+              <HashLink
+                to="/academics#Preschool"
                 className="btn btn-outline-light btn-lg rounded-pill"
               >
                 Learn More
-              </a>
+              </HashLink>
             </div>
           </Col>
           <Col md={10} lg={4}>
@@ -33,16 +35,16 @@ const GradeLevels = () => {
               giftedness.
             </p>
             <div className="text-center mt-4">
-              <a
-                href="/academics#elementary"
+              <HashLink
+                to="/academics#Elementary"
                 className="btn btn-lg btn-outline-light rounded-pill"
               >
                 Learn More
-              </a>
+              </HashLink>
             </div>
           </Col>
           <Col md={10} lg={4}>
-            <h2 className="display-6 my-4 text-center">Middle School</h2>
+            <h2 className="display-6 my-4 text-center">Junior High</h2>
             <p className="lead">
               At Tabernacle Middle School, we help our students navigate the
               early teen years and prepare to excel in high school and beyond.
@@ -51,12 +53,12 @@ const GradeLevels = () => {
               interests.
             </p>
             <div className="text-center mt-4">
-              <a
-                href="/academics#middleSchool"
+              <HashLink
+                to="/academics#Junior"
                 className="btn btn-lg btn-outline-light rounded-pill"
               >
                 Learn More
-              </a>
+              </HashLink>
             </div>
           </Col>
         </Row>

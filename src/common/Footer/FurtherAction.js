@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./FurtherAction.scss";
+import { HashLink } from "react-router-hash-link";
 
 const FurtherAction = () => {
   return (
@@ -11,14 +12,15 @@ const FurtherAction = () => {
           We hope you will consider enrolling and encourage you to seek more
           information about the process.
         </p>
+
         <Row className="my-md-5">
           <Col md={4} className="mb-3">
-            <a
-              href="/admissions#visit"
+            <HashLink
+              to="/admissions#Schedule"
               className="btn btn-lg border border-white rounded-pill text-white further-btn"
             >
               <strong>Schedule Tour</strong>
-            </a>
+            </HashLink>
           </Col>
           <Col md={4} className="mb-3">
             <a
@@ -30,12 +32,12 @@ const FurtherAction = () => {
           </Col>
 
           <Col md={4} className="mb-3">
-            <a
-              href="/admissions#charges"
+            <HashLink
+              to="/admissions#Tuition"
               className="btn btn-lg border border-white rounded-pill text-white further-btn"
             >
               <strong>Tuition & Fees</strong>
-            </a>
+            </HashLink>
           </Col>
         </Row>
         <Row>

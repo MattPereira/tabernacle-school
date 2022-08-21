@@ -12,15 +12,18 @@ import About from "./pages/About";
 import Admissions from "./pages/Admissions";
 import Academics from "./pages/Academics";
 import Campus from "./pages/Campus";
-import Contact from "./pages/Contact";
+import Connect from "./pages/Connect";
 import Family from "./pages/Family";
 
 /** The family/Information Pages */
-import Orientation from "./pages/Family/pages/Orientation";
-import FactsHelp from "./pages/Family/pages/FactsHelp";
-import SupplyList from "./pages/Family/pages/SupplyList";
-import UniformGuidelines from "./pages/Family/pages/UniformGuidelines";
-import Discipline from "./pages/Family/pages/Discipline";
+import Orientation from "./pages/Family/Information/Orientation";
+import FactsHelp from "./pages/Family/Information/FactsHelp";
+import SupplyList from "./pages/Family/Information/SupplyList";
+import UniformGuidelines from "./pages/Family/Information/UniformGuidelines";
+import Discipline from "./pages/Family/Information/Discipline";
+
+/** The family/Information Pages */
+import OrientationVideo from "./pages/Family/TigerLife/OrientationVideo";
 
 function App() {
   return (
@@ -33,14 +36,20 @@ function App() {
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/campus" element={<Campus />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/family/orientation" element={<Orientation />} />
-          <Route path="/family/facts" element={<FactsHelp />} />
-          <Route path="/family/supply_list" element={<SupplyList />} />
+          <Route path="/connect" element={<Connect />} />
           <Route
             path="/family/uniform_guidelines"
             element={<UniformGuidelines />}
           />
+          <Route path="/family/orientation" element={<Orientation />} />
+          <Route
+            path="/family/orientation_video"
+            element={<OrientationVideo />}
+          />
+
+          <Route path="/family/facts" element={<FactsHelp />} />
+          <Route path="/family/supply_list" element={<SupplyList />} />
+
           <Route path="/family/discipline" element={<Discipline />} />
 
           <Route path="/family" element={<Family />} />

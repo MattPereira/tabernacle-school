@@ -12,6 +12,9 @@ import moral from "../../../assets/images/about/gift/moral.jpg";
 import { Row, Col } from "react-bootstrap";
 import GiftCard from "./GiftCard";
 
+import Marquee from "react-fast-marquee";
+import "./index.scss";
+
 const GiftProgram = () => {
   return (
     <section id="Programs" className="py-5 bg-light">
@@ -30,8 +33,94 @@ const GiftProgram = () => {
             </p>
           </Col>
         </Row>
+        <div className="giftsContainer">
+          <div className="gift--scroll">
+            <Marquee
+              gradient={false}
+              speed={80}
+              pauseOnHover={true}
+              pauseOnClick={true}
+              delay={0}
+              play={true}
+              direction="left"
+            >
+              <Row>
+                <GiftCard
+                  image={linguistic}
+                  bgColor={"bg-primary text-white"}
+                  title="Linguistic"
+                  definition="The ability to use words effectively."
+                  description="A student with this gift will show great skill with written and/or spoken language. Political leaders, legal experts and writers have developed this ability to a high degree."
+                />
+                <GiftCard
+                  image={logical}
+                  bgColor={"bg-warning text-dark"}
+                  title="Logical-Mathematical"
+                  definition="The ability to reason well."
+                  description="A child with this ability is interested in patterns and relationships among things and loves puzzles and brainteasers. Future technology and financial specalists."
+                />
+                <GiftCard
+                  image={musical}
+                  bgColor={"bg-success text-white"}
+                  title="Musical"
+                  definition="A keen ear and sense of rhythm."
+                  description="These children possess an innate sensitivity toward the musical elements of melody, tone, and rhythm. Many professional musicians first demonstrated musical potential at a very early age."
+                />
+                <GiftCard
+                  image={spatial}
+                  bgColor={"bg-danger text-white"}
+                  title="Spatial"
+                  definition="The ability to perceive and transform things visually."
+                  description={`Thinking in three dimensional terms, these children see things clearly in the mind’s eye, and can manipulate things with their imaginations. Future mechanics artists, designers, and surgeons.`}
+                />
+                <GiftCard
+                  image={bodily}
+                  bgColor={"bg-info text-dark"}
+                  title="Bodily-Kinestetic"
+                  definition="Using one's body with grace or agility"
+                  description="Kinesthetically gifted children are gifted with fine-motor skills used for sewing, crafts, typing, drawing and fixing machinery. Future athletes, dancers, swimmers,inventors and actors."
+                />
+                <GiftCard
+                  image={interpersonal}
+                  bgColor={"bg-primary"}
+                  title="Interpersonal"
+                  definition="Adept at understanding others."
+                  description="The ability to empathize, understand and communicate with other people. These children have an uncanny sense of saying or doing the right thing at just the right time. Future teachers, therapists, and counselors."
+                />
+                <GiftCard
+                  image={intrapersonal}
+                  bgColor={"bg-warning text-dark"}
+                  title="Intrapersonal"
+                  definition="Having deep insight into oneself."
+                  description="Children who recognize their own strengths and weaknesses. The ability to detect and to symbolize complex and highly differentiated sets of feelings. Future writers, poets, and philosophers."
+                />
+                <GiftCard
+                  image={leadership}
+                  bgColor={"bg-success text-white"}
+                  title="Leadership"
+                  definition="Guiding others through love and service"
+                  description="We believe this gift is God-given. Students are encouraged and taught how to serve others. Future teachers, pastors, presidents, and politicians."
+                />
+                <GiftCard
+                  image={creationist}
+                  bgColor={"bg-danger text-white"}
+                  title="Creationist"
+                  definition="Comprehension and love of God’s creation"
+                  description="The creationist intelligence is connected to the cosmos and the belief in the truthful narrative of the creation of God. Future farmers, scientists, and geologists."
+                />
+                <GiftCard
+                  image={moral}
+                  bgColor={"bg-info text-dark"}
+                  title="Moral Intelligence"
+                  definition="Having a desire to live ethically."
+                  description="Children who have a heart attitude and desire to conscientiously seek truth and justice. They are able to delay self-gratification and make good decisions."
+                />
+              </Row>
+            </Marquee>
+          </div>
+        </div>
 
-        <Row className="justify-content-center">
+        {/* <Row className="justify-content-center">
           <GiftCard
             image={linguistic}
             bgColor={"bg-primary text-white"}
@@ -105,7 +194,7 @@ const GiftProgram = () => {
             definition="Having a desire to live ethically."
             description="Children who have a heart attitude and desire to conscientiously seek truth and justice are gifted with moral skills. They are able to delay self-gratification and make good decisions. Moral intelligence is the foundation upon which the gifts must be nurtured and developed."
           />
-        </Row>
+        </Row> */}
       </div>
     </section>
   );

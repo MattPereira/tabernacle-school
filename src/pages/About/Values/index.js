@@ -11,7 +11,7 @@ const Values = () => {
       <Container className="py-5">
         <Row className="d-flex align-items-center">
           <Col xl={6}>
-            <h5 className="fs-3 text-center">Truth Centered</h5>
+            <h5 className="fs-3 text-center fw-bold">Truth Centered</h5>
             <div>
               <p className="lead">
                 Committed to education which will mold students’ hearts and
@@ -20,7 +20,7 @@ const Values = () => {
             </div>
 
             <div className="">
-              <h5 className="fs-3 text-center">Excellence Based</h5>
+              <h5 className="fs-3 text-center fw-bold">Excellence Based</h5>
               <p className="lead">
                 Vitally engaged in producing life-long learners through teaching
                 and modeling self-discipline. We identify each student’s unique
@@ -32,7 +32,7 @@ const Values = () => {
             </div>
 
             <div className="">
-              <h5 className="fs-3 text-center">Relationally Engaged</h5>
+              <h5 className="fs-3 text-center fw-bold">Relationally Engaged</h5>
               <div>
                 <p className="lead">
                   Dedicated to loving and nurturing students. Tabernacle School
@@ -42,7 +42,9 @@ const Values = () => {
               </div>
             </div>
             <div className="">
-              <h5 className="fs-3 text-center">Evangelically Focused</h5>
+              <h5 className="fs-3 text-center fw-bold">
+                Evangelically Focused
+              </h5>
               <p className="lead">
                 Passionate about knowing Jesus and making Him known. Inclusive
                 in our outreach. We have families from every religion; we have

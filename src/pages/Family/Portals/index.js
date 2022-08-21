@@ -6,9 +6,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Portals = () => {
   return (
-    <section id="portals" className="py-5">
-      <h2 className="display-2 text-center pt-5">School Portals</h2>
-      <hr className="section-hr mb-5" />
+    <section id="Portals" className="py-5">
+      <h2 className="display-3 text-center pt-5">School Portals</h2>
+      <hr className="section-hr mb-3" />
       <Container className="py-5">
         <Row className="text-center align-items-center justify-content-around">
           <Col lg={4} className="mb-5">
