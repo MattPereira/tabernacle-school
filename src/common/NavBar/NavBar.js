@@ -28,7 +28,7 @@ const NavBar = () => {
     <>
       <Navbar
         collapseOnSelect
-        expand="lg"
+        expand="xl"
         className={navColour ? "sticky" : "navbar"}
         variant="dark"
         bg="dark"

@@ -19,14 +19,14 @@ const About = () => {
     <div>
       <Showcase title="About" extra="Us" />
       <PageNav
-        sections={["History", "Faculty", "Values", "Vision", "Programs"]}
+        sections={["History", "Faculty", "Programs", "Values", "Vision"]}
       />
       <History />
       <Faculty />
-      <Values />
-      <Vision />
       <LiveProgram />
       <GiftProgram />
+      <Values />
+      <Vision />
     </div>
   );
 };

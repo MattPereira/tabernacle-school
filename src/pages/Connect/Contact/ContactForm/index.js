@@ -3,6 +3,8 @@ import { Form, Button } from "react-bootstrap";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+import { contactServiceId } from "../../../../secrets";
+
 const ContactForm = () => {
   const form = useRef();
 
@@ -11,7 +13,7 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_8c5vd8g",
+        { contactServiceId },
         "template_ikpibjh",
         form.current,
         "heIj4fGneSLnzTwDG"

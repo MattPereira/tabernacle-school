@@ -4,6 +4,8 @@ import "./index.scss";
 
 import { Row, Col, Button, Form, Container } from "react-bootstrap";
 
+import { scheduleServiceId } from "../../../secrets";
+
 const Visit = () => {
   const form = useRef();
 
@@ -12,7 +14,7 @@ const Visit = () => {
 
     emailjs
       .sendForm(
-        "service_7qwuduh",
+        { scheduleServiceId },
         "template_7b0dke8",
         form.current,
         "JmFz1hF-3wfdGY2oT"
@@ -37,12 +39,15 @@ const Visit = () => {
         </h2>
         <hr className="section-hr mb-md-3" />
         <Container className="py-5">
-          <p className="lead text-center">
-            To schedule a tour, email our registrar, Lisa Mazzoncini, at
-            Lisam@tbs.org.
-          </p>
           <Row className="justify-content-center align-items-center">
             <Col lg={6} className="mb-5">
+              <p className="lead">
+                To schedule a tour, please call{" "}
+                <a href="tel:9256859169">925.685.9169</a> or email our
+                registrars at &nbsp;
+                <a href="mailto:Lisam@tbs.org">Lisam@tbs.org</a> and{" "}
+                <a href="mailto:Lesleyn@tbs.org">Lesleyn@tbs.org</a>.
+              </p>
               <div>
                 <Form ref={form} onSubmit={sendEmail}>
                   <Form.Group className="mb-3" controlId="name">

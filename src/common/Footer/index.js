@@ -43,10 +43,10 @@ const Footer = () => {
           cursor: "pointer",
           background: "white",
           borderRadius: "50%",
-          border: "3px solid #74b9ff",
+          border: "3px solid #0984e3",
         }}
       >
-        <BsArrowUpShort className="display-4 text-info" />
+        <BsArrowUpShort className="display-4 text-primary" />
       </span>
     </>
   );

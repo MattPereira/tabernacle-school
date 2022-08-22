@@ -58,7 +58,7 @@ const Orientation = () => {
                   className="responsive-iframe"
                   width="1000"
                   src="https://www.youtube.com/embed/kS7yJQ6MwEc"
-                  frameborder="0"
+                  frameBorder="0"
                   allowfullscreen
                 ></iframe>
               </div>

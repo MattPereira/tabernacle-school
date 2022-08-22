@@ -19,7 +19,7 @@ const Orientation = () => {
             or mechanical pencils
           </h3>
           <Row className="justify-content-center">
-            <Col lg={10}>
+            <Col lg={8}>
               <Accordion>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Transitional Kindergarten</Accordion.Header>

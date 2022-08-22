@@ -20,10 +20,10 @@ const Location = () => {
                   // height="700"
                   id="gmap_canvas"
                   src="https://maps.google.com/maps?q=4380%20Concord%20Blvd%20Concord,%20CA%2094521&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0"
+                  frameBorder="0"
                   scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
+                  marginHeight="0"
+                  marginWidth="0"
                 ></iframe>
               </div>
             </div>
@@ -32,20 +32,20 @@ const Location = () => {
             <Row>
               <Col xl={12} lg={6} md={6} sm={6} xs={6}>
                 <div className="mb-5">
-                  <h5 className="fs-5 fw-bold">TABERNACLE CAMPUS</h5>
+                  <h5 className="fs-5 fw-bold">CAMPUS ADDRESS</h5>
                   <p>
                     4380 Concord Blvd
                     <br />
                     Concord, CA 94521
-                    <br />
-                    (925) 685-9169
-                    <br />
-                    info@tbs.org
                   </p>
                 </div>
                 <div className="mb-5">
-                  <h5 className="fs-5 fw-bold">OFFICE HOURS</h5>
-                  <p>9:00AM - 5:00PM</p>
+                  <h5 className="fs-5 fw-bold">FRONT OFFICE</h5>
+                  <p>
+                    8:30AM - 4:00PM
+                    <br />
+                    (925) 685-9169
+                  </p>
                 </div>
               </Col>
               <Col xl={12} lg={6} md={6} sm={6} xs={6}>

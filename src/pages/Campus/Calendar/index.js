@@ -7,11 +7,13 @@ import FullCalendar from "@fullcalendar/react";
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
+import { googleApiKey } from "../../../secrets";
+
 const SchoolCalendar = () => {
-  //GOOGLE API KEY : AIzaSyBvYyqG8cjiq7D0oBz5akpG96qi40iWJfA
   //CALENDAR ID : tabernacle.school1@gmail.com
-  //PUBLIC URL : https://calendar.google.com/calendar/embed?src=tabernacle.school1%40gmail.com&ctz=America%2FLos_Angeles
   //FULL CALENDAR DOCS: https://fullcalendar.io/docs#toc
+
+  console.log("SECRET", googleApiKey);
   return (
     <section id="Calendar" className="py-5">
       <h2 className="display-4 text-center mb-3 pt-5">Calendar</h2>
@@ -21,7 +23,7 @@ const SchoolCalendar = () => {
           <Col lg={10} xl={8}>
             <FullCalendar
               plugins={[googleCalendarPlugin, dayGridPlugin]}
-              googleCalendarApiKey="AIzaSyBvYyqG8cjiq7D0oBz5akpG96qi40iWJfA"
+              googleCalendarApiKey={googleApiKey}
               events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
             />
             <a
