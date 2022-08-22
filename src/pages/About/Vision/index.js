@@ -10,7 +10,7 @@ import "./index.scss";
 
 const Vision = () => {
   return (
-    <section id="Vision" className="py-5">
+    <section id="Vision" className="py-5 bg-light">
       <h2 className="display-3 text-center pt-5">Vision</h2>
       <hr className="section-hr mb-3" />
       <Container className="py-5">

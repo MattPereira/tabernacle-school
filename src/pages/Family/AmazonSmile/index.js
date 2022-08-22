@@ -2,14 +2,14 @@ import amazon from "../../../assets/images/family/amazon.png";
 
 const AmazonSmile = () => {
   return (
-    <section id="giving" class="py-5">
-      <div class="container py-5">
+    <section id="giving" className="py-5">
+      <div className="container py-5">
         <div id="amazonSmile">
-          <div class="d-flex justify-content-center mb-5">
+          <div className="d-flex justify-content-center mb-5">
             <a href="https://smile.amazon.com">
               <img
                 src={amazon}
-                class="img-fluid mb-5"
+                className="img-fluid mb-5"
                 alt="Amazon Smile Logo"
               />
             </a>

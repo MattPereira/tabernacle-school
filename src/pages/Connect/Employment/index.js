@@ -3,34 +3,36 @@ import application from "../../../assets/images/connect/application.pdf";
 
 const Employment = () => {
   return (
-    <section id="Preschool" className="py-5">
+    <section id="Employment" className="py-5">
       <h2 className="text-center display-4 pt-5">Employment</h2>
       <hr className="section-hr mb-md-4" />
       <Container className="py-5">
-        <p class="lead">
-          We are hiring! Tabernacle School is hiring teachers for our elementary
-          department for the 2022-2023 school year. All applicants must hold a
-          bachelor's degree from an accredited university and be able to sign
-          the school Statement of Faith. Tabernacle School is an evangelical
-          Christian school focused on providing an excellent Christ centered
-          education in spiritual, academic and extracurricular subjects. Our
-          teachers and staff help students acquire the skills and attitudes
-          necessary to be Faithful Followers of Jesus Christ, Life-Long
-          Learners, Citizens of Character and Academic Achievers.{" "}
-        </p>
-        <div className="text-center my-5">
-          <a
-            href={application}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-dark btn-lg rounded-pill fw-bold"
-          >
-            Employment Application
-          </a>
-        </div>
-
         <Row>
-          <Col md={6}>
+          <Col lg={6}>
+            <p className="lead">
+              We are hiring! Tabernacle School is hiring teachers for our
+              elementary department for the 2022-2023 school year. All
+              applicants must hold a bachelor's degree from an accredited
+              university and be able to sign the school Statement of Faith.
+              Tabernacle School is an evangelical Christian school focused on
+              providing an excellent Christ centered education in spiritual,
+              academic and extracurricular subjects. Our teachers and staff help
+              students acquire the skills and attitudes necessary to be Faithful
+              Followers of Jesus Christ, Life-Long Learners, Citizens of
+              Character and Academic Achievers.{" "}
+            </p>
+            <div className="text-center my-5">
+              <a
+                href={application}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-dark btn-lg fw-bold"
+              >
+                Employment Application
+              </a>
+            </div>
+          </Col>
+          <Col lg={6}>
             <h5 className="fw-bold">Required Application Materials</h5>
             <ul>
               <li>
@@ -46,8 +48,6 @@ const Employment = () => {
               Must be a professing believer of Jesus Christ and attend a
               Christ-centered church.
             </p>
-          </Col>
-          <Col md={6}>
             <h5 className="fw-bold">Equal Opportunity Employer</h5>
             <p>
               Tabernacle School is an equal opportunity employer, dedicated to a

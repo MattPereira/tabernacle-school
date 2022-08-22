@@ -10,13 +10,13 @@ const Athletics = () => {
         <Row className="align-items-center">
           <Col lg={6} className="col-lg-6">
             <div className="mb-5">
-              <h4 className="text-center fw-bold mb-3">Focus</h4>
               <p className="lead">
-                To instill Christ-centered character traits within the lives of
-                our student athletes. While the program includes training to
-                enhance the ability of the student and education to develop a
-                better understanding of sports, at the end of each day, we
-                strive to glorify Him in all that we do.
+                The focus behind the athletic program at Tabernacle is to
+                instill Christ-centered character traits within the lives of our
+                student athletes. While the program includes training to enhance
+                the ability of the student and education to develop a better
+                understanding of sports, at the end of each day, we strive to
+                glorify Him in all that we do.
               </p>
             </div>
             <div className="mb-5">

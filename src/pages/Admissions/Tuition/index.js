@@ -92,15 +92,6 @@ const Tuition = () => {
               </tbody>
             </Table>
             <p>*Tuition payments begin 8/1/2022 and end 5/1/2023</p>
-            <p>
-              *Classroom placement is secured upon payment of registration and
-              consumalbe fee and first month's tuition.
-            </p>
-            <p>
-              *Registration is non-refundable. Consumable fee is non-refundable
-              after June 1st or at time of enrollment for new students. First
-              month's tuition is non-refundable.
-            </p>
             <h4 className="text-center fw-bold">Annual Fees</h4>
             <Table bordered className="align-middle mb-5 bg-white">
               <thead>
@@ -137,6 +128,15 @@ const Tuition = () => {
                 </tr>
               </tbody>
             </Table>
+            <p>
+              *Classroom placement is secured upon payment of registration and
+              consumalbe fee and first month's tuition.
+            </p>
+            <p>
+              *Registration is non-refundable. Consumable fee is non-refundable
+              after June 1st or at time of enrollment for new students. First
+              month's tuition is non-refundable.
+            </p>
           </Col>
           <Col xl={6}>
             <h4 className="text-center fw-bold">Other Fees</h4>

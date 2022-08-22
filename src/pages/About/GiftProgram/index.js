@@ -17,7 +17,7 @@ import "./index.scss";
 
 const GiftProgram = () => {
   return (
-    <section id="Programs" className="py-5 bg-light">
+    <section id="Gifts" className="py-5 bg-light">
       <h2 className="display-2 text-center pt-5">Gift Program</h2>
       <hr className="section-hr mb-4" />
       <div className="container py-5">

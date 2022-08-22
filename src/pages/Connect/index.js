@@ -17,6 +17,7 @@ const Connect = () => {
       <Showcase title={"Connect"} />
       <PageNav sections={["Contact Us", "Location", "Employment"]} />
       <Contact />
+
       <Location />
       <Employment />
     </div>

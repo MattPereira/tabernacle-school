@@ -11,8 +11,8 @@ const Location = () => {
       <Container className="py-5">
         <Row>
           <Col xl={8} className="mb-5 mb-xl-0">
-            <div class="mapouter">
-              <div class="video-container">
+            <div className="mapouter">
+              <div className="video-container">
                 <iframe
                   title="tabernacle location"
                   className="responsive-iframe"

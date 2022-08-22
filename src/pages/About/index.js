@@ -1,6 +1,6 @@
 import Showcase from "../../common/Showcase/Showcase";
 import PageNav from "../../common/PageNav";
-import Introduction from "./Introduction";
+// import Introduction from "./Introduction";
 import History from "./History";
 import Faculty from "./Faculty";
 import Values from "./Values";
@@ -21,13 +21,12 @@ const About = () => {
       <PageNav
         sections={["History", "Faculty", "Values", "Vision", "Programs"]}
       />
-      <Introduction />
       <History />
       <Faculty />
       <Values />
       <Vision />
-      <GiftProgram />
       <LiveProgram />
+      <GiftProgram />
     </div>
   );
 };

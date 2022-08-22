@@ -93,7 +93,7 @@ const characteristics = {
 
 const LiveProgram = () => {
   return (
-    <section id="live-program" className="py-5">
+    <section id="Programs" className="py-5">
       <h2 className="display-3 text-center pt-5">Live Program</h2>
       <hr className="section-hr mb-4" />
       <Container className="py-5">

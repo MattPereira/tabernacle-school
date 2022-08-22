@@ -35,28 +35,43 @@ const Visit = () => {
         <h2 className="text-center section-title display-2 pt-5">
           Schedule Tour
         </h2>
-        <hr className="section-hr mb-5" />
+        <hr className="section-hr mb-md-3" />
         <Container className="py-5">
+          <p className="lead text-center">
+            To schedule a tour, email our registrar, Lisa Mazzoncini, at
+            Lisam@tbs.org.
+          </p>
           <Row className="justify-content-center align-items-center">
-            <Col lg={7} className="mb-5">
+            <Col lg={6} className="mb-5">
               <div>
                 <Form ref={form} onSubmit={sendEmail}>
                   <Form.Group className="mb-3" controlId="name">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label className="fw-bold">Name</Form.Label>
                     <Form.Control type="text" name="name" required />
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="email">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className="fw-bold">Email</Form.Label>
 
                     <Form.Control type="email" name="email" required />
                   </Form.Group>
+                  <Form.Group className="mb-3" controlId="subject">
+                    <Form.Label className="fw-bold">Subject</Form.Label>
+
+                    <Form.Control
+                      type="subject"
+                      name="subject"
+                      defaultValue="Schedule a Tour"
+                      required
+                    />
+                  </Form.Group>
                   <Form.Group className="mb-3" controlId="message">
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label className="fw-bold">Message</Form.Label>
                     <Form.Control
                       as="textarea"
                       rows="5"
                       name="message"
+                      defaultValue="I'd like to schedule a tour at the earliest convenience. I am available the following dates:&#10;"
                       required
                     />
                   </Form.Group>

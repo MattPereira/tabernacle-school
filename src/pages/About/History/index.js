@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const History = () => {
   return (
-    <section id="History" className="bg-light py-5">
+    <section id="History" className="py-5">
       <h2 className="display-3 text-center pt-5">History</h2>
       <hr className="section-hr" />
       <Container className="py-5">

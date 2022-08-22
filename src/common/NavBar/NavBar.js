@@ -28,7 +28,7 @@ const NavBar = () => {
     <>
       <Navbar
         collapseOnSelect
-        expand="xl"
+        expand="lg"
         className={navColour ? "sticky" : "navbar"}
         variant="dark"
         bg="dark"
@@ -36,7 +36,7 @@ const NavBar = () => {
       >
         <Container>
           <Navbar.Brand
-            eventkey={1}
+            eventKey={1}
             as={RRNavLink}
             to="/"
             className="navbar-brand"
@@ -49,7 +49,7 @@ const NavBar = () => {
               <ul className="navbar-nav m-auto align-items-center text-center">
                 <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey={2} as={RRNavLink} to="/about">
+                    <Nav.Link eventKey={2} as={RRNavLink} to="/about">
                       <BsFillPersonFill style={{ marginBottom: "2px" }} /> About
                     </Nav.Link>
                   </Nav.Item>
@@ -86,7 +86,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey={3} as={RRNavLink} to="/admissions">
+                    <Nav.Link eventKey={3} as={RRNavLink} to="/admissions">
                       <IoSchool style={{ marginBottom: "2px" }} /> Admissions
                     </Nav.Link>
                   </Nav.Item>
@@ -114,7 +114,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey={4} as={RRNavLink} to="/academics">
+                    <Nav.Link eventKey={4} as={RRNavLink} to="/academics">
                       <IoBookSharp style={{ marginBottom: "2px" }} /> Academics
                     </Nav.Link>
                   </Nav.Item>
@@ -171,7 +171,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey="5" as={RRNavLink} to="/campus">
+                    <Nav.Link eventKey="5" as={RRNavLink} to="/campus">
                       <FaSchool style={{ marginBottom: "2px" }} /> Campus
                     </Nav.Link>
                   </Nav.Item>
@@ -207,7 +207,7 @@ const NavBar = () => {
 
                 <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey={7} as={RRNavLink} to="/family">
+                    <Nav.Link eventKey={6} as={RRNavLink} to="/family">
                       <img
                         src={ts_logo}
                         alt="Tabernacle School logo"
@@ -250,12 +250,42 @@ const NavBar = () => {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item dropdown">
                   <Nav.Item>
-                    <Nav.Link eventkey={6} as={RRNavLink} to="/connect">
+                    <Nav.Link
+                      eventKey={7}
+                      as={RRNavLink}
+                      to="/connect#Employment"
+                    >
                       <GrMail style={{ marginBottom: "2px" }} /> Connect
                     </Nav.Link>
                   </Nav.Item>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="mainNavbarDropdown"
+                  >
+                    <li>
+                      <HashLink className="dropdown-item" to="/connect#Contact">
+                        Contact Us
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/connect#Location"
+                      >
+                        Location
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/connect#Employment"
+                      >
+                        Employment
+                      </HashLink>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </Nav>

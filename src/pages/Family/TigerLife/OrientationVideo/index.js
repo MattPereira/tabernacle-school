@@ -52,7 +52,7 @@ const Orientation = () => {
               <p>*Jr. Knd and 3's meetings require signup with Betty.</p>
             </Col>
             <Col xl={6}>
-              <div class="video-container">
+              <div className="video-container">
                 <iframe
                   title="Parent Orientation Video"
                   className="responsive-iframe"

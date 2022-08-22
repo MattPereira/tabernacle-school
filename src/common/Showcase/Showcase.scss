@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Copse&family=Didact+Gothic&family=Fredoka+One&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Didact+Gothic&family=Fredoka+One&family=Paytone+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Didact+Gothic&family=Fredoka+One&family=Paytone+One&family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Didact+Gothic&family=Fredoka+One&family=Lilita+One&family=Paytone+One&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:wght@700&family=Didact+Gothic&family=Fredoka+One&family=Lilita+One&family=Paytone+One&family=Yanone+Kaffeesatz:wght@700&display=swap');
 .showcase {
     min-height: 275px;
     position: relative;
     .showcase-header {
       z-index: 2;
       h1 {
-        font-family: 'Fredoka One', sans-serif;
+        font-family: 'Lilita One', sans-serif;
       }
     }
     .showcase-overlay {
@@ -30,7 +36,7 @@
 }
 
 #academics-showcase {
-    background: url("/assets/images/academics/showcase.jpg") center / cover no-repeat;
+    background: url("/assets/images/academics/showcase.jpg") bottom / cover no-repeat;
 }
 
 #campus-showcase {

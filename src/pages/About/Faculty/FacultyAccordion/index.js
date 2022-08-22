@@ -31,7 +31,7 @@ const FacultyAccordion = () => {
                   ) : null}
                   {staff["title"] ? (
                     <div>
-                      <span className="">{staff["title"]}</span>
+                      <span className="fs-5">{staff["title"]}</span>
                     </div>
                   ) : null}
                   <br />

@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Values = () => {
   return (
-    <section id="Values" className="py-5 bg-light">
+    <section id="Values" className="py-5">
       <h2 className="display-3 text-center pt-5">Values</h2>
       <hr className="section-hr mb-lg-5" />
       <Container className="py-5">

@@ -1,34 +1,40 @@
-import { Container } from "react-bootstrap";
+import React from "react";
 
-const Calendar = () => {
+import events from "../../../assets/images/family/information/calendar.pdf";
+
+import { Container, Col, Row } from "react-bootstrap";
+import FullCalendar from "@fullcalendar/react";
+import googleCalendarPlugin from "@fullcalendar/google-calendar";
+import dayGridPlugin from "@fullcalendar/daygrid";
+
+const SchoolCalendar = () => {
+  //GOOGLE API KEY : AIzaSyBvYyqG8cjiq7D0oBz5akpG96qi40iWJfA
+  //CALENDAR ID : tabernacle.school1@gmail.com
+  //PUBLIC URL : https://calendar.google.com/calendar/embed?src=tabernacle.school1%40gmail.com&ctz=America%2FLos_Angeles
+  //FULL CALENDAR DOCS: https://fullcalendar.io/docs#toc
   return (
     <section id="Calendar" className="py-5">
       <h2 className="display-4 text-center mb-3 pt-5">Calendar</h2>
-      <hr className="section-hr mb-md-5" />
-      <Container className="py-5 text-center">
-        <div className="d-none d-md-flex justify-content-center">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showCalendars=0&showPrint=0&showNav=1&showTitle=0&showTabs=1&showTz=0&src=dGFiZXJuYWNsZS5zY2hvb2wxQGdtYWlsLmNvbQ&color=%23F09300"
-            style={{ borderWidth: "0" }}
-            width="800"
-            height="600"
-            frameBorder="0"
-            scrolling="no"
-            title="tabernacle-calendar"
-          ></iframe>
-        </div>
-        <div className="py-5 text-center">
-          <a
-            href="/images/pdfs/Calendar-22-23.pdf"
-            className="fs-3 btn btn-primary text-white"
-          >
-            <i className="fas fa-calendar-alt"></i>
-            <strong>PDF Download</strong>
-          </a>
-        </div>
+      <hr className="section-hr mb-md-3" />
+      <Container className="py-5">
+        <Row className="justify-content-center text-end">
+          <Col lg={10} xl={8}>
+            <FullCalendar
+              plugins={[googleCalendarPlugin, dayGridPlugin]}
+              googleCalendarApiKey="AIzaSyBvYyqG8cjiq7D0oBz5akpG96qi40iWJfA"
+              events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
+            />
+            <a
+              href={events}
+              className="btn btn-primary text-white fw-bold mt-5"
+            >
+              All Events
+            </a>
+          </Col>
+        </Row>
       </Container>
     </section>
   );
 };
 
-export default Calendar;
+export default SchoolCalendar;

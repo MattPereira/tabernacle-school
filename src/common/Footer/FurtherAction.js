@@ -16,27 +16,28 @@ const FurtherAction = () => {
         <Row className="my-md-5">
           <Col md={4} className="mb-3">
             <HashLink
+              to="/connect#Contact"
+              className="btn btn-lg border border-1 border-white rounded-pill text-white further-btn"
+              href="https://tabernacleschool.wpcomstaging.com/contact/"
+            >
+              <strong>Contact Us</strong>
+            </HashLink>
+          </Col>
+          <Col md={4} className="mb-3">
+            <HashLink
               to="/admissions#Schedule"
               className="btn btn-lg border border-white rounded-pill text-white further-btn"
             >
               <strong>Schedule Tour</strong>
             </HashLink>
           </Col>
-          <Col md={4} className="mb-3">
-            <a
-              className="btn btn-lg border border-1 border-white rounded-pill text-white further-btn"
-              href="https://tabernacleschool.wpcomstaging.com/contact/"
-            >
-              <strong>Contact Us</strong>
-            </a>
-          </Col>
 
           <Col md={4} className="mb-3">
             <HashLink
-              to="/admissions#Tuition"
-              className="btn btn-lg border border-white rounded-pill text-white further-btn"
+              to="/connect#Employment"
+              className="btn btn-lg border border-white rounded-pill text-white further-btn fw-bold"
             >
-              <strong>Tuition & Fees</strong>
+              Employment
             </HashLink>
           </Col>
         </Row>
