@@ -31,8 +31,8 @@ const Statement = () => {
             <h2>Philosophy</h2>
             <p className="lead">
               All children are gifted, and our responsibility is to help
-              students discover and develop the unique abilities with which God
-              has bestowed upon them.
+              students discover and develop the unique abilities that God has
+              given them.
             </p>
           </Carousel.Item>
         </Carousel>

@@ -39,8 +39,18 @@ const NavBar = () => {
             eventKey={1}
             as={RRNavLink}
             to="/"
-            className="navbar-brand"
+            className="navbar-brand fs-4"
           >
+            <img
+              src={ts_logo}
+              alt="Tabernacle School logo"
+              className="img-fluid"
+              style={{
+                width: "2rem",
+                marginBottom: "0.7rem",
+                marginRight: "7px",
+              }}
+            />
             <strong>Tabernacle School</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -48,7 +58,7 @@ const NavBar = () => {
             <Nav className="ms-auto" defaultActiveKey="#home">
               <ul className="navbar-nav m-auto align-items-center text-center">
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link eventKey={2} as={RRNavLink} to="/about">
                       <BsFillPersonFill style={{ marginBottom: "2px" }} /> About
                     </Nav.Link>
@@ -68,6 +78,11 @@ const NavBar = () => {
                       </HashLink>
                     </li>
                     <li>
+                      <HashLink className="dropdown-item" to="/about#Programs">
+                        Programs
+                      </HashLink>
+                    </li>
+                    <li>
                       <HashLink className="dropdown-item" to="/about#Values">
                         Values
                       </HashLink>
@@ -77,15 +92,10 @@ const NavBar = () => {
                         Vision
                       </HashLink>
                     </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#Programs">
-                        Programs
-                      </HashLink>
-                    </li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link eventKey={3} as={RRNavLink} to="/admissions">
                       <IoSchool style={{ marginBottom: "2px" }} /> Admissions
                     </Nav.Link>
@@ -113,7 +123,7 @@ const NavBar = () => {
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link eventKey={4} as={RRNavLink} to="/academics">
                       <IoBookSharp style={{ marginBottom: "2px" }} /> Academics
                     </Nav.Link>
@@ -170,7 +180,7 @@ const NavBar = () => {
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link eventKey="5" as={RRNavLink} to="/campus">
                       <FaSchool style={{ marginBottom: "2px" }} /> Campus
                     </Nav.Link>
@@ -206,7 +216,7 @@ const NavBar = () => {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link eventKey={6} as={RRNavLink} to="/family">
                       <img
                         src={ts_logo}
@@ -214,8 +224,8 @@ const NavBar = () => {
                         className="img-fluid"
                         style={{
                           width: "1.25rem",
-                          marginBottom: "2px",
-                          marginRight: "7px",
+                          marginBottom: "7px",
+                          marginRight: "4px",
                         }}
                       />
                       Family
@@ -251,7 +261,7 @@ const NavBar = () => {
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
-                  <Nav.Item>
+                  <Nav.Item className="fs-5">
                     <Nav.Link
                       eventKey={7}
                       as={RRNavLink}

@@ -9,8 +9,8 @@ const Location = () => {
       <hr className="section-hr mb-md-5" />
 
       <Container className="py-5">
-        <Row>
-          <Col xl={8} className="mb-5 mb-xl-0">
+        <Row className="justify-content-center">
+          <Col xl={9} className="mb-5 mb-xl-0">
             <div className="mapouter">
               <div className="video-container">
                 <iframe
@@ -28,7 +28,7 @@ const Location = () => {
               </div>
             </div>
           </Col>
-          <Col xl={4}>
+          <Col xl={2}>
             <Row>
               <Col xl={12} lg={6} md={6} sm={6} xs={6}>
                 <div className="mb-5">

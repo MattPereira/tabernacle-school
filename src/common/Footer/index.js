@@ -22,7 +22,7 @@ const Footer = () => {
       <Information />
       <div className="text-center py-3 bg-secondary">
         <a
-          href="https://mattpereira.github.io/personal-portfolio/"
+          href="https://matt-pereira.surge.sh/"
           className="text-decoration-none link-light"
         >
           Website by Matt Pereira

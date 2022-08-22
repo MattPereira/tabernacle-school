@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 const Information = () => {
   return (
     <section id="footer" className="bg-dark text-white py-5">
@@ -13,12 +15,12 @@ const Information = () => {
               </a>
             </div>
             <div>
-              <a
-                className="text-white  text-decoration-none"
-                href="/employment"
+              <HashLink
+                className="text-white text-decoration-none"
+                to="/connect#Employment"
               >
                 Employment
-              </a>
+              </HashLink>
             </div>
             <div>
               <a
@@ -41,7 +43,7 @@ const Information = () => {
             <br></br>
             Monday - Friday
             <br></br>
-            6:30AM - 6:30PM
+            8:30AM - 4:00PM
           </div>
         </div>
       </div>

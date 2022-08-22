@@ -5,7 +5,7 @@
 </a>
 
 ---
-Informational and functional website I built for my current employer. The site advertises to prospective families and provides current families with essential documents, calendars, and instructions. Features include personal pages for all school staff and astute incorporation of Bootstrap’s layout, content, and components functionalities. 
+Informational and functional website I built for Tabernacle School. The single-page application advertises to prospective families and provides current families with essential documents, calendars, and instructions. Features include personal pages for all school staff and astute incorporation of Bootstrap’s layout, content, and components functionalities. 
 
 ---
 ### **Features**
