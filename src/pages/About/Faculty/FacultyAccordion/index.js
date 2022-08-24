@@ -1,6 +1,8 @@
 import { Accordion, Row, Col } from "react-bootstrap";
 import { facultyData } from "../../../../data/facultyData.js";
 
+import { Link } from "react-router-dom";
+
 import "./index.scss";
 
 const FacultyAccordion = () => {
@@ -18,23 +20,24 @@ const FacultyAccordion = () => {
                   className="text-center mb-3"
                   key={staff["name"]}
                 >
-                  <h5 className="fw-bold">{staff["name"]}</h5>
-                  {/* <p className="mb-0">{staff["email"]}</p> */}
+                  <Link to={`/about/staff/${staff["email"]}`}>
+                    <h5 className="fw-bold">{staff["name"]}</h5>
+                    {/* <p className="mb-0">{staff["email"]}</p> */}
 
-                  {staff["image"] ? (
-                    <img
-                      src={staff["image"]}
-                      className="img-fluid rounded-circle"
-                      alt={staff["name"]}
-                      style={{ width: "150px" }}
-                    />
-                  ) : null}
-                  {staff["title"] ? (
-                    <div>
-                      <span className="fs-5">{staff["title"]}</span>
-                    </div>
-                  ) : null}
-                  <br />
+                    {staff["image"] ? (
+                      <img
+                        src={staff["image"]}
+                        className="img-fluid rounded-circle"
+                        alt={staff["name"]}
+                        style={{ width: "150px" }}
+                      />
+                    ) : null}
+                    {staff["title"] ? (
+                      <div>
+                        <span className="fs-5">{staff["title"]}</span>
+                      </div>
+                    ) : null}
+                  </Link>
                 </Col>
               ))}
             </Row>

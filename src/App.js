@@ -9,6 +9,7 @@ import Footer from "./common/Footer";
 /** The NavBar Pages */
 import Home from "./pages/Home";
 import About from "./pages/About";
+import ProfilePage from "./pages/About/Faculty/ProfilePage";
 import Admissions from "./pages/Admissions";
 import Academics from "./pages/Academics";
 import Campus from "./pages/Campus";
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route exact path="/about/staff/:id" element={<ProfilePage />} />
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/campus" element={<Campus />} />
