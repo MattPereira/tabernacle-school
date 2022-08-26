@@ -19,7 +19,7 @@ const Forms = () => {
       <hr className="section-hr mb-3" />
       <Container className="py-5">
         <Row className="text-center">
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={technology}
               target="_blank"
@@ -30,7 +30,7 @@ const Forms = () => {
               <div className="lead fw-bold">Technology</div>
             </a>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={bicycle}
               target="_blank"
@@ -41,7 +41,7 @@ const Forms = () => {
               <div className="lead fw-bold">Bicycle & Walk</div>
             </a>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={medication}
               target="_blank"
@@ -52,7 +52,7 @@ const Forms = () => {
               <div className="lead fw-bold">Medication</div>
             </a>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={sports}
               target="_blank"

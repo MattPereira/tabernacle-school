@@ -24,7 +24,7 @@ const Information = () => {
       <hr className="section-hr mb-md-5" />
       <Container className="py-5">
         <Row className="text-center mb-md-5">
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={handbook}
               target="_blank"
@@ -35,7 +35,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Handbook</div>
             </a>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link
               to="/admissions#Tuition"
               className="link-dark text-decoration-none"
@@ -44,7 +44,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Tuition</div>
             </Link>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link
               to="/family/orientation"
               className="link-dark text-decoration-none"
@@ -53,7 +53,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Parent Orientation</div>
             </Link>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link to="/family/facts" className="link-dark text-decoration-none">
               <BsFillQuestionCircleFill className="display-1 mb-3" />
               <div className="mb-3 fs-5 fw-bold">Facts Help</div>
@@ -61,7 +61,7 @@ const Information = () => {
           </Col>
         </Row>
         <Row className="row text-center justify-content-around">
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <a
               href={calendar}
               target="_blank"
@@ -72,7 +72,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Calendar</div>
             </a>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link
               to="/family/supply_list"
               className="link-dark text-decoration-none"
@@ -81,7 +81,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Supply List</div>
             </Link>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link
               to="/family/uniform_guidelines"
               className="link-dark text-decoration-none"
@@ -90,7 +90,7 @@ const Information = () => {
               <div className="mb-3 fs-5 fw-bold">Uniform Guidelines</div>
             </Link>
           </Col>
-          <Col sm={6} md={3} className="mb-5">
+          <Col xs={6} md={3} className="mb-5">
             <Link
               to="/family/discipline"
               className="link-dark text-decoration-none"
