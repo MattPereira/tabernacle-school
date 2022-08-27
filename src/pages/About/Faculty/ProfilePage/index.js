@@ -62,16 +62,16 @@ const ProfilePage = () => {
       </section>
 
       <section className="py-5">
-        <Container>
+        <Container className="py-5">
           <Row className="align-items-center mb-5">
-            <Col md={6} className="text-center mb-5 mb-md-0">
+            <Col xl={6} className="text-center mb-5 mb-xl-0">
               <img
                 src={`${profile_picture_url}`}
                 alt="profile pic"
                 className="img-fluid img-crop rounded-circle"
               />
             </Col>
-            <Col md={6}>
+            <Col xl={6}>
               <p className="lead">{description}</p>
             </Col>
           </Row>

@@ -21,3 +21,10 @@
     height: 500px;
     width: 500px;
   }
+
+@media (max-width: 768px) {
+    .img-crop {
+        height: 300px;
+        width: 300px;
+    }
+}

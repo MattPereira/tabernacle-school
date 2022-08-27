@@ -1,4 +1,4 @@
-# [**Tabernacle.School**](https://tabernacle.school)
+# [**Tabernacle School**](https://tabernacle.school)
 
 <a href="https://tabernacle.school">
 <img src="public/TS_LOGO_CIRCLE.png" style="height: 200px; width: 200px;">
