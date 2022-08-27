@@ -8,7 +8,7 @@ import "./index.scss";
 const FacultyAccordion = () => {
   return (
     <>
-      <p className="lead text-center mb-5">
+      <p className="lead fs-4 text-center mb-5">
         Select a teacher to see their profile page!
       </p>
       <Accordion>

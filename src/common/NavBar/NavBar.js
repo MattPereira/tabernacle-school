@@ -34,12 +34,12 @@ const NavBar = () => {
         bg="dark"
         fixed="top"
       >
-        <Container>
+        <Container fluid className="py-1 px-xl-4">
           <Navbar.Brand
             eventKey={1}
             as={RRNavLink}
             to="/"
-            className="navbar-brand fs-4"
+            className="navbar-brand fs-4 fw-bold"
           >
             <img
               src={ts_logo}
@@ -51,7 +51,7 @@ const NavBar = () => {
                 marginRight: "7px",
               }}
             />
-            <strong>Tabernacle School</strong>
+            Tabernacle School
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
