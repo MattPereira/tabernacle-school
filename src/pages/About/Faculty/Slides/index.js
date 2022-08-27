@@ -10,29 +10,33 @@ import slide6 from "../../../../assets/images/about/slides/slide6.jpg";
 const Slides = () => {
   return (
     <div className="mb-5">
-      <Carousel controls={false} indicators={false}>
+      <Carousel controls={false} indicators={false} fade>
         <Carousel.Item>
           <Row className="g-0">
-            <Col md={4}>
+            <Col md={6}>
               <img className="img-fluid" src={slide1} alt="First slide" />
             </Col>
-            <Col md={4} className="d-none d-md-flex">
+            <Col md={6} className="d-none d-md-flex">
               <img className="img-fluid" src={slide6} alt="First slide" />
-            </Col>
-            <Col md={4} className="d-none d-md-flex">
-              <img className="img-fluid" src={slide4} alt="First slide" />
             </Col>
           </Row>
         </Carousel.Item>
         <Carousel.Item>
           <Row className="g-0">
-            <Col md={4}>
+            <Col md={6}>
               <img className="img-fluid" src={slide2} alt="First slide" />
             </Col>
-            <Col md={4} className="d-none d-md-flex">
+            <Col md={6} className="d-none d-md-flex">
               <img className="img-fluid" src={slide3} alt="First slide" />
             </Col>
-            <Col md={4} className="d-none d-md-flex">
+          </Row>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Row className="g-0">
+            <Col md={6}>
+              <img className="img-fluid" src={slide4} alt="First slide" />
+            </Col>
+            <Col md={6} className="d-none d-md-flex">
               <img className="img-fluid" src={slide5} alt="First slide" />
             </Col>
           </Row>

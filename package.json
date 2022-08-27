@@ -28,8 +28,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-1": "react-scripts build",
-    "build-2": "cp build/index.html build/200.html",
+    "build": "react-scripts build",
+    "pre-deploy": "cp build/index.html build/200.html",
     "deploy": "surge build"
   },
   "eslintConfig": {
