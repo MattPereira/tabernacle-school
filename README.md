@@ -1,11 +1,11 @@
 # [**Tabernacle.School**](https://tabernacle.school)
 
 <a href="https://tabernacle.school">
-<img src="public/TS_LOGO_DARK.svg" style="height: 200px; width: 200px;">
+<img src="public/TS_LOGO_CIRCLE.png" style="height: 200px; width: 200px;">
 </a>
 
 ---
-Informational and functional website I built for Tabernacle School. The single-page application advertises to prospective families and provides current families with essential documents, calendars, and instructions. Features include personal pages for all school staff and astute incorporation of Bootstrap’s layout, content, and components functionalities. 
+A single page web application for Tabernacle School that advertises to prospective families and provides current families with requisite documents, calendars, and instructions. Features include forms that allow users to send emails to the school, a FullCalender that fetches data from the school’s google calendar, and a headless CMS for updating the data and photos displayed on the website. 
 
 ---
 ### **Features**
@@ -17,8 +17,9 @@ Informational and functional website I built for Tabernacle School. The single-p
 ### **Technology Stack**
 - JavaScript
 - React
+- React-Router
+- Strapi
 - Bootstrap
-- React-Bootstrap
 - Sass
 - CSS
 - HTML
