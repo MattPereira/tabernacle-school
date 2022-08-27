@@ -15,12 +15,12 @@ const ProfilePage = () => {
   const [staff, setStaff] = useState(null);
   const { id } = useParams();
 
-  //ID IS CURRENTLY THE EMAIL ADDRESS, WILL EVENTUALLY CHANGE TO ID INTEGER
+  //ID IS CURRENTLY THE EMAIL ADDRESS, WILL EVENTUALLY CHANGE TO INTEGER ID NUMBER
 
   //https://tabernacle-school-strapi.herokuapp.com/api
 
   // const BASE_URL = "http://localhost:1337";
-  const BASE_URL = "https://ts-strapi.herokuapp.com";
+  const BASE_URL = "https://tabernacle-backend.herokuapp.com/";
 
   useEffect(
     function getAllStaff() {
