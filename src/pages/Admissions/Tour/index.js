@@ -1,32 +1,34 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./index.scss";
 
-import { Row, Col, Button, Form, Container } from "react-bootstrap";
+import { Row, Col, Button, Form, Container, Alert } from "react-bootstrap";
 
 import { scheduleServiceId } from "../../../secrets";
 
 const Visit = () => {
   const form = useRef();
 
+  const [status, setStatus] = useState(null);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        { scheduleServiceId },
+        scheduleServiceId,
         "template_7b0dke8",
         form.current,
         "JmFz1hF-3wfdGY2oT"
       )
       .then(
         () => {
-          alert("Message successfully sent!");
+          setStatus(true);
           window.location.reload(false);
         },
         (error) => {
+          setStatus(false);
           console.log(error.text);
-          alert("Failed to send the message, please try again");
         }
       );
   };
@@ -41,13 +43,26 @@ const Visit = () => {
         <Container className="py-5">
           <Row className="justify-content-center align-items-center">
             <Col lg={6} className="mb-5">
-              <p className="lead">
+              {/* <p className="lead">
                 To schedule a tour, please call{" "}
                 <a href="tel:9256859169">925.685.9169</a> or email our
                 registrars at &nbsp;
                 <a href="mailto:Lisam@tbs.org">Lisam@tbs.org</a> and{" "}
                 <a href="mailto:Lesleyn@tbs.org">Lesleyn@tbs.org</a>.
-              </p>
+              </p> */}
+              {status === true ? (
+                <Alert variant="success">
+                  Message successfully sent! Tabernacle School's registrar will
+                  respond soon!
+                </Alert>
+              ) : status === false ? (
+                <Alert variant="danger">
+                  Failed to send the message, please call{" "}
+                  <a href="tel:9256859169">(925) 685-9169</a> or email our
+                  registrar at{" "}
+                  <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a>
+                </Alert>
+              ) : null}
               <div>
                 <Form ref={form} onSubmit={sendEmail}>
                   <Form.Group className="mb-3" controlId="name">
@@ -76,7 +91,6 @@ const Visit = () => {
                       as="textarea"
                       rows="5"
                       name="message"
-                      defaultValue="I'd like to schedule a tour at the earliest convenience. I am available the following dates:&#10;"
                       required
                     />
                   </Form.Group>

@@ -20,7 +20,7 @@ const ProfilePage = () => {
   //https://tabernacle-school-strapi.herokuapp.com/api
 
   // const BASE_URL = "http://localhost:1337";
-  const BASE_URL = "https://tabernacle-backend.herokuapp.com/";
+  const BASE_URL = "https://tabernacle-backend.herokuapp.com";
 
   useEffect(
     function getAllStaff() {
