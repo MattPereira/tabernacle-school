@@ -262,11 +262,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <Nav.Item className="fs-5">
-                    <Nav.Link
-                      eventKey={7}
-                      as={RRNavLink}
-                      to="/connect#Employment"
-                    >
+                    <Nav.Link eventKey={7} as={RRNavLink} to="/connect">
                       <GrMail style={{ marginBottom: "2px" }} /> Connect
                     </Nav.Link>
                   </Nav.Item>

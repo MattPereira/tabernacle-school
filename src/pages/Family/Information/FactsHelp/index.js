@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import Showcase from "../../../../common/Showcase/Showcase";
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -7,10 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import facts from "../../../../assets/images/family/facts-help.png";
 
 const FactsHelp = () => {
-  useEffect(() => {
-    // 👇️ scroll to top on page load
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
   return (
     <>
       <Showcase title="Facts Help" />

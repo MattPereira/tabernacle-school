@@ -7,11 +7,6 @@ import Marquee from "react-fast-marquee";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 
 const ProfilePage = () => {
-  useEffect(() => {
-    // 👇️ scroll to top on page load
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
   const [staff, setStaff] = useState(null);
   const { id } = useParams();
 
@@ -39,8 +34,11 @@ const ProfilePage = () => {
   // Handles waiting for the async response from the API call
   if (!staff)
     return (
-      <div className="loading-screen">
+      <div className="loading-screen text-center">
         <Spinner animation="border" variant="primary" />
+        <div className="text-center fs-4 loading-text text-primary">
+          Loading Profile Page
+        </div>
       </div>
     );
 
