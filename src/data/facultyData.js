@@ -285,6 +285,12 @@ export const facultyData = [
         image: images["cathyColomb.jpg"],
         email: "Cathyc@tbs.org",
       },
+      {
+        name: "Judy Burmeister",
+        title: "Instrumental",
+        image: images["judyBurmeister.jpg"],
+        email: "JudyB@tbs.org",
+      },
     ],
   },
   {
