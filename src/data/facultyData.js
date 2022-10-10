@@ -287,9 +287,9 @@ export const facultyData = [
       },
       {
         name: "Judy Burmeister",
-        title: "Instrumental",
+        title: "Band",
         image: images["judyBurmeister.jpg"],
-        email: "JudyB@tbs.org",
+        email: "Judyb@tbs.org",
       },
     ],
   },

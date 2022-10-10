@@ -44,8 +44,10 @@ const ProfilePage = () => {
 
   console.log(staff);
 
-  const { description, name, title_long, photos, profile_picture } =
+  const { description, name, title_long, photos, profile_picture, email } =
     staff.data.data[0].attributes;
+
+  console.log(staff.data.data[0].attributes);
 
   const profile_picture_url = profile_picture.data.attributes.url;
 
@@ -53,14 +55,19 @@ const ProfilePage = () => {
 
   return (
     <>
-      <section className="py-5 bg-light">
-        <h2 className="display-3 text-center">{name}</h2>
+      <section className="py-5 bg-light text-center">
+        <h2 className="text-center display-3">{title_long}</h2>
+
         <hr className="section-hr my-3" />
-        <h3 className="display-5 text-center text-primary">{title_long}</h3>
+        <a href={`mailto:${email}`} className="lead fs-4">
+          {email}
+        </a>
       </section>
 
-      <section className="py-5">
+      <section className="pb-5">
         <Container className="py-5">
+          <h2 className="display-5 mb-5 text-center">{name}</h2>
+
           <Row className="align-items-center mb-5">
             <Col xl={6} className="text-center mb-5 mb-xl-0">
               <img
