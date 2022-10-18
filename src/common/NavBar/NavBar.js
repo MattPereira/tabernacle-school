@@ -1,17 +1,18 @@
 import { useState } from "react";
-import "./NavBar.scss";
-
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import ts_logo from "../../assets/svgs/TS_LOGO_LIGHT.svg";
 
-import { BsFillPersonFill } from "react-icons/bs";
-import { IoSchool, IoBookSharp } from "react-icons/io5";
-import { GrMail } from "react-icons/gr";
-import { FaSchool } from "react-icons/fa";
+import "./NavBar.scss";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+
+import { useTheme } from "@mui/material/styles";
 
 import {
   AppBar,
@@ -28,11 +29,16 @@ import {
   Drawer,
 } from "@mui/material";
 
-import { useTheme } from "@mui/material/styles";
-
-import ts_logo from "../../assets/svgs/TS_LOGO_LIGHT.svg";
-
-const topNavItems = ["Renweb Login", "Contact Us", "Calendar", "Employment"];
+const topNavItems = [
+  { text: "Renweb", icon: <LockOpenOutlinedIcon />, path: "renweb.com" },
+  { text: "Contact", icon: <InfoOutlinedIcon />, path: "/connect#Contact" },
+  { text: "Calendar", icon: <CalendarTodayIcon />, path: "/campus#Calendar" },
+  {
+    text: "Employment",
+    icon: <WorkOutlineIcon />,
+    path: "/connect#Employment",
+  },
+];
 
 const midNavItems = [
   "About",
@@ -123,7 +129,7 @@ const NavBar = (props) => {
                   primaryTypographyProps={{
                     fontSize: "16px",
                     color: "white",
-                    fontFamily: "Didact Gothic",
+                    fontFamily: "Montserrat",
                     fontWeight: "bold",
                   }}
                 />
@@ -141,7 +147,7 @@ const NavBar = (props) => {
   return (
     <>
       <AppBar component="nav" elevation={0}>
-        <Toolbar sx={{ justifyContent: "space-between", py: 2 }}>
+        <Toolbar sx={{ justifyContent: "space-between", py: { md: 3, xs: 1 } }}>
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box
@@ -153,7 +159,7 @@ const NavBar = (props) => {
               <Typography
                 color="white"
                 variant="h4"
-                sx={{ fontFamily: "Didact Gothic", fontWeight: "bold" }}
+                sx={{ fontFamily: "Montserrat", fontWeight: "bold" }}
               >
                 Tabernacle School
               </Typography>
@@ -169,22 +175,25 @@ const NavBar = (props) => {
             <MenuIcon fontSize="large" />
           </IconButton>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            {topNavItems.map((item) => (
-              <Button
-                key={item}
-                component={NavLink}
-                to={`/${item}`}
-                sx={{ color: "#fff" }}
-              >
-                {item}
-              </Button>
-            ))}
+            {topNavItems.map((item) => {
+              const { icon, path, text } = item;
+              return (
+                <Button
+                  key={item}
+                  component={HashLink}
+                  to={path}
+                  sx={{ color: "#fff", fontFamily: "Montserrat" }}
+                >
+                  {icon} {text}
+                </Button>
+              );
+            })}
           </Box>
         </Toolbar>
         <Toolbar
           sx={{
             justifyContent: "center",
-            bgcolor: "lightgrey",
+            bgcolor: "#eeeeee",
             display: { xs: "none", md: "flex" },
           }}
         >
@@ -195,9 +204,10 @@ const NavBar = (props) => {
                 component={NavLink}
                 to={`/${item}`}
                 sx={{
-                  fontFamily: "Didact Gothic",
-                  fontSize: "1.1rem",
-                  fontWeight: "bold",
+                  fontFamily: "Montserrat",
+                  fontSize: "17px",
+                  fontWeight: 600,
+                  color: "black",
                 }}
               >
                 {item}
@@ -223,278 +233,6 @@ const NavBar = (props) => {
           {drawer}
         </Drawer>
       </Box>
-      <Navbar
-        collapseOnSelect
-        expand="xl"
-        className={navColour ? "sticky" : "navbar"}
-        variant="dark"
-        bg="dark"
-        fixed="top"
-      >
-        <Container fluid className="py-1 px-xl-4">
-          <Navbar.Brand
-            eventKey={1}
-            as={NavLink}
-            to="/"
-            className="navbar-brand fs-4 fw-bold"
-          >
-            <img
-              src={ts_logo}
-              alt="Tabernacle School logo"
-              className="img-fluid"
-              style={{
-                width: "2rem",
-                marginBottom: "0.7rem",
-                marginRight: "7px",
-              }}
-            />
-            Tabernacle School
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto" defaultActiveKey="#home">
-              <ul className="navbar-nav m-auto align-items-center text-center">
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey={2} as={NavLink} to="/about">
-                      <BsFillPersonFill style={{ marginBottom: "2px" }} /> About
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu text-white"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#History">
-                        History
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#Faculty">
-                        Faculty
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#Programs">
-                        Programs
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#Values">
-                        Values
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/about#Vision">
-                        Vision
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey={3} as={NavLink} to="/admissions">
-                      <IoSchool style={{ marginBottom: "2px" }} /> Admissions
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/admissions#Tuition"
-                      >
-                        Tuition & Fees
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/admissions#Schedule"
-                      >
-                        Schedule Tour
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey={4} as={NavLink} to="/academics">
-                      <IoBookSharp style={{ marginBottom: "2px" }} /> Academics
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/academics#Preschool"
-                      >
-                        Preschool
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/academics#Elementary"
-                      >
-                        Elementary
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/academics#Junior"
-                      >
-                        Junior High
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/academics#Distance"
-                      >
-                        Distance Learning
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/academics#Common"
-                      >
-                        Common Core
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/academics#eslr">
-                        ESLR
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey="5" as={NavLink} to="/campus">
-                      <FaSchool style={{ marginBottom: "2px" }} /> Campus
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink className="dropdown-item" to="/campus#Calendar">
-                        Calendar
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/campus#Athletics"
-                      >
-                        Athletics
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/campus#Daycare">
-                        Daycare
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/campus#Outreach">
-                        Outreach
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey={6} as={NavLink} to="/family">
-                      <img
-                        src={ts_logo}
-                        alt="Tabernacle School logo"
-                        className="img-fluid"
-                        style={{
-                          width: "1.25rem",
-                          marginBottom: "7px",
-                          marginRight: "4px",
-                        }}
-                      />
-                      Family
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink className="dropdown-item" to="/family#Portals">
-                        Portals
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/family#Information"
-                      >
-                        Information
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/family#Tiger">
-                        Tiger Life
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink className="dropdown-item" to="/family#Forms">
-                        Forms
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown">
-                  <Nav.Item className="fs-5">
-                    <Nav.Link eventKey={7} as={NavLink} to="/connect">
-                      <GrMail style={{ marginBottom: "2px" }} /> Connect
-                    </Nav.Link>
-                  </Nav.Item>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="mainNavbarDropdown"
-                  >
-                    <li>
-                      <HashLink className="dropdown-item" to="/connect#Contact">
-                        Contact Us
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/connect#Location"
-                      >
-                        Location
-                      </HashLink>
-                    </li>
-                    <li>
-                      <HashLink
-                        className="dropdown-item"
-                        to="/connect#Employment"
-                      >
-                        Employment
-                      </HashLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </>
   );
 };

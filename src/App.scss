@@ -9,13 +9,13 @@
 
 
   .content-wrap {
-    padding-top: 80px; /* Navbar height */
+    padding-top: 152px; /* Navbar height */
     // padding-bottom: 2.5rem; /* Footer height */
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     .content-wrap {
-    padding-top: 60px;
+    padding-top: 57px;
      } /* Navbar height */
   }
     
