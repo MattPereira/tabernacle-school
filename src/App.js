@@ -2,7 +2,6 @@ import { Route, Routes, Navigate } from "react-router-dom";
 
 import "./App.scss";
 import "./custom.scss";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./common/NavBar/NavBar";
 import Footer from "./common/Footer";
 
@@ -28,42 +27,56 @@ import OrientationVideo from "./pages/Family/TigerLife/OrientationVideo";
 
 import ScrollToTop from "./common/ScrollToTop";
 
+import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
+
 function App() {
+  let theme = createTheme({
+    typography: {
+      // h1: {
+      //   fontFamily: "Lilita One",
+      // },
+    },
+  });
+
+  theme = responsiveFontSizes(theme);
+
   return (
     <div className="App page-container">
-      <NavBar />
-      <div className="content-wrap">
-        <ScrollToTop>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route exact path="/about/staff/:id" element={<ProfilePage />} />
-            <Route path="/admissions" element={<Admissions />} />
-            <Route path="/academics" element={<Academics />} />
-            <Route path="/campus" element={<Campus />} />
-            <Route path="/connect" element={<Connect />} />
-            <Route
-              path="/family/uniform_guidelines"
-              element={<UniformGuidelines />}
-            />
-            <Route path="/family/orientation" element={<Orientation />} />
-            <Route
-              path="/family/orientation_video"
-              element={<OrientationVideo />}
-            />
+      <ThemeProvider theme={theme}>
+        <NavBar />
+        <div className="content-wrap">
+          <ScrollToTop>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route exact path="/about/staff/:id" element={<ProfilePage />} />
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/academics" element={<Academics />} />
+              <Route path="/campus" element={<Campus />} />
+              <Route path="/connect" element={<Connect />} />
+              <Route
+                path="/family/uniform_guidelines"
+                element={<UniformGuidelines />}
+              />
+              <Route path="/family/orientation" element={<Orientation />} />
+              <Route
+                path="/family/orientation_video"
+                element={<OrientationVideo />}
+              />
 
-            <Route path="/family/facts" element={<FactsHelp />} />
-            <Route path="/family/supply_list" element={<SupplyList />} />
+              <Route path="/family/facts" element={<FactsHelp />} />
+              <Route path="/family/supply_list" element={<SupplyList />} />
 
-            <Route path="/family/discipline" element={<Discipline />} />
+              <Route path="/family/discipline" element={<Discipline />} />
 
-            <Route path="/family" element={<Family />} />
+              <Route path="/family" element={<Family />} />
 
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </ScrollToTop>
-      </div>
-      <Footer />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </ScrollToTop>
+        </div>
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 }
