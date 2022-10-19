@@ -10,7 +10,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
+// import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
 import { useTheme } from "@mui/material/styles";
 
@@ -30,12 +31,24 @@ import {
 } from "@mui/material";
 
 const topNavItems = [
-  { text: "Renweb", icon: <LockOpenOutlinedIcon />, path: "renweb.com" },
-  { text: "Contact", icon: <InfoOutlinedIcon />, path: "/connect#Contact" },
-  { text: "Calendar", icon: <CalendarTodayIcon />, path: "/campus#Calendar" },
+  // {
+  //   text: "Renweb",
+  //   icon: <LockOpenOutlinedIcon fontSize="small" />,
+  //   path: "/renweb",
+  // },
+  {
+    text: "Contact",
+    icon: <InfoOutlinedIcon fontSize="small" />,
+    path: "/connect#Contact",
+  },
+  {
+    text: "Calendar",
+    icon: <CalendarTodayIcon fontSize="small" />,
+    path: "/campus#Calendar",
+  },
   {
     text: "Employment",
-    icon: <WorkOutlineIcon />,
+    icon: <WorkOutlineIcon fontSize="small" />,
     path: "/connect#Employment",
   },
 ];
@@ -49,14 +62,22 @@ const midNavItems = [
   "Connect",
 ];
 
+const alertNavItems = [
+  {
+    text: "Preschool Hiring",
+    icon: <NotificationsActiveOutlinedIcon fontSize="small" />,
+    path: "/connect#Employment",
+  },
+];
+
 const NavBar = (props) => {
-  const [navColour, updateNavbar] = useState(false);
+  const [transparent, setTransparent] = useState(false);
 
   function scrollHandler() {
     if (window.scrollY >= 75) {
-      updateNavbar(true);
+      setTransparent(true);
     } else {
-      updateNavbar(false);
+      setTransparent(false);
     }
   }
 
@@ -71,6 +92,7 @@ const NavBar = (props) => {
   };
 
   const theme = useTheme();
+  console.log(theme.palette);
 
   const drawer = (
     <Box
@@ -116,13 +138,8 @@ const NavBar = (props) => {
       <Divider sx={{ border: "0.5px solid white" }} />
       <List sx={{ px: 2 }}>
         {midNavItems.map((item) => (
-          <>
-            <ListItem
-              key={item}
-              component={NavLink}
-              to={`/${item}`}
-              disablePadding
-            >
+          <div key={item}>
+            <ListItem component={NavLink} to={`/${item}`} disablePadding>
               <ListItemButton>
                 <ListItemText
                   primary={item.toUpperCase()}
@@ -136,8 +153,31 @@ const NavBar = (props) => {
               </ListItemButton>
             </ListItem>
             <Divider sx={{ border: "1px solid white" }} />
-          </>
+          </div>
         ))}
+        <Box sx={{ py: 1 }}></Box>
+        {topNavItems.map((item) => {
+          const { text, icon, path } = item;
+          return (
+            <div key={text}>
+              <Button
+                component={HashLink}
+                to={path}
+                sx={{
+                  color: "#fff",
+                  fontFamily: "Montserrat",
+                  p: 2,
+                  "&:hover": {
+                    color: "white",
+                    fontWeight: "bold",
+                  },
+                }}
+              >
+                {icon} <span style={{ marginLeft: "4px" }}>{text}</span>
+              </Button>
+            </div>
+          );
+        })}
       </List>
     </Box>
   );
@@ -146,31 +186,36 @@ const NavBar = (props) => {
     windoo !== undefined ? () => windoo().document.body : undefined;
   return (
     <>
-      <AppBar component="nav" elevation={0}>
-        <Toolbar sx={{ justifyContent: "space-between", py: { md: 3, xs: 1 } }}>
+      <AppBar component="nav" elevation={0} color="transparent">
+        <Toolbar
+          sx={{
+            bgcolor: "#1565c0",
+            justifyContent: "space-between",
+            py: { md: 2, xs: 1 },
+          }}
+        >
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box
                 component="img"
                 alt="ts logo"
                 src={ts_logo}
-                sx={{ height: "40px", width: "40px", pb: 1, mr: 1 }}
+                sx={{ height: "45px", width: "45px", mr: 1, pb: 1 }}
               />
               <Typography
                 color="white"
                 variant="h4"
-                sx={{ fontFamily: "Montserrat", fontWeight: "bold" }}
+                sx={{ fontFamily: "Roboto Mono" }}
               >
                 Tabernacle School
               </Typography>
             </Box>
           </NavLink>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: "none" } }}
+            sx={{ display: { md: "none" }, color: "white" }}
           >
             <MenuIcon fontSize="large" />
           </IconButton>
@@ -179,12 +224,20 @@ const NavBar = (props) => {
               const { icon, path, text } = item;
               return (
                 <Button
-                  key={item}
+                  key={text}
                   component={HashLink}
                   to={path}
-                  sx={{ color: "#fff", fontFamily: "Montserrat" }}
+                  sx={{
+                    color: "#fff",
+                    fontFamily: "Montserrat",
+                    p: 2,
+                    "&:hover": {
+                      color: "white",
+                      fontWeight: "bold",
+                    },
+                  }}
                 >
-                  {icon} {text}
+                  {icon} <span style={{ marginLeft: "4px" }}>{text}</span>
                 </Button>
               );
             })}
@@ -193,29 +246,74 @@ const NavBar = (props) => {
         <Toolbar
           sx={{
             justifyContent: "center",
-            bgcolor: "#eeeeee",
+            bgcolor: transparent
+              ? "rgba(255, 255, 255, 0.9)"
+              : "rgb(224, 230, 233)",
             display: { xs: "none", md: "flex" },
           }}
         >
-          <Box>
+          <Box sx={{ display: "flex" }}>
             {midNavItems.map((item) => (
-              <Button
-                key={item}
-                component={NavLink}
-                to={`/${item}`}
-                sx={{
-                  fontFamily: "Montserrat",
-                  fontSize: "17px",
-                  fontWeight: 600,
-                  color: "black",
-                }}
-              >
-                {item}
-              </Button>
+              <Box key={item}>
+                <Button
+                  component={NavLink}
+                  to={`/${item}`}
+                  sx={{
+                    p: 2,
+                    // py: 2,
+                    fontFamily: "Montserrat",
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor: "#fff",
+                      color: "#1565c0",
+                    },
+                  }}
+                >
+                  {item}
+                </Button>
+              </Box>
             ))}
           </Box>
         </Toolbar>
+        <Toolbar
+          variant="dense"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            bgcolor: transparent ? "rgba(255, 255, 255, 0.9)" : "#ffffff",
+          }}
+        >
+          <Box>
+            {alertNavItems.map((item) => {
+              const { icon, path, text } = item;
+              return (
+                <Box key={text}>
+                  <Button
+                    component={HashLink}
+                    to={`${path}`}
+                    sx={{
+                      p: 1.5,
+                      fontFamily: "Montserrat",
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "black",
+                      "&:hover": {
+                        backgroundColor: "#fff",
+                        color: "#1565c0",
+                      },
+                    }}
+                  >
+                    {icon} <span style={{ marginLeft: "5px" }}>{text}</span>
+                  </Button>
+                </Box>
+              );
+            })}
+          </Box>
+        </Toolbar>
       </AppBar>
+
       <Box component="nav">
         <Drawer
           anchor="top"
@@ -227,7 +325,7 @@ const NavBar = (props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", md: "none" },
           }}
         >
           {drawer}

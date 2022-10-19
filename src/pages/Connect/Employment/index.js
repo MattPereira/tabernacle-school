@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import application from "../../../assets/images/connect/application.pdf";
+import employment from "../../../assets/images/connect/employment.jpg";
 
 const Employment = () => {
   return (
@@ -9,18 +10,31 @@ const Employment = () => {
       <Container className="py-5">
         <Row>
           <Col lg={6}>
-            <p className="lead">
-              We are hiring! Tabernacle School is hiring teachers for our
-              elementary department for the 2022-2023 school year. All
-              applicants must hold a bachelor's degree from an accredited
-              university and be able to sign the school Statement of Faith.
-              Tabernacle School is an evangelical Christian school focused on
-              providing an excellent Christ centered education in spiritual,
-              academic and extracurricular subjects. Our teachers and staff help
-              students acquire the skills and attitudes necessary to be Faithful
-              Followers of Jesus Christ, Life-Long Learners, Citizens of
-              Character and Academic Achievers.{" "}
-            </p>
+            <Row className="justify-content-center">
+              <Col lg={10}>
+                <img
+                  src={employment}
+                  alt="join our team"
+                  className="img-fluid mb-4 rounded"
+                />
+              </Col>
+            </Row>
+
+            <h5 className="fw-bold">Now Hiring Preschool Teachers!</h5>
+            <ul>
+              <li>
+                Tabernacle Preschool is looking for part time candidates who
+                have at least six ECE units.
+              </li>
+              <li>
+                Please contact Betty Mason at ElizabethM@tbs.org or 925-695-9169
+                for more information
+              </li>
+              <li>
+                Applications may be picked up in school office or downloaded{" "}
+                <a href={application}>here</a>
+              </li>
+            </ul>
             <div className="text-center my-5">
               <a
                 href={application}
@@ -33,6 +47,19 @@ const Employment = () => {
             </div>
           </Col>
           <Col lg={6}>
+            <p>
+              We are hiring! Tabernacle School is hiring teachers for our
+              elementary department for the 2022-2023 school year. All
+              applicants must hold a bachelor's degree from an accredited
+              university and be able to sign the school Statement of Faith.
+              Tabernacle School is an evangelical Christian school focused on
+              providing an excellent Christ centered education in spiritual,
+              academic and extracurricular subjects. Our teachers and staff help
+              students acquire the skills and attitudes necessary to be Faithful
+              Followers of Jesus Christ, Life-Long Learners, Citizens of
+              Character and Academic Achievers.{" "}
+            </p>
+
             <h5 className="fw-bold">Required Application Materials</h5>
             <ul>
               <li>
