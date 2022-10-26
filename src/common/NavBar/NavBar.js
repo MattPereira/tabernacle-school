@@ -64,7 +64,7 @@ const midNavItems = [
 
 const alertNavItems = [
   {
-    text: "Preschool Hiring",
+    text: "Preschool Hiring!",
     icon: <NotificationsActiveOutlinedIcon fontSize="small" />,
     path: "/connect#Employment",
   },
