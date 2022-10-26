@@ -6,7 +6,6 @@
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@fullcalendar/core": "^5.11.2",
     "@fullcalendar/daygrid": "^5.11.2",
     "@fullcalendar/google-calendar": "^5.11.2",
     "@fullcalendar/react": "^5.11.2",
@@ -34,7 +33,7 @@
     "eject": "react-scripts eject",
     "build": "react-scripts build",
     "pre-deploy": "cp build/index.html build/200.html",
-    "deploy": "surge build --domain tabernacle-school.surge.sh"
+    "deploy": "surge build --domain tabernacle.school"
   },
   "eslintConfig": {
     "extends": [
