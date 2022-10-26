@@ -35,7 +35,7 @@
     "eject": "react-scripts eject",
     "build": "react-scripts build",
     "pre-deploy": "cp build/index.html build/200.html",
-    "deploy": "surge build --domain tabernacle.school"
+    "deploy": "surge build --domain tabernacle-school.surge.sh"
   },
   "eslintConfig": {
     "extends": [
