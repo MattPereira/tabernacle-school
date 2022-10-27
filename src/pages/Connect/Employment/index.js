@@ -27,8 +27,9 @@ const Employment = () => {
                 have at least six ECE units.
               </li>
               <li>
-                Please contact Betty Mason at ElizabethM@tbs.org or 925-695-9169
-                for more information
+                Please contact Betty Mason at{" "}
+                <a href="mailto:ElizabethM@tbs.org">ElizabethM@tbs.org</a> or{" "}
+                <a href="tel:925-685-9169">925-685-9169</a> for more information
               </li>
               <li>
                 Applications may be picked up in school office or downloaded{" "}
@@ -48,16 +49,16 @@ const Employment = () => {
           </Col>
           <Col lg={6}>
             <p>
-              We are hiring! Tabernacle School is hiring teachers for our
-              elementary department for the 2022-2023 school year. All
-              applicants must hold a bachelor's degree from an accredited
-              university and be able to sign the school Statement of Faith.
-              Tabernacle School is an evangelical Christian school focused on
-              providing an excellent Christ centered education in spiritual,
-              academic and extracurricular subjects. Our teachers and staff help
-              students acquire the skills and attitudes necessary to be Faithful
-              Followers of Jesus Christ, Life-Long Learners, Citizens of
-              Character and Academic Achievers.{" "}
+              We are hiring! Tabernacle School is hiring substitute teachers and
+              support staff for the 2022-2023 school year. All elementary and
+              middle school teaching staff must hold a bachelor's degree from an
+              accredited university and be able to sign the school Statement of
+              Faith. Tabernacle School is an evangelical Christian school
+              focused on providing an excellent Christ centered education in
+              spiritual, academic and extracurricular subjects. Our teachers and
+              staff help students acquire the skills and attitudes necessary to
+              be Faithful Followers of Jesus Christ, Life-Long Learners,
+              Citizens of Character and Academic Achievers.{" "}
             </p>
 
             <h5 className="fw-bold">Required Application Materials</h5>
