@@ -14,6 +14,7 @@ import Academics from "./pages/Academics";
 import Campus from "./pages/Campus";
 import Connect from "./pages/Connect";
 import Family from "./pages/Family";
+import Renweb from "./pages/Renweb";
 
 /** The family/Information Pages */
 import Orientation from "./pages/Family/Information/Orientation";
@@ -32,9 +33,9 @@ import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
 function App() {
   let theme = createTheme({
     typography: {
-      // h1: {
-      //   fontFamily: "Lilita One",
-      // },
+      h1: {
+        fontFamily: "Cubano",
+      },
     },
   });
 
@@ -54,6 +55,7 @@ function App() {
               <Route path="/academics" element={<Academics />} />
               <Route path="/campus" element={<Campus />} />
               <Route path="/connect" element={<Connect />} />
+              <Route path="/renweb" element={<Renweb />} />
               <Route
                 path="/family/uniform_guidelines"
                 element={<UniformGuidelines />}

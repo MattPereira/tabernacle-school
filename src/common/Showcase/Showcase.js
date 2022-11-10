@@ -1,18 +1,36 @@
-import "./Showcase.scss";
+import { Typography, Box } from "@mui/material";
+import backgroundImage from "../../assets/images/showcase.jpg";
 
 const Showcase = ({ title, extra }) => {
+  // console.log(window.location.pathname);
   return (
-    <section
-      id={`${title.toLowerCase()}-showcase`}
-      className="d-flex justify-content-center align-items-center showcase"
+    <Box
+      sx={{
+        minHeight: "275px",
+        position: "relative",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: `url(${backgroundImage}) center / cover no-repeat`,
+      }}
     >
-      <div className="showcase-overlay"></div>
-      <div className="showcase-header">
-        <h1 className="display-1 text-white">
+      <Box
+        sx={{
+          background: "rgba(0, 0, 0, 0.4)",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 1,
+        }}
+      ></Box>
+      <Box sx={{ zIndex: 2 }}>
+        <Typography variant="h1" sx={{ color: "white" }}>
           {title} {extra}
-        </h1>
-      </div>
-    </section>
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import ts_logo from "../../assets/svgs/TS_LOGO_LIGHT.svg";
-
-import "./NavBar.scss";
+import ts_logo from "../../assets/svgs/ts_logo.svg";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -11,7 +9,7 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
-// import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
 import { useTheme } from "@mui/material/styles";
 
@@ -31,11 +29,11 @@ import {
 } from "@mui/material";
 
 const topNavItems = [
-  // {
-  //   text: "Renweb",
-  //   icon: <LockOpenOutlinedIcon fontSize="small" />,
-  //   path: "/renweb",
-  // },
+  {
+    text: "Renweb",
+    icon: <LockOpenOutlinedIcon fontSize="small" />,
+    path: "/renweb",
+  },
   {
     text: "Contact",
     icon: <InfoOutlinedIcon fontSize="small" />,
@@ -54,12 +52,12 @@ const topNavItems = [
 ];
 
 const midNavItems = [
-  "About",
-  "Admissions",
-  "Academics",
-  "Campus",
-  "Family",
-  "Connect",
+  "about",
+  "admissions",
+  "academics",
+  "campus",
+  "family",
+  "connect",
 ];
 
 const alertNavItems = [

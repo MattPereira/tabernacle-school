@@ -2,7 +2,7 @@ import { HashLink } from "react-router-hash-link";
 
 const Information = () => {
   return (
-    <section id="footer" className="bg-dark text-white py-5">
+    <section id="bottom-info" className="bg-dark text-white py-5">
       <div className="container py-md-5">
         <div className="row align-items-center text-center justify-content-between">
           <div className="col-md-4 mb-3 mb-md-0 lead">
