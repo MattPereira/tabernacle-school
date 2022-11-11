@@ -2,10 +2,12 @@ import { Route, Routes, Navigate } from "react-router-dom";
 
 import "./App.scss";
 import "./custom.scss";
+import ScrollToTop from "./common/ScrollToTop";
+
 import NavBar from "./common/NavBar/NavBar";
 import Footer from "./common/Footer";
 
-/** The "main" pages accessible throught the navbar */
+/***** The "main" pages accessible throught the navbar *****/
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
@@ -16,17 +18,15 @@ import Connect from "./pages/Connect";
 import Family from "./pages/Family";
 import Renweb from "./pages/Renweb";
 
-/** The family/Information Pages */
+/***** The "/family/information" Pages */
 import Orientation from "./pages/Family/Information/Orientation";
 import FactsHelp from "./pages/Family/Information/FactsHelp";
 import SupplyList from "./pages/Family/Information/SupplyList";
 import UniformGuidelines from "./pages/Family/Information/UniformGuidelines";
 import Discipline from "./pages/Family/Information/Discipline";
 
-/** The family/Information Pages */
+/***** The family/tigerlife Pages */
 import OrientationVideo from "./pages/Family/TigerLife/OrientationVideo";
-
-import ScrollToTop from "./common/ScrollToTop";
 
 import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
 
