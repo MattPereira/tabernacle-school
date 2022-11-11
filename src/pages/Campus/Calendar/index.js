@@ -1,12 +1,9 @@
 import React from "react";
 
-import events from "../../../assets/images/family/information/calendar.pdf";
-
 import { Container, Col, Row } from "react-bootstrap";
 import FullCalendar from "@fullcalendar/react";
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
-
 import { googleApiKey } from "../../../secrets";
 
 const SchoolCalendar = () => {
@@ -27,7 +24,7 @@ const SchoolCalendar = () => {
               events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
             />
             <a
-              href={events}
+              href="https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing"
               className="btn btn-primary text-white fw-bold mt-5"
             >
               All Events

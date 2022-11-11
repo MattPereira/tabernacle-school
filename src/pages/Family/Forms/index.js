@@ -1,10 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import technology from "../../../assets/images/family/forms/technology.pdf";
-import sports from "../../../assets/images/family/forms/sports.pdf";
-import medication from "../../../assets/images/family/forms/medication.pdf";
-import bicycle from "../../../assets/images/family/forms/bicycle.pdf";
-
 import {
   FaLaptopCode,
   FaBicycle,
@@ -21,7 +16,7 @@ const Forms = () => {
         <Row className="text-center">
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={technology}
+              href="https://docs.google.com/document/d/1UG-KgfmIjsgstryN86A6uzKw59r_twLPAP74-3GKGvU/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
@@ -32,7 +27,7 @@ const Forms = () => {
           </Col>
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={bicycle}
+              href="https://drive.google.com/file/d/1CpmlHSZ23FMp4UxCpLKw80nDpNEO6sze/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
@@ -43,7 +38,7 @@ const Forms = () => {
           </Col>
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={medication}
+              href="https://drive.google.com/file/d/1EIfpUITQCQpeMKXpzInPcFAO5cdHzA4X/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
@@ -54,7 +49,7 @@ const Forms = () => {
           </Col>
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={sports}
+              href="https://drive.google.com/file/d/1XMxpVPuQXgngYSy_SeEpGvOZ2EoBA7RL/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"

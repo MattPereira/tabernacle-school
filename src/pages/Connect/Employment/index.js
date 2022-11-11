@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import application from "../../../assets/images/connect/application.pdf";
 import employment from "../../../assets/images/connect/employment.jpg";
 
 const Employment = () => {
@@ -33,12 +32,18 @@ const Employment = () => {
               </li>
               <li>
                 Applications may be picked up in school office or downloaded{" "}
-                <a href={application}>here</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/155waZK-5Jq3IwcDit2wTdlNtBAxpqeKW/view?usp=sharing"
+                >
+                  here
+                </a>
               </li>
             </ul>
             <div className="text-center my-5">
               <a
-                href={application}
+                href="https://drive.google.com/file/d/155waZK-5Jq3IwcDit2wTdlNtBAxpqeKW/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-dark btn-lg fw-bold"

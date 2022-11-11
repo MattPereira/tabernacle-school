@@ -1,21 +1,16 @@
+import { Link } from "react-router-dom";
+
 import {
   FaBook,
   FaMoneyCheck,
   FaParachuteBox,
   FaUserTie,
 } from "react-icons/fa";
-
 import { RiParentFill } from "react-icons/ri";
 import { BsFillQuestionCircleFill } from "react-icons/bs";
-
 import { IoCalendar, IoWarning } from "react-icons/io5";
 
-import { Link } from "react-router-dom";
-
 import { Container, Row, Col } from "react-bootstrap";
-
-import handbook from "../../../assets/images/family/information/school-handbook.pdf";
-import calendar from "../../../assets/images/family/information/calendar.pdf";
 
 const Information = () => {
   return (
@@ -26,7 +21,7 @@ const Information = () => {
         <Row className="text-center mb-md-5">
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={handbook}
+              href="https://drive.google.com/file/d/1BERNJUWaKWVnerCK0cIbFh9ZVib4xSt0/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
@@ -63,7 +58,7 @@ const Information = () => {
         <Row className="row text-center justify-content-around">
           <Col xs={6} md={3} className="mb-5">
             <a
-              href={calendar}
+              href="https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
