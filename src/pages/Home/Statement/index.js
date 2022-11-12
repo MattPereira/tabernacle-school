@@ -1,40 +1,49 @@
-import { Carousel } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Container, Typography } from "@mui/material";
 
-import { Container, Box, Typography } from "@mui/material";
+const statements = [
+  {
+    title: "Mission",
+    text: "Teaching in all areas of life, the Truth, as centered in the Lord Jesus of the Bible.",
+  },
+  {
+    title: "Vision",
+    text: "To see children grow up and reach their full potential by providing an environment that allows students to blossom as unique individuals created in the image of God.",
+  },
+  {
+    title: "Philosophy",
+    text: "All children are gifted, and our responsibility is to help students discover and develop the unique abilities that God has given them.",
+  },
+];
 
 const Statement = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const maxSteps = statements.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeStep === maxSteps - 1) {
+        setActiveStep(0);
+      } else {
+        setActiveStep(activeStep + 1);
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [activeStep, maxSteps]);
+
   return (
-    <Container sx={{ py: 5, minHeight: "300px" }}>
-      <Carousel
-        controls={false}
-        indicators={false}
-        className="text-center p-5"
-        interval={8000}
-        fade
-      >
-        <Carousel.Item>
-          <Typography variant="h4">Mission</Typography>
-          <p className="lead">
-            Teaching in all areas of life, the Truth, as centered in the Lord
-            Jesus of the Bible.
-          </p>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Typography variant="h4">Vision</Typography>
-          <p className="lead">
-            To see children grow up and reach their full potential by providing
-            an environment that allows students to blossom as unique individuals
-            created in the image of God.
-          </p>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Typography variant="h4">Philosophy</Typography>
-          <p className="lead">
-            All children are gifted, and our responsibility is to help students
-            discover and develop the unique abilities that God has given them.
-          </p>
-        </Carousel.Item>
-      </Carousel>
+    <Container
+      sx={{
+        py: 5,
+        minHeight: "300px",
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Typography variant="h4">{statements[activeStep].title}</Typography>
+      <Typography variant="p">{statements[activeStep].text}</Typography>
     </Container>
   );
 };

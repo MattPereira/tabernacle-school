@@ -38,8 +38,16 @@ function App() {
       h2: {
         fontFamily: "Copse",
       },
+      h3: {
+        fontFamily: "Copse",
+        fontSize: "2.5rem",
+      },
       h4: {
         fontFamily: "Copse",
+      },
+      p: {
+        fontFamily: "Didact Gothic",
+        fontSize: "20px",
       },
     },
   });
