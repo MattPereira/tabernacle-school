@@ -1,10 +1,11 @@
 import { Container } from "react-bootstrap";
 
+import SectionTitle from "../../../common/SectionTitle";
+
 const History = () => {
   return (
     <section id="History" className="py-5">
-      <h2 className="display-3 text-center pt-5">History</h2>
-      <hr className="section-hr" />
+      <SectionTitle title="History" />
       <Container className="py-5">
         <h4 className="fw-bold">Founding</h4>
         <p className="lead">

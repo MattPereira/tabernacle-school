@@ -1,7 +1,6 @@
-import { Route, Routes, Navigate } from "react-router-dom";
-
-import "./App.scss";
 import "./custom.scss";
+
+import { Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
 
 import NavBar from "./common/NavBar/NavBar";
@@ -36,50 +35,48 @@ function App() {
       h1: {
         fontFamily: "Cubano",
       },
+      h2: {
+        fontFamily: "Copse",
+      },
+      h4: {
+        fontFamily: "Copse",
+      },
     },
   });
 
   theme = responsiveFontSizes(theme);
 
   return (
-    <div className="App page-container">
-      <ThemeProvider theme={theme}>
-        <NavBar />
-        <div className="content-wrap">
-          <ScrollToTop>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route exact path="/about/staff/:id" element={<ProfilePage />} />
-              <Route path="/admissions" element={<Admissions />} />
-              <Route path="/academics" element={<Academics />} />
-              <Route path="/campus" element={<Campus />} />
-              <Route path="/connect" element={<Connect />} />
-              <Route path="/renweb" element={<Renweb />} />
-              <Route
-                path="/family/uniform_guidelines"
-                element={<UniformGuidelines />}
-              />
-              <Route path="/family/orientation" element={<Orientation />} />
-              <Route
-                path="/family/orientation_video"
-                element={<OrientationVideo />}
-              />
-
-              <Route path="/family/facts" element={<FactsHelp />} />
-              <Route path="/family/supply_list" element={<SupplyList />} />
-
-              <Route path="/family/discipline" element={<Discipline />} />
-
-              <Route path="/family" element={<Family />} />
-
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-          </ScrollToTop>
-        </div>
-        <Footer />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <NavBar />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route exact path="/about/staff/:id" element={<ProfilePage />} />
+          <Route path="/admissions" element={<Admissions />} />
+          <Route path="/academics" element={<Academics />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/renweb" element={<Renweb />} />
+          <Route
+            path="/family/uniform_guidelines"
+            element={<UniformGuidelines />}
+          />
+          <Route path="/family/orientation" element={<Orientation />} />
+          <Route
+            path="/family/orientation_video"
+            element={<OrientationVideo />}
+          />
+          <Route path="/family/facts" element={<FactsHelp />} />
+          <Route path="/family/supply_list" element={<SupplyList />} />
+          <Route path="/family/discipline" element={<Discipline />} />
+          <Route path="/family" element={<Family />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </ScrollToTop>
+      <Footer />
+    </ThemeProvider>
   );
 }
 
