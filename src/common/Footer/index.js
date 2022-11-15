@@ -1,53 +1,173 @@
-import FurtherAction from "./FurtherAction";
-import Information from "./Information";
-import { BsArrowUpShort } from "react-icons/bs";
-
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import {
+  Grid,
+  Button,
+  Box,
+  Divider,
+  Container,
+  Typography,
+  IconButton,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 const Footer = () => {
-  const [show, setShow] = useState(false);
+  const StyledButton = styled(Button)(({ theme }) => ({
+    width: "100%",
+    color: "white",
+    border: "1px solid white",
+    fontSize: "16px",
+    fontWeight: 700,
+    padding: "15px 0px",
+    "&:hover": {
+      color: "white",
+      border: `1px solid ${theme.palette.grey[500]}`,
+      backgroundColor: "#c0ac15",
+    },
+  }));
 
-  function scrollHandler() {
-    if (window.scrollY >= 500) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  }
+  const StyledIconButton = styled(IconButton)(({ theme }) => ({
+    color: "white",
+    border: "1px solid white",
+    borderRadius: "50%",
+    padding: "16px",
+    "&:hover": {
+      color: "white",
+      backgroundColor: "#c0ac15",
+      border: "1px solid #c0ac15",
+    },
+  }));
 
-  window.addEventListener("scroll", scrollHandler);
   return (
     <>
-      <FurtherAction />
-      <Information />
-      <div className="text-center py-3 bg-secondary">
-        <a
-          href="https://matt-pereira.surge.sh/"
-          className="text-decoration-none link-light"
-        >
-          Website by Matt Pereira
-        </a>
-      </div>
-      {/* 👇️ scroll to top on button click */}
-      <span
-        className={show ? "scroll-to-top" : "scroll-to-top d-none"}
-        onClick={() => {
-          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-        }}
-        style={{
-          position: "fixed",
-          fontSize: "20px",
-          bottom: "40px",
-          right: "20px",
-          textAlign: "center",
-          cursor: "pointer",
-          background: "white",
-          borderRadius: "50%",
-          border: "3px solid #0984e3",
-        }}
-      >
-        <BsArrowUpShort className="display-4 text-primary" />
-      </span>
+      <Box sx={{ bgcolor: "#1e88e5", py: 9 }}>
+        <Container>
+          <Box>
+            <Grid container spacing={4} sx={{ px: { xs: 0, md: 15 } }}>
+              <Grid item xs={12} md={4}>
+                <StyledButton
+                  component={HashLink}
+                  to="/connect#Contact"
+                  variant="outlined"
+                >
+                  Contact Us
+                </StyledButton>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <StyledButton
+                  variant="outlined"
+                  component={HashLink}
+                  to="/admissions#Schedule"
+                >
+                  Request Tour
+                </StyledButton>
+              </Grid>
+
+              <Grid item xs={12} md={4}>
+                <StyledButton
+                  component={HashLink}
+                  variant="outlined"
+                  to="/connect#Employment"
+                >
+                  Employment
+                </StyledButton>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
+      <Box sx={{ bgcolor: "#1565c0", py: 5 }}>
+        <Container>
+          <Grid
+            container
+            justifyContent="space-between"
+            sx={{
+              py: 5,
+              color: "white",
+              justifyContent: { xs: "center", md: "space-between" },
+            }}
+          >
+            <Grid item sx={{ textAlign: { xs: "center", md: "start" } }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                TABERNACLE CHRISTIAN SCHOOL
+              </Typography>
+              <Box>
+                <Typography variant="p">4380 Concord Blvd</Typography>
+              </Box>
+              <Box>
+                <Typography variant="p">Concord, CA 94521</Typography>
+              </Box>
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="p">925.685.9169</Typography>
+              </Box>
+              <Box sx={{ mb: { xs: 2, md: 0 } }}>
+                <Typography
+                  component="a"
+                  href="https://goo.gl/maps/bzszKK9jY9ngSiDE9"
+                  sx={{
+                    color: "#E6BE67",
+                    fontWeight: 600,
+                    textDecoration: "none",
+
+                    "&:hover": {
+                      textDecoration: "underline",
+                      color: "#E6BE67",
+                    },
+                  }}
+                >
+                  DIRECTIONS
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item>
+              <Box sx={{ mb: { xs: 3 } }}>
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#E6BE67", fontWeight: 600 }}
+                >
+                  <em>Love God. Learn for life. Lead like Christ.</em>
+                </Typography>
+              </Box>
+              <Grid
+                container
+                spacing={2}
+                sx={{ justifyContent: { xs: "center", md: "end" } }}
+              >
+                <Grid item>
+                  <StyledIconButton
+                    component="a"
+                    href="https://www.facebook.com/people/Tabernacle-School/100064024872370/"
+                  >
+                    <FacebookOutlinedIcon />
+                  </StyledIconButton>
+                </Grid>
+                <Grid item>
+                  <StyledIconButton component={Link} to="/campus#calendar">
+                    <CalendarMonthIcon />
+                  </StyledIconButton>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Divider sx={{ borderTop: "2px solid white" }} />
+          <Grid
+            container
+            justifyContent="flex-end"
+            sx={{ pt: 3, color: "white" }}
+          >
+            <Grid item>
+              <a
+                href="https://matt-pereira.surge.sh/"
+                className="text-decoration-none link-light"
+              >
+                Website by Matt Pereira
+              </a>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };

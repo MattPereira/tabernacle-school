@@ -1,19 +1,20 @@
-import { Row, Col, Container } from "react-bootstrap";
+import { Grid, Container, Typography, Box } from "@mui/material";
 
 import asci from "../../../assets/images/home/acsi.png";
 import wasc from "../../../assets/images/home/wasc.jpeg";
+
+import SectionTitle from "../../../common/SectionTitle";
 
 const Accreditations = () => {
   return (
     <section id="accreditation" className="py-5">
       <Container>
-        <h2 className="text-center display-4 mt-5 mb-3">Accreditation</h2>
-        <hr className="section-hr mb-5" />
-        <Row className="py-5">
-          <Col lg={8}>
-            <h5 className="fw-bold">
+        <SectionTitle title="Accreditations" />
+        <Grid container columnSpacing={3} sx={{ mb: 5 }}>
+          <Grid item xs={12} md={6} lg={8}>
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               ASSOCIATION OF CHRISTIAN SCHOOLS INTERNATIONAL
-            </h5>
+            </Typography>
             <p>
               Tabernacle School is accredited by the Association of Christian
               Schools International (ACSI). ACSI endeavors to "strengthen
@@ -21,20 +22,21 @@ const Accreditations = () => {
               prepare students academically and inspire them to become devoted
               followers of Jesus Christ."
             </p>
-          </Col>
-          <Col lg={4} className="mb-3">
-            <img
-              className="img-fluid"
+          </Grid>
+          <Grid item xs={12} md={6} lg={4} sx={{ textAlign: "center" }}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
               src={asci}
               alt="ACSI accreditaiton logo"
             />
-          </Col>
-        </Row>
-        <Row className="py-5">
-          <Col lg={8}>
-            <h5 className="fw-bold">
+          </Grid>
+        </Grid>
+        <Grid container columnSpacing={3} sx={{ mb: 5 }}>
+          <Grid item md={6} lg={8}>
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               WESTERN ASSOCIATION OF SCHOOLS AND COLLEGES
-            </h5>
+            </Typography>
             <p>
               Tabernacle School is also accredited by the Western Association of
               Schools and Colleges (WASC). WASC fosters "excellence in
@@ -45,15 +47,16 @@ const Accreditations = () => {
               schools that meet an acceptable level of quality in accordance
               with the established criteria."
             </p>
-          </Col>
-          <Col className="mb-3 d-flex justify-content-center">
-            <img
-              className="img-fluid w-50"
+          </Grid>
+          <Grid item xs={12} md={6} lg={4} sx={{ textAlign: "center" }}>
+            <Box
+              component="img"
+              sx={{ width: "50%" }}
               src={wasc}
               alt="Western Association of Schools and Colleges"
             />
-          </Col>
-        </Row>
+          </Grid>
+        </Grid>
       </Container>
     </section>
   );

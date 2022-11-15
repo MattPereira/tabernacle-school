@@ -1,29 +1,33 @@
-import { Container } from "react-bootstrap";
+import { Container, Box, Typography } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
+import useTheme from "@mui/material/styles/useTheme";
 
 const Testimonials = () => {
-  return (
-    <section id="testimonials" className="bg-light py-5">
-      <Container className="my-5">
-        <h2 className="text-center display-4">Parent Testimonials</h2>
-        <hr className="section-hr mb-5" />
+  const theme = useTheme();
 
-        <figure className="mb-5">
-          <blockquote className="blockquote">
-            <p>
+  console.log(theme.palette);
+  return (
+    <Box sx={{ py: 5, bgcolor: theme.palette.background.alternate }}>
+      <Container>
+        <SectionTitle title="Parent Testimonials" />
+
+        <Box sx={{ mb: 5 }}>
+          <blockquote>
+            <Typography variant="p">
               “I couldn’t say enough great things about Tabernacle’s preschool
               program. I appreciate them so much and wish I could have them be
               my daughter’s teachers forever. They are the most loving, smart,
               kind hearted, caring teachers I have ever met. We are so blessed
               to have them in our kids lives! They are the very best.”
-            </p>
+            </Typography>
           </blockquote>
-          <figcaption className="blockquote-footer fs-6">
-            Preschool parent, 2019
+          <figcaption style={{ color: theme.palette.grey[600] }}>
+            — Preschool parent, 2019
           </figcaption>
-        </figure>
-        <figure className="mb-5">
-          <blockquote className="blockquote">
-            <p>
+        </Box>
+        <Box sx={{ mb: 5 }}>
+          <blockquote>
+            <Typography variant="p">
               “My child’s third grade teacher is incredible! She is caring,
               encouraging and supportive, while still holding high expectations
               to ensure the students are ready for 4th grade and beyond. With
@@ -35,15 +39,15 @@ const Testimonials = () => {
               into a more confident learner and this is a huge thank you to his
               teacher and the safe learning environment she creates in her
               classNameroom.”
-            </p>
+            </Typography>
           </blockquote>
-          <figcaption className="blockquote-footer fs-6">
-            Third grade parent, 2019
+          <figcaption style={{ color: theme.palette.grey[600] }}>
+            — Third grade parent, 2019
           </figcaption>
-        </figure>
+        </Box>
         <figure className="mb-5">
           <blockquote className="blockquote">
-            <p>
+            <Typography variant="p">
               “We feel blessed that two of our three children have attended
               Tabernacle. Knowing that the teachers care, that they can be
               themselves without a ‘direct worldly attack’, and that there are
@@ -51,14 +55,14 @@ const Testimonials = () => {
               worth the sacrifices we make as parents for them to attend here.
               We appreciate all the Tabernacle offers their students, families,
               and staff.”
-            </p>
+            </Typography>
           </blockquote>
-          <figcaption className="blockquote-footer fs-6">
-            Middle school parent, 2016
+          <figcaption style={{ color: theme.palette.grey[600] }}>
+            — Middle school parent, 2016
           </figcaption>
         </figure>
       </Container>
-    </section>
+    </Box>
   );
 };
 

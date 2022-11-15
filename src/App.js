@@ -2,7 +2,7 @@ import "./custom.scss";
 
 import { Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
-
+import ScrollToTopButton from "./common/ScrollToTop/ScrollToTopButton";
 import NavBar from "./common/NavBar/NavBar";
 import Footer from "./common/Footer";
 
@@ -45,9 +45,17 @@ function App() {
       h4: {
         fontFamily: "Copse",
       },
+      h6: {
+        fontFamily: "Didact Gothic",
+      },
       p: {
         fontFamily: "Didact Gothic",
         fontSize: "20px",
+      },
+    },
+    palette: {
+      background: {
+        alternate: "#eeeeee",
       },
     },
   });
@@ -83,6 +91,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </ScrollToTop>
+      <ScrollToTopButton />
       <Footer />
     </ThemeProvider>
   );

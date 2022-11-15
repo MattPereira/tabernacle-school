@@ -208,9 +208,8 @@ const NavBar = (props) => {
 
   const StyledPagesToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: "center",
-    backgroundColor: transparent
-      ? "rgba(224, 230, 233, 0.9)"
-      : "rgb(224, 230, 233)",
+    backgroundColor: theme.palette.grey[300],
+    opacity: transparent ? "0.9" : "1",
   }));
 
   const StyledAlertToolbar = styled(Toolbar)({
@@ -297,7 +296,12 @@ const NavBar = (props) => {
           ))}
         </StyledPagesToolbar>
       </AppBar>
-      <AppBar elevation={0} color="transparent" position="relative">
+      <AppBar
+        elevation={0}
+        color="transparent"
+        position="relative"
+        sx={{ pt: transparent ? 8 : 0 }}
+      >
         <StyledAlertToolbar variant="dense">
           {alertNavItems.map((item) => {
             const { icon, path, text } = item;

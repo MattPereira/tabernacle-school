@@ -19,9 +19,9 @@ const GradeLevels = () => {
 
   return (
     <Box sx={{ bgcolor: "rgb(53, 94, 59)", py: 5, color: "white" }}>
-      <Container disableGutters>
+      <Container sx={{ px: { xs: 3, lg: 0 } }}>
         <Grid container spacing={4} justifyContent="center">
-          <Grid item md={8} lg={4}>
+          <Grid item sm={10} md={8} lg={4}>
             <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
               Preschool
             </Typography>
@@ -43,7 +43,7 @@ const GradeLevels = () => {
               </StyledButton>
             </Box>
           </Grid>
-          <Grid item md={8} lg={4}>
+          <Grid item sm={10} md={8} lg={4}>
             <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
               Elementary
             </Typography>
@@ -65,7 +65,7 @@ const GradeLevels = () => {
               </StyledButton>
             </Box>
           </Grid>
-          <Grid item md={8} lg={4}>
+          <Grid item sm={10} md={8} lg={4}>
             <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
               Junior High
             </Typography>
