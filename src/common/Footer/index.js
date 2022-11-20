@@ -13,13 +13,16 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+import bgImage from "../../assets/images/academics/preschool.jpg";
+
 const Footer = () => {
   const StyledButton = styled(Button)(({ theme }) => ({
     width: "100%",
     color: "white",
-    border: "1px solid white",
+    border: "2px solid white",
     fontSize: "16px",
-    fontWeight: 700,
+    fontWeight: 900,
+    letterSpacing: "0.25rem",
     padding: "15px 0px",
     "&:hover": {
       color: "white",
@@ -39,10 +42,15 @@ const Footer = () => {
       border: "1px solid #c0ac15",
     },
   }));
-
+  // bgcolor: "#1e88e5"
   return (
     <>
-      <Box sx={{ bgcolor: "#1e88e5", py: 9 }}>
+      <Box
+        sx={{
+          background: `linear-gradient(rgba(21, 101, 192, 0.55), rgba(21, 101, 192, 0.55)), url(${bgImage}) center / cover no-repeat`,
+          py: 9,
+        }}
+      >
         <Container>
           <Box>
             <Grid container spacing={4} sx={{ px: { xs: 0, md: 15 } }}>
@@ -52,7 +60,7 @@ const Footer = () => {
                   to="/connect#Contact"
                   variant="outlined"
                 >
-                  Contact Us
+                  Contact
                 </StyledButton>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -61,7 +69,7 @@ const Footer = () => {
                   component={HashLink}
                   to="/admissions#Schedule"
                 >
-                  Request Tour
+                  Visit
                 </StyledButton>
               </Grid>
 
@@ -89,7 +97,12 @@ const Footer = () => {
               justifyContent: { xs: "center", md: "space-between" },
             }}
           >
-            <Grid item sx={{ textAlign: { xs: "center", md: "start" } }}>
+            <Grid
+              item
+              sm={12}
+              md={6}
+              sx={{ textAlign: { xs: "center", md: "start" } }}
+            >
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
                 TABERNACLE CHRISTIAN SCHOOL
               </Typography>
@@ -121,8 +134,10 @@ const Footer = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item>
-              <Box sx={{ mb: { xs: 3 } }}>
+            <Grid sm={12} md={6} item>
+              <Box
+                sx={{ mb: { xs: 3 }, textAlign: { xs: "center", md: "end" } }}
+              >
                 <Typography
                   variant="h6"
                   sx={{ color: "#E6BE67", fontWeight: 600 }}

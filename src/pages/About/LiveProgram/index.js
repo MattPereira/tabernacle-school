@@ -1,4 +1,5 @@
-import { Tab, Tabs, Container } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
+import { Container } from "@mui/material";
 import "./index.scss";
 
 import responsibleImg from "../../../assets/images/about/live/responsible.jpg";
@@ -8,6 +9,7 @@ import cooperativeImg from "../../../assets/images/about/live/cooperative.jpg";
 import courageousImg from "../../../assets/images/about/live/courageous.jpg";
 
 import Trait from "./Trait";
+import SectionTitle from "../../../common/SectionTitle";
 
 const characteristics = {
   Responsible: {
@@ -94,8 +96,7 @@ const characteristics = {
 const LiveProgram = () => {
   return (
     <section id="Programs" className="py-5">
-      <h2 className="display-3 text-center pt-5">Live Program</h2>
-      <hr className="section-hr mb-4" />
+      <SectionTitle title="Live Program" />
       <Container className="py-5">
         <p className="lead mb-5">
           Teaching character is an important part of our philosophy at

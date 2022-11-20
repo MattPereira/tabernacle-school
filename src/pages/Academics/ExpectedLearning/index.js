@@ -1,10 +1,11 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 const ExpectedLearning = () => {
   return (
-    <section id="eslr" className="bg-light py-5">
-      <h2 className="display-4 text-center pt-5">Expected Learning Results</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Elementary" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Expected Learning Results" />
       <Container className="py-5">
         <Row>
           <Col xl={6}>
@@ -67,7 +68,7 @@ const ExpectedLearning = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

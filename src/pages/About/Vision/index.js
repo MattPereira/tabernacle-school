@@ -1,4 +1,7 @@
-import { Carousel, Container } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
+import { Container, Box } from "@mui/material";
+
+import SectionTitle from "../../../common/SectionTitle";
 
 import vision1 from "../../../assets/images/about/vision/vision1.jpg";
 import vision2 from "../../../assets/images/about/vision/vision2.jpg";
@@ -10,10 +13,9 @@ import "./index.scss";
 
 const Vision = () => {
   return (
-    <section id="Vision" className="py-5 bg-light">
-      <h2 className="display-3 text-center pt-5">Vision</h2>
-      <hr className="section-hr mb-3" />
-      <Container className="py-5">
+    <Box id="Vision" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Vision" />
+      <Container sx={{ py: 5 }}>
         <Carousel indicators={false} controls={false}>
           <Carousel.Item>
             <Slide
@@ -77,7 +79,7 @@ const Vision = () => {
           </Carousel.Item>
         </Carousel>
       </Container>
-    </section>
+    </Box>
   );
 };
 

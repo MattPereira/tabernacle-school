@@ -7,7 +7,7 @@ const Testimonials = () => {
 
   console.log(theme.palette);
   return (
-    <Box sx={{ py: 5, bgcolor: theme.palette.background.alternate }}>
+    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
       <Container>
         <SectionTitle title="Parent Testimonials" />
 

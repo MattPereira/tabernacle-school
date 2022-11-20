@@ -1,13 +1,14 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import googleClassroom from "../../../assets/images/academics/google-classroom.png";
 import ignitia from "../../../assets/images/academics/ignitia.png";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 const Distance = () => {
   return (
-    <section id="Distance" className="bg-light py-5">
-      <h2 className="text-center display-4 pt-5">Distance Learning</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Distance Learning" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Distance Learning" />
       <Container className="py-5">
         <p className="lead px-lg-5">
           In case of a resurgence in Coronavirus cases and potential school
@@ -51,7 +52,7 @@ const Distance = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

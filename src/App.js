@@ -33,7 +33,8 @@ function App() {
   let theme = createTheme({
     typography: {
       h1: {
-        fontFamily: "Cubano",
+        fontFamily: "Montserrat",
+        fontWeight: 700,
       },
       h2: {
         fontFamily: "Copse",

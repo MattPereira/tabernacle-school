@@ -1,12 +1,13 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 import "./index.scss";
 
 const Location = () => {
   return (
-    <section id="Location" className="py-5 bg-light">
-      <h2 className="display-4 text-center mb-3 pt-5">Location</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Location" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Location" />
 
       <Container className="py-5">
         <Row className="justify-content-center">
@@ -66,7 +67,7 @@ const Location = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

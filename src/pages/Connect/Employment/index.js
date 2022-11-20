@@ -1,11 +1,12 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import employment from "../../../assets/images/connect/employment.jpg";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container } from "@mui/material";
 
 const Employment = () => {
   return (
     <section id="Employment" className="py-5">
-      <h2 className="text-center display-4 pt-5">Employment</h2>
-      <hr className="section-hr mb-md-4" />
+      <SectionTitle title="Employment" />
       <Container className="py-5">
         <Row>
           <Col lg={6}>

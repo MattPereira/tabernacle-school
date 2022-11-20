@@ -1,18 +1,16 @@
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { Row, Col, Table } from "react-bootstrap";
+import { Container } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
 
 const Tuition = () => {
   return (
     <section id="Tuition" className="py-5">
-      <Container className="py-5">
-        <h2 className="text-center section-title display-3">Tuition & Fees</h2>
-        <hr className="section-hr mb-5" />
-        <div className="my-5">
-          <h3 className="text-center display-5 mb-5">2022-23 Rates</h3>
-        </div>
+      <Container>
+        <SectionTitle title="Tuition & Fees" />
 
         <Row className="row my-5">
           <Col xl={6}>
-            <h4 className="text-center fw-bold">Tuition</h4>
+            <h4 className="text-center fw-bold">2022-23 Tuition</h4>
 
             <Table bordered hover>
               <thead>

@@ -1,13 +1,14 @@
 import value1 from "../../../assets/images/about/values/value1.jpg";
 import value2 from "../../../assets/images/about/values/value2.jpg";
+import SectionTitle from "../../../common/SectionTitle";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Container } from "@mui/material";
 
 const Values = () => {
   return (
     <section id="Values" className="py-5">
-      <h2 className="display-3 text-center pt-5">Values</h2>
-      <hr className="section-hr mb-lg-5" />
+      <SectionTitle title="Values" />
       <Container className="py-5">
         <Row className="d-flex align-items-center">
           <Col xl={6}>

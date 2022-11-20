@@ -1,11 +1,12 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import athletics from "../../../assets/images/campus/athletics.jpg";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 const Athletics = () => {
   return (
-    <section id="Athletics" className="py-5 bg-light">
-      <h2 className="text-center display-4 pt-5">Athletics</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Athletics" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Athletics" />
       <Container className="py-5">
         <Row className="align-items-center">
           <Col lg={6} className="col-lg-6">
@@ -49,7 +50,7 @@ const Athletics = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

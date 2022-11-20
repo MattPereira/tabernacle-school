@@ -10,13 +10,14 @@ import { RiParentFill } from "react-icons/ri";
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { IoCalendar, IoWarning } from "react-icons/io5";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 const Information = () => {
   return (
-    <section id="Information" className="py-5 bg-light">
-      <h2 className="display-3 text-center pt-5">Information</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Elementary" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Information" />
       <Container className="py-5">
         <Row className="text-center mb-md-5">
           <Col xs={6} md={3} className="mb-5">
@@ -96,7 +97,7 @@ const Information = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

@@ -9,30 +9,27 @@ import leadership from "../../../assets/images/about/gift/leadership.jpg";
 import creationist from "../../../assets/images/about/gift/creationist.jpg";
 import moral from "../../../assets/images/about/gift/moral.jpg";
 
-import { Row, Col, Accordion } from "react-bootstrap";
+import SectionTitle from "../../../common/SectionTitle";
+import { Row, Accordion } from "react-bootstrap";
 import GiftCard from "./GiftCard";
+import { Container, Box } from "@mui/material";
 
 import Marquee from "react-fast-marquee";
 import "./index.scss";
 
 const GiftProgram = () => {
   return (
-    <section id="Gifts" className="py-5 bg-light">
-      <h2 className="display-2 text-center pt-5">Gift Program</h2>
-      <hr className="section-hr mb-4" />
-      <div className="container py-5">
-        <Row className="justify-content-center">
-          <Col xl={10}>
-            <p className="lead mb-5">
-              Every child is a gifted child. At Tabernacle we respect the unique
-              giftedness of all children and work to help them discover and
-              develop their gifts.Because children are gifted in different ways,
-              we offer a broad range of programs designed to help them develop
-              their own unique strengths. We respect and work to develop the
-              following universally recognized areas of giftedness.
-            </p>
-          </Col>
-        </Row>
+    <Box id="Gifts" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Gift Program" />
+      <Container sx={{ py: 5 }}>
+        <p className="lead mb-5">
+          At Tabernacle we believe every child is a gifted child, and we respect
+          the unique giftedness of all children by working to help them discover
+          and develop their gifts. Because children are gifted in different
+          ways, we offer a broad range of programs designed to help them develop
+          their own unique strengths. We respect and work to develop the
+          following universally recognized areas of giftedness.
+        </p>
         <div className="d-md-none">
           <Accordion>
             <Accordion.Item eventKey="0">
@@ -244,8 +241,8 @@ const GiftProgram = () => {
             </Marquee>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

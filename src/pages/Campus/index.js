@@ -8,7 +8,7 @@ import Outreach from "./Outreach";
 const Campus = () => {
   return (
     <div>
-      <Showcase title="Campus" extra="Life" />
+      <Showcase title="Campus" />
       <PageNav sections={["Calendar", "Athletics", "Daycare", "Outreach"]} />
       <Calendar />
       <Athletics />

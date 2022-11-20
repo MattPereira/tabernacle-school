@@ -1,17 +1,18 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import friends from "../../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../../assets/images/campus/operation-christmas.jpg";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 import "./index.scss";
 
 const Outreach = () => {
   return (
-    <section id="Outreach" className="bg-light py-5">
-      <h2 className="text-center display-4 pt-5">Outreach</h2>
-      <hr className="section-hr" />
-      <Container className="py-5">
+    <Box id="Outreach" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Outreach" />
+      <Container sx={{ py: 5 }}>
         <Row className="row text-center">
           <Col xl={4} className="mb-3">
             <div className="text-center">
@@ -74,7 +75,7 @@ const Outreach = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

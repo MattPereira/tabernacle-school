@@ -25,17 +25,17 @@ const ScrollToTopButton = () => {
         style={{
           position: "fixed",
           fontSize: "20px",
-          bottom: "40px",
+          bottom: "20px",
           right: "20px",
           textAlign: "center",
           cursor: "pointer",
-          background: "white",
+          background: "#c0ac15",
           borderRadius: "50%",
           border: "3px solid #c0ac15",
           display: show ? "flex" : "none",
         }}
       >
-        <ArrowUpwardIcon sx={{ fontSize: "2.5rem", color: "#c0ac15" }} />
+        <ArrowUpwardIcon sx={{ fontSize: "2.5rem", color: "white" }} />
       </span>
     </>
   );

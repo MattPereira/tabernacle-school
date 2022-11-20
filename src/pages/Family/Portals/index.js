@@ -2,13 +2,14 @@ import ignitia from "../../../assets/images/family/ignitia.png";
 import choiceLunch from "../../../assets/images/family/choice-lunch.png";
 import facts from "../../../assets/images/family/facts-logo.png";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Container } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
 
 const Portals = () => {
   return (
     <section id="Portals" className="py-5">
-      <h2 className="display-3 text-center pt-5">School Portals</h2>
-      <hr className="section-hr mb-3" />
+      <SectionTitle title="Portals" />
       <Container className="py-5">
         <Row className="text-center align-items-center justify-content-around">
           <Col lg={4} className="mb-5">

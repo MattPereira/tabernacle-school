@@ -1,11 +1,12 @@
 import juniorHigh from "../../../assets/images/academics/junior-high.jpg";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Container } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
 
 const JuniorHigh = () => {
   return (
     <section id="Junior" className="py-5">
-      <h2 className="text-center display-4 pt-5">Junior High</h2>
-      <hr className="section-hr mb-md-5" />
+      <SectionTitle title="Junior High" />
       <Container className="py-5">
         <Row className="align-items-center">
           <Col xl={6} className="d-flex justify-content-center mb-5">

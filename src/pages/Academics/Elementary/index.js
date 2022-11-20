@@ -1,11 +1,13 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import elementary from "../../../assets/images/academics/elementary.jpg";
+import SectionTitle from "../../../common/SectionTitle";
+
+import { Container, Box } from "@mui/material";
 
 const Elementary = () => {
   return (
-    <section id="Elementary" className="bg-light py-5">
-      <h2 className="text-center display-4 pt-5">Elementary</h2>
-      <hr className="section-hr mb-md-5" />
+    <Box id="Elementary" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Elementary" />
       <Container className="py-5">
         <Row className="align-items-center">
           <Col xl={6} className="order-2">
@@ -37,7 +39,7 @@ const Elementary = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

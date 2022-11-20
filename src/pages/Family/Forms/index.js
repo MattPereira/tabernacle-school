@@ -1,4 +1,6 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import SectionTitle from "../../../common/SectionTitle";
+import { Container, Box } from "@mui/material";
 
 import {
   FaLaptopCode,
@@ -9,10 +11,9 @@ import {
 
 const Forms = () => {
   return (
-    <section id="Forms" className="py-5 bg-light">
-      <h2 className="display-3 text-center pt-5">Forms</h2>
-      <hr className="section-hr mb-3" />
-      <Container className="py-5">
+    <Box id="Elementary" sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Forms" />
+      <Container sx={{ py: 5 }}>
         <Row className="text-center">
           <Col xs={6} md={3} className="mb-5">
             <a
@@ -60,7 +61,7 @@ const Forms = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { ReactComponent as TSLogo } from "../../assets/svgs/ts_logo.svg";
 
+import { useMediaQuery } from "react-responsive";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
@@ -63,7 +65,7 @@ const midNavItems = [
 
 const alertNavItems = [
   {
-    text: "Preschool Hiring!",
+    text: "Preschool Hiring",
     icon: <NotificationsActiveOutlinedIcon fontSize="small" />,
     path: "/connect#Employment",
   },
@@ -85,6 +87,8 @@ const NavBar = (props) => {
   const { window: windoo } = props;
 
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isCollapsed = useMediaQuery({ query: "(max-width: 900px)" });
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -208,8 +212,10 @@ const NavBar = (props) => {
 
   const StyledPagesToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: "center",
-    backgroundColor: theme.palette.grey[300],
-    opacity: transparent ? "0.9" : "1",
+    backgroundColor: transparent
+      ? "rgba(21, 101, 192, 0.9)"
+      : theme.palette.grey[300],
+    // opacity: transparent ? "0.9" : "1",
   }));
 
   const StyledAlertToolbar = styled(Toolbar)({
@@ -222,7 +228,7 @@ const NavBar = (props) => {
         component="nav"
         elevation={0}
         color="transparent"
-        position="relative"
+        position={isCollapsed ? "fixed" : "relative"}
       >
         <StyledTopToolBar sx={{ py: { xs: 1, md: 2 } }}>
           <NavLink to="/" style={{ textDecoration: "none" }}>
@@ -283,7 +289,7 @@ const NavBar = (props) => {
                   fontFamily: "Montserrat",
                   fontSize: "16px",
                   fontWeight: 600,
-                  color: "black",
+                  color: transparent ? "white" : "black",
                   "&:hover": {
                     backgroundColor: "#fff",
                     color: "#1565c0",

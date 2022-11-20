@@ -8,9 +8,6 @@ import "./index.scss";
 const FacultyAccordion = () => {
   return (
     <>
-      <p className="lead fs-4 text-center mb-5">
-        Select a teacher to see their profile page!
-      </p>
       <Accordion>
         {facultyData.map((level, idx) => (
           <Accordion.Item eventKey={`${idx}`} key={level["grade"]}>

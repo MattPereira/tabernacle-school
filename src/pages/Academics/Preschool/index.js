@@ -1,11 +1,12 @@
 import preschool from "../../../assets/images/academics/preschool.jpg";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Container } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
 
 const Preschool = () => {
   return (
     <section id="Preschool" className="py-5">
-      <h2 className="text-center display-4 pt-5">Preschool</h2>
-      <hr className="section-hr mb-md-5" />
+      <SectionTitle title="Preschool" />
       <Container className="py-5">
         <div className="text-center mb-5">
           <img

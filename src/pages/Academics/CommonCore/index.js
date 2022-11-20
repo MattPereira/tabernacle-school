@@ -1,10 +1,11 @@
-import { Container, Row, Col, Accordion } from "react-bootstrap";
+import { Row, Col, Accordion } from "react-bootstrap";
+import { Container } from "@mui/material";
+import SectionTitle from "../../../common/SectionTitle";
 
 const CommonCore = () => {
   return (
     <section id="Common" className="my-5">
-      <h2 className="text-center display-4 mb-3 pt-5">Common Core</h2>
-      <hr className="section-hr mb-md-5" />
+      <SectionTitle title="Common Core" />
       <Container className="py-5">
         <Row>
           <Col xl={6}>
