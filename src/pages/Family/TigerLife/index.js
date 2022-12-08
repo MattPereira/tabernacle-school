@@ -3,34 +3,40 @@ import orientation from "../../../assets/images/family/orientation.jpg";
 import { Link } from "react-router-dom";
 
 import SectionTitle from "../../../common/SectionTitle";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Paper, Typography, Grid } from "@mui/material";
 
 const TigerLife = () => {
   return (
-    <section id="Tiger" className="py-5 text-center">
+    <Box id="Tiger" sx={{ py: 5 }}>
       <Container>
         <SectionTitle title="Tiger Life" />
 
-        <div className="row justify-content-center">
-          <div className="col-xl-3">
+        <Grid container justifyContent="center" sx={{ pb: 5 }}>
+          <Grid item xs={12} md={6} lg={4}>
             <Link
               to="/family/orientation_video"
               className="text-decoration-none link-dark"
             >
-              <Box
-                component="img"
-                src={orientation}
-                sx={{ width: "100%" }}
-                alt=""
-              />
-              <h3 className="p-2 mx-5 mx-sm-0 rounded-pill mb-4">
-                Orientation Video
-              </h3>
+              <Paper elevation={5} sx={{ borderRadius: "30px" }}>
+                <Box
+                  component="img"
+                  src={orientation}
+                  sx={{ width: "100%", borderRadius: "30px" }}
+                  alt=""
+                />
+                <Box sx={{ p: 3 }}>
+                  <Typography variant="h5">Parent Orientation</Typography>
+                  <Typography variant="p">
+                    All relevant information parents need for the upcoming
+                    school year
+                  </Typography>
+                </Box>
+              </Paper>
             </Link>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </Container>
-    </section>
+    </Box>
   );
 };
 

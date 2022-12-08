@@ -6,11 +6,11 @@ import "./index.scss";
 
 const Location = () => {
   return (
-    <Box id="Location" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box id="Location" sx={{ py: 5 }}>
       <SectionTitle title="Location" />
 
-      <Container className="py-5">
-        <Row className="justify-content-center">
+      <Container sx={{ py: 5 }}>
+        <Row className="justify-content-center mb-5">
           <Col xl={9} className="mb-5 mb-xl-0">
             <div className="mapouter">
               <div className="video-container">

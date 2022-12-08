@@ -8,10 +8,10 @@ const Connect = () => {
   return (
     <div>
       <Showcase title={"Connect"} />
-      <PageNav sections={["Contact Us", "Location", "Employment"]} />
+      <PageNav sections={["Contact", "Employment", "Location"]} />
       <Contact />
-      <Location />
       <Employment />
+      <Location />
     </div>
   );
 };

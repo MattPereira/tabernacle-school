@@ -6,7 +6,7 @@ const Showcase = ({ title, extra }) => {
   return (
     <Box
       sx={{
-        minHeight: "275px",
+        minHeight: { xs: "225px", md: "275px" },
         position: "relative",
         display: "flex",
         justifyContent: "center",
@@ -26,7 +26,7 @@ const Showcase = ({ title, extra }) => {
         }}
       ></Box>
       <Box sx={{ zIndex: 2 }}>
-        <Typography variant="h1" sx={{ color: "white" }}>
+        <Typography variant="h1" sx={{ color: "white", letterSpacing: "3px" }}>
           {title} {extra}
         </Typography>
       </Box>

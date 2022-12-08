@@ -10,7 +10,7 @@ const PageNav = ({ sections }) => {
       {sections.map((section) => (
         <li className="nav-item mx-5" key={section}>
           <a
-            className="text-decoration-none text-black"
+            className="text-decoration-none text-dark"
             href={`#${section.split(" ")[0]}`}
             style={{
               fontSize: "16px",

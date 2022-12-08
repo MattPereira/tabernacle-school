@@ -1,11 +1,11 @@
 import { Row, Col } from "react-bootstrap";
 import employment from "../../../assets/images/connect/employment.jpg";
 import SectionTitle from "../../../common/SectionTitle";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 
 const Employment = () => {
   return (
-    <section id="Employment" className="py-5">
+    <Box id="Employment" sx={{ py: 5, bgcolor: "background.alternate" }}>
       <SectionTitle title="Employment" />
       <Container className="py-5">
         <Row>
@@ -97,7 +97,7 @@ const Employment = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

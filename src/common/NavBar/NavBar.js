@@ -320,8 +320,9 @@ const NavBar = (props) => {
                   p: 1.5,
                   fontFamily: "Montserrat",
                   fontSize: "16px",
-                  fontWeight: 600,
+                  fontWeight: 400,
                   color: "black",
+                  textTransform: "none",
                   "&:hover": {
                     backgroundColor: "#fff",
                     color: "#1565c0",

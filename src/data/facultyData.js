@@ -80,114 +80,120 @@ export const facultyData = [
     ],
   },
   {
-    grade: "1st Grade",
-    staff: [
+    grade: "Elementary",
+    groups: [
       {
-        name: "Alexis Jue",
-        title: "1A",
-        image: images["alexisJue.jpg"],
-        email: "Alexisj@tbs.org",
+        grade: "1st Grade",
+        staff: [
+          {
+            name: "Alexis Jue",
+            title: "1A",
+            image: images["alexisJue.jpg"],
+            email: "Alexisj@tbs.org",
+          },
+          {
+            name: "Emily Scouten",
+            title: "1B",
+            image: images["emilyScouten.jpg"],
+            email: "Emilys@tbs.org",
+          },
+          {
+            name: "Terra Jean McFadden",
+            title: "1C",
+            image: images["terraJeanMcFadden.jpg"],
+            email: "Terrajeanm@tbs.org",
+          },
+        ],
       },
       {
-        name: "Emily Scouten",
-        title: "1B",
-        image: images["emilyScouten.jpg"],
-        email: "Emilys@tbs.org",
+        grade: "2nd Grade",
+        staff: [
+          {
+            name: "Heather Cochnauer",
+            title: "2A",
+            image: images["heatherCochnauer.jpg"],
+            email: "Heatherc@tbs.org",
+          },
+          {
+            name: "Kristen McDermott",
+            title: "2A",
+            image: images["kristenMcDermott.jpg"],
+            email: "Kristenm@tbs.org",
+          },
+          {
+            name: "Tracy Herrera",
+            title: "2B",
+            image: images["tracyHerrera.jpg"],
+            email: "Tracyh@tbs.org",
+          },
+          {
+            name: "Elsy Herrera",
+            title: "2C",
+            image: images["elsyHerrera.jpg"],
+            email: "Elsyh@tbs.org",
+          },
+        ],
       },
       {
-        name: "Terra Jean McFadden",
-        title: "1C",
-        image: images["terraJeanMcFadden.jpg"],
-        email: "Terrajeanm@tbs.org",
+        grade: "3rd Grade",
+        staff: [
+          {
+            name: "Meg Peacock",
+            title: "3A",
+            image: images["megPeacock.jpg"],
+            email: "Megp@tbs.org",
+          },
+          {
+            name: "Pamela Lucido",
+            title: "3B",
+            image: images["pamelaLucido.jpg"],
+            email: "Paml@tbs.org",
+          },
+          {
+            name: "Haley Max",
+            title: "3C",
+            image: images["haleyMax.jpg"],
+            email: "Haleym@tbs.org",
+          },
+        ],
+      },
+      {
+        grade: "4th Grade",
+        staff: [
+          {
+            name: "Carol Nissen",
+            title: "4A",
+            image: images["carolNissen.jpg"],
+            email: "Caroln@tbs.org",
+          },
+          {
+            name: "Alexander Buckley",
+            title: "4B",
+            image: images["alexanderBuckley.jpg"],
+            email: "Alexb@tbs.org",
+          },
+        ],
+      },
+      {
+        grade: "5th Grade",
+        staff: [
+          {
+            name: "Brenda Chapman",
+            title: "5A",
+            image: images["brendaChapman.jpg"],
+            email: "Brendac@tbs.org",
+          },
+          {
+            name: "Aurelius Morgan",
+            title: "5B",
+            image: images["aureliusMorgan.jpg"],
+            email: "Aureliusm@tbs.org",
+          },
+        ],
       },
     ],
   },
-  {
-    grade: "2nd Grade",
-    staff: [
-      {
-        name: "Heather Cochnauer",
-        title: "2A",
-        image: images["heatherCochnauer.jpg"],
-        email: "Heatherc@tbs.org",
-      },
-      {
-        name: "Kristen McDermott",
-        title: "2A",
-        image: images["kristenMcDermott.jpg"],
-        email: "Kristenm@tbs.org",
-      },
-      {
-        name: "Tracy Herrera",
-        title: "2B",
-        image: images["tracyHerrera.jpg"],
-        email: "Tracyh@tbs.org",
-      },
-      {
-        name: "Elsy Herrera",
-        title: "2C",
-        image: images["elsyHerrera.jpg"],
-        email: "Elsyh@tbs.org",
-      },
-    ],
-  },
-  {
-    grade: "3rd Grade",
-    staff: [
-      {
-        name: "Meg Peacock",
-        title: "3A",
-        image: images["megPeacock.jpg"],
-        email: "Megp@tbs.org",
-      },
-      {
-        name: "Pamela Lucido",
-        title: "3B",
-        image: images["pamelaLucido.jpg"],
-        email: "Paml@tbs.org",
-      },
-      {
-        name: "Haley Max",
-        title: "3C",
-        image: images["haleyMax.jpg"],
-        email: "Haleym@tbs.org",
-      },
-    ],
-  },
-  {
-    grade: "4th Grade",
-    staff: [
-      {
-        name: "Carol Nissen",
-        title: "4A",
-        image: images["carolNissen.jpg"],
-        email: "Caroln@tbs.org",
-      },
-      {
-        name: "Alexander Buckley",
-        title: "4B",
-        image: images["alexanderBuckley.jpg"],
-        email: "Alexb@tbs.org",
-      },
-    ],
-  },
-  {
-    grade: "5th Grade",
-    staff: [
-      {
-        name: "Brenda Chapman",
-        title: "5A",
-        image: images["brendaChapman.jpg"],
-        email: "Brendac@tbs.org",
-      },
-      {
-        name: "Aurelius Morgan",
-        title: "5B",
-        image: images["aureliusMorgan.jpg"],
-        email: "Aureliusm@tbs.org",
-      },
-    ],
-  },
+
   {
     grade: "Junior High",
     staff: [

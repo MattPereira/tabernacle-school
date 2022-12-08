@@ -1,5 +1,6 @@
-import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Alert } from "react-bootstrap";
 
+import { Typography, TextField, Box, Button } from "@mui/material";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -33,7 +34,12 @@ const ContactForm = () => {
   };
   return (
     <div>
-      <h3 className="mb-3 fs-2 text-center">Send a Message</h3>
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h3" align="center">
+          Send Message
+        </Typography>
+      </Box>
+
       {status === true ? (
         <Alert variant="success">
           Message successfully sent! Tabernacle School's registrar will respond
@@ -47,27 +53,68 @@ const ContactForm = () => {
         </Alert>
       ) : null}
       <Form ref={form} onSubmit={sendEmail}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label className="fw-bold">Name</Form.Label>
-          <Form.Control type="text" name="name" required />
-        </Form.Group>
+        <TextField
+          id="name"
+          name="name"
+          label="Name"
+          variant="outlined"
+          type="text"
+          required
+          sx={{
+            width: "100%",
+            mb: 3,
+          }}
+        />
+        <TextField
+          id="email"
+          name="email"
+          label="Email"
+          variant="outlined"
+          type="email"
+          required
+          sx={{
+            width: "100%",
+            mb: 3,
+          }}
+        />
 
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label className="fw-bold">Email</Form.Label>
+        <TextField
+          id="subject"
+          name="subject"
+          label="Subject"
+          variant="outlined"
+          type="text"
+          required
+          sx={{
+            width: "100%",
+            mb: 3,
+          }}
+        />
 
-          <Form.Control type="email" name="email" required />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="subject">
-          <Form.Label className="fw-bold">Subject</Form.Label>
-
-          <Form.Control type="subject" name="subject" required />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="message">
-          <Form.Label className="fw-bold">Message</Form.Label>
-          <Form.Control as="textarea" rows="5" name="message" required />
-        </Form.Group>
+        <TextField
+          id="message"
+          name="message"
+          label="Message"
+          required
+          multiline
+          minRows={5}
+          variant="outlined"
+          sx={{
+            width: "100%",
+            mb: 3,
+          }}
+        />
         <div className="text-end">
-          <Button variant="primary" type="submit" className="text-white">
+          <Button
+            variant="contained"
+            sx={{
+              fontWeight: "bold",
+              fontFamily: "Didact Gothic",
+              textTransform: "none",
+              fontSize: "1.2rem",
+            }}
+            type="submit"
+          >
             Submit
           </Button>
         </div>

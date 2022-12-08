@@ -8,8 +8,8 @@ import SectionTitle from "../../../common/SectionTitle";
 
 const Portals = () => {
   return (
-    <section id="Portals" className="py-5">
-      <SectionTitle title="Portals" />
+    <section id="Resources" className="py-5">
+      <SectionTitle title="Resources" />
       <Container className="py-5">
         <Row className="text-center align-items-center justify-content-around">
           <Col lg={4} className="mb-5">

@@ -10,7 +10,7 @@ import LiveProgram from "./LiveProgram";
 const About = () => {
   return (
     <div>
-      <Showcase title="About" extra="Us" />
+      <Showcase title="About" />
       <PageNav
         sections={["History", "Faculty", "Programs", "Values", "Vision"]}
       />

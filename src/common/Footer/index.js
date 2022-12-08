@@ -19,15 +19,15 @@ const Footer = () => {
   const StyledButton = styled(Button)(({ theme }) => ({
     width: "100%",
     color: "white",
-    border: "2px solid white",
-    fontSize: "16px",
-    fontWeight: 900,
-    letterSpacing: "0.25rem",
+    border: "3px solid white",
+    fontSize: "22px",
+    fontWeight: 800,
     padding: "15px 0px",
+    fontFamily: "Montserrat",
     "&:hover": {
       color: "white",
-      border: `1px solid ${theme.palette.grey[500]}`,
-      backgroundColor: "#c0ac15",
+      border: `3px solid ${theme.palette.grey[500]}`,
+      backgroundColor: theme.palette.grey[500],
     },
   }));
 
@@ -36,6 +36,7 @@ const Footer = () => {
     border: "1px solid white",
     borderRadius: "50%",
     padding: "16px",
+
     "&:hover": {
       color: "white",
       backgroundColor: "#c0ac15",
@@ -47,7 +48,7 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          background: `linear-gradient(rgba(21, 101, 192, 0.55), rgba(21, 101, 192, 0.55)), url(${bgImage}) center / cover no-repeat`,
+          background: `linear-gradient(rgba(21, 101, 192, 0.65), rgba(21, 101, 192, 0.65)), url(${bgImage}) center / cover no-repeat`,
           py: 9,
         }}
       >
@@ -67,7 +68,7 @@ const Footer = () => {
                 <StyledButton
                   variant="outlined"
                   component={HashLink}
-                  to="/admissions#Schedule"
+                  to="/admissions#Request"
                 >
                   Visit
                 </StyledButton>

@@ -1,10 +1,14 @@
 import { Row, Col, Table } from "react-bootstrap";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import SectionTitle from "../../../common/SectionTitle";
 
 const Tuition = () => {
   return (
-    <section id="Tuition" className="py-5">
+    <Box
+      id="Tuition"
+      className="py-5"
+      sx={{ bgcolor: "background.alternate", py: 5 }}
+    >
       <Container>
         <SectionTitle title="Tuition & Fees" />
 
@@ -12,7 +16,7 @@ const Tuition = () => {
           <Col xl={6}>
             <h4 className="text-center fw-bold">2022-23 Tuition</h4>
 
-            <Table bordered hover>
+            <Table bordered hover className="bg-white">
               <thead>
                 <tr className="text-center table-dark">
                   <th>Child</th>
@@ -23,7 +27,7 @@ const Tuition = () => {
               </thead>
               <tbody>
                 <tr className="">
-                  <td colSpan="4" className="table-secondary">
+                  <td colSpan="4" className="table-light">
                     Junior & Transitional Kindergarten
                   </td>
                 </tr>
@@ -45,7 +49,7 @@ const Tuition = () => {
                   <td>$6,800</td>
                   <td>$695</td>
                 </tr>
-                <tr className="table-secondary">
+                <tr className="table-light">
                   <td colSpan="4">Grades K-5</td>
                 </tr>
                 <tr className="text-center">
@@ -66,7 +70,7 @@ const Tuition = () => {
                   <td>$6,450</td>
                   <td>$660</td>
                 </tr>
-                <tr className="table-secondary">
+                <tr className="table-light">
                   <td colSpan="4">Grades 6-8</td>
                 </tr>
                 <tr className="text-center">
@@ -138,7 +142,7 @@ const Tuition = () => {
           </Col>
           <Col xl={6}>
             <h4 className="text-center fw-bold">Other Fees</h4>
-            <Table bordered className="mb-5">
+            <Table bordered className="mb-5 bg-white">
               <thead>
                 <tr className="table-dark">
                   <th>Fee</th>
@@ -180,8 +184,8 @@ const Tuition = () => {
               </tbody>
             </Table>
             <h4 className="text-center fw-bold">Daycare Fees</h4>
-            <Table bordered>
-              <thead className="table-dark">
+            <Table bordered className="bg-white">
+              <thead className="table-dark ">
                 <tr>
                   <th>Type</th>
                   <th>Description</th>
@@ -253,7 +257,7 @@ const Tuition = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </Box>
   );
 };
 

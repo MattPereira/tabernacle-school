@@ -1,11 +1,17 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./index.scss";
 
-import { Row, Col, Button, Form, Alert } from "react-bootstrap";
+import { Form, Alert } from "react-bootstrap";
 import SectionTitle from "../../../common/SectionTitle";
 
-import { Container, Box } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Grid,
+} from "@mui/material";
 
 import { scheduleServiceId } from "../../../secrets";
 
@@ -37,34 +43,57 @@ const Visit = () => {
   };
 
   return (
-    <Box id="Faculty" sx={{ py: 5, bgcolor: "background.alternate" }}>
-      <SectionTitle title="Schedule Tour " />
-      <Container className="py-5">
-        <Row className="justify-content-center align-items-center">
-          <Col lg={6} className="mb-5">
-            {/* <p className="lead">
-                To schedule a tour, please call{" "}
-                <a href="tel:9256859169">925.685.9169</a> or email our
-                registrars at &nbsp;
-                <a href="mailto:Lisam@tbs.org">Lisam@tbs.org</a> and{" "}
-                <a href="mailto:Lesleyn@tbs.org">Lesleyn@tbs.org</a>.
-              </p> */}
-            {status === true ? (
-              <Alert variant="success">
-                Message successfully sent! Tabernacle School's registrar will
-                respond soon!
-              </Alert>
-            ) : status === false ? (
-              <Alert variant="danger">
-                Failed to send the message, please call{" "}
-                <a href="tel:9256859169">(925) 685-9169</a> or email our
-                registrar at{" "}
-                <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a>
-              </Alert>
-            ) : null}
-            <div>
-              <Form ref={form} onSubmit={sendEmail}>
-                <Form.Group className="mb-3" controlId="name">
+    <Box id="Schedule" sx={{ py: 5 }}>
+      <SectionTitle title="Schedule Tour" />
+      <Container sx={{ py: { xs: 0, md: 5 } }}>
+        <Grid container sx={{ justifyContent: "center" }}>
+          <Grid item xs={12} md={8}>
+            <Box sx={{ mb: { xs: 5, md: 10 } }}>
+              <Typography variant="p">
+                Request a tour of our campus by filling out the form below or
+                calling us at <a href="tel:9256859169">925.685.9169</a>
+              </Typography>
+            </Box>
+
+            <Form ref={form} onSubmit={sendEmail}>
+              <TextField
+                id="name"
+                name="name"
+                label="Name"
+                variant="outlined"
+                type="text"
+                required
+                sx={{
+                  width: "100%",
+                  mb: 3,
+                }}
+              />
+              <TextField
+                id="email"
+                name="email"
+                label="Email"
+                variant="outlined"
+                type="email"
+                required
+                sx={{
+                  width: "100%",
+                  mb: 3,
+                }}
+              />
+              <TextField
+                id="message"
+                name="message"
+                label="Preferable dates and times"
+                multiline
+                minRows={5}
+                variant="outlined"
+                sx={{
+                  width: "100%",
+                  mb: 3,
+                }}
+              />
+
+              {/* <Form.Group className="mb-3" controlId="name">
                   <Form.Label className="fw-bold">Name</Form.Label>
                   <Form.Control type="text" name="name" required />
                 </Form.Group>
@@ -73,18 +102,18 @@ const Visit = () => {
                   <Form.Label className="fw-bold">Email</Form.Label>
 
                   <Form.Control type="email" name="email" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="subject">
-                  <Form.Label className="fw-bold">Subject</Form.Label>
+                </Form.Group> */}
 
-                  <Form.Control
-                    type="subject"
-                    name="subject"
-                    defaultValue="Schedule a Tour"
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="message">
+              <Form.Group controlId="subject">
+                <Form.Control
+                  type="hidden"
+                  name="subject"
+                  defaultValue="Schedule a Tour"
+                  required
+                />
+              </Form.Group>
+
+              {/* <Form.Group className="mb-3" controlId="message">
                   <Form.Label className="fw-bold">Message</Form.Label>
                   <Form.Control
                     as="textarea"
@@ -92,20 +121,38 @@ const Visit = () => {
                     name="message"
                     required
                   />
-                </Form.Group>
-                <div className="text-end">
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    className="text-white"
-                  >
-                    Submit
-                  </Button>
-                </div>
-              </Form>
-            </div>
-          </Col>
-        </Row>
+                </Form.Group> */}
+              {status === true ? (
+                <Alert variant="success">
+                  Message successfully sent! Tabernacle School's registrar will
+                  respond soon!
+                </Alert>
+              ) : status === false ? (
+                <Alert variant="danger">
+                  Failed to send the message, please try again, call{" "}
+                  <a href="tel:9256859169">925.685.9169</a> or send an email to
+                  our registrar at{" "}
+                  <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a>
+                </Alert>
+              ) : null}
+              <Box sx={{ textAlign: "end" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    fontWeight: "bold",
+                    fontFamily: "Didact Gothic",
+                    textTransform: "none",
+                    fontSize: "1.2rem",
+                  }}
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </Box>
+            </Form>
+          </Grid>
+          <Grid item xs={12} md={6}></Grid>
+        </Grid>
       </Container>
     </Box>
   );

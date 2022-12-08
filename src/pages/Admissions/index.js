@@ -8,9 +8,9 @@ const Admissions = () => {
   return (
     <div>
       <Showcase title="Admissions" />
-      <PageNav sections={["Tuition & Fees", "Schedule Tour"]} />
-      <Tuition />
+      <PageNav sections={["Schedule Tour", "Tuition & Fees"]} />
       <Tour />
+      <Tuition />
     </div>
   );
 };
