@@ -19,15 +19,15 @@ const Footer = () => {
   const StyledButton = styled(Button)(({ theme }) => ({
     width: "100%",
     color: "white",
-    border: "3px solid white",
+    border: "2px solid white",
     fontSize: "22px",
-    fontWeight: 800,
+    letterSpacing: "3px",
     padding: "15px 0px",
-    fontFamily: "Montserrat",
+    fontFamily: "Didact Gothic",
     "&:hover": {
       color: "white",
-      border: `3px solid ${theme.palette.grey[500]}`,
-      backgroundColor: theme.palette.grey[500],
+      border: `2px solid #c0ac15`,
+      backgroundColor: "#c0ac15",
     },
   }));
 
@@ -61,7 +61,7 @@ const Footer = () => {
                   to="/connect#Contact"
                   variant="outlined"
                 >
-                  Contact
+                  <strong>Contact</strong>
                 </StyledButton>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -70,7 +70,7 @@ const Footer = () => {
                   component={HashLink}
                   to="/admissions#Request"
                 >
-                  Visit
+                  <strong>Visit</strong>
                 </StyledButton>
               </Grid>
 
@@ -80,7 +80,7 @@ const Footer = () => {
                   variant="outlined"
                   to="/connect#Employment"
                 >
-                  Employment
+                  <strong>Employment</strong>
                 </StyledButton>
               </Grid>
             </Grid>
