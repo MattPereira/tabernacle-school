@@ -1,6 +1,6 @@
 import juniorHigh from "../../../assets/images/academics/junior-high.jpg";
 import { Row, Col } from "react-bootstrap";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import SectionTitle from "../../../common/SectionTitle";
 
 const JuniorHigh = () => {
@@ -10,7 +10,12 @@ const JuniorHigh = () => {
       <Container className="py-5">
         <Row className="align-items-center">
           <Col xl={6} className="d-flex justify-content-center mb-5">
-            <img src={juniorHigh} className="img-fluid" alt="" />
+            <Box
+              component="img"
+              sx={{ width: "100%", borderRadius: "30px" }}
+              src={juniorHigh}
+              alt=""
+            />
           </Col>
           <Col xl={6} className="align-middle">
             <p className="lead">

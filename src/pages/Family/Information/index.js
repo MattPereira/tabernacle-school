@@ -16,7 +16,7 @@ import { Container, Box } from "@mui/material";
 
 const Information = () => {
   return (
-    <Box id="Information" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box id="Information" sx={{ py: 5 }}>
       <SectionTitle title="Information" />
       <Container className="py-5">
         <Row className="text-center mb-md-5">

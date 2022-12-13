@@ -1,17 +1,18 @@
 import preschool from "../../../assets/images/academics/preschool.jpg";
 import { Row, Col } from "react-bootstrap";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import SectionTitle from "../../../common/SectionTitle";
 
 const Preschool = () => {
   return (
     <section id="Preschool" className="py-5">
       <SectionTitle title="Preschool" />
-      <Container className="py-5">
+      <Container className="pb-5 pt-3">
         <div className="text-center mb-5">
-          <img
+          <Box
+            component="img"
             src={preschool}
-            className="img-fluid mb-4"
+            sx={{ width: "100%", borderRadius: "30px" }}
             alt="Group of preschool children"
           />
         </div>

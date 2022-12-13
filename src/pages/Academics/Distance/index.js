@@ -1,56 +1,66 @@
-import { Row, Col } from "react-bootstrap";
-
 import googleClassroom from "../../../assets/images/academics/google-classroom.png";
 import ignitia from "../../../assets/images/academics/ignitia.png";
 import SectionTitle from "../../../common/SectionTitle";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Grid, Paper, Typography } from "@mui/material";
 
 const Distance = () => {
   return (
     <Box id="Distance Learning" sx={{ py: 5, bgcolor: "background.alternate" }}>
       <SectionTitle title="Distance Learning" />
-      <Container className="py-5">
-        <p className="lead px-lg-5">
-          In case of a resurgence in Coronavirus cases and potential school
-          closure, Tabernacle has implemented a Distance Learning Program using
-          Google Classroom. Each student has been assigned to a Google
-          classroom. To continue the parent orientation and learn more about
-          your child’s teacher and what they will be doing this year, please
-          sign in to their Google Classroom. Middle School students engaging in
-          distance learning will access their curriculum using Ignitia, a
-          Web-based learning environment featuring a media-rich, online
-          curriculum.
-        </p>
-        <Row className="justify-content-around align-items-center">
-          <Col lg={6} xl={5} className="rounded p-5 mb-4">
-            <img
-              src={googleClassroom}
-              className="mx-auto d-block w-50"
-              alt=""
-            />
-            <h3 className="text-center my-4 fw-bold">Google Classroom</h3>
-            <div className="text-center">
-              <a
-                href="https://classroom.google.com/u/0/h"
-                className="btn btn-dark px-5 fw-bold"
-              >
-                Login
-              </a>
-            </div>
-          </Col>
-          <Col lg={6} xl={5} className="p-5 rounded mb-4">
-            <img src={ignitia} className="mx-auto d-block w-75" alt="" />
-            <div className="text-center">
-              <a
-                href="https://tabernacleca.ignitiaschools.com/owsoo/login/auth"
-                className="btn btn-dark px-5 fw-bold"
-              >
-                Login
-              </a>
-            </div>
-            <p className="mt-3"></p>
-          </Col>
-        </Row>
+      <Container sx={{ pb: 10 }}>
+        <Box sx={{ mb: 8, mt: 3 }}>
+          <Typography variant="p">
+            In case of a resurgence in Coronavirus cases and potential school
+            closure, Tabernacle has implemented a Distance Learning Program
+            using Google Classroom. Each student has been assigned to a Google
+            classroom. Middle School students engaging in distance learning will
+            access their curriculum using Ignitia, a Web-based learning
+            environment featuring a media-rich, online curriculum.
+          </Typography>
+        </Box>
+        <Grid container spacing={5} justifyContent="space-around">
+          <Grid item md={6} lg={5}>
+            <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
+              <Box sx={{ p: 3 }}>
+                <Box
+                  component="img"
+                  src={googleClassroom}
+                  className="mx-auto d-block w-50"
+                  alt=""
+                />
+              </Box>
+              <Box sx={{ p: 3 }}>
+                <Typography variant="h5">Google Classroom</Typography>
+                <Typography variant="p">
+                  A blended learning platform developed by Google for
+                  educational institutions that aims to simplify creating,
+                  distributing, and grading assignments.
+                </Typography>
+              </Box>
+            </Paper>
+          </Grid>
+          <Grid item md={6} lg={5}>
+            <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
+              <Box sx={{ p: 3 }}>
+                <Box
+                  component="img"
+                  src={ignitia}
+                  className="mx-auto d-block w-50"
+                  alt=""
+                />
+              </Box>
+              <Box sx={{ p: 3 }}>
+                <Typography variant="h5">Ignitia</Typography>
+                <Typography variant="p">
+                  A versatile online Christian curriculum and learning
+                  management system with dynamic, Christ-centered lessons and
+                  interactive features designed to serve teachers and students
+                  in elementary, middle, and high school.
+                </Typography>
+              </Box>
+            </Paper>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );

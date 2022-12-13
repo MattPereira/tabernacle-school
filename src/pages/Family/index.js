@@ -1,6 +1,6 @@
 import Showcase from "../../common/Showcase/Showcase";
 import PageNav from "../../common/PageNav/";
-import Portals from "./Resources";
+import Resources from "./Resources";
 import Information from "./Information";
 import TigerLife from "./TigerLife";
 import Forms from "./Forms";
@@ -10,11 +10,13 @@ const Family = () => {
   return (
     <div>
       <Showcase title="Family" />
-      <PageNav sections={["Resources", "Information", "Tiger Life", "Forms"]} />
-      <Portals />
+      <PageNav sections={["Information", "Resources", "Forms", "Tiger Life"]} />
       <Information />
-      <TigerLife />
+      <Resources />
+
       <Forms />
+      <TigerLife />
+
       <AmazonSmile />
     </div>
   );

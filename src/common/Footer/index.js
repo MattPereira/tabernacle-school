@@ -24,6 +24,7 @@ const Footer = () => {
     letterSpacing: "3px",
     padding: "15px 0px",
     fontFamily: "Didact Gothic",
+    borderRadius: "15px",
     "&:hover": {
       color: "white",
       border: `2px solid #c0ac15`,

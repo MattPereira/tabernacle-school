@@ -19,8 +19,15 @@ const FacultyAccordion = () => {
                 level.groups.map((group) => {
                   return (
                     <Box>
-                      <Row className="mb-5">
-                        <Box sx={{ mb: 3 }}>
+                      <Row>
+                        <Box
+                          sx={{
+                            mb: 2,
+                            backgroundColor: "grey.900",
+                            color: "white",
+                            borderRadius: "10px",
+                          }}
+                        >
                           <Typography variant="h4" align="center">
                             {group["grade"]}
                           </Typography>

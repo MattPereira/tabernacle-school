@@ -31,10 +31,11 @@ const Elementary = () => {
             </p>
           </Col>
           <Col xl={6} className="order-1 order-xl-2 mb-5 text-center">
-            <img
+            <Box
+              component="img"
+              sx={{ width: "100%", borderRadius: "30px" }}
               src={elementary}
-              className="img-fluid"
-              alt="Elementary school children"
+              alt=""
             />
           </Col>
         </Row>

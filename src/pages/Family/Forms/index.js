@@ -11,7 +11,7 @@ import {
 
 const Forms = () => {
   return (
-    <Box id="Elementary" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box id="Elementary" sx={{ py: 5 }}>
       <SectionTitle title="Forms" />
       <Container sx={{ py: 5 }}>
         <Row className="text-center">

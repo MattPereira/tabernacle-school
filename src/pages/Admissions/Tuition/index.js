@@ -1,8 +1,10 @@
 import { Row, Col, Table } from "react-bootstrap";
 import { Container, Box } from "@mui/material";
 import SectionTitle from "../../../common/SectionTitle";
+import { useTheme } from "@mui/material/styles";
 
 const Tuition = () => {
+  const theme = useTheme();
   return (
     <Box
       id="Tuition"
@@ -26,10 +28,13 @@ const Tuition = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="">
-                  <td colSpan="4" className="table-light">
-                    Junior & Transitional Kindergarten
-                  </td>
+                <tr
+                  style={{
+                    backgroundColor: theme.palette.primary.light,
+                    color: theme.palette.primary.contrastText,
+                  }}
+                >
+                  <th colSpan="4">Junior & Transitional Kindergarten</th>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
@@ -49,8 +54,13 @@ const Tuition = () => {
                   <td>$6,800</td>
                   <td>$695</td>
                 </tr>
-                <tr className="table-light">
-                  <td colSpan="4">Grades K-5</td>
+                <tr
+                  style={{
+                    backgroundColor: theme.palette.primary.light,
+                    color: theme.palette.primary.contrastText,
+                  }}
+                >
+                  <th colSpan="4">Grades K-5</th>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
@@ -70,8 +80,13 @@ const Tuition = () => {
                   <td>$6,450</td>
                   <td>$660</td>
                 </tr>
-                <tr className="table-light">
-                  <td colSpan="4">Grades 6-8</td>
+                <tr
+                  style={{
+                    backgroundColor: theme.palette.primary.light,
+                    color: theme.palette.primary.contrastText,
+                  }}
+                >
+                  <th colSpan="4">Grades 6 - 8</th>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>

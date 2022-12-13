@@ -7,7 +7,7 @@ import { Container, Box, Paper, Typography, Grid } from "@mui/material";
 
 const TigerLife = () => {
   return (
-    <Box id="Tiger" sx={{ py: 5 }}>
+    <Box id="Tiger" sx={{ py: 5, bgcolor: "background.alternate" }}>
       <Container>
         <SectionTitle title="Tiger Life" />
 
@@ -17,7 +17,7 @@ const TigerLife = () => {
               to="/family/orientation_video"
               className="text-decoration-none link-dark"
             >
-              <Paper elevation={5} sx={{ borderRadius: "30px" }}>
+              <Paper elevation={0} sx={{ borderRadius: "30px" }}>
                 <Box
                   component="img"
                   src={orientation}

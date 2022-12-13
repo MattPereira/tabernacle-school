@@ -1,15 +1,14 @@
-import { Row, Col } from "react-bootstrap";
 import athletics from "../../../assets/images/campus/athletics.jpg";
 import SectionTitle from "../../../common/SectionTitle";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Grid } from "@mui/material";
 
 const Athletics = () => {
   return (
     <Box id="Athletics" sx={{ py: 5, bgcolor: "background.alternate" }}>
       <SectionTitle title="Athletics" />
-      <Container className="py-5">
-        <Row className="align-items-center">
-          <Col lg={6} className="col-lg-6">
+      <Container sx={{ py: 5 }}>
+        <Grid container spacing={5} alignItems="center">
+          <Grid item md={6}>
             <div className="mb-5">
               <p className="lead">
                 The focus behind the athletic program at Tabernacle is to
@@ -40,15 +39,16 @@ const Athletics = () => {
                 on BACSAL visit <a href="bascal.org">bacsal.org</a>.
               </p>
             </div>
-          </Col>
-          <Col lg={6} className="col-lg-6">
-            <img
+          </Grid>
+          <Grid item md={6}>
+            <Box
+              component="img"
               src={athletics}
-              className="img-fluid"
+              sx={{ width: "100%", borderRadius: "30px" }}
               alt="Child running on track"
             />
-          </Col>
-        </Row>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
