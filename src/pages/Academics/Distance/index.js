@@ -21,11 +21,11 @@ const Distance = () => {
         <Grid container spacing={5} justifyContent="space-around">
           <Grid item md={6} lg={5}>
             <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
-              <Box sx={{ p: 3 }}>
+              <Box sx={{ p: 5, textAlign: "center" }}>
                 <Box
                   component="img"
                   src={googleClassroom}
-                  className="mx-auto d-block w-50"
+                  sx={{ width: "75%" }}
                   alt=""
                 />
               </Box>
@@ -41,11 +41,11 @@ const Distance = () => {
           </Grid>
           <Grid item md={6} lg={5}>
             <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
-              <Box sx={{ p: 3 }}>
+              <Box sx={{ px: 5, pt: 5, textAlign: "center" }}>
                 <Box
                   component="img"
                   src={ignitia}
-                  className="mx-auto d-block w-50"
+                  sx={{ width: "75%" }}
                   alt=""
                 />
               </Box>
