@@ -22,7 +22,10 @@ const GradeLevels = () => {
       <Container sx={{ px: { xs: 3, lg: 0 } }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid item sm={10} md={8} lg={4}>
-            <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
+            <Typography
+              variant="h3"
+              sx={{ my: 3, textAlign: "center", fontFamily: "Copse" }}
+            >
               Preschool
             </Typography>
             <Typography variant="p">
@@ -44,7 +47,10 @@ const GradeLevels = () => {
             </Box>
           </Grid>
           <Grid item sm={10} md={8} lg={4}>
-            <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
+            <Typography
+              variant="h3"
+              sx={{ my: 3, textAlign: "center", fontFamily: "Copse" }}
+            >
               Elementary
             </Typography>
             <Typography variant="p">
@@ -66,7 +72,10 @@ const GradeLevels = () => {
             </Box>
           </Grid>
           <Grid item sm={10} md={8} lg={4}>
-            <Typography variant="h3" sx={{ my: 3, textAlign: "center" }}>
+            <Typography
+              variant="h3"
+              sx={{ my: 3, textAlign: "center", fontFamily: "Copse" }}
+            >
               Junior High
             </Typography>
             <Typography variant="p">

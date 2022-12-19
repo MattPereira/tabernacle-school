@@ -112,13 +112,10 @@ const NavBar = (props) => {
       >
         <NavLink to="/" style={{ textDecoration: "none", paddingLeft: "1rem" }}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <SvgIcon sx={{ mb: 1, mr: 1, fontSize: "2.5rem" }}>
-              <TSLogo />
-            </SvgIcon>
             <Typography
               variant="h4"
               color="white"
-              sx={{ fontFamily: "Didact Gothic", fontWeight: "bold" }}
+              sx={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
             >
               Tabernacle School
             </Typography>
@@ -190,11 +187,6 @@ const NavBar = (props) => {
     justifyContent: "space-between",
   }));
 
-  const StyledTitleBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-  }));
-
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
     fontFamily: "Roboto Mono",
     fontWeight: "bold",
@@ -203,7 +195,7 @@ const NavBar = (props) => {
   const StyledTopNavButtons = styled(Button)({
     color: "#fff",
     fontFamily: "Montserrat",
-    padding: "0rem 1rem",
+    paddingLeft: "1rem",
     "&:hover": {
       color: "white",
       fontWeight: "bold",
@@ -232,21 +224,13 @@ const NavBar = (props) => {
       >
         <StyledTopToolBar sx={{ py: { xs: 1, md: 2 } }}>
           <NavLink to="/" style={{ textDecoration: "none" }}>
-            <StyledTitleBox>
-              <SvgIcon sx={{ mb: 1, mr: 1, fontSize: "2.5rem" }}>
-                <TSLogo />
-              </SvgIcon>
-              <StyledSiteTitle color="white" variant="h4">
-                Tabernacle
-              </StyledSiteTitle>
-              <StyledSiteTitle
-                color="white"
-                variant="h4"
-                sx={{ display: { xs: "none", lg: "block" } }}
-              >
-                &nbsp;School
-              </StyledSiteTitle>
-            </StyledTitleBox>
+            <StyledSiteTitle
+              color="white"
+              variant="h4"
+              sx={{ fontSize: { xs: "1.75rem", md: "2rem", lg: "2.25rem" } }}
+            >
+              Tabernacle School
+            </StyledSiteTitle>
           </NavLink>
           <IconButton
             aria-label="open drawer"
