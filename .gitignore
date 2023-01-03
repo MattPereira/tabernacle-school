@@ -24,3 +24,5 @@ yarn-error.log*
 
 
 /src/secrets.js
+
+/.firebase
