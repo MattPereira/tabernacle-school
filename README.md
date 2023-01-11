@@ -24,3 +24,10 @@ A single page web application for Tabernacle School that advertises to prospecti
 - Sass
 - CSS
 - HTML
+
+
+### **History**
+1. Version 1.0: ExpressJs, Bootstrap and Jinja Templating
+2. Version 2.0: Create React App, Strapi, and Material UI
+3. Version 3.0: NextJs and Firebase
+

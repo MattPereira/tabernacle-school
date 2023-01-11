@@ -38,7 +38,7 @@ const Tuition = () => {
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
-                  <td>$7,500</td>
+                  <td>$7,850</td>
                   <td>$7,350</td>
                   <td>$750</td>
                 </tr>
