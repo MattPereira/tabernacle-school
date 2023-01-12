@@ -9,8 +9,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
 import { useTheme, styled } from "@mui/material/styles";
 
@@ -105,7 +106,7 @@ const NavBar = (props) => {
             <Typography
               variant="h4"
               color="white"
-              sx={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
+              sx={{ fontFamily: "Copse", fontWeight: "bold" }}
             >
               Tabernacle School
             </Typography>
@@ -178,8 +179,9 @@ const NavBar = (props) => {
   }));
 
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
-    fontFamily: "Roboto Mono",
+    fontFamily: "Copse",
     fontWeight: "bold",
+    letterSpacing: "0.2rem",
   }));
 
   const StyledTopNavButtons = styled(Button)({
@@ -280,7 +282,7 @@ const NavBar = (props) => {
         elevation={0}
         color="transparent"
         position="relative"
-        sx={{ pt: transparent || isCollapsed ? 8 : 0 }}
+        sx={{ pt: transparent || isCollapsed ? 8 : 0, bgcolor: "#ffcf33" }}
       >
         <StyledAlertToolbar variant="dense">
           <Button
@@ -288,21 +290,15 @@ const NavBar = (props) => {
             href="https://drive.google.com/file/d/10B_x9KBnytuErqotLrhaMh0ztZdT4JAS/view?usp=sharing"
             sx={{
               p: 1.5,
-              fontFamily: "Montserrat",
-              fontSize: "16px",
-              fontWeight: 400,
+              fontFamily: "Copse",
+              fontSize: "22px",
+              fontWeight: 600,
               color: "black",
               textTransform: "none",
-              "&:hover": {
-                backgroundColor: "#fff",
-                color: "#1565c0",
-              },
             }}
           >
-            <NotificationsActiveOutlinedIcon fontSize="small" />{" "}
-            <span style={{ marginLeft: "5px" }}>
-              Open House on January 26th
-            </span>
+            <NotificationsActiveIcon sx={{ fontSize: "28px" }} />
+            <span style={{ marginLeft: "5px" }}>Open House January 26th</span>
           </Button>
         </StyledAlertToolbar>
       </AppBar>
