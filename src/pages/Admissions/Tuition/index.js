@@ -3,6 +3,10 @@ import { Container, Box } from "@mui/material";
 import SectionTitle from "../../../common/SectionTitle";
 import { useTheme } from "@mui/material/styles";
 
+const preschool = { annual: 7850, monthly: 785 };
+const elementary = { annual: 7150, monthly: 715 };
+const juniorHigh = { annual: 79000, monthly: 795 };
+
 const Tuition = () => {
   const theme = useTheme();
   return (
@@ -16,7 +20,7 @@ const Tuition = () => {
 
         <Row className="row my-5">
           <Col xl={6}>
-            <h4 className="text-center fw-bold">2022-23 Tuition</h4>
+            <h4 className="text-center fw-bold">2023-24 Tuition</h4>
 
             <Table bordered hover className="bg-white">
               <thead>
@@ -34,25 +38,25 @@ const Tuition = () => {
                     color: theme.palette.primary.contrastText,
                   }}
                 >
-                  <th colSpan="4">Junior & Transitional Kindergarten</th>
+                  <th colSpan="4">Preschool & Transitional Kindergarten</th>
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
-                  <td>$7,850</td>
-                  <td>$7,350</td>
-                  <td>$750</td>
+                  <td>${preschool.annual}</td>
+                  <td>${preschool.annual - 150}</td>
+                  <td>${preschool.monthly}</td>
                 </tr>
                 <tr className="text-center">
                   <td>2nd</td>
-                  <td>$6,950</td>
-                  <td>$6,800</td>
-                  <td>$695</td>
+                  <td>${preschool.annual - 550}</td>
+                  <td>${preschool.annual - 150 - 550}</td>
+                  <td>${preschool.monthly - 55}</td>
                 </tr>
                 <tr className="text-center">
                   <td>3rd</td>
-                  <td>$6,950</td>
-                  <td>$6,800</td>
-                  <td>$695</td>
+                  <td>${preschool.annual - 550}</td>
+                  <td>${preschool.annual - 150 - 550}</td>
+                  <td>${preschool.monthly - 55}</td>
                 </tr>
                 <tr
                   style={{
@@ -64,21 +68,21 @@ const Tuition = () => {
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
-                  <td>$7,150</td>
-                  <td>$7,000</td>
-                  <td>$715</td>
+                  <td>${elementary.annual}</td>
+                  <td>${elementary.annual - 150}</td>
+                  <td>${elementary.monthly}</td>
                 </tr>
                 <tr className="text-center">
                   <td>2nd</td>
-                  <td>$6,600</td>
-                  <td>$6,450</td>
-                  <td>$660</td>
+                  <td>${elementary.annual - 550}</td>
+                  <td>${elementary.annual - 150 - 550}</td>
+                  <td>${elementary.monthly - 55}</td>
                 </tr>
                 <tr className="text-center">
                   <td>3rd</td>
-                  <td>$6,600</td>
-                  <td>$6,450</td>
-                  <td>$660</td>
+                  <td>${elementary.annual - 550}</td>
+                  <td>${elementary.annual - 150 - 550}</td>
+                  <td>${elementary.monthly - 55}</td>
                 </tr>
                 <tr
                   style={{
@@ -90,25 +94,28 @@ const Tuition = () => {
                 </tr>
                 <tr className="text-center">
                   <td>1st</td>
-                  <td>$7,550</td>
-                  <td>$7,400</td>
-                  <td>$755</td>
+                  <td>${juniorHigh.annual}</td>
+                  <td>${juniorHigh.annual - 150}</td>
+                  <td>${juniorHigh.monthly}</td>
                 </tr>
                 <tr className="text-center">
                   <td>2nd</td>
-                  <td>$7,000</td>
-                  <td>$6,850</td>
-                  <td>$700</td>
+                  <td>${juniorHigh.annual - 550}</td>
+                  <td>${juniorHigh.annual - 150 - 550}</td>
+                  <td>${juniorHigh.monthly - 55}</td>
                 </tr>
                 <tr className="text-center">
                   <td>3rd</td>
-                  <td>$7,000</td>
-                  <td>$6,850</td>
-                  <td>$700</td>
+                  <td>${juniorHigh.annual - 550}</td>
+                  <td>${juniorHigh.annual - 150 - 550}</td>
+                  <td>${juniorHigh.monthly - 55}</td>
                 </tr>
               </tbody>
             </Table>
-            <p>*Tuition payments begin 8/1/2022 and end 5/1/2023</p>
+            <p>
+              *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for PIF
+              discount is due by 8/10/2023
+            </p>
             <h4 className="text-center fw-bold">Annual Fees</h4>
             <Table bordered className="align-middle mb-5 bg-white">
               <thead>
@@ -128,8 +135,8 @@ const Tuition = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>TK/JK Consumables</td>
-                  <td>$250</td>
+                  <td>TK & Preschool Consumables</td>
+                  <td>$350</td>
                   <td>
                     Fee includes curriculum, emergency kit, yearbook, and craft
                     supplies.
@@ -137,7 +144,7 @@ const Tuition = () => {
                 </tr>
                 <tr>
                   <td>K-8 Consumables</td>
-                  <td>$325</td>
+                  <td>$375</td>
                   <td>
                     Fee includes textbooks, emergency supplies, yearbook, and
                     online resources. Maximum consumable fee per family is $850
@@ -178,16 +185,16 @@ const Tuition = () => {
                 </tr>
                 <tr>
                   <td>Field Trip</td>
-                  <td>variable</td>
+                  <td>TBD</td>
                   <td>Per trip</td>
                 </tr>
                 <tr>
                   <td>Emergency Lunch</td>
-                  <td>$6</td>
+                  <td>$7</td>
                   <td>Per lunch</td>
                 </tr>
                 <tr>
-                  <td>Bounced Checks</td>
+                  <td>Returned Check</td>
                   <td>$25</td>
                   <td>Per check</td>
                 </tr>
@@ -254,12 +261,12 @@ const Tuition = () => {
                 <tr>
                   <td>Hourly Daycare</td>
                   <td>For students not enrolled in FTDC</td>
-                  <td>$8</td>
+                  <td>$10</td>
                   <td>Hourly</td>
                 </tr>
                 <tr>
                   <td>After Hours Daycare</td>
-                  <td>After 6:30 pm closing time (late pick-up)</td>
+                  <td>After 6:00 pm (late pick-up)</td>
                   <td>$1</td>
                   <td>Minute</td>
                 </tr>

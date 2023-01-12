@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { ReactComponent as TSLogo } from "../../assets/svgs/ts_logo.svg";
 
 import { useMediaQuery } from "react-responsive";
 
@@ -28,7 +27,6 @@ import {
   IconButton,
   Button,
   Drawer,
-  SvgIcon,
 } from "@mui/material";
 
 const topNavItems = [
@@ -61,14 +59,6 @@ const midNavItems = [
   "campus",
   "family",
   "connect",
-];
-
-const alertNavItems = [
-  {
-    text: "Preschool Hiring",
-    icon: <NotificationsActiveOutlinedIcon fontSize="small" />,
-    path: "/connect#Employment",
-  },
 ];
 
 const NavBar = (props) => {
@@ -290,33 +280,30 @@ const NavBar = (props) => {
         elevation={0}
         color="transparent"
         position="relative"
-        sx={{ pt: transparent ? 8 : 0 }}
+        sx={{ pt: transparent || isCollapsed ? 8 : 0 }}
       >
         <StyledAlertToolbar variant="dense">
-          {alertNavItems.map((item) => {
-            const { icon, path, text } = item;
-            return (
-              <Button
-                key={text}
-                component={HashLink}
-                to={`${path}`}
-                sx={{
-                  p: 1.5,
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                  fontWeight: 400,
-                  color: "black",
-                  textTransform: "none",
-                  "&:hover": {
-                    backgroundColor: "#fff",
-                    color: "#1565c0",
-                  },
-                }}
-              >
-                {icon} <span style={{ marginLeft: "5px" }}>{text}</span>
-              </Button>
-            );
-          })}
+          <Button
+            component="a"
+            href="https://drive.google.com/file/d/10B_x9KBnytuErqotLrhaMh0ztZdT4JAS/view?usp=sharing"
+            sx={{
+              p: 1.5,
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontWeight: 400,
+              color: "black",
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "#fff",
+                color: "#1565c0",
+              },
+            }}
+          >
+            <NotificationsActiveOutlinedIcon fontSize="small" />{" "}
+            <span style={{ marginLeft: "5px" }}>
+              Open House on January 26th
+            </span>
+          </Button>
         </StyledAlertToolbar>
       </AppBar>
 
