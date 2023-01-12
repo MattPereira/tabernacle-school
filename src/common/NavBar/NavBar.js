@@ -263,7 +263,7 @@ const NavBar = (props) => {
                 sx={{
                   p: 2,
                   fontFamily: "Montserrat",
-                  fontSize: "16px",
+                  fontSize: "20px",
                   fontWeight: 600,
                   color: transparent ? "white" : "black",
                   "&:hover": {
@@ -289,7 +289,7 @@ const NavBar = (props) => {
             component="a"
             href="https://drive.google.com/file/d/10B_x9KBnytuErqotLrhaMh0ztZdT4JAS/view?usp=sharing"
             sx={{
-              p: 1.5,
+              p: 1.25,
               fontFamily: "Copse",
               fontSize: "22px",
               fontWeight: 600,
