@@ -30,7 +30,16 @@ const Distance = () => {
                 />
               </Box>
               <Box sx={{ p: 3 }}>
-                <Typography variant="h5">Google Classroom</Typography>
+                <Box>
+                  <Typography
+                    variant="h5"
+                    component="a"
+                    href="https://edu.google.com/workspace-for-education/classroom/"
+                  >
+                    Google Classroom
+                  </Typography>
+                </Box>
+
                 <Typography variant="p">
                   A blended learning platform developed by Google for
                   educational institutions that aims to simplify creating,
@@ -41,7 +50,7 @@ const Distance = () => {
           </Grid>
           <Grid item md={6} lg={5}>
             <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
-              <Box sx={{ px: 5, pt: 5, textAlign: "center" }}>
+              <Box sx={{ p: 5, textAlign: "center" }}>
                 <Box
                   component="img"
                   src={ignitia}
@@ -50,7 +59,16 @@ const Distance = () => {
                 />
               </Box>
               <Box sx={{ p: 3 }}>
-                <Typography variant="h5">Ignitia</Typography>
+                <Box>
+                  <Typography
+                    variant="h5"
+                    component="a"
+                    href="https://tabernacleca.ignitiaschools.com/owsoo/login/auth"
+                  >
+                    Ignitia
+                  </Typography>
+                </Box>
+
                 <Typography variant="p">
                   A versatile online Christian curriculum and learning
                   management system with dynamic, Christ-centered lessons and

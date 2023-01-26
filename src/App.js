@@ -27,41 +27,10 @@ import Discipline from "./pages/Family/Information/Discipline";
 /***** The family/tigerlife Pages */
 import OrientationVideo from "./pages/Family/TigerLife/OrientationVideo";
 
-import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
 
 function App() {
-  let theme = createTheme({
-    typography: {
-      h1: {
-        fontFamily: "Cubano",
-      },
-      h2: {
-        fontFamily: "Copse",
-      },
-      h3: {
-        fontFamily: "Didact Gothic",
-        fontSize: "2.5rem",
-      },
-      h4: {
-        fontFamily: "Copse",
-      },
-      h6: {
-        fontFamily: "Didact Gothic",
-      },
-      p: {
-        fontFamily: "Didact Gothic",
-        fontSize: "20px",
-      },
-    },
-    palette: {
-      background: {
-        alternate: "#eeeeee",
-      },
-    },
-  });
-
-  theme = responsiveFontSizes(theme);
-
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
