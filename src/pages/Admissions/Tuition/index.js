@@ -4,8 +4,8 @@ import SectionTitle from "../../../common/SectionTitle";
 import { useTheme } from "@mui/material/styles";
 
 const preschool = { annual: 7850, monthly: 785 };
-const elementary = { annual: 7150, monthly: 715 };
-const juniorHigh = { annual: 79000, monthly: 795 };
+const elementary = { annual: 7500, monthly: 715 };
+const juniorHigh = { annual: 7900, monthly: 795 };
 
 const Tuition = () => {
   const theme = useTheme();
@@ -154,11 +154,11 @@ const Tuition = () => {
             </Table>
             <p>
               *Classroom placement is secured upon payment of registration and
-              consumalbe fee and first month's tuition.
+              consumable fee and first month's tuition.
             </p>
             <p>
               *Registration is non-refundable. Consumable fee is non-refundable
-              after June 1st or at time of enrollment for new students. First
+              after May 1st or at time of enrollment for new students. First
               month's tuition is non-refundable.
             </p>
           </Col>
@@ -273,7 +273,7 @@ const Tuition = () => {
               </tbody>
             </Table>
             <p>
-              *Daycare is open 7:00AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
+              *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
               <a href="/campus#calendar">calendar</a> for closures.
             </p>
           </Col>

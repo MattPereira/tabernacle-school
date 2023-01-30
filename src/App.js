@@ -1,5 +1,5 @@
 import "./custom.scss";
-
+import { Box } from "@mui/material";
 import { Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
 import ScrollToTopButton from "./common/ScrollToTop/ScrollToTopButton";
@@ -35,30 +35,32 @@ function App() {
     <ThemeProvider theme={theme}>
       <NavBar />
       <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route exact path="/about/staff/:id" element={<ProfilePage />} />
-          <Route path="/admissions" element={<Admissions />} />
-          <Route path="/academics" element={<Academics />} />
-          <Route path="/campus" element={<Campus />} />
-          <Route path="/connect" element={<Connect />} />
-          <Route path="/renweb" element={<Renweb />} />
-          <Route
-            path="/family/uniform_guidelines"
-            element={<UniformGuidelines />}
-          />
-          <Route path="/family/orientation" element={<Orientation />} />
-          <Route
-            path="/family/orientation_video"
-            element={<OrientationVideo />}
-          />
-          <Route path="/family/facts" element={<FactsHelp />} />
-          <Route path="/family/supply_list" element={<SupplyList />} />
-          <Route path="/family/discipline" element={<Discipline />} />
-          <Route path="/family" element={<Family />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <Box sx={{ mt: { xs: "67px", md: 0 } }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route exact path="/about/staff/:id" element={<ProfilePage />} />
+            <Route path="/admissions" element={<Admissions />} />
+            <Route path="/academics" element={<Academics />} />
+            <Route path="/campus" element={<Campus />} />
+            <Route path="/connect" element={<Connect />} />
+            <Route path="/renweb" element={<Renweb />} />
+            <Route
+              path="/family/uniform_guidelines"
+              element={<UniformGuidelines />}
+            />
+            <Route path="/family/orientation" element={<Orientation />} />
+            <Route
+              path="/family/orientation_video"
+              element={<OrientationVideo />}
+            />
+            <Route path="/family/facts" element={<FactsHelp />} />
+            <Route path="/family/supply_list" element={<SupplyList />} />
+            <Route path="/family/discipline" element={<Discipline />} />
+            <Route path="/family" element={<Family />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Box>
       </ScrollToTop>
       <ScrollToTopButton />
       <Footer />

@@ -51,7 +51,7 @@ const Daycare = () => {
                 <tbody>
                   <tr>
                     <td>Drop-In</td>
-                    <td>$8</td>
+                    <td>$10</td>
                     <td>Hour</td>
                   </tr>
                   <tr>

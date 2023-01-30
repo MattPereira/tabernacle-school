@@ -278,7 +278,7 @@ const NavBar = (props) => {
           ))}
         </StyledPagesToolbar>
       </AppBar>
-      <AppBar
+      {/* <AppBar
         elevation={0}
         color="transparent"
         position="relative"
@@ -301,7 +301,7 @@ const NavBar = (props) => {
             <span style={{ marginLeft: "5px" }}>Open House January 26th</span>
           </Button>
         </StyledAlertToolbar>
-      </AppBar>
+      </AppBar> */}
 
       <Box component="nav">
         <Drawer
