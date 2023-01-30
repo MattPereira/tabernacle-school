@@ -93,17 +93,6 @@ const Visit = () => {
                 }}
               />
 
-              {/* <Form.Group className="mb-3" controlId="name">
-                  <Form.Label className="fw-bold">Name</Form.Label>
-                  <Form.Control type="text" name="name" required />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="email">
-                  <Form.Label className="fw-bold">Email</Form.Label>
-
-                  <Form.Control type="email" name="email" required />
-                </Form.Group> */}
-
               <Form.Group controlId="subject">
                 <Form.Control
                   type="hidden"
@@ -113,15 +102,6 @@ const Visit = () => {
                 />
               </Form.Group>
 
-              {/* <Form.Group className="mb-3" controlId="message">
-                  <Form.Label className="fw-bold">Message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows="5"
-                    name="message"
-                    required
-                  />
-                </Form.Group> */}
               {status === true ? (
                 <Alert variant="success">
                   Message successfully sent! Tabernacle School's registrar will

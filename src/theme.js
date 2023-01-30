@@ -17,6 +17,7 @@ let theme = createTheme({
     },
     h6: {
       fontFamily: "Didact Gothic",
+      fontWeight: "bold",
     },
     p: {
       fontFamily: "Didact Gothic",

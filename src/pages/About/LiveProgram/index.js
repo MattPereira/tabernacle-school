@@ -32,7 +32,7 @@ const characteristics = {
     image: respectfulImg,
     adjectives: {
       Polite: "Well mannered and honoring in your attitude",
-      Obidient: "Submitting to your authority",
+      Obedient: "Submitting to your authority",
       Thinking: "Putting God first in your thoughts",
       Leadership: "Being an example for other students",
       Accepting: "Treat others as you would want to be treated",

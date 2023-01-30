@@ -11,7 +11,7 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+// import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
 import { useTheme, styled } from "@mui/material/styles";
 
@@ -199,12 +199,11 @@ const NavBar = (props) => {
     backgroundColor: transparent
       ? "rgba(21, 101, 192, 0.9)"
       : theme.palette.grey[300],
-    // opacity: transparent ? "0.9" : "1",
   }));
 
-  const StyledAlertToolbar = styled(Toolbar)({
-    justifyContent: "center",
-  });
+  // const StyledAlertToolbar = styled(Toolbar)({
+  //   justifyContent: "center",
+  // });
 
   return (
     <>
@@ -263,7 +262,7 @@ const NavBar = (props) => {
                 sx={{
                   p: 2,
                   fontFamily: "Montserrat",
-                  fontSize: "20px",
+                  fontSize: "18px",
                   fontWeight: 600,
                   color: transparent ? "white" : "black",
                   "&:hover": {

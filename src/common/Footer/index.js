@@ -140,10 +140,7 @@ const Footer = () => {
               <Box
                 sx={{ mb: { xs: 3 }, textAlign: { xs: "center", md: "end" } }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{ color: "#E6BE67", fontWeight: 600 }}
-                >
+                <Typography variant="h6" sx={{ color: "#E6BE67" }}>
                   <em>Love God. Learn for life. Lead like Christ.</em>
                 </Typography>
               </Box>
