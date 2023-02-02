@@ -15,6 +15,10 @@ let theme = createTheme({
     h4: {
       fontFamily: "Copse",
     },
+    h5: {
+      fontFamily: "Didact Gothic",
+      fontWeight: "bold",
+    },
     h6: {
       fontFamily: "Didact Gothic",
       fontWeight: "bold",
