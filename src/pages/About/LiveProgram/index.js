@@ -1,6 +1,5 @@
 import { Tab, Tabs } from "react-bootstrap";
-import { Container } from "@mui/material";
-import "./index.scss";
+import { Container, Typography, Box } from "@mui/material";
 
 import responsibleImg from "../../../assets/images/about/live/responsible.jpg";
 import respectfulImg from "../../../assets/images/about/live/respectful.jpg";
@@ -95,22 +94,26 @@ const characteristics = {
 
 const LiveProgram = () => {
   return (
-    <section id="Programs" className="py-5">
+    <Box id="Programs" sx={{ py: 5 }}>
       <SectionTitle title="Live Program" />
-      <Container className="py-5">
-        <p className="lead mb-5">
-          Teaching character is an important part of our philosophy at
-          Tabernacle School. We emphasize five different character traits in our
-          classrooms: responsible, respectful, compassionate, cooperative, and
-          courageous. Teachers recognize students for showing these character
-          traits in the classroom and at quarterly assemblies. If a student
-          shows exceptional character in one of these areas a teacher will send
-          them to the office for “Caught Being Good”. There they get a sticker
-          that they proudly display for the rest of the day. Their name is added
-          to our character bulletin board in the lunchroom and a letter is sent
-          home detailing why they were sent to the office. Below are some
-          examples of how each character trait is displayed in our students.
-        </p>
+      <Container sx={{ py: 5 }}>
+        <Box sx={{ mb: 3 }}>
+          <Typography variant="p">
+            Teaching character is an important part of our philosophy at
+            Tabernacle School. We emphasize five different character traits in
+            our classrooms: responsible, respectful, compassionate, cooperative,
+            and courageous. Teachers recognize students for showing these
+            character traits in the classroom and at quarterly assemblies. If a
+            student shows exceptional character in one of these areas a teacher
+            will send them to the office for “Caught Being Good”. There they get
+            a sticker that they proudly display for the rest of the day. Their
+            name is added to our character bulletin board in the lunchroom and a
+            letter is sent home detailing why they were sent to the office.
+            Below are some examples of how each character trait is displayed in
+            our students.
+          </Typography>
+        </Box>
+
         <div id="live-tabs">
           <Tabs
             defaultActiveKey="Responsible"
@@ -134,7 +137,7 @@ const LiveProgram = () => {
           </Tabs>
         </div>
       </Container>
-    </section>
+    </Box>
   );
 };
 

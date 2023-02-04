@@ -66,31 +66,30 @@ function Preschool() {
               is essential. Our school has been serving families in the
               community for 44 years. We offer a variety of childcare options to
               meet your individual family needs. We have half day and full day
-              options available. Daycare is available from 7:00am to 6:00pm.
-              Parents and children who attend Tabernacle will tell you that this
-              school feels like family. Many of our teachers and staff are
+              options available. Daycare is available from 6:45am to 6:00pm.
+              Parents and children who attend Tabernacle will tell you that our
+              school feels like a family. Many of our teachers and staff are
               former students who return to invest back into the school
               community. Lasting friendships are formed here. We invite you to
               start your experience at Tabernacle by joining the Tiny Tigers and
-              watch your child excel.
+              watching your child excel.
             </Typography>
           </Grid>
           <Grid item lg={6}>
             <Typography variant="p">
               Our classrooms and dedicated teachers offer students the
               opportunity to learn and discover more about themselves, their
-              world and each other in a warm and safe environment. Each one of
-              our teachers is trained in early childhood education and has a
-              passion to see children excel. We provide a quality preschool
-              program that combines play-based and academic curriculum to help
-              our students prepare for kindergarten. We carefully plan
-              activities that are developmentally appropriate and encourage
-              exploration, fine-motor improvement, an interest in science and
-              mathematics, and early literacy. Establishing routines and
-              procedures is an important part of our program. These practices
-              provide a safety and security that allows children the freedom to
-              thrive. We encourage healthy lifestyle choices with our snack and
-              lunch program.
+              world, and each other in a warm and safe environment. Each of our
+              teachers is trained in early childhood education and has a passion
+              to see children excel. We provide a quality preschool program that
+              combines play-based and academic curriculum to help our students
+              prepare for kindergarten. We carefully plan activities that are
+              developmentally appropriate and encourage exploration, fine-motor
+              improvement, an interest in science and mathematics, and early
+              literacy. Establishing routines and procedures is an important
+              part of our program. These practices provide a safety and security
+              that allows children the freedom to thrive. We encourage healthy
+              lifestyle choices with our snack and lunch program.
             </Typography>
           </Grid>
         </Grid>
@@ -121,13 +120,13 @@ function Elementary() {
             </Typography>
             <Typography variant="p">
               Our qualified teachers are passionate about providing a
-              high-quality education while developing student’s love for Christ
+              high-quality education while developing students' love for Christ
               in a caring and safe environment. We provide different modalities
               of learning knowing that God has created each child to be unique.
-              Through hands on projects and enrichment activities such as
+              Through hands-on projects and enrichment activities such as
               electives, physical education, integrated technology, and field
               trips, Tabernacle equips our students to thrive academically,
-              socially, and emotionally.{" "}
+              socially, and emotionally.
             </Typography>
           </Grid>
           <Grid
@@ -306,7 +305,7 @@ function CommonCore() {
             </Box>
             <Box sx={{ mb: 1 }}>
               <Typography variant="p">
-                As a school well known for maintaining academic excellence,
+                As a school well-known for maintaining academic excellence,
                 Tabernacle School reviews all educational standards, both state
                 and national. More importantly, we are committed to providing a
                 Christian education to those we serve by forming and awakening
@@ -314,19 +313,19 @@ function CommonCore() {
               </Typography>
             </Box>
             <Typography variant="p">
-              Many of the Common Core standards already have been in place at
-              Tabernacle School. The Common Core calls for an increased emphasis
-              on deeper understanding of underlying concepts in both the English
-              Language Arts and Mathematics standards. Tabernacle School has
-              long challenged students not just to memorize facts, but to go
-              deeper, think critically, and demonstrate a higher level of
-              understanding of content areas. Other Common Core Standards
-              address only the minimum requirements and may be one or more grade
-              levels below what we recognize as good teaching. We do not limit
-              ourselves to the level of the standards but go beyond, based on
-              our philosophy of learning and sound educational practices. In
-              other words, Tabernacle School’s curriculum exceeds many Common
-              Core Standards in age­ appropriate instruction and academic rigor.{" "}
+              Many Common Core standards have been implemented at Tabernacle
+              School. The Common Core calls for an increased emphasis on deeper
+              understanding of underlying concepts in both the English Language
+              Arts and Mathematics standards. Tabernacle School has long
+              challenged students not just to memorize facts, but to go deeper,
+              think critically, and demonstrate a higher level of understanding.
+              Other Common Core Standards address only minimum requirements and
+              may be one or more grade levels below what we recognize as good
+              teaching. We do not limit ourselves to national standards but go
+              beyond, based on our philosophy of learning and sound educational
+              practices. In other words, Tabernacle School’s curriculum exceeds
+              many Common Core Standards in age­ appropriate instruction and
+              academic rigor.{" "}
             </Typography>
           </Grid>
           <Grid item lg={6}>
@@ -343,7 +342,7 @@ function CommonCore() {
                   Common Core Standards are a broad set of national standards
                   established to shape and govern the general educational
                   standards and assessments in public school. Currently, there
-                  are a handful of states who have opted to not align with the
+                  are a handful of states who have opted not to align with the
                   national standards.
                 </Typography>
               </AccordionDetails>
@@ -381,15 +380,13 @@ function CommonCore() {
               <AccordionDetails>
                 <Typography variant="p">
                   In English (which the state refers to as English Language
-                  Arts), the Common Core State Standards refer to specific
-                  standards of reading, writing, speaking, and listening whose
-                  mastery allows students to leave high school “ready in
-                  literacy.” Tabernacle School never set out to align ourselves
-                  to secular standards, but we find that the Common Core
-                  standards are already embedded in our courses. Perhaps, it is
-                  because educators all agree that good teaching is teaching
-                  that drives students to think well, think critically, and
-                  think intelligently. This is what we strive to do.
+                  Arts), the Common Core refers to specific state standards of
+                  reading, writing, speaking, and listening whose mastery allows
+                  students to leave high school “ready in literacy.” Tabernacle
+                  School never set out to align ourselves with secular
+                  standards, but we find that the Common Core standards are
+                  already embedded in our courses. We strive to encourage
+                  students to think skillfully, critically, and intelligently.
                 </Typography>
               </AccordionDetails>
             </StyledAccordion>
@@ -470,13 +467,14 @@ function ExpectedLearningResults() {
               </Typography>
               <Typography variant="p">
                 Reads with good comprehension and writes with clear expression,
-                meaningful vocabulary, and organization of thought.Applies
+                meaningful vocabulary, and organization of thought. Applies
                 critical thinking and problem solving skills to all types of
                 learning and life situations. Communicates effectively with
                 others by listening attentively and speaking clearly with
-                confidence.Exercises a variety of methods, strategies and tools,
-                including technology, to conduct research, evaluate information,
-                and make responsible decisions in light of Biblical truths.
+                confidence. Exercises a variety of methods, strategies and
+                tools, including technology, to conduct research, evaluate
+                information, and make responsible decisions in light of Biblical
+                truths.
               </Typography>
             </Box>
             <Box sx={{ mb: 4 }}>

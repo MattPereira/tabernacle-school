@@ -32,11 +32,6 @@ import {
 
 const topNavItems = [
   {
-    text: "Renweb",
-    icon: <LockOpenOutlinedIcon fontSize="small" />,
-    path: "/renweb",
-  },
-  {
     text: "Contact",
     icon: <InfoOutlinedIcon fontSize="small" />,
     path: "/connect#Contact",
@@ -144,6 +139,25 @@ const NavBar = (props) => {
           </div>
         ))}
         <Box sx={{ py: 1 }}></Box>
+        <div>
+          <Button
+            component="a"
+            href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
+            target="_blank"
+            sx={{
+              color: "#fff",
+              fontFamily: "Montserrat",
+              p: 2,
+              "&:hover": {
+                color: "white",
+                fontWeight: "bold",
+              },
+            }}
+          >
+            <LockOpenOutlinedIcon fontSize="small" />{" "}
+            <span style={{ marginLeft: "4px" }}>Facts</span>
+          </Button>
+        </div>
         {topNavItems.map((item) => {
           const { text, icon, path } = item;
           return (
@@ -232,6 +246,14 @@ const NavBar = (props) => {
             <MenuIcon fontSize="large" />
           </IconButton>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <StyledTopNavButtons
+              component="a"
+              href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
+              target="_blank"
+            >
+              <LockOpenOutlinedIcon fontSize="small" />{" "}
+              <span style={{ marginLeft: "4px" }}>Facts</span>
+            </StyledTopNavButtons>
             {topNavItems.map((item) => {
               const { icon, path, text } = item;
               return (

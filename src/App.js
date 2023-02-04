@@ -7,7 +7,7 @@ import NavBar from "./common/NavBar/NavBar";
 import Footer from "./common/Footer";
 
 /***** The "main" pages accessible throught the navbar *****/
-import Home from "./pages/Home";
+import Homepage from "./pages";
 import About from "./pages/About";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
 import Admissions from "./pages/Admissions";
@@ -15,7 +15,6 @@ import Academics from "./pages/Academics";
 import Campus from "./pages/Campus";
 import Connect from "./pages/Connect";
 import Family from "./pages/Family";
-import Renweb from "./pages/Renweb";
 
 /***** The "/family/information" Pages */
 import Orientation from "./pages/Family/Information/Orientation";
@@ -37,14 +36,13 @@ function App() {
       <ScrollToTop>
         <Box sx={{ mt: { xs: "67px", md: 0 } }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
             <Route exact path="/about/staff/:id" element={<ProfilePage />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/connect" element={<Connect />} />
-            <Route path="/renweb" element={<Renweb />} />
             <Route
               path="/family/uniform_guidelines"
               element={<UniformGuidelines />}

@@ -35,7 +35,7 @@ const Outreach = () => {
       <Container sx={{ py: 5, mb: 5 }}>
         <Grid container spacing={3}>
           {outreachPrograms.map((program) => (
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} md={6} lg={4} key={program.title}>
               <Link
                 to={program.url}
                 style={{ textDecoration: "none", cursor: "pointer" }}
