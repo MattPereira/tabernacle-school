@@ -28,7 +28,7 @@ export const facultyData = [
         name: "Debbie Keough",
         title: "JKA",
         image: images["debbieKeough.jpg"],
-        email: "DebbieK@tbs.org",
+        email: "Deborahk@tbs.org",
       },
       {
         name: "Jessie Mason",
