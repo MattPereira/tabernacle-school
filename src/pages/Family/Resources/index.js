@@ -9,18 +9,21 @@ import { useTheme } from "@mui/material/styles";
 const Resources = () => {
   const resources = [
     {
+      title: "FACTS",
       description:
         "Facts provides tools and solutions to private K-12 schools that elevate the education experience for administrators, teachers, and families.",
       image: facts,
       url: "https://logins2.renweb.com/logins/ParentsWeb-Login.aspx",
     },
     {
+      title: "Ignitia",
       description:
         "A versatile online Christian curriculum and learning management system with dynamic, Christ-centered lessons",
       image: ignitia,
       url: "https://tabernacleca.ignitiaschools.com/owsoo/login/auth",
     },
     {
+      title: "ChoiceLunch",
       description:
         "Choicelunch individually packages your child’s lunch for safe delivery and easy distribution at school.",
       image: choiceLunch,

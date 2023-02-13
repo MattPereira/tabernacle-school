@@ -5,8 +5,6 @@ import { Box, Typography } from "@mui/material";
 
 import { Link } from "react-router-dom";
 
-import "./index.scss";
-
 const FacultyAccordion = () => {
   return (
     <>
@@ -18,7 +16,7 @@ const FacultyAccordion = () => {
               {level["grade"] === "Elementary" ? (
                 level.groups.map((group) => {
                   return (
-                    <Box>
+                    <Box key={group.grade}>
                       <Row>
                         <Box
                           sx={{

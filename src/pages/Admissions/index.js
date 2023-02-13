@@ -182,40 +182,39 @@ function Tuition() {
                     <th scope="">Monthly Plan</th>
                   </tr>
                 </thead>
-                <tbody>
-                  {tuitionPrices.map((group) => {
-                    return (
-                      <>
-                        <tr
-                          style={{
-                            backgroundColor: theme.palette.primary.main,
-                            color: theme.palette.primary.contrastText,
-                          }}
-                        >
-                          <th colSpan="4">{group["title"]}</th>
-                        </tr>
-                        <tr className="text-center">
-                          <td>1st</td>
-                          <td>${group.annual}</td>
-                          <td>${group.annual - 150}</td>
-                          <td>${group.monthly}</td>
-                        </tr>
-                        <tr className="text-center">
-                          <td>2nd</td>
-                          <td>${group.annual - 550}</td>
-                          <td>${group.annual - 150 - 550}</td>
-                          <td>${group.monthly - 55}</td>
-                        </tr>
-                        <tr className="text-center">
-                          <td>3rd</td>
-                          <td>${group.annual - 550}</td>
-                          <td>${group.annual - 150 - 550}</td>
-                          <td>${group.monthly - 55}</td>
-                        </tr>
-                      </>
-                    );
-                  })}
-                </tbody>
+
+                {tuitionPrices.map((group) => {
+                  return (
+                    <tbody key={group.title}>
+                      <tr
+                        style={{
+                          backgroundColor: theme.palette.primary.main,
+                          color: theme.palette.primary.contrastText,
+                        }}
+                      >
+                        <th colSpan="4">{group["title"]}</th>
+                      </tr>
+                      <tr className="text-center">
+                        <td>1st</td>
+                        <td>${group.annual}</td>
+                        <td>${group.annual - 150}</td>
+                        <td>${group.monthly}</td>
+                      </tr>
+                      <tr className="text-center">
+                        <td>2nd</td>
+                        <td>${group.annual - 550}</td>
+                        <td>${group.annual - 150 - 550}</td>
+                        <td>${group.monthly - 55}</td>
+                      </tr>
+                      <tr className="text-center">
+                        <td>3rd</td>
+                        <td>${group.annual - 550}</td>
+                        <td>${group.annual - 150 - 550}</td>
+                        <td>${group.monthly - 55}</td>
+                      </tr>
+                    </tbody>
+                  );
+                })}
               </table>
               <Typography>
                 *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for
