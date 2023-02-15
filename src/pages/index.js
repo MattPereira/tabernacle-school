@@ -5,6 +5,13 @@ import { styled } from "@mui/material/styles";
 
 import SectionTitle from "../common/SectionTitle";
 
+// Jogathon icons for links
+import InfoIcon from "@mui/icons-material/Info";
+import PaidIcon from "@mui/icons-material/Paid";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+
 // Infinite Carousel Image Imports
 import Marquee from "react-fast-marquee";
 import carousel1 from "../assets/images/home/carousel1.jpg";
@@ -27,11 +34,129 @@ export default function Homepage() {
   return (
     <div>
       <LandingCarousel />
+      <Jogathon />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
     </div>
+  );
+}
+
+function Jogathon() {
+  return (
+    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
+      <Box
+        sx={{
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Box>
+          <Typography
+            variant="h2"
+            sx={{ fontFamily: "Montserrat", fontWeight: "bold", mb: 2 }}
+          >
+            ARK-A-THON
+          </Typography>
+        </Box>
+
+        <Box>
+          <Typography variant="h4" sx={{ fontFamily: "Montserrat", mb: 2 }}>
+            Thursday, April 6th
+          </Typography>
+        </Box>
+      </Box>
+      <Grid container justifyContent="center" spacing={1} sx={{ mb: 2 }}>
+        <Grid item>
+          <Button
+            component="a"
+            href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
+            target="_blank"
+            sx={{
+              p: 1.25,
+              fontFamily: "Cubano",
+              fontSize: "20px",
+              color: "black",
+              textTransform: "none",
+            }}
+          >
+            <InfoIcon sx={{ fontSize: "25px" }} />
+            <span style={{ marginLeft: "5px" }}>ARK FLYER</span>
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            component="a"
+            target="_blank"
+            href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
+            sx={{
+              p: 1.25,
+              fontFamily: "Cubano",
+              fontSize: "20px",
+              color: "black",
+              textTransform: "none",
+            }}
+          >
+            <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
+            <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            component="a"
+            href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
+            target="_blank"
+            sx={{
+              p: 1.25,
+              fontFamily: "Cubano",
+              fontSize: "20px",
+              color: "black",
+              textTransform: "none",
+            }}
+          >
+            <PaidIcon sx={{ fontSize: "25px" }} />
+            <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            component="a"
+            href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
+            target="_blank"
+            sx={{
+              p: 1.25,
+              fontFamily: "Cubano",
+              fontSize: "20px",
+              color: "black",
+              textTransform: "none",
+            }}
+          >
+            <EmojiEventsIcon sx={{ fontSize: "25px" }} />
+            <span style={{ marginLeft: "5px" }}>PRIZES</span>
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            component="a"
+            href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
+            target="_blank"
+            sx={{
+              p: 1.25,
+              fontFamily: "Cubano",
+              fontSize: "20px",
+              color: "black",
+              textTransform: "none",
+            }}
+          >
+            <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
+            <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
+          </Button>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 

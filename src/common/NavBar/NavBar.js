@@ -11,12 +11,6 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 
-import InfoIcon from "@mui/icons-material/Info";
-import PaidIcon from "@mui/icons-material/Paid";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-
 import { useTheme, styled } from "@mui/material/styles";
 
 import {
@@ -32,7 +26,6 @@ import {
   IconButton,
   Button,
   Drawer,
-  Grid,
 } from "@mui/material";
 
 const topNavItems = [
@@ -299,110 +292,6 @@ const NavBar = (props) => {
             </Box>
           ))}
         </StyledPagesToolbar>
-      </AppBar>
-      <AppBar
-        elevation={0}
-        color="transparent"
-        position="relative"
-        sx={{ pt: transparent || isCollapsed ? 8 : 0 }}
-      >
-        <Toolbar sx={{ display: "block", textAlign: "center" }}>
-          <Box sx={{ display: "flex", justifyContent: "center", py: 2 }}>
-            <Typography
-              variant="h3"
-              sx={{ fontWeight: "bold", fontFamily: "cubano" }}
-            >
-              <span style={{ marginLeft: "5px" }}>ARK-A-THON April 6th</span>
-            </Typography>
-          </Box>
-          <Grid container justifyContent="center" spacing={1} sx={{ mb: 2 }}>
-            <Grid item>
-              <Button
-                component="a"
-                href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
-                target="_blank"
-                sx={{
-                  p: 1.25,
-                  fontFamily: "Cubano",
-                  fontSize: "20px",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                <InfoIcon sx={{ fontSize: "25px" }} />
-                <span style={{ marginLeft: "5px" }}>ARK FLYER</span>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                component="a"
-                target="_blank"
-                href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
-                sx={{
-                  p: 1.25,
-                  fontFamily: "Cubano",
-                  fontSize: "20px",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-                <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                component="a"
-                href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
-                target="_blank"
-                sx={{
-                  p: 1.25,
-                  fontFamily: "Cubano",
-                  fontSize: "20px",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                <PaidIcon sx={{ fontSize: "25px" }} />
-                <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                component="a"
-                href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
-                target="_blank"
-                sx={{
-                  p: 1.25,
-                  fontFamily: "Cubano",
-                  fontSize: "20px",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-                <span style={{ marginLeft: "5px" }}>PRIZES</span>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                component="a"
-                href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
-                target="_blank"
-                sx={{
-                  p: 1.25,
-                  fontFamily: "Cubano",
-                  fontSize: "20px",
-                  color: "black",
-                  textTransform: "none",
-                }}
-              >
-                <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
-              </Button>
-            </Grid>
-          </Grid>
-        </Toolbar>
       </AppBar>
 
       <Box component="nav">
