@@ -35,8 +35,9 @@ export default function Homepage() {
   return (
     <div>
       <LandingCarousel />
+      <StatementSlider />
+
       <Jogathon />
-      {/* <StatementSlider /> */}
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
@@ -58,103 +59,113 @@ function Jogathon() {
   }));
 
   return (
-    <Container sx={{ py: 5 }}>
-      <SectionTitle title="Jog-A-Thon" />
-      <Box
-        sx={{
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          py: 5,
-        }}
-      >
-        <Grid container alignItems="center" justifyContent="space-around">
-          <Grid item xs={8} md={5} sx={{ textAlign: "center" }}>
-            <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
-            <Box sx={{ my: 3, textAlign: "center" }}>
-              <Typography
-                variant="h4"
-                sx={{ fontFamily: "didact gothic", fontWeight: "bold", mb: 2 }}
+    <Box sx={{ bgcolor: "background.alternate" }}>
+      <Container sx={{ py: 5 }}>
+        <SectionTitle title="Jog-A-Thon" />
+        <Box
+          sx={{
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            pb: 5,
+          }}
+        >
+          <Grid container alignItems="center" justifyContent="space-around">
+            <Grid item xs={8} md={5} sx={{ textAlign: "center" }}>
+              <Box
+                component="img"
+                sx={{ width: "100%", pr: 4 }}
+                src={jogHero}
+              />
+              <Box sx={{ my: 3, textAlign: "center" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontFamily: "didact gothic",
+                    fontWeight: "bold",
+                    mb: 2,
+                  }}
+                >
+                  Thursday, April 6th
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={10} md={5} lg={4}>
+              <Grid
+                container
+                justifyContent="center"
+                flexDirection="column"
+                spacing={2}
+                sx={{ mb: 2 }}
               >
-                Thursday, April 6th
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={5} lg={4}>
-            <Grid
-              container
-              justifyContent="center"
-              flexDirection="column"
-              spacing={2}
-              sx={{ mb: 2 }}
-            >
-              <Grid item>
-                <StyledButton
-                  variant="contained"
-                  component="a"
-                  href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
-                  target="_blank"
-                >
-                  <InfoIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "20px" }}>
-                    General Information
-                  </span>
-                </StyledButton>
-              </Grid>
-              <Grid item>
-                <StyledButton
-                  variant="contained"
-                  component="a"
-                  target="_blank"
-                  href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
-                >
-                  <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "20px" }}>
-                    Distance Pledge Form
-                  </span>
-                </StyledButton>
-              </Grid>
-              <Grid item>
-                <StyledButton
-                  variant="contained"
-                  component="a"
-                  href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
-                  target="_blank"
-                >
-                  <PaidIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "20px" }}>
-                    Request Sponsor Form
-                  </span>
-                </StyledButton>
-              </Grid>
-              <Grid item>
-                <StyledButton
-                  variant="contained"
-                  component="a"
-                  href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
-                  target="_blank"
-                >
-                  <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "20px" }}>Prize Program</span>
-                </StyledButton>
-              </Grid>
-              <Grid item>
-                <StyledButton
-                  variant="contained"
-                  component="a"
-                  href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
-                  target="_blank"
-                >
-                  <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "20px" }}>Jog Volunteers</span>
-                </StyledButton>
+                <Grid item>
+                  <StyledButton
+                    variant="contained"
+                    component="a"
+                    href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
+                    target="_blank"
+                  >
+                    <InfoIcon sx={{ fontSize: "25px" }} />
+                    <span style={{ marginLeft: "20px" }}>
+                      General Information
+                    </span>
+                  </StyledButton>
+                </Grid>
+                <Grid item>
+                  <StyledButton
+                    variant="contained"
+                    component="a"
+                    target="_blank"
+                    href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
+                  >
+                    <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
+                    <span style={{ marginLeft: "20px" }}>
+                      Distance Pledge Form
+                    </span>
+                  </StyledButton>
+                </Grid>
+                <Grid item>
+                  <StyledButton
+                    variant="contained"
+                    component="a"
+                    href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
+                    target="_blank"
+                  >
+                    <PaidIcon sx={{ fontSize: "25px" }} />
+                    <span style={{ marginLeft: "20px" }}>
+                      Request Sponsor Form
+                    </span>
+                  </StyledButton>
+                </Grid>
+                <Grid item>
+                  <StyledButton
+                    variant="contained"
+                    component="a"
+                    href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
+                    target="_blank"
+                  >
+                    <EmojiEventsIcon sx={{ fontSize: "25px" }} />
+                    <span style={{ marginLeft: "20px" }}>Prize Program</span>
+                  </StyledButton>
+                </Grid>
+                <Grid item>
+                  <StyledButton
+                    variant="contained"
+                    component="a"
+                    href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
+                    target="_blank"
+                  >
+                    <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
+                    <span style={{ marginLeft: "20px" }}>Jog Volunteers</span>
+                  </StyledButton>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </Box>
   );
 }
 
