@@ -22,6 +22,7 @@ import carousel5 from "../assets/images/home/carousel5.jpg";
 import carousel6 from "../assets/images/home/carousel6.jpg";
 import carousel7 from "../assets/images/home/carousel7.jpg";
 import carousel8 from "../assets/images/home/carousel8.jpg";
+import jogHero from "../assets/images/home/ark-a-thon.png";
 
 // Accreditations Image Imports
 import asci from "../assets/images/home/acsi.png";
@@ -44,6 +45,16 @@ export default function Homepage() {
 }
 
 function Jogathon() {
+  const theme = useTheme();
+
+  const StyledButton = styled(Button)(({ theme }) => ({
+    p: 1.25,
+    fontFamily: "Montserrat",
+    fontSize: "20px",
+    color: "black",
+    textTransform: "none",
+  }));
+
   return (
     <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
       <Box
@@ -54,106 +65,71 @@ function Jogathon() {
           alignItems: "center",
         }}
       >
-        <Box>
-          <Typography
-            variant="h2"
-            sx={{ fontFamily: "Montserrat", fontWeight: "bold", mb: 2 }}
-          >
-            ARK-A-THON
-          </Typography>
-        </Box>
+        <Grid container justifyContent="center">
+          <Grid item xs={12} md={6}>
+            <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
+          </Grid>
+        </Grid>
 
-        <Box>
-          <Typography variant="h4" sx={{ fontFamily: "Montserrat", mb: 2 }}>
+        <Box sx={{ my: 3 }}>
+          <Typography
+            variant="h4"
+            sx={{ fontFamily: "didact gothic", fontWeight: "bold", mb: 2 }}
+          >
             Thursday, April 6th
           </Typography>
         </Box>
       </Box>
-      <Grid container justifyContent="center" spacing={1} sx={{ mb: 2 }}>
+      <Grid container justifyContent="center" spacing={5} sx={{ mb: 2 }}>
         <Grid item>
-          <Button
+          <StyledButton
             component="a"
             href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
             target="_blank"
-            sx={{
-              p: 1.25,
-              fontFamily: "Cubano",
-              fontSize: "20px",
-              color: "black",
-              textTransform: "none",
-            }}
           >
             <InfoIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>ARK FLYER</span>
-          </Button>
+            <span style={{ marginLeft: "5px" }}>INFORMATION</span>
+          </StyledButton>
         </Grid>
         <Grid item>
-          <Button
+          <StyledButton
             component="a"
             target="_blank"
             href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
-            sx={{
-              p: 1.25,
-              fontFamily: "Cubano",
-              fontSize: "20px",
-              color: "black",
-              textTransform: "none",
-            }}
           >
             <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
             <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
-          </Button>
+          </StyledButton>
         </Grid>
         <Grid item>
-          <Button
+          <StyledButton
             component="a"
             href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
             target="_blank"
-            sx={{
-              p: 1.25,
-              fontFamily: "Cubano",
-              fontSize: "20px",
-              color: "black",
-              textTransform: "none",
-            }}
           >
             <PaidIcon sx={{ fontSize: "25px" }} />
             <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
-          </Button>
+          </StyledButton>
         </Grid>
         <Grid item>
-          <Button
+          <StyledButton
             component="a"
             href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
             target="_blank"
-            sx={{
-              p: 1.25,
-              fontFamily: "Cubano",
-              fontSize: "20px",
-              color: "black",
-              textTransform: "none",
-            }}
           >
             <EmojiEventsIcon sx={{ fontSize: "25px" }} />
             <span style={{ marginLeft: "5px" }}>PRIZES</span>
-          </Button>
+          </StyledButton>
         </Grid>
         <Grid item>
-          <Button
+          <StyledButton
             component="a"
             href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
             target="_blank"
-            sx={{
-              p: 1.25,
-              fontFamily: "Cubano",
-              fontSize: "20px",
-              color: "black",
-              textTransform: "none",
-            }}
           >
             <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
             <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
-          </Button>
+          </StyledButton>
         </Grid>
       </Grid>
     </Box>
