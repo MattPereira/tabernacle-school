@@ -36,7 +36,7 @@ export default function Homepage() {
     <div>
       <LandingCarousel />
       <Jogathon />
-      <StatementSlider />
+      {/* <StatementSlider /> */}
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
@@ -46,27 +46,30 @@ export default function Homepage() {
 
 function Jogathon() {
   const theme = useTheme();
-
   const StyledButton = styled(Button)(({ theme }) => ({
-    p: 1.25,
-    fontFamily: "Montserrat",
-    fontSize: "20px",
-    color: "black",
+    fontFamily: "didact gothic",
+    fontSize: "25px",
     textTransform: "none",
+    width: "100%",
+    "&:hover": {
+      color: "white",
+    },
   }));
 
   return (
-    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Container sx={{ py: 5 }}>
+      <SectionTitle title="Jog-A-Thon" />
       <Box
         sx={{
           justifyContent: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          py: 5,
         }}
       >
-        <Grid container alignItems="center">
-          <Grid item xs={12} md={6}>
+        <Grid container alignItems="center" justifyContent="space-around">
+          <Grid item xs={8} md={5} sx={{ textAlign: "center" }}>
             <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
             <Box sx={{ my: 3, textAlign: "center" }}>
               <Typography
@@ -77,16 +80,17 @@ function Jogathon() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <Grid
               container
               justifyContent="center"
               flexDirection="column"
-              spacing={5}
+              spacing={2}
               sx={{ mb: 2 }}
             >
-              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+              <Grid item>
                 <StyledButton
+                  variant="contained"
                   component="a"
                   href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
                   target="_blank"
@@ -95,8 +99,9 @@ function Jogathon() {
                   <span style={{ marginLeft: "5px" }}>INFORMATION</span>
                 </StyledButton>
               </Grid>
-              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+              <Grid item>
                 <StyledButton
+                  variant="contained"
                   component="a"
                   target="_blank"
                   href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
@@ -105,8 +110,9 @@ function Jogathon() {
                   <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
                 </StyledButton>
               </Grid>
-              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+              <Grid item>
                 <StyledButton
+                  variant="contained"
                   component="a"
                   href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
                   target="_blank"
@@ -115,8 +121,9 @@ function Jogathon() {
                   <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
                 </StyledButton>
               </Grid>
-              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+              <Grid item>
                 <StyledButton
+                  variant="contained"
                   component="a"
                   href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
                   target="_blank"
@@ -125,8 +132,9 @@ function Jogathon() {
                   <span style={{ marginLeft: "5px" }}>PRIZES</span>
                 </StyledButton>
               </Grid>
-              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+              <Grid item>
                 <StyledButton
+                  variant="contained"
                   component="a"
                   href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
                   target="_blank"
@@ -139,7 +147,7 @@ function Jogathon() {
           </Grid>
         </Grid>
       </Box>
-    </Box>
+    </Container>
   );
 }
 
