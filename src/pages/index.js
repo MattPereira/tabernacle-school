@@ -65,73 +65,80 @@ function Jogathon() {
           alignItems: "center",
         }}
       >
-        <Grid container justifyContent="center">
+        <Grid container alignItems="center">
           <Grid item xs={12} md={6}>
             <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
+            <Box sx={{ my: 3, textAlign: "center" }}>
+              <Typography
+                variant="h4"
+                sx={{ fontFamily: "didact gothic", fontWeight: "bold", mb: 2 }}
+              >
+                Thursday, April 6th
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              container
+              justifyContent="center"
+              flexDirection="column"
+              spacing={5}
+              sx={{ mb: 2 }}
+            >
+              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledButton
+                  component="a"
+                  href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
+                  target="_blank"
+                >
+                  <InfoIcon sx={{ fontSize: "25px" }} />
+                  <span style={{ marginLeft: "5px" }}>INFORMATION</span>
+                </StyledButton>
+              </Grid>
+              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledButton
+                  component="a"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
+                >
+                  <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
+                  <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
+                </StyledButton>
+              </Grid>
+              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledButton
+                  component="a"
+                  href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
+                  target="_blank"
+                >
+                  <PaidIcon sx={{ fontSize: "25px" }} />
+                  <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
+                </StyledButton>
+              </Grid>
+              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledButton
+                  component="a"
+                  href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
+                  target="_blank"
+                >
+                  <EmojiEventsIcon sx={{ fontSize: "25px" }} />
+                  <span style={{ marginLeft: "5px" }}>PRIZES</span>
+                </StyledButton>
+              </Grid>
+              <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledButton
+                  component="a"
+                  href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
+                  target="_blank"
+                >
+                  <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
+                  <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
+                </StyledButton>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-
-        <Box sx={{ my: 3 }}>
-          <Typography
-            variant="h4"
-            sx={{ fontFamily: "didact gothic", fontWeight: "bold", mb: 2 }}
-          >
-            Thursday, April 6th
-          </Typography>
-        </Box>
       </Box>
-      <Grid container justifyContent="center" spacing={5} sx={{ mb: 2 }}>
-        <Grid item>
-          <StyledButton
-            component="a"
-            href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
-            target="_blank"
-          >
-            <InfoIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>INFORMATION</span>
-          </StyledButton>
-        </Grid>
-        <Grid item>
-          <StyledButton
-            component="a"
-            target="_blank"
-            href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
-          >
-            <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
-          </StyledButton>
-        </Grid>
-        <Grid item>
-          <StyledButton
-            component="a"
-            href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
-            target="_blank"
-          >
-            <PaidIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
-          </StyledButton>
-        </Grid>
-        <Grid item>
-          <StyledButton
-            component="a"
-            href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
-            target="_blank"
-          >
-            <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>PRIZES</span>
-          </StyledButton>
-        </Grid>
-        <Grid item>
-          <StyledButton
-            component="a"
-            href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
-            target="_blank"
-          >
-            <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-            <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
-          </StyledButton>
-        </Grid>
-      </Grid>
     </Box>
   );
 }
