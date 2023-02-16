@@ -45,12 +45,13 @@ export default function Homepage() {
 }
 
 function Jogathon() {
-  const theme = useTheme();
   const StyledButton = styled(Button)(({ theme }) => ({
     fontFamily: "didact gothic",
     fontSize: "25px",
     textTransform: "none",
     width: "100%",
+    fontWeight: "bold",
+    justifyContent: "start",
     "&:hover": {
       color: "white",
     },
@@ -80,7 +81,7 @@ function Jogathon() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={5} lg={4}>
             <Grid
               container
               justifyContent="center"
@@ -96,7 +97,9 @@ function Jogathon() {
                   target="_blank"
                 >
                   <InfoIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "5px" }}>INFORMATION</span>
+                  <span style={{ marginLeft: "20px" }}>
+                    General Information
+                  </span>
                 </StyledButton>
               </Grid>
               <Grid item>
@@ -107,7 +110,9 @@ function Jogathon() {
                   href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
                 >
                   <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "5px" }}>PLEDGE FORM</span>
+                  <span style={{ marginLeft: "20px" }}>
+                    Distance Pledge Form
+                  </span>
                 </StyledButton>
               </Grid>
               <Grid item>
@@ -118,7 +123,9 @@ function Jogathon() {
                   target="_blank"
                 >
                   <PaidIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "5px" }}>REQUEST SPONSOR</span>
+                  <span style={{ marginLeft: "20px" }}>
+                    Request Sponsor Form
+                  </span>
                 </StyledButton>
               </Grid>
               <Grid item>
@@ -129,7 +136,7 @@ function Jogathon() {
                   target="_blank"
                 >
                   <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "5px" }}>PRIZES</span>
+                  <span style={{ marginLeft: "20px" }}>Prize Program</span>
                 </StyledButton>
               </Grid>
               <Grid item>
@@ -140,7 +147,7 @@ function Jogathon() {
                   target="_blank"
                 >
                   <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                  <span style={{ marginLeft: "5px" }}>VOLUNTEER</span>
+                  <span style={{ marginLeft: "20px" }}>Jog Volunteers</span>
                 </StyledButton>
               </Grid>
             </Grid>
