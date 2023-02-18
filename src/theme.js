@@ -32,6 +32,9 @@ let theme = createTheme({
     background: {
       alternate: "#eeeeee",
     },
+    dark: {
+      main: "#212121",
+    },
   },
 });
 

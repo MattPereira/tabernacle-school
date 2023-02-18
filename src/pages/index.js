@@ -53,6 +53,8 @@ function Jogathon() {
     width: "100%",
     fontWeight: "bold",
     justifyContent: "start",
+    borderRadius: "30px",
+    backgroundColor: theme.palette.dark.main,
     "&:hover": {
       color: "white",
     },
@@ -72,7 +74,7 @@ function Jogathon() {
           }}
         >
           <Grid container alignItems="center" justifyContent="space-around">
-            <Grid item xs={8} md={5} sx={{ textAlign: "center" }}>
+            <Grid item xs={10} md={5} sx={{ textAlign: "center" }}>
               <Box
                 component="img"
                 sx={{ width: "100%", pr: 4 }}
@@ -80,11 +82,9 @@ function Jogathon() {
               />
               <Box sx={{ my: 3, textAlign: "center" }}>
                 <Typography
-                  variant="h4"
+                  variant="h3"
                   sx={{
-                    fontFamily: "didact gothic",
-                    fontWeight: "bold",
-                    mb: 2,
+                    fontFamily: "copse",
                   }}
                 >
                   Thursday, April 6th
@@ -120,9 +120,7 @@ function Jogathon() {
                     href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
                   >
                     <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>
-                      Distance Pledge Form
-                    </span>
+                    <span style={{ marginLeft: "20px" }}>Pledge Distance</span>
                   </StyledButton>
                 </Grid>
                 <Grid item>
@@ -133,20 +131,18 @@ function Jogathon() {
                     target="_blank"
                   >
                     <PaidIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>
-                      Request Sponsor Form
-                    </span>
+                    <span style={{ marginLeft: "20px" }}>Request Sponsor</span>
                   </StyledButton>
                 </Grid>
                 <Grid item>
                   <StyledButton
                     variant="contained"
                     component="a"
-                    href="https://drive.google.com/file/d/1cM2oz2bSJM87dCgv9hEPRoDcKOz8xxWM/view"
+                    href="https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing"
                     target="_blank"
                   >
                     <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Prize Program</span>
+                    <span style={{ marginLeft: "20px" }}>Class Prizes</span>
                   </StyledButton>
                 </Grid>
                 <Grid item>
@@ -157,7 +153,9 @@ function Jogathon() {
                     target="_blank"
                   >
                     <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Jog Volunteers</span>
+                    <span style={{ marginLeft: "20px" }}>
+                      Volunteer Helpers
+                    </span>
                   </StyledButton>
                 </Grid>
               </Grid>
