@@ -173,7 +173,7 @@ const Footer = () => {
           >
             <Grid item>
               <a
-                href="https://matt-pereira.surge.sh/"
+                href="https://matt-pereira.vercel.app/"
                 className="text-decoration-none link-light"
               >
                 Website by Matt Pereira
