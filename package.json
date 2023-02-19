@@ -36,9 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "react-scripts build",
-    "pre-deploy": "cp build/index.html build/200.html",
-    "deploy:surge": "surge build --domain https://tabernacle-school.surge.sh",
-    "deploy:firebase": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [
