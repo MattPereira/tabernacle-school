@@ -12,7 +12,7 @@ import {
   Button,
   Alert,
 } from "@mui/material";
-import SectionTitle from "../../common/SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 
 import { facultyData } from "../../data/facultyData.js";
 

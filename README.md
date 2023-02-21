@@ -1,7 +1,7 @@
 # **Tabernacle School**
 
 <a href="https://tabernacle.school">
-<img src="https://raw.githubusercontent.com/MattPereira/tabernacle-school/main/public/TS_LOGO_CIRCLE.png" style="height: 200px; width: 200px;">
+Tabernacle.School
 </a>
 
 ---

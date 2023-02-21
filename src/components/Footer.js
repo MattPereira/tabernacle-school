@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import bgImage from "../../assets/images/academics/preschool.jpg";
+import bgImage from "../assets/images/academics/preschool.jpg";
 
 const Footer = () => {
   const StyledButton = styled(Button)(({ theme }) => ({

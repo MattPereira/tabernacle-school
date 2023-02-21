@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
 
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 // Jogathon icons for links
 import InfoIcon from "@mui/icons-material/Info";
@@ -63,14 +63,13 @@ function Jogathon() {
   return (
     <Box sx={{ bgcolor: "background.alternate" }}>
       <Container sx={{ py: 5 }}>
-        <SectionTitle title="Jog-A-Thon" />
         <Box
           sx={{
             justifyContent: "center",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            pb: 5,
+            py: 5,
           }}
         >
           <Grid container alignItems="center" justifyContent="space-around">
@@ -80,11 +79,13 @@ function Jogathon() {
                 sx={{ width: "100%", pr: 4 }}
                 src={jogHero}
               />
-              <Box sx={{ my: 3, textAlign: "center" }}>
+              <Box sx={{ mt: 3, textAlign: "center" }}>
                 <Typography
-                  variant="h3"
                   sx={{
-                    fontFamily: "copse",
+                    fontFamily: "didact gothic",
+                    fontWeight: "bold",
+                    fontSize: { xs: "2rem", md: "2.75rem" },
+                    mb: 3,
                   }}
                 >
                   Thursday, April 6th
@@ -107,9 +108,7 @@ function Jogathon() {
                     target="_blank"
                   >
                     <InfoIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>
-                      General Information
-                    </span>
+                    <span style={{ marginLeft: "20px" }}>Information</span>
                   </StyledButton>
                 </Grid>
                 <Grid item>
@@ -153,9 +152,7 @@ function Jogathon() {
                     target="_blank"
                   >
                     <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>
-                      Volunteer Helpers
-                    </span>
+                    <span style={{ marginLeft: "20px" }}>Volunteer</span>
                   </StyledButton>
                 </Grid>
               </Grid>

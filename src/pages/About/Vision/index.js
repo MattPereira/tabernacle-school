@@ -1,7 +1,7 @@
 import { Carousel } from "react-bootstrap";
 import { Container, Box } from "@mui/material";
 
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 import vision1 from "../../../assets/images/about/vision/vision1.jpg";
 import vision2 from "../../../assets/images/about/vision/vision2.jpg";

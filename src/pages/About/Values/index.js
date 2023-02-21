@@ -1,6 +1,6 @@
 import value1 from "../../../assets/images/about/values/value1.jpg";
 import value2 from "../../../assets/images/about/values/value2.jpg";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 import { Row, Col } from "react-bootstrap";
 import { Container } from "@mui/material";

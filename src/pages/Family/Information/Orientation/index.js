@@ -1,4 +1,4 @@
-import Showcase from "../../../../common/Showcase/Showcase";
+import Showcase from "../../../../components/Showcase";
 
 import { Container, Row, Col, Table } from "react-bootstrap";
 import "./index.scss";

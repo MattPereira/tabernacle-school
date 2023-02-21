@@ -3,7 +3,7 @@ import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
 import { googleApiKey } from "../../secrets";
-import SectionTitle from "../../common/SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 
 import {
   Container,
@@ -21,8 +21,8 @@ import {
   TableBody,
 } from "@mui/material";
 
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav/";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
 
 import athletics from "../../assets/images/campus/athletics.jpg";
 

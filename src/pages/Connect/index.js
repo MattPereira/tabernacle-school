@@ -1,9 +1,9 @@
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
 import Contact from "./contact";
 
 import { Container, Box, Grid, Typography, Button } from "@mui/material";
-import SectionTitle from "../../common/SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 import employmentImg from "../../assets/images/connect/employment.jpg";
 
 export default function Connect() {

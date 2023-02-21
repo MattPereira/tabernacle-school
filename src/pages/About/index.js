@@ -1,5 +1,5 @@
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
 import Faculty from "./Faculty";
 import Values from "./Values";
 import Vision from "./Vision";
@@ -8,7 +8,7 @@ import LiveProgram from "./LiveProgram";
 
 import { Container, Typography, Box } from "@mui/material";
 
-import SectionTitle from "../../common/SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 
 export default function About() {
   return (

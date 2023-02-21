@@ -9,7 +9,7 @@ import leadership from "../../../assets/images/about/gift/leadership.jpg";
 import creationist from "../../../assets/images/about/gift/creationist.jpg";
 import moral from "../../../assets/images/about/gift/moral.jpg";
 
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { Row, Accordion } from "react-bootstrap";
 import GiftCard from "./GiftCard";
 import { Container, Box } from "@mui/material";

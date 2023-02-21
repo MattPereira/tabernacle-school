@@ -8,7 +8,7 @@ import cooperativeImg from "../../../assets/images/about/live/cooperative.jpg";
 import courageousImg from "../../../assets/images/about/live/courageous.jpg";
 
 import Trait from "./Trait";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 const characteristics = {
   Responsible: {

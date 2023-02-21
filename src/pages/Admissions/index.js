@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav";
-import SectionTitle from "../../common/SectionTitle";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
+import SectionTitle from "../../components/SectionTitle";
 
 import { useTheme } from "@mui/material/styles";
 import {

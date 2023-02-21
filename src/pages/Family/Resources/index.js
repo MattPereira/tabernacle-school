@@ -3,7 +3,7 @@ import choiceLunch from "../../../assets/images/family/choice-lunch.png";
 import facts from "../../../assets/images/family/facts-logo.png";
 
 import { Container, Grid, Paper, Box, Link, Typography } from "@mui/material";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { useTheme } from "@mui/material/styles";
 
 const Resources = () => {

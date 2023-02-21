@@ -11,7 +11,7 @@ import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { IoCalendar, IoWarning } from "react-icons/io5";
 
 import { Row, Col } from "react-bootstrap";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { Container, Box } from "@mui/material";
 
 const Information = () => {

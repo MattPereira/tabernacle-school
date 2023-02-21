@@ -1,6 +1,6 @@
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav/";
-import SectionTitle from "../../common/SectionTitle";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
+import SectionTitle from "../../components/SectionTitle";
 
 import preschoolImg from "../../assets/images/academics/preschool.jpg";
 import elementaryImg from "../../assets/images/academics/elementary.jpg";

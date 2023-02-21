@@ -2,7 +2,7 @@ import orientation from "../../../assets/images/family/orientation.jpg";
 
 import { Link } from "react-router-dom";
 
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { Container, Box, Paper, Typography, Grid } from "@mui/material";
 
 const TigerLife = () => {

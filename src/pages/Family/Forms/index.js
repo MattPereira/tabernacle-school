@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { Container, Box } from "@mui/material";
 
 import {

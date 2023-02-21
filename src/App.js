@@ -1,13 +1,13 @@
 import "./custom.scss";
 import { Box } from "@mui/material";
 import { Route, Routes, Navigate } from "react-router-dom";
-import ScrollToTop from "./common/ScrollToTop";
-import ScrollToTopButton from "./common/ScrollToTop/ScrollToTopButton";
-import NavBar from "./common/NavBar/NavBar";
-import Footer from "./common/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 /***** The "main" pages accessible throught the navbar *****/
-import Homepage from "./pages";
+import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
 import Admissions from "./pages/Admissions";

@@ -1,6 +1,6 @@
 import Slides from "./Slides";
 import Accordion from "./FacultyAccordion";
-import SectionTitle from "../../../common/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 import { Container, Grid, Box } from "@mui/material";
 
 const Faculty = () => {

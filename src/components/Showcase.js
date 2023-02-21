@@ -1,5 +1,5 @@
 import { Typography, Box } from "@mui/material";
-import backgroundImage from "../../assets/images/showcase.jpg";
+import backgroundImage from "../assets/images/showcase.jpg";
 
 const Showcase = ({ title, extra }) => {
   // console.log(window.location.pathname);
@@ -26,7 +26,14 @@ const Showcase = ({ title, extra }) => {
         }}
       ></Box>
       <Box sx={{ zIndex: 2 }}>
-        <Typography variant="h1" sx={{ color: "white", letterSpacing: "3px" }}>
+        <Typography
+          variant="h1"
+          sx={{
+            color: "white",
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+          }}
+        >
           {title} {extra}
         </Typography>
       </Box>

@@ -1,5 +1,5 @@
-import Showcase from "../../common/Showcase/Showcase";
-import PageNav from "../../common/PageNav/";
+import Showcase from "../../components/Showcase";
+import PageNav from "../../components/PageNav";
 import Resources from "./Resources";
 import Information from "./Information";
 import TigerLife from "./TigerLife";
