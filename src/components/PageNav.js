@@ -13,11 +13,14 @@ const PageNav = ({ sections }) => {
         {sections.map((section) => (
           <Grid item key={section}>
             <Typography
+              component="a"
               href={`#${section.split(" ")[0]}`}
               sx={{
                 fontSize: "1.2rem",
                 fontFamily: "Montserrat",
                 fontWeight: 500,
+                textDecoration: "none",
+                color: "black",
               }}
             >
               {section}
