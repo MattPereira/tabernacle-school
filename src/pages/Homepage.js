@@ -11,6 +11,8 @@ import PaidIcon from "@mui/icons-material/Paid";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 
 // Infinite Carousel Image Imports
 import Marquee from "react-fast-marquee";
@@ -48,7 +50,7 @@ export default function Homepage() {
 function Jogathon() {
   const StyledButton = styled(Button)(({ theme }) => ({
     fontFamily: "didact gothic",
-    fontSize: "25px",
+    fontSize: "22px",
     textTransform: "none",
     width: "100%",
     fontWeight: "bold",
@@ -59,6 +61,44 @@ function Jogathon() {
       color: "white",
     },
   }));
+
+  const jogLinks = [
+    {
+      title: "Information",
+      href: "https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view",
+      icon: InfoIcon,
+    },
+    {
+      title: "Pledge Distance",
+      href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
+      icon: FormatListBulletedIcon,
+    },
+    {
+      title: "Request Sponsor",
+      href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
+      icon: PaidIcon,
+    },
+    {
+      title: "Prizes",
+      href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
+      icon: EmojiEventsIcon,
+    },
+    {
+      title: "Volunteer",
+      href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/",
+      icon: VolunteerActivismIcon,
+    },
+    {
+      title: "Schedule",
+      href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
+      icon: ScheduleIcon,
+    },
+    {
+      title: "Business Sponsors",
+      href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
+      icon: StorefrontIcon,
+    },
+  ];
 
   return (
     <Box sx={{ bgcolor: "background.alternate" }}>
@@ -100,61 +140,22 @@ function Jogathon() {
                 spacing={2}
                 sx={{ mb: 2 }}
               >
-                <Grid item>
-                  <StyledButton
-                    variant="contained"
-                    component="a"
-                    href="https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view"
-                    target="_blank"
-                  >
-                    <InfoIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Information</span>
-                  </StyledButton>
-                </Grid>
-                <Grid item>
-                  <StyledButton
-                    variant="contained"
-                    component="a"
-                    target="_blank"
-                    href="https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view"
-                  >
-                    <FormatListBulletedIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Pledge Distance</span>
-                  </StyledButton>
-                </Grid>
-                <Grid item>
-                  <StyledButton
-                    variant="contained"
-                    component="a"
-                    href="https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view"
-                    target="_blank"
-                  >
-                    <PaidIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Request Sponsor</span>
-                  </StyledButton>
-                </Grid>
-                <Grid item>
-                  <StyledButton
-                    variant="contained"
-                    component="a"
-                    href="https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing"
-                    target="_blank"
-                  >
-                    <EmojiEventsIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Class Prizes</span>
-                  </StyledButton>
-                </Grid>
-                <Grid item>
-                  <StyledButton
-                    variant="contained"
-                    component="a"
-                    href="https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/"
-                    target="_blank"
-                  >
-                    <VolunteerActivismIcon sx={{ fontSize: "25px" }} />
-                    <span style={{ marginLeft: "20px" }}>Volunteer</span>
-                  </StyledButton>
-                </Grid>
+                {jogLinks.map((link) => (
+                  <Grid item>
+                    <StyledButton
+                      variant="contained"
+                      component="a"
+                      href={link.href}
+                      target="_blank"
+                      size="small"
+                    >
+                      <link.icon
+                        sx={{ fontSize: "25px", marginLeft: "10px" }}
+                      />
+                      <span style={{ marginLeft: "15px" }}>{link.title}</span>
+                    </StyledButton>
+                  </Grid>
+                ))}
               </Grid>
             </Grid>
           </Grid>
