@@ -13,6 +13,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import StorefrontIcon from "@mui/icons-material/Storefront";
+import LocalDiningIcon from "@mui/icons-material/LocalDining";
 
 // Infinite Carousel Image Imports
 import Marquee from "react-fast-marquee";
@@ -69,19 +70,14 @@ function Jogathon() {
       icon: InfoIcon,
     },
     {
-      title: "Pledge Distance",
-      href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
-      icon: FormatListBulletedIcon,
+      title: "Schedule",
+      href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
+      icon: ScheduleIcon,
     },
     {
-      title: "Request Sponsor",
-      href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
-      icon: PaidIcon,
-    },
-    {
-      title: "Prizes",
-      href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
-      icon: EmojiEventsIcon,
+      title: "Lunch Orders",
+      href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-taco",
+      icon: LocalDiningIcon,
     },
     {
       title: "Volunteer",
@@ -89,14 +85,24 @@ function Jogathon() {
       icon: VolunteerActivismIcon,
     },
     {
-      title: "Schedule",
-      href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
-      icon: ScheduleIcon,
+      title: "Distance Pledge Form",
+      href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
+      icon: FormatListBulletedIcon,
     },
     {
-      title: "Business Sponsors",
+      title: "Request Sponsor Form",
       href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
+      icon: PaidIcon,
+    },
+    {
+      title: "Business Sponsor Form",
+      href: "https://drive.google.com/file/d/1U7E7Jv2lRcck7EBQBz8fd75MELWBrxj6/view?usp=sharing",
       icon: StorefrontIcon,
+    },
+    {
+      title: "Prizes",
+      href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
+      icon: EmojiEventsIcon,
     },
   ];
 
