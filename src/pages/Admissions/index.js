@@ -157,8 +157,8 @@ function Tuition() {
       annual: 7850,
       monthly: 785,
     },
-    { title: "Grades K-5", annual: 7500, monthly: 715 },
-    { title: "Grades 6-8", annual: 7900, monthly: 795 },
+    { title: "Grades K-5", annual: 7500, monthly: 750 },
+    { title: "Grades 6-8", annual: 7900, monthly: 790 },
   ];
 
   return (
@@ -293,7 +293,7 @@ function Tuition() {
                   </tr>
                   <tr>
                     <td>Tutoring</td>
-                    <td>$40</td>
+                    <td>$50</td>
                     <td>Per hour</td>
                   </tr>
                   <tr>
@@ -308,7 +308,7 @@ function Tuition() {
                   </tr>
                   <tr>
                     <td>Returned Check</td>
-                    <td>$25</td>
+                    <td>$30</td>
                     <td>Per check</td>
                   </tr>
                   <tr>
