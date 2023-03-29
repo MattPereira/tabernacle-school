@@ -14,6 +14,7 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
+import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 
 // Infinite Carousel Image Imports
 import Marquee from "react-fast-marquee";
@@ -103,6 +104,11 @@ function Jogathon() {
       title: "Prizes",
       href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
       icon: EmojiEventsIcon,
+    },
+    {
+      title: "Garden Competition",
+      href: "https://drive.google.com/file/d/1GjtrnM2d_RttlF1td5FPl9YucEbYXyO2/view?usp=sharing",
+      icon: LocalFloristIcon,
     },
   ];
 
