@@ -115,63 +115,46 @@ function Jogathon() {
   return (
     <Box sx={{ bgcolor: "background.alternate" }}>
       <Container sx={{ py: 5 }}>
-        <Box
-          sx={{
-            justifyContent: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            py: 5,
-          }}
-        >
-          <Grid container alignItems="center" justifyContent="space-around">
-            <Grid item xs={10} md={5} sx={{ textAlign: "center" }}>
-              <Box
-                component="img"
-                sx={{ width: "100%", pr: 4 }}
-                src={jogHero}
-              />
-              <Box sx={{ mt: 3, textAlign: "center" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "didact gothic",
-                    fontWeight: "bold",
-                    fontSize: { xs: "2rem", md: "2.75rem" },
-                    mb: 3,
-                  }}
-                >
-                  Thursday, April 6th
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={10} md={5} lg={4}>
-              <Grid
-                container
-                justifyContent="center"
-                flexDirection="column"
-                spacing={2}
-                sx={{ mb: 2 }}
-              >
-                {jogLinks.map((link) => (
-                  <Grid item>
-                    <StyledButton
-                      variant="contained"
-                      component="a"
-                      href={link.href}
-                      target="_blank"
-                      size="small"
-                    >
-                      <link.icon
-                        sx={{ fontSize: "25px", marginLeft: "10px" }}
-                      />
-                      <span style={{ marginLeft: "15px" }}>{link.title}</span>
-                    </StyledButton>
-                  </Grid>
-                ))}
-              </Grid>
-            </Grid>
+        <Grid container spacing={2} sx={{ mb: 5 }} alignItems="center">
+          <Grid item xs={12} md={6}>
+            <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
           </Grid>
-        </Box>
+          <Grid item xs={12} md={6}>
+            <Typography
+              sx={{
+                fontFamily: "didact gothic",
+                fontWeight: "bold",
+                fontSize: { xs: "2rem", md: "2.75rem" },
+                mb: 3,
+                textAlign: "center",
+              }}
+            >
+              Friday, April 8th
+            </Typography>
+            <Typography variant="p">
+              Tabernacle is excited to announce this year's jogathon fundraiser!
+              Please mark your calendars and review the resource links below. If
+              you are available to help or have any additional questions, please
+              contact Lisa Mazzoncini at LisaM@tbs.org
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={2}>
+          {jogLinks.map((link) => (
+            <Grid item xs={12} sm={6} lg={4} key={link.title}>
+              <StyledButton
+                variant="contained"
+                component="a"
+                href={link.href}
+                target="_blank"
+                size="small"
+              >
+                <link.icon sx={{ fontSize: "25px", marginLeft: "10px" }} />
+                <span style={{ marginLeft: "15px" }}>{link.title}</span>
+              </StyledButton>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );

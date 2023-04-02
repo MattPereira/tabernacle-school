@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "./index.scss";
-import Marquee from "react-fast-marquee";
 
-import { Container, Row, Col, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
+import { Typography, Box, Container, Grid } from "@mui/material";
 
 const ProfilePage = () => {
   const [staff, setStaff] = useState(null);
@@ -53,58 +52,54 @@ const ProfilePage = () => {
 
   console.log(typeof description);
 
-  return (
-    <>
-      <section className="py-5 bg-light text-center">
-        <h2 className="text-center display-3">{title_long}</h2>
+  console.log("photos", photos);
 
-        <hr className="section-hr my-3" />
+  return (
+    <Container sx={{ py: 5 }}>
+      <Box sx={{ textAlign: "center", mb: 5 }}>
+        <Typography variant="h1">{name}</Typography>
+
+        <Typography variant="h4" gutterBottom>
+          {title_long}
+        </Typography>
+
         <a href={`mailto:${email}`} className="lead fs-4">
           {email}
         </a>
-      </section>
+      </Box>
 
-      <section className="pb-5">
-        <Container className="py-5">
-          <h2 className="display-5 mb-5 text-center">{name}</h2>
-
-          <Row className="align-items-center mb-5">
-            <Col xl={6} className="text-center mb-5 mb-xl-0">
-              <img
-                src={`${profile_picture_url}`}
-                alt="profile pic"
-                className="img-fluid img-crop rounded-circle"
+      <Grid container alignItems="center" spacing={2} sx={{ mb: 5 }}>
+        <Grid item xs={12} lg={6} textAlign="center">
+          <Box
+            component="img"
+            src={`${profile_picture_url}`}
+            alt="profile pic"
+            sx={{
+              width: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
+              height: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
+              borderRadius: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <Typography variant="p">{description}</Typography>
+        </Grid>
+      </Grid>
+      <Grid container spacing={3} alignItems="center">
+        {photos.data &&
+          photos.data.map((photo, idx) => (
+            <Grid key={photo.id} item xs={12} sm={6} lg={6} textAlign="center">
+              <Box
+                component="img"
+                src={`${photo.attributes.url}`}
+                sx={{ width: "100%", borderRadius: "30px" }}
               />
-            </Col>
-            <Col xl={6}>
-              <p className="lead">{description}</p>
-            </Col>
-          </Row>
-          {photos.data ? (
-            <div className="py-5">
-              <Marquee
-                gradient={false}
-                speed={80}
-                pauseOnHover={true}
-                pauseOnClick={true}
-                delay={0}
-                play={true}
-                direction="left"
-              >
-                {photos.data.map((photo, idx) => (
-                  <img
-                    src={`${photo.attributes.url}`}
-                    alt={`${name} carousel pic ${idx}`}
-                    className="img-fluid img-faculty-carousel"
-                    key={idx}
-                  />
-                ))}
-              </Marquee>
-            </div>
-          ) : null}
-        </Container>
-      </section>
-    </>
+            </Grid>
+          ))}
+      </Grid>
+    </Container>
   );
 };
 

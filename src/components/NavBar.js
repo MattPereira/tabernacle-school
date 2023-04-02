@@ -191,9 +191,9 @@ const NavBar = (props) => {
   }));
 
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
-    fontFamily: "Didact Gothic",
-    letterSpacing: "0.2rem",
-    fontWeight: "bold",
+    fontFamily: "Lilita One",
+    letterSpacing: "0.1rem",
+    // fontWeight: "bold",
   }));
 
   const StyledTopNavButtons = styled(Button)({
@@ -277,9 +277,10 @@ const NavBar = (props) => {
                 to={`/${item}`}
                 sx={{
                   p: 2,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Didact Gothic",
                   fontSize: "18px",
                   fontWeight: 600,
+                  letterSpacing: "0.05rem",
                   color: transparent ? "white" : "black",
                   "&:hover": {
                     backgroundColor: "#fff",

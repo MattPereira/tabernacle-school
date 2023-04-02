@@ -6,7 +6,7 @@ import { Container, Box, Grid, Typography, Button } from "@mui/material";
 import SectionTitle from "../../components/SectionTitle";
 import employmentImg from "../../assets/images/connect/employment.jpg";
 
-export default function Connect() {
+export default function ConnectPage() {
   return (
     <div>
       <Showcase title={"Connect"} />
