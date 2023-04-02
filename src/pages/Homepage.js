@@ -115,26 +115,24 @@ function Jogathon() {
   return (
     <Box sx={{ bgcolor: "background.alternate" }}>
       <Container sx={{ py: 5 }}>
-        <Grid container spacing={2} sx={{ mb: 5 }} alignItems="center">
+        <Grid container spacing={2} sx={{ mb: 7 }} alignItems="center">
           <Grid item xs={12} md={6}>
             <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography
               sx={{
-                fontFamily: "didact gothic",
-                fontWeight: "bold",
-                fontSize: { xs: "2rem", md: "2.75rem" },
-                mb: 3,
+                fontFamily: "copse",
+                fontSize: { xs: "2rem", md: "2.5rem" },
                 textAlign: "center",
               }}
             >
               Friday, April 8th
             </Typography>
             <Typography variant="p">
-              Tabernacle is excited to announce this year's jogathon fundraiser!
-              Please mark your calendars and review the resource links below. If
-              you are available to help or have any additional questions, please
+              Join us for Tabernacle's 2023 jogathon fundraiser! Please mark
+              your calendars and review the resource links below. If you are
+              available to volunteer or have any additional questions, please
               contact Lisa Mazzoncini at LisaM@tbs.org
             </Typography>
           </Grid>
