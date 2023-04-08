@@ -82,21 +82,21 @@ export const facultyData = [
             name: "Alexis Jue",
             title: "1A",
             image:
-              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979905/Faculty/First%20Grade/Alexis%20Jue/download_fcljyh.jpg",
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680980223/Faculty/1st%20Grade/Alexis%20Jue/download_fcljyh_cyqovo.jpg",
             email: "Alexisj@tbs.org",
           },
           {
             name: "Emily Scouten",
             title: "1B",
             image:
-              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979934/Faculty/First%20Grade/Emily%20Scouten/download_hrk8sy.jpg",
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680980231/Faculty/1st%20Grade/Emily%20Scouten/download_hrk8sy_vlbojz.jpg",
             email: "Emilys@tbs.org",
           },
           {
             name: "Terra Jean McFadden",
             title: "1C",
             image:
-              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979970/Faculty/First%20Grade/Terra%20McFadden/download_jafmoc.jpg",
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680980236/Faculty/1st%20Grade/Terra%20Jean%20McFadden/download_jafmoc_ynzdwx.jpg",
             email: "Terrajeanm@tbs.org",
           },
         ],
