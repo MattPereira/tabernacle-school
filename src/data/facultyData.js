@@ -1,19 +1,3 @@
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
-
-const images = importAll(
-  require.context(
-    "../assets/images/about/faculty/thumbnails",
-    false,
-    /\.(jpg|png|jpeg)$/
-  )
-);
-
 export const facultyData = [
   {
     grade: "Preschool",
@@ -21,31 +5,36 @@ export const facultyData = [
       {
         name: "Betty Mason",
         title: "Director",
-        image: images["bettyMason.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680977666/Faculty/Preschool/Betty%20Mason/thumbnail.jpg",
         email: "ElizabethM@tbs.org",
       },
       {
         name: "Debbie Keough",
         title: "JKA",
-        image: images["debbieKeough.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680977848/Faculty/Preschool/Debbie%20Keough/thumbnail.jpg",
         email: "Deborahk@tbs.org",
       },
       {
         name: "Jessie Mason",
         title: "JKB",
-        image: images["jessieMason.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680978101/Faculty/Preschool/Jessie%20Mason/thumbnail.jpg",
         email: "JesseM@tbs.org",
       },
       {
         name: "Onita Chavez",
         title: "JKB Aide",
-        image: images["onitaChavez.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979198/Faculty/Preschool/Onita%20Chavez/onitaChavez.563dd6ac81d1c4f7876c_hysegi.jpg",
         email: "OnitaC@tbs.org",
       },
       {
         name: "Rebecca Hoellwoarth",
         title: "Three-Year-Olds",
-        image: images["rebeccaHoellwarth.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979228/Faculty/Preschool/Rebecca%20Hoellwoarth/rebeccaHoellwarth.d5a7fbd81e48a789b539_uc2nw4.jpg",
         email: "RebeccaH@tbs.org",
       },
     ],
@@ -56,25 +45,29 @@ export const facultyData = [
       {
         name: "Charina Moore",
         title: "TK",
-        image: images["charinaMoore.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680976825/Faculty/Kindergarten/Charina%20Moore/headshot.jpg",
         email: "CharinaM@tbs.org",
       },
       {
         name: "Sylvia Borde",
         title: "KA",
-        image: images["sylviaBorde.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979499/Faculty/Kindergarten/Sylvia%20Borde/download_uqs6tf.jpg",
         email: "Sylviab@tbs.org",
       },
       {
         name: "Cecilia Prior",
         title: "KB",
-        image: images["ceciliaPrior.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979547/Faculty/Kindergarten/Cecilia%20Prior/download_xe7dh3.jpg",
         email: "Ceciliap@tbs.org",
       },
       {
         name: "Lina Foltz",
         title: "KC",
-        image: images["linaFoltz.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979703/Faculty/Kindergarten/Lina%20Foltz/download_krdsce.jpg",
         email: "Linaf@tbs.org",
       },
     ],
@@ -88,19 +81,22 @@ export const facultyData = [
           {
             name: "Alexis Jue",
             title: "1A",
-            image: images["alexisJue.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979905/Faculty/First%20Grade/Alexis%20Jue/download_fcljyh.jpg",
             email: "Alexisj@tbs.org",
           },
           {
             name: "Emily Scouten",
             title: "1B",
-            image: images["emilyScouten.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979934/Faculty/First%20Grade/Emily%20Scouten/download_hrk8sy.jpg",
             email: "Emilys@tbs.org",
           },
           {
             name: "Terra Jean McFadden",
             title: "1C",
-            image: images["terraJeanMcFadden.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680979970/Faculty/First%20Grade/Terra%20McFadden/download_jafmoc.jpg",
             email: "Terrajeanm@tbs.org",
           },
         ],
@@ -111,25 +107,29 @@ export const facultyData = [
           {
             name: "Heather Cochnauer",
             title: "2A",
-            image: images["heatherCochnauer.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680980282/Faculty/2nd%20Grade/Heather%20Cochnauer/download_jhdvfo.jpg",
             email: "Heatherc@tbs.org",
           },
           {
             name: "Kristen McDermott",
             title: "2A",
-            image: images["kristenMcDermott.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981295/Faculty/2nd%20Grade/Kristen%20McDermott/download_fpql3s.jpg",
             email: "Kristenm@tbs.org",
           },
           {
             name: "Tracy Herrera",
             title: "2B",
-            image: images["tracyHerrera.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981311/Faculty/2nd%20Grade/Tracy%20Herrera/download_ocgh0h.jpg",
             email: "Tracyh@tbs.org",
           },
           {
             name: "Elsy Herrera",
             title: "2C",
-            image: images["elsyHerrera.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981329/Faculty/2nd%20Grade/Elsy%20Herrera/elsyHerrera.27087d67e372d56a07ba_oea1c4.jpg",
             email: "Elsyh@tbs.org",
           },
         ],
@@ -140,19 +140,22 @@ export const facultyData = [
           {
             name: "Meg Peacock",
             title: "3A",
-            image: images["megPeacock.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981463/Faculty/3rd%20Grade/Meg%20Peacok/megPeacock.760f17105b88ccb554fa_smadqu.jpg",
             email: "Megp@tbs.org",
           },
           {
             name: "Pamela Lucido",
             title: "3B",
-            image: images["pamelaLucido.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981492/Faculty/3rd%20Grade/Pamela%20Lucido/download_giz4qv.jpg",
             email: "Paml@tbs.org",
           },
           {
             name: "Haley Max",
             title: "3C",
-            image: images["haleyMax.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981515/Faculty/3rd%20Grade/Haley%20Max/download_zqqvrl.jpg",
             email: "Haleym@tbs.org",
           },
         ],
@@ -163,13 +166,15 @@ export const facultyData = [
           {
             name: "Carol Nissen",
             title: "4A",
-            image: images["carolNissen.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981837/Faculty/4th%20Grade/Carol%20Nissen/carolNissen.8c52dc4866494a7e4fa8_zpbnsk.jpg",
             email: "Caroln@tbs.org",
           },
           {
             name: "Alexander Buckley",
             title: "4B",
-            image: images["alexanderBuckley.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981865/Faculty/4th%20Grade/Alexander%20Buckley/download_rbuxeg.jpg",
             email: "Alexb@tbs.org",
           },
         ],
@@ -180,57 +185,64 @@ export const facultyData = [
           {
             name: "Brenda Chapman",
             title: "5A",
-            image: images["brendaChapman.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981964/Faculty/5th%20Grade/Brenda%20Chapman/download_mx0eib.jpg",
             email: "Brendac@tbs.org",
           },
           {
             name: "Aurelius Morgan",
             title: "5B",
-            image: images["aureliusMorgan.jpg"],
+            image:
+              "https://res.cloudinary.com/tabernacle-school/image/upload/v1680981993/Faculty/5th%20Grade/Aurelius%20Morgan/download_fvaab3.jpg",
             email: "Aureliusm@tbs.org",
           },
         ],
       },
     ],
   },
-
   {
     grade: "Junior High",
     staff: [
       {
         name: "Eric Issacson",
         title: "English",
-        image: images["ericIssacson.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983658/Faculty/Junior%20High/Eric%20Issacson/ericIssacson.b9aee9d2504dea40a814_fhkmlq.jpg",
         email: "Erici@tbs.org",
       },
       {
         name: "Joey Prior",
         title: "History",
-        image: images["joeyPrior.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983730/Faculty/Junior%20High/Joey%20Prior/download_nukpyd.jpg",
         email: "Joeyp@tbs.org",
       },
       {
         name: "Steve Souza",
         title: "Math",
-        image: images["steveSouza.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983755/Faculty/Junior%20High/Steve%20Souza/download_dwwxc5.jpg",
         email: "Steves@tbs.org",
       },
       {
         name: "Todd Keough",
         title: "Bible",
-        image: images["toddKeough.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983778/Faculty/Junior%20High/Todd%20Keough/download_nbzt72.jpg",
         email: "Toddk@tbs.org",
       },
       {
         name: "Tirzah Burke",
         title: "English",
-        image: images["tirzahBurke.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983797/Faculty/Junior%20High/Tirzah%20Burke/download_xxnpky.jpg",
         email: "Tirzahb@tbs.org",
       },
       {
         name: "Andy Prior",
         title: "Science",
-        image: images["andyPrior.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983709/Faculty/Junior%20High/Andy%20Prior/download_krcose.jpg",
         email: "Andyp@tbs.org",
       },
     ],
@@ -241,25 +253,29 @@ export const facultyData = [
       {
         name: "Daran Fraser",
         title: "Director",
-        image: images["daranFraser.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983912/Faculty/Physical%20Education/Daran%20Fraser/download_tarcpl.jpg",
         email: "DaranF@tbs.org",
       },
       {
         name: "Amie Robison",
         title: "Teacher",
-        image: images["amieRobison.png"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983996/Faculty/Physical%20Education/Amie%20Robison/amieRobison.864a7d049efa48bb6bc3_dnmaai.png",
         email: "Amier@tbs.org",
       },
       {
         name: "Emily Buckley",
         title: "Teacher",
-        image: images["emilyBuckley.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680983946/Faculty/Physical%20Education/Emily%20Buckley/emilyBuckley.a10a1d135a021804275a_wvofsq.jpg",
         email: "Emilyb@tbs.org",
       },
       {
         name: "Lauren Morgan",
         title: "Teacher",
-        image: images["laurenMorgan.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984013/Faculty/Physical%20Education/Lauren%20Morgan/laurenMorgan.ca844ec8542e3f0382cf_ujodmy.jpg",
         email: "Laurenm@tbs.org",
       },
     ],
@@ -270,31 +286,36 @@ export const facultyData = [
       {
         name: "Rebecca Kelly",
         title: "Music",
-        image: images["rebeccaKelly.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984488/Faculty/Electives/Rebecca%20Kelly/download_yygup1.jpg",
         email: "Rebeccak@tbs.org",
       },
       {
         name: "Kimberlyn Schmitz",
         title: "Computers",
-        image: images["kimberlynSchmitz.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984483/Faculty/Electives/Kimberlyn%20Schmitz/download_crxlp8.jpg",
         email: "Kimberlyns@tbs.org",
       },
       {
         name: "Margaret Trice",
         title: "Art",
-        image: images["margaretTrice.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984477/Faculty/Electives/Margaret%20Trice/download_bftfyz.jpg",
         email: "Margarett@tbs.org",
       },
       {
         name: "Cathy Colomb",
         title: "Resources",
-        image: images["cathyColomb.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984468/Faculty/Electives/Cathy%20Colomb/download_arqndj.jpg",
         email: "Cathyc@tbs.org",
       },
       {
         name: "Judy Burmeister",
         title: "Band",
-        image: images["judyBurmeister.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984463/Faculty/Electives/Judy%20Burmeister/download_hhs0up.jpg",
         email: "Judyb@tbs.org",
       },
     ],
@@ -305,49 +326,57 @@ export const facultyData = [
       {
         name: "Vern Taylor",
         title: "Principal",
-        image: images["vernTaylor.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984947/Faculty/Administration/Vern%20Taylor/download_yg2xuw.jpg",
         email: "Vernt@tbs.org",
       },
       {
         name: "Theresa Kukla",
         title: "Vice Principal",
-        image: images["theresaKukla.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984960/Faculty/Administration/Theresa%20Kukla/download_zhjyry.jpg",
         email: "Theresak@tbs.org",
       },
       {
         name: "Dave Pereira",
         title: "Finance & Technology",
-        image: images["davePereira.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680984983/Faculty/Administration/Dave%20Pereira/download_bnp1d1.jpg",
         email: "Davep@tbs.org",
       },
       {
         name: "Rebeca Shreve",
         title: "Administrator",
-        image: images["rebecaShreve.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680985016/Faculty/Administration/Rebeca%20Shreve/download_v4ntgl.jpg",
         email: "Rebecas@tbs.org",
       },
       {
         name: "Patti Chan",
         title: "Finance Manager",
-        image: images["pattiChan.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680985035/Faculty/Administration/Patti%20Chan/download_rp5l6h.jpg",
         email: "Pattic@tbs.org",
       },
       {
         name: "Lisa Mazzoncini",
         title: "Registrar & Office",
-        image: images["lisaMazzoncini.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680985061/Faculty/Administration/Lisa%20Mazzoncini/download_vczlrf.jpg",
         email: "Lisam@tbs.org",
       },
       {
         name: "Laurie Pease",
         title: "Student Services",
-        image: images["lauriePease.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680985081/Faculty/Administration/Laurie%20Pease/download_kbbti4.jpg",
         email: "Lauriep@tbs.org",
       },
       {
         name: "Lesley Nutting",
         title: "Registrar & Support",
-        image: images["lesleyNutting.jpg"],
+        image:
+          "https://res.cloudinary.com/tabernacle-school/image/upload/v1680985127/Faculty/Administration/Lesley%20Nutting/lesleyNutting.f2679546bda0363ed026_tqzmro.jpg",
         email: "Lesleyn@tbs.org",
       },
     ],

@@ -90,11 +90,15 @@ const ProfilePage = () => {
       <Grid container spacing={3} alignItems="center">
         {photos.data &&
           photos.data.map((photo, idx) => (
-            <Grid key={photo.id} item xs={12} sm={6} lg={6} textAlign="center">
+            <Grid key={photo.id} item xs={12} md={6} lg={4} textAlign="center">
               <Box
                 component="img"
                 src={`${photo.attributes.url}`}
-                sx={{ width: "100%", borderRadius: "30px" }}
+                sx={{
+                  maxHeight: "350px",
+                  maxWidth: "100%",
+                  borderRadius: "30px",
+                }}
               />
             </Grid>
           ))}

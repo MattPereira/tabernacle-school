@@ -20,10 +20,7 @@ const FacultyAccordion = () => {
                       <Row>
                         <Box
                           sx={{
-                            mb: 2,
-                            backgroundColor: "grey.900",
-                            color: "white",
-                            borderRadius: "10px",
+                            mb: 3,
                           }}
                         >
                           <Typography variant="h4" align="center">
@@ -41,7 +38,9 @@ const FacultyAccordion = () => {
                               to={`/about/staff/${staff["email"]}`}
                               className="link-dark text-decoration-none"
                             >
-                              <h5 className="fw-bold">{staff["name"]}</h5>
+                              <Typography variant="h5" gutterBottom>
+                                {staff["name"]}
+                              </Typography>
 
                               {staff["image"] ? (
                                 <img
@@ -59,6 +58,7 @@ const FacultyAccordion = () => {
                             </Link>
                           </Col>
                         ))}
+                        <hr></hr>
                       </Row>
                     </Box>
                   );
@@ -76,8 +76,9 @@ const FacultyAccordion = () => {
                         to={`/about/staff/${staff["email"]}`}
                         className="link-dark text-decoration-none"
                       >
-                        <h5 className="fw-bold">{staff["name"]}</h5>
-
+                        <Typography variant="h5" gutterBottom>
+                          {staff["name"]}
+                        </Typography>
                         {staff["image"] ? (
                           <img
                             src={staff["image"]}
@@ -86,11 +87,13 @@ const FacultyAccordion = () => {
                             style={{ width: "150px" }}
                           />
                         ) : null}
-                        {staff["title"] ? (
+                        {staff["title"] && (
                           <div>
-                            <span className="fs-5">{staff["title"]}</span>
+                            <Typography variant="p">
+                              {staff["title"]}
+                            </Typography>
                           </div>
-                        ) : null}
+                        )}
                       </Link>
                     </Col>
                   ))}
