@@ -6,15 +6,15 @@ import { styled } from "@mui/material/styles";
 import SectionTitle from "../components/SectionTitle";
 
 // Jogathon icons for links
-import InfoIcon from "@mui/icons-material/Info";
-import PaidIcon from "@mui/icons-material/Paid";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-import ScheduleIcon from "@mui/icons-material/Schedule";
-import StorefrontIcon from "@mui/icons-material/Storefront";
-import LocalDiningIcon from "@mui/icons-material/LocalDining";
-import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
+// import InfoIcon from "@mui/icons-material/Info";
+// import PaidIcon from "@mui/icons-material/Paid";
+// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+// import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+// import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+// import ScheduleIcon from "@mui/icons-material/Schedule";
+// import StorefrontIcon from "@mui/icons-material/Storefront";
+// import LocalDiningIcon from "@mui/icons-material/LocalDining";
+// import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 
 // Infinite Carousel Image Imports
 import Marquee from "react-fast-marquee";
@@ -26,7 +26,7 @@ import carousel5 from "../assets/images/home/carousel5.jpg";
 import carousel6 from "../assets/images/home/carousel6.jpg";
 import carousel7 from "../assets/images/home/carousel7.jpg";
 import carousel8 from "../assets/images/home/carousel8.jpg";
-import jogHero from "../assets/images/home/ark-a-thon.png";
+// import jogHero from "../assets/images/home/ark-a-thon.png";
 
 // Accreditations Image Imports
 import asci from "../assets/images/home/acsi.png";
@@ -41,7 +41,7 @@ export default function Homepage() {
       <LandingCarousel />
       <StatementSlider />
 
-      <Jogathon />
+      {/* <Jogathon /> */}
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
@@ -49,114 +49,114 @@ export default function Homepage() {
   );
 }
 
-function Jogathon() {
-  const StyledButton = styled(Button)(({ theme }) => ({
-    fontFamily: "didact gothic",
-    fontSize: "22px",
-    textTransform: "none",
-    width: "100%",
-    fontWeight: "bold",
-    justifyContent: "start",
-    borderRadius: "30px",
-    backgroundColor: theme.palette.dark.main,
-    "&:hover": {
-      color: "white",
-    },
-  }));
+// function Jogathon() {
+//   const StyledButton = styled(Button)(({ theme }) => ({
+//     fontFamily: "didact gothic",
+//     fontSize: "22px",
+//     textTransform: "none",
+//     width: "100%",
+//     fontWeight: "bold",
+//     justifyContent: "start",
+//     borderRadius: "30px",
+//     backgroundColor: theme.palette.dark.main,
+//     "&:hover": {
+//       color: "white",
+//     },
+//   }));
 
-  const jogLinks = [
-    {
-      title: "Information",
-      href: "https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view",
-      icon: InfoIcon,
-    },
-    {
-      title: "Schedule",
-      href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
-      icon: ScheduleIcon,
-    },
-    {
-      title: "Lunch Orders",
-      href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-taco",
-      icon: LocalDiningIcon,
-    },
-    {
-      title: "Volunteer",
-      href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/",
-      icon: VolunteerActivismIcon,
-    },
-    {
-      title: "Distance Pledge Form",
-      href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
-      icon: FormatListBulletedIcon,
-    },
-    {
-      title: "Request Sponsor Form",
-      href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
-      icon: PaidIcon,
-    },
-    {
-      title: "Business Sponsor Form",
-      href: "https://drive.google.com/file/d/1U7E7Jv2lRcck7EBQBz8fd75MELWBrxj6/view?usp=sharing",
-      icon: StorefrontIcon,
-    },
-    {
-      title: "Prizes",
-      href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
-      icon: EmojiEventsIcon,
-    },
-    {
-      title: "Garden Competition",
-      href: "https://drive.google.com/file/d/1GjtrnM2d_RttlF1td5FPl9YucEbYXyO2/view?usp=sharing",
-      icon: LocalFloristIcon,
-    },
-  ];
+//   const jogLinks = [
+//     {
+//       title: "Information",
+//       href: "https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view",
+//       icon: InfoIcon,
+//     },
+//     {
+//       title: "Schedule",
+//       href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
+//       icon: ScheduleIcon,
+//     },
+//     {
+//       title: "Lunch Orders",
+//       href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-taco",
+//       icon: LocalDiningIcon,
+//     },
+//     {
+//       title: "Volunteer",
+//       href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/",
+//       icon: VolunteerActivismIcon,
+//     },
+//     {
+//       title: "Distance Pledge Form",
+//       href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
+//       icon: FormatListBulletedIcon,
+//     },
+//     {
+//       title: "Request Sponsor Form",
+//       href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
+//       icon: PaidIcon,
+//     },
+//     {
+//       title: "Business Sponsor Form",
+//       href: "https://drive.google.com/file/d/1U7E7Jv2lRcck7EBQBz8fd75MELWBrxj6/view?usp=sharing",
+//       icon: StorefrontIcon,
+//     },
+//     {
+//       title: "Prizes",
+//       href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
+//       icon: EmojiEventsIcon,
+//     },
+//     {
+//       title: "Garden Competition",
+//       href: "https://drive.google.com/file/d/1GjtrnM2d_RttlF1td5FPl9YucEbYXyO2/view?usp=sharing",
+//       icon: LocalFloristIcon,
+//     },
+//   ];
 
-  return (
-    <Box sx={{ bgcolor: "background.alternate" }}>
-      <Container sx={{ py: 5 }}>
-        <Grid container spacing={2} sx={{ mb: 7 }} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography
-              sx={{
-                fontFamily: "copse",
-                fontSize: { xs: "2rem", md: "2.5rem" },
-                textAlign: "center",
-              }}
-            >
-              Friday, April 8th
-            </Typography>
-            <Typography variant="p">
-              Join us for Tabernacle's 2023 jogathon fundraiser! Please mark
-              your calendars and review the resource links below. If you are
-              available to volunteer or have any additional questions, please
-              contact Lisa Mazzoncini at LisaM@tbs.org
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid container spacing={2}>
-          {jogLinks.map((link) => (
-            <Grid item xs={12} sm={6} lg={4} key={link.title}>
-              <StyledButton
-                variant="contained"
-                component="a"
-                href={link.href}
-                target="_blank"
-                size="small"
-              >
-                <link.icon sx={{ fontSize: "25px", marginLeft: "10px" }} />
-                <span style={{ marginLeft: "15px" }}>{link.title}</span>
-              </StyledButton>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
-  );
-}
+//   return (
+//     <Box sx={{ bgcolor: "background.alternate" }}>
+//       <Container sx={{ py: 5 }}>
+//         <Grid container spacing={2} sx={{ mb: 7 }} alignItems="center">
+//           <Grid item xs={12} md={6}>
+//             <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
+//           </Grid>
+//           <Grid item xs={12} md={6}>
+//             <Typography
+//               sx={{
+//                 fontFamily: "copse",
+//                 fontSize: { xs: "2rem", md: "2.5rem" },
+//                 textAlign: "center",
+//               }}
+//             >
+//               Friday, April 8th
+//             </Typography>
+//             <Typography variant="p">
+//               Join us for Tabernacle's 2023 jogathon fundraiser! Please mark
+//               your calendars and review the resource links below. If you are
+//               available to volunteer or have any additional questions, please
+//               contact Lisa Mazzoncini at LisaM@tbs.org
+//             </Typography>
+//           </Grid>
+//         </Grid>
+//         <Grid container spacing={2}>
+//           {jogLinks.map((link) => (
+//             <Grid item xs={12} sm={6} lg={4} key={link.title}>
+//               <StyledButton
+//                 variant="contained"
+//                 component="a"
+//                 href={link.href}
+//                 target="_blank"
+//                 size="small"
+//               >
+//                 <link.icon sx={{ fontSize: "25px", marginLeft: "10px" }} />
+//                 <span style={{ marginLeft: "15px" }}>{link.title}</span>
+//               </StyledButton>
+//             </Grid>
+//           ))}
+//         </Grid>
+//       </Container>
+//     </Box>
+//   );
+// }
 
 function LandingCarousel() {
   const carouselImages = [

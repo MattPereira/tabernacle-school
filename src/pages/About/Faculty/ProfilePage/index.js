@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+// import { v2 as cloudinary } from "cloudinary";
+
 import { Spinner } from "react-bootstrap";
 import { Typography, Box, Container, Grid } from "@mui/material";
 
 const ProfilePage = () => {
   const [staff, setStaff] = useState(null);
   const { id } = useParams();
+
+  // console.log("cloudinary", cloudinary);
 
   //ID IS CURRENTLY THE EMAIL ADDRESS, WILL EVENTUALLY CHANGE TO INTEGER ID NUMBER
 
