@@ -18,11 +18,7 @@ const FacultyAccordion = () => {
                   return (
                     <Box key={group.grade}>
                       <Row>
-                        <Box
-                          sx={{
-                            mb: 3,
-                          }}
-                        >
+                        <Box sx={{ mb: 3 }}>
                           <Typography variant="h4" align="center">
                             {group["grade"]}
                           </Typography>
@@ -42,19 +38,21 @@ const FacultyAccordion = () => {
                                 {staff["name"]}
                               </Typography>
 
-                              {staff["image"] ? (
+                              {staff["image"] && (
                                 <img
                                   src={staff["image"]}
                                   className="img-fluid rounded-circle"
                                   alt={staff["name"]}
                                   style={{ width: "150px" }}
                                 />
-                              ) : null}
-                              {staff["title"] ? (
+                              )}
+                              {staff["title"] && (
                                 <div>
-                                  <span className="fs-5">{staff["title"]}</span>
+                                  <Typography variant="p">
+                                    {staff["title"]}
+                                  </Typography>
                                 </div>
-                              ) : null}
+                              )}
                             </Link>
                           </Col>
                         ))}
@@ -79,14 +77,14 @@ const FacultyAccordion = () => {
                         <Typography variant="h5" gutterBottom>
                           {staff["name"]}
                         </Typography>
-                        {staff["image"] ? (
+                        {staff["image"] && (
                           <img
                             src={staff["image"]}
                             className="img-fluid rounded-circle"
                             alt={staff["name"]}
                             style={{ width: "150px" }}
                           />
-                        ) : null}
+                        )}
                         {staff["title"] && (
                           <div>
                             <Typography variant="p">
