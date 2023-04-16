@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
+import Carousel from "react-material-ui-carousel";
 
 import SectionTitle from "../components/SectionTitle";
 
@@ -17,16 +18,22 @@ import SectionTitle from "../components/SectionTitle";
 // import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 
 // Infinite Carousel Image Imports
-import Marquee from "react-fast-marquee";
-import carousel1 from "../assets/images/home/carousel1.jpg";
-import carousel2 from "../assets/images/home/carousel2.jpg";
-import carousel3 from "../assets/images/home/carousel3.jpg";
-import carousel4 from "../assets/images/home/carousel4.jpg";
-import carousel5 from "../assets/images/home/carousel5.jpg";
-import carousel6 from "../assets/images/home/carousel6.jpg";
-import carousel7 from "../assets/images/home/carousel7.jpg";
-import carousel8 from "../assets/images/home/carousel8.jpg";
+// import Marquee from "react-fast-marquee";
+// import carousel1 from "../assets/images/home/carousel1.jpg";
+// import carousel2 from "../assets/images/home/carousel2.jpg";
+// import carousel3 from "../assets/images/home/carousel3.jpg";
+// import carousel4 from "../assets/images/home/carousel4.jpg";
+// import carousel5 from "../assets/images/home/carousel5.jpg";
+// import carousel6 from "../assets/images/home/carousel6.jpg";
+// import carousel7 from "../assets/images/home/carousel7.jpg";
+// import carousel8 from "../assets/images/home/carousel8.jpg";
 // import jogHero from "../assets/images/home/ark-a-thon.png";
+
+// Showcase Images
+import showcase1 from "../assets/images/showcase/about.jpg";
+import showcase2 from "../assets/images/showcase/admissions.jpg";
+import showcase3 from "../assets/images/showcase/campus.jpg";
+import showcase4 from "../assets/images/showcase/academics.jpg";
 
 // Accreditations Image Imports
 import asci from "../assets/images/home/acsi.png";
@@ -38,10 +45,8 @@ import useTheme from "@mui/material/styles/useTheme";
 export default function Homepage() {
   return (
     <div>
-      <LandingCarousel />
+      <LandingShowcase />
       <StatementSlider />
-
-      {/* <Jogathon /> */}
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
@@ -158,49 +163,69 @@ export default function Homepage() {
 //   );
 // }
 
-function LandingCarousel() {
-  const carouselImages = [
-    carousel1,
-    carousel2,
-    carousel3,
-    carousel4,
-    carousel5,
-    carousel6,
-    carousel7,
-    carousel8,
-  ];
+// function LandingCarousel() {
+//   const carouselImages = [
+//     carousel1,
+//     carousel2,
+//     carousel3,
+//     carousel4,
+//     carousel5,
+//     carousel6,
+//     carousel7,
+//     carousel8,
+//   ];
 
+//   return (
+//     <Box
+//       sx={{
+//         display: "flex",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         width: "100%",
+//       }}
+//     >
+//       <Box sx={{ width: "100%" }}>
+//         <Marquee
+//           gradient={false}
+//           speed={80}
+//           pauseOnHover={true}
+//           pauseOnClick={true}
+//           delay={0}
+//           play={true}
+//           direction="left"
+//         >
+//           {carouselImages.map((image, idx) => (
+//             <Box
+//               key={idx}
+//               sx={{ width: { xs: "400px", md: "500px", lg: "600px" } }}
+//               component="img"
+//               src={image}
+//               alt="carousel image"
+//             />
+//           ))}
+//         </Marquee>
+//       </Box>
+//     </Box>
+//   );
+// }
+
+function LandingShowcase() {
+  const items = [showcase1, showcase2, showcase4, showcase3];
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-      }}
-    >
-      <Box sx={{ width: "100%" }}>
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          {carouselImages.map((image, idx) => (
-            <Box
-              key={idx}
-              sx={{ width: { xs: "400px", md: "500px", lg: "600px" } }}
-              component="img"
-              src={image}
-              alt="carousel image"
-            />
-          ))}
-        </Marquee>
-      </Box>
-    </Box>
+    <Carousel indicators={false} interval={5000}>
+      {items.map((item, idx) => (
+        <Box
+          component="img"
+          src={item}
+          sx={{
+            width: "100%",
+            objectFit: "cover",
+            height: { xs: "250px", sm: "300px", md: "400px", lg: "500px" },
+          }}
+          alt="showcase"
+        />
+      ))}
+    </Carousel>
   );
 }
 
@@ -237,7 +262,8 @@ function StatementSlider() {
   return (
     <Container
       sx={{
-        py: 5,
+        pt: 2,
+        pb: 5,
         minHeight: "300px",
         display: "flex",
         flexDirection: "column",
