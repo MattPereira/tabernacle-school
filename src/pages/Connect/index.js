@@ -5,11 +5,12 @@ import Contact from "./contact";
 import { Container, Box, Grid, Typography, Button } from "@mui/material";
 import SectionTitle from "../../components/SectionTitle";
 import employmentImg from "../../assets/images/connect/employment.jpg";
+import connectShowcase from "../../assets/images/showcase/connect.jpg";
 
 export default function ConnectPage() {
   return (
     <div>
-      <Showcase title={"Connect"} />
+      <Showcase title={"Connect"} image={connectShowcase} />
       <PageNav sections={["Contact", "Employment", "Location"]} />
       <Contact />
       <Employment />

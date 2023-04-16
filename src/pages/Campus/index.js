@@ -4,6 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 
 import { googleApiKey } from "../../secrets";
 import SectionTitle from "../../components/SectionTitle";
+import campusShowcase from "../../assets/images/showcase/campus.jpg";
 
 import {
   Container,
@@ -33,7 +34,7 @@ import christmas from "../../assets/images/campus/operation-christmas.jpg";
 export default function Campus() {
   return (
     <div>
-      <Showcase title="Campus" />
+      <Showcase title="Campus" image={campusShowcase} />
       <PageNav sections={["Calendar", "Athletics", "Daycare", "Outreach"]} />
       <SchoolCalendar />
       <Athletics />

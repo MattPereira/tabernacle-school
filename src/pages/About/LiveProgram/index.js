@@ -94,7 +94,7 @@ const characteristics = {
 
 const LiveProgram = () => {
   return (
-    <Box id="Programs" sx={{ py: 5 }}>
+    <Box sx={{ py: 5 }}>
       <SectionTitle title="Live Program" />
       <Container sx={{ py: 5 }}>
         <Box sx={{ mb: 3 }}>

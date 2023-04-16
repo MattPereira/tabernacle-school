@@ -3,16 +3,18 @@ import value2 from "../../../assets/images/about/values/value2.jpg";
 import SectionTitle from "../../../components/SectionTitle";
 
 import { Row, Col } from "react-bootstrap";
-import { Container } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 
 const Values = () => {
   return (
-    <section id="Values" className="py-5">
+    <section className="py-5">
       <SectionTitle title="Values" />
       <Container className="py-5">
         <Row className="d-flex align-items-center">
           <Col xl={6}>
-            <h5 className="fs-3 text-center fw-bold">Truth Centered</h5>
+            <Typography variant="h5" align="center">
+              Truth Centered
+            </Typography>
             <div>
               <p className="lead">
                 Committed to education which will mold students’ hearts and
@@ -21,7 +23,9 @@ const Values = () => {
             </div>
 
             <div className="">
-              <h5 className="fs-3 text-center fw-bold">Excellence Based</h5>
+              <Typography variant="h5" align="center">
+                Excellence Based
+              </Typography>
               <p className="lead">
                 Vitally engaged in producing life-long learners through teaching
                 and modeling self-discipline. We identify each student’s unique
@@ -33,7 +37,9 @@ const Values = () => {
             </div>
 
             <div className="">
-              <h5 className="fs-3 text-center fw-bold">Relationally Engaged</h5>
+              <Typography variant="h5" align="center">
+                Relationally Engaged
+              </Typography>
               <div>
                 <p className="lead">
                   Dedicated to loving and nurturing students. Tabernacle School
@@ -43,9 +49,9 @@ const Values = () => {
               </div>
             </div>
             <div className="">
-              <h5 className="fs-3 text-center fw-bold">
+              <Typography variant="h5" align="center">
                 Evangelically Focused
-              </h5>
+              </Typography>
               <p className="lead">
                 Passionate about knowing Jesus and making Him known. Inclusive
                 in our outreach. We have families from every religion; we have
@@ -59,8 +65,18 @@ const Values = () => {
             </div>
           </Col>
           <Col xl={6} className="d-none d-xl-block">
-            <img src={value1} className="img-fluid mb-3" alt="" />
-            <img src={value2} className="img-fluid" alt="" />
+            <Box
+              component="img"
+              src={value1}
+              sx={{ width: "100%", borderRadius: "30px", mb: 3 }}
+              alt=""
+            />
+            <Box
+              component="img"
+              src={value2}
+              sx={{ width: "100%", borderRadius: "30px" }}
+              alt=""
+            />
           </Col>
         </Row>
       </Container>

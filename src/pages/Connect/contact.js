@@ -23,7 +23,7 @@ export default function Contact() {
     <Box id="Contact" sx={{ py: 5 }}>
       <SectionTitle title="Contact" />
       <Container sx={{ py: 5 }}>
-        <Grid container spacing={6} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={10} md={6}>
             <SendMessageForm />
           </Grid>
@@ -65,7 +65,7 @@ function SendMessageForm() {
   return (
     <div>
       <Box sx={{ mb: 3 }}>
-        <Typography variant="h3" align="center">
+        <Typography variant="h5" align="center">
           Send Message
         </Typography>
       </Box>
@@ -157,7 +157,7 @@ function StaffDirectory() {
   return (
     <div>
       <Box sx={{ mb: 3 }}>
-        <Typography variant="h3" align="center">
+        <Typography variant="h5" align="center">
           Staff Directory
         </Typography>
       </Box>

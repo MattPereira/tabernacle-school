@@ -5,11 +5,12 @@ import Information from "./Information";
 import TigerLife from "./TigerLife";
 import Forms from "./Forms";
 import AmazonSmile from "./AmazonSmile";
+import familyShowcase from "../../assets/images/showcase/family.jpg";
 
 const Family = () => {
   return (
     <div>
-      <Showcase title="Family" />
+      <Showcase title="Family" image={familyShowcase} />
       <PageNav sections={["Information", "Resources", "Forms", "Tiger Life"]} />
       <Information />
       <Resources />

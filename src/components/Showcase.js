@@ -1,7 +1,7 @@
 import { Typography, Box } from "@mui/material";
-import backgroundImage from "../assets/images/showcase.jpg";
+// import backgroundImage from "../assets/images/admissions-showcase.jpg";
 
-const Showcase = ({ title, extra }) => {
+const Showcase = ({ title, image }) => {
   // console.log(window.location.pathname);
   return (
     <Box
@@ -11,7 +11,7 @@ const Showcase = ({ title, extra }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: `url(${backgroundImage}) center / cover no-repeat`,
+        background: `url(${image}) center / cover no-repeat`,
       }}
     >
       <Box
@@ -34,7 +34,7 @@ const Showcase = ({ title, extra }) => {
             textTransform: "uppercase",
           }}
         >
-          {title} {extra}
+          {title}
         </Typography>
       </Box>
     </Box>

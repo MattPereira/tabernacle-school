@@ -8,6 +8,8 @@ import juniorHighImg from "../../assets/images/academics/junior-high.jpg";
 import googleClassroomImg from "../../assets/images/academics/google-classroom.png";
 import ignitiaImg from "../../assets/images/academics/ignitia.png";
 
+import academicsShowcaseImg from "../../assets/images/showcase/academics.jpg";
+
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/material/styles";
 import {
@@ -24,19 +26,19 @@ import {
 export default function AcademicsPage() {
   return (
     <div>
-      <Showcase title="Academics" />
+      <Showcase title="Academics" image={academicsShowcaseImg} />
       <PageNav
         sections={[
           "Preschool",
           "Elementary",
-          "Junior High",
+          "Middle School",
           "Distance Learning",
           "Common Core",
         ]}
       />
       <Preschool />
       <Elementary />
-      <JuniorHigh />
+      <MiddleSchool />
       <DistanceLearning />
       <CommonCore />
       <ExpectedLearningResults />
@@ -46,7 +48,7 @@ export default function AcademicsPage() {
 
 function Preschool() {
   return (
-    <Box id="Preschool">
+    <Box>
       <Container sx={{ py: 5 }}>
         <SectionTitle title="Preschool" />
 
@@ -100,7 +102,7 @@ function Preschool() {
 
 function Elementary() {
   return (
-    <Box id="Elementary" sx={{ bgcolor: "background.alternate" }}>
+    <Box sx={{ bgcolor: "background.alternate" }}>
       <Container sx={{ py: 5 }}>
         <SectionTitle title="Elementary" />
 
@@ -148,10 +150,10 @@ function Elementary() {
   );
 }
 
-function JuniorHigh() {
+function MiddleSchool() {
   return (
-    <Box id="Junior" sx={{ py: 5 }}>
-      <SectionTitle title="Junior High" />
+    <Box sx={{ my: 5 }}>
+      <SectionTitle title="Middle School" />
       <Container sx={{ pb: 5 }}>
         <Grid
           spacing={4}
@@ -207,7 +209,7 @@ function JuniorHigh() {
 
 const DistanceLearning = () => {
   return (
-    <Box id="Distance" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
       <SectionTitle title="Distance Learning" />
       <Container sx={{ pb: 5 }}>
         <Box sx={{ mb: 5 }}>
@@ -293,14 +295,14 @@ function CommonCore() {
   }));
 
   return (
-    <Box id="Common" sx={{ py: 5 }}>
+    <Box sx={{ py: 5 }}>
       <SectionTitle title="Common Core" />
       <Container sx={{ pb: 5 }}>
         <Grid container spacing={4}>
           <Grid item lg={6}>
             <Box sx={{ mb: 1 }}>
-              <Typography variant="h4" textAlign="center">
-                Tabernacle School Standards
+              <Typography variant="h5" textAlign="center">
+                School Standards
               </Typography>
             </Box>
             <Box sx={{ mb: 1 }}>
@@ -428,7 +430,7 @@ function ExpectedLearningResults() {
         <Grid container spacing={4}>
           <Grid item lg={6}>
             <Box sx={{ mb: 4 }}>
-              <Typography variant="h4" textAlign="center">
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Lifelong Learner
               </Typography>
               <Typography variant="p">
@@ -444,7 +446,7 @@ function ExpectedLearningResults() {
               </Typography>
             </Box>
             <Box sx={{ mb: 4 }}>
-              <Typography variant="h4" textAlign="center">
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Faithful Follower of Jesus
               </Typography>
               <Typography variant="p">
@@ -462,7 +464,7 @@ function ExpectedLearningResults() {
           </Grid>
           <Grid item lg={6}>
             <Box sx={{ mb: 4 }}>
-              <Typography variant="h4" textAlign="center">
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Academic Achiever
               </Typography>
               <Typography variant="p">
@@ -478,7 +480,7 @@ function ExpectedLearningResults() {
               </Typography>
             </Box>
             <Box sx={{ mb: 4 }}>
-              <Typography variant="h4" textAlign="center">
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Citizen of Character
               </Typography>
               <Typography variant="p">

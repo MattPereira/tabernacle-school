@@ -201,7 +201,7 @@ export const facultyData = [
     ],
   },
   {
-    grade: "Junior High",
+    grade: "Middle School",
     staff: [
       {
         name: "Eric Issacson",

@@ -1,24 +1,32 @@
-import { Row, Col } from "react-bootstrap";
+import { Box, Grid, Typography } from "@mui/material";
 
 const Slide = ({ image, paragraphs }) => {
   return (
-    <Row className="align-items-center">
-      <Col xl={6} className="text-center mb-5 mb-xl-0">
-        <img
-          className="img-fluid center-cropped rounded-circle"
+    <Grid container spacing={4} alignItems="center" justifyContent="center">
+      <Grid item lg={6}>
+        <Box
+          component="img"
+          sx={{
+            width: "100%",
+            borderRadius: "30px",
+            objectFit: "cover",
+            height: { sx: "250px", md: "550px" },
+          }}
           src={image}
           alt="..."
         />
-      </Col>
-      <Col xl={6}>
+      </Grid>
+      <Grid item lg={6}>
         {paragraphs.map((paragraph) => (
-          <div key={paragraph["title"]}>
-            <h4 className="text-center fs-3 fw-bold">{paragraph["title"]}</h4>
-            <p className="lead">{paragraph["text"]}</p>
-          </div>
+          <Box key={paragraph["title"]} sx={{ mb: 3 }}>
+            <Typography variant="h5" textAlign="center">
+              {paragraph["title"]}
+            </Typography>
+            <Typography variant="p">{paragraph["text"]}</Typography>
+          </Box>
         ))}
-      </Col>
-    </Row>
+      </Grid>
+    </Grid>
   );
 };
 

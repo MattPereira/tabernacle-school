@@ -5,6 +5,7 @@ import Values from "./Values";
 import Vision from "./Vision";
 import GiftProgram from "./GiftProgram";
 import LiveProgram from "./LiveProgram";
+import aboutShowcase from "../../assets/images/showcase/about.jpg";
 
 import { Container, Typography, Box } from "@mui/material";
 
@@ -13,9 +14,16 @@ import SectionTitle from "../../components/SectionTitle";
 export default function About() {
   return (
     <div>
-      <Showcase title="About" />
+      <Showcase title="About" image={aboutShowcase} />
       <PageNav
-        sections={["History", "Faculty", "Programs", "Values", "Vision"]}
+        sections={[
+          "History",
+          "Faculty",
+          "Live Program",
+          "Gift Program",
+          "Values",
+          "Vision",
+        ]}
       />
       <History />
       <Faculty />
@@ -29,11 +37,15 @@ export default function About() {
 
 function History() {
   return (
-    <Box id="History" sx={{ py: 5 }}>
+    <Box>
       <Container sx={{ py: 5 }}>
         <SectionTitle title="History" />
         <Box sx={{ mb: 3 }}>
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h5"
+            textAlign={{ xs: "center", md: "start" }}
+            gutterBottom
+          >
             Founding
           </Typography>
           <Typography variant="p">
@@ -45,7 +57,11 @@ function History() {
           </Typography>
         </Box>
         <Box sx={{ mb: 3 }}>
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h5"
+            textAlign={{ xs: "center", md: "start" }}
+            gutterBottom
+          >
             Restructuring
           </Typography>
           <Typography variant="p">
@@ -61,7 +77,11 @@ function History() {
           </Typography>
         </Box>
         <Box sx={{ mb: 3 }}>
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h5"
+            textAlign={{ xs: "center", md: "start" }}
+            gutterBottom
+          >
             Present Day
           </Typography>
           <Typography variant="p">

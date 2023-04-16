@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import SectionTitle from "../../components/SectionTitle";
+import admissionsShowcase from "../../assets/images/showcase/admissions.jpg";
 
 import { useTheme } from "@mui/material/styles";
 import {
@@ -21,7 +22,7 @@ import { scheduleServiceId } from "../../secrets";
 export default function Admissions() {
   return (
     <div>
-      <Showcase title="Admissions" />
+      <Showcase title="Admissions" image={admissionsShowcase} />
       <PageNav sections={["Schedule Tour", "Tuition & Fees"]} />
       <ScheduleTour />
       <Tuition />
@@ -57,7 +58,7 @@ function ScheduleTour() {
   };
 
   return (
-    <Box id="Schedule" sx={{ py: 5 }}>
+    <Box sx={{ py: 5 }}>
       <SectionTitle title="Schedule Tour" />
       <Container sx={{ py: { xs: 0, md: 5 } }}>
         <Grid container sx={{ justifyContent: "center" }}>
@@ -162,7 +163,7 @@ function Tuition() {
   ];
 
   return (
-    <Box id="Tuition" sx={{ bgcolor: "background.alternate", py: 5 }}>
+    <Box sx={{ bgcolor: "background.alternate", py: 5 }}>
       <Container sx={{ py: 5 }}>
         <SectionTitle title="Tuition & Fees" />
 

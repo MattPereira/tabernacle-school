@@ -191,9 +191,8 @@ const NavBar = (props) => {
   }));
 
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
-    fontFamily: "Lilita One",
+    fontFamily: "Copse",
     letterSpacing: "0.1rem",
-    // fontWeight: "bold",
   }));
 
   const StyledTopNavButtons = styled(Button)({

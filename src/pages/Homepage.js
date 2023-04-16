@@ -325,7 +325,7 @@ function EducationLevels() {
               variant="h3"
               sx={{ my: 3, textAlign: "center", fontFamily: "Copse" }}
             >
-              Junior High
+              Middle School
             </Typography>
             <Typography variant="p">
               At Tabernacle Middle School, we help our students navigate the
