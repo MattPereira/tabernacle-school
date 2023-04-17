@@ -20,9 +20,9 @@ import { contactServiceId } from "../../secrets";
 
 export default function Contact() {
   return (
-    <Box id="Contact" sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Contact" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={10} md={6}>
             <SendMessageForm />

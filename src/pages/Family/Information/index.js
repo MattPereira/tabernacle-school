@@ -12,13 +12,13 @@ import { IoCalendar, IoWarning } from "react-icons/io5";
 
 import { Row, Col } from "react-bootstrap";
 import SectionTitle from "../../../components/SectionTitle";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 
 const Information = () => {
   return (
-    <Box id="Information" sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Information" />
-      <Container className="py-5">
+      <Container>
         <Row className="text-center mb-md-5">
           <Col xs={6} md={3} className="mb-5">
             <a
@@ -27,8 +27,8 @@ const Information = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <FaBook className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Handbook</div>
+              <FaBook className="display-4 mb-3" />
+              <Typography variant="h5">Handbook</Typography>
             </a>
           </Col>
           <Col xs={6} md={3} className="mb-5">
@@ -36,8 +36,8 @@ const Information = () => {
               to="/admissions#Tuition"
               className="link-dark text-decoration-none"
             >
-              <FaMoneyCheck className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Tuition</div>
+              <FaMoneyCheck className="display-4 mb-3" />
+              <Typography variant="h5">Tuition</Typography>
             </Link>
           </Col>
           <Col xs={6} md={3} className="mb-5">
@@ -45,14 +45,14 @@ const Information = () => {
               to="/family/orientation"
               className="link-dark text-decoration-none"
             >
-              <RiParentFill className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Parent Orientation</div>
+              <RiParentFill className="display-4 mb-3" />
+              <Typography variant="h5">Parent Orientation</Typography>
             </Link>
           </Col>
           <Col xs={6} md={3} className="mb-5">
             <Link to="/family/facts" className="link-dark text-decoration-none">
-              <BsFillQuestionCircleFill className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Facts Help</div>
+              <BsFillQuestionCircleFill className="display-4 mb-3" />
+              <Typography variant="h5">Facts Help</Typography>
             </Link>
           </Col>
         </Row>
@@ -64,8 +64,8 @@ const Information = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <IoCalendar className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Calendar</div>
+              <IoCalendar className="display-4 mb-3" />
+              <Typography variant="h5">Calendar</Typography>
             </a>
           </Col>
           <Col xs={6} md={3} className="mb-5">
@@ -73,8 +73,8 @@ const Information = () => {
               to="/family/supply_list"
               className="link-dark text-decoration-none"
             >
-              <FaParachuteBox className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Supply List</div>
+              <FaParachuteBox className="display-4 mb-3" />
+              <Typography variant="h5">Supply List</Typography>
             </Link>
           </Col>
           <Col xs={6} md={3} className="mb-5">
@@ -82,8 +82,8 @@ const Information = () => {
               to="/family/uniform_guidelines"
               className="link-dark text-decoration-none"
             >
-              <FaUserTie className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Uniform Guidelines</div>
+              <FaUserTie className="display-4 mb-3" />
+              <Typography variant="h5">Uniform Guidelines</Typography>
             </Link>
           </Col>
           <Col xs={6} md={3} className="mb-5">
@@ -91,8 +91,8 @@ const Information = () => {
               to="/family/discipline"
               className="link-dark text-decoration-none"
             >
-              <IoWarning className="display-1 mb-3" />
-              <div className="mb-3 fs-5 fw-bold">Jr High Discipline</div>
+              <IoWarning className="display-4 mb-3" />
+              <Typography variant="h5">Jr High Discipline</Typography>
             </Link>
           </Col>
         </Row>

@@ -34,10 +34,10 @@ const Resources = () => {
   const theme = useTheme();
 
   return (
-    <Box id="Resources" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Resources" />
-      <Container sx={{ py: 5 }}>
-        <Grid container spacing={3}>
+      <Container>
+        <Grid container spacing={4}>
           {resources.map((resource) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={resource.title}>
               <Link href={resource.url} style={{ textDecoration: "none" }}>

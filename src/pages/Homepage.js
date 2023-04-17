@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
@@ -212,7 +210,7 @@ export default function Homepage() {
 function LandingShowcase() {
   const items = [showcase1, showcase2, showcase4, showcase3];
   return (
-    <Carousel indicators={false} interval={5000}>
+    <Carousel indicators={false} interval={5000} duration={1500}>
       {items.map((item, idx) => (
         <Box
           component="img"
@@ -220,7 +218,7 @@ function LandingShowcase() {
           sx={{
             width: "100%",
             objectFit: "cover",
-            height: { xs: "250px", sm: "300px", md: "400px", lg: "500px" },
+            height: { xs: "300px", sm: "300px", md: "400px", lg: "500px" },
           }}
           alt="showcase"
         />
@@ -245,34 +243,26 @@ function StatementSlider() {
     },
   ];
 
-  const [activeStep, setActiveStep] = useState(0);
-  const maxSteps = statements.length;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeStep === maxSteps - 1) {
-        setActiveStep(0);
-      } else {
-        setActiveStep(activeStep + 1);
-      }
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [activeStep, maxSteps]);
-
   return (
     <Container
       sx={{
-        pt: 2,
-        pb: 5,
-        minHeight: "300px",
+        height: { xs: "250px", md: "275px" },
         display: "flex",
         flexDirection: "column",
         textAlign: "center",
         justifyContent: "center",
       }}
     >
-      <Typography variant="h4">{statements[activeStep].title}</Typography>
-      <Typography variant="p">{statements[activeStep].text}</Typography>
+      <Carousel interval={5000} duration={1500}>
+        {statements.map((statement, idx) => (
+          <>
+            <Typography variant="h4" gutterBottom>
+              {statement.title}
+            </Typography>
+            <Typography variant="p">{statement.text}</Typography>
+          </>
+        ))}
+      </Carousel>
     </Container>
   );
 }
@@ -293,8 +283,8 @@ function EducationLevels() {
   });
 
   return (
-    <Box sx={{ bgcolor: "rgb(53, 94, 59)", py: 5, color: "white" }}>
-      <Container sx={{ px: { xs: 3, lg: 0 } }}>
+    <Box sx={{ bgcolor: "rgb(53, 94, 59)", py: 6, color: "white" }}>
+      <Container>
         <Grid container spacing={4} justifyContent="center">
           <Grid item sm={10} md={8} lg={4}>
             <Typography
@@ -382,7 +372,7 @@ function ParentTestimonials() {
 
   console.log(theme.palette);
   return (
-    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <Container>
         <SectionTitle title="Parent Testimonials" />
 
@@ -420,7 +410,7 @@ function ParentTestimonials() {
             — Third grade parent, 2019
           </figcaption>
         </Box>
-        <Box sx={{ mb: 5 }}>
+        <Box>
           <blockquote>
             <Typography variant="p">
               “We feel blessed that two of our three children have attended
@@ -443,10 +433,10 @@ function ParentTestimonials() {
 
 function Accreditations() {
   return (
-    <Box id="accreditation" sx={{ py: 5 }}>
+    <Box id="accreditation" sx={{ py: 6 }}>
       <SectionTitle title="Accreditations" />
 
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Grid container columnSpacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} md={6} lg={8}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>

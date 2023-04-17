@@ -14,10 +14,8 @@ const Family = () => {
       <PageNav sections={["Information", "Resources", "Forms", "Tiger Life"]} />
       <Information />
       <Resources />
-
       <Forms />
       <TigerLife />
-
       <AmazonSmile />
     </div>
   );

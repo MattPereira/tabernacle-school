@@ -58,12 +58,12 @@ function ScheduleTour() {
   };
 
   return (
-    <Box sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Schedule Tour" />
-      <Container sx={{ py: { xs: 0, md: 5 } }}>
+      <Container>
         <Grid container sx={{ justifyContent: "center" }}>
           <Grid item xs={12} md={8}>
-            <Box sx={{ mb: { xs: 5, md: 10 } }}>
+            <Box sx={{ mb: 5 }}>
               <Typography variant="p">
                 Request a tour of our campus by filling out the form below or
                 calling us at <a href="tel:9256859169">925.685.9169</a>
@@ -163,8 +163,8 @@ function Tuition() {
   ];
 
   return (
-    <Box sx={{ bgcolor: "background.alternate", py: 5 }}>
-      <Container sx={{ py: 5 }}>
+    <Box sx={{ bgcolor: "background.alternate", py: 6 }}>
+      <Container>
         <SectionTitle title="Tuition & Fees" />
 
         <Grid container spacing={4}>

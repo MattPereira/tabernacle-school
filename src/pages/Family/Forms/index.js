@@ -13,7 +13,7 @@ const Forms = () => {
   return (
     <Box id="Elementary" sx={{ py: 5 }}>
       <SectionTitle title="Forms" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Row className="text-center">
           <Col xs={6} md={3} className="mb-5">
             <a
@@ -22,7 +22,7 @@ const Forms = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <FaLaptopCode className="display-1 mb-2" />
+              <FaLaptopCode className="display-4 mb-2" />
               <div className="lead fw-bold">Technology</div>
             </a>
           </Col>
@@ -33,7 +33,7 @@ const Forms = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <FaBicycle className="display-1 mb-2" />
+              <FaBicycle className="display-4 mb-2" />
               <div className="lead fw-bold">Bicycle & Walk</div>
             </a>
           </Col>
@@ -44,7 +44,7 @@ const Forms = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <FaClinicMedical className="display-1 mb-2" />
+              <FaClinicMedical className="display-4 mb-2" />
               <div className="lead fw-bold">Medication</div>
             </a>
           </Col>
@@ -55,7 +55,7 @@ const Forms = () => {
               rel="noopener noreferrer"
               className="link-dark text-decoration-none"
             >
-              <FaBasketballBall className="display-1 mb-2" />
+              <FaBasketballBall className="display-4 mb-2" />
               <div className="lead fw-bold">Sports</div>
             </a>
           </Col>

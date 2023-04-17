@@ -37,8 +37,8 @@ export default function About() {
 
 function History() {
   return (
-    <Box>
-      <Container sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
+      <Container>
         <SectionTitle title="History" />
         <Box sx={{ mb: 3 }}>
           <Typography

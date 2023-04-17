@@ -99,7 +99,7 @@ const NavBar = (props) => {
             <Typography
               variant="h4"
               color="white"
-              sx={{ fontFamily: "Copse", fontWeight: "bold" }}
+              sx={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
             >
               Tabernacle School
             </Typography>
@@ -191,8 +191,8 @@ const NavBar = (props) => {
   }));
 
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
-    fontFamily: "Copse",
-    letterSpacing: "0.1rem",
+    fontFamily: "Roboto Mono",
+    fontWeight: "700",
   }));
 
   const StyledTopNavButtons = styled(Button)({

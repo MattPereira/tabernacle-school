@@ -13,9 +13,9 @@ import "./index.scss";
 
 const Vision = () => {
   return (
-    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Vision" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Carousel indicators={false} controls={false}>
           <Carousel.Item>
             <Slide

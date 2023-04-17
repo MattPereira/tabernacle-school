@@ -1,24 +1,38 @@
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+
+import { Box, Typography } from "@mui/material";
 
 const GiftCard = ({ image, title, definition, description, bgColor }) => {
   return (
-    <div className="gift--box">
+    <div>
       <Row
         className={`${bgColor} justify-content-center align-items-center p-4 rounded text-white`}
       >
-        <Col md={6} className="d-flex justify-content-center">
-          <img
+        <Box sx={{ mb: 3 }}>
+          <Box
+            component="img"
             src={image}
-            className="img-fluid rounded-circle"
             alt={title}
-            style={{ width: "275px", height: "275px" }}
+            sx={{
+              width: "100%",
+              borderRadius: "7px",
+              objectFit: "cover",
+              height: { xs: "250px", sm: "450px", md: "300px", lg: "350px" },
+            }}
           />
-        </Col>
-        <Col md={6}>
-          <h4 className="mb-0 py-3 fw-bold">{title}</h4>
-          <p className="lead fst-italic">{definition}</p>
-          <p>{description}</p>
-        </Col>
+        </Box>
+        <Box>
+          <Typography variant="h5">{title}</Typography>
+          <Typography
+            variant="p"
+            sx={{ fontSize: "1.5rem", fontStyle: "italic" }}
+          >
+            {definition}
+          </Typography>
+          <Box>
+            <Typography variant="p">{description}</Typography>
+          </Box>
+        </Box>
       </Row>
     </div>
   );

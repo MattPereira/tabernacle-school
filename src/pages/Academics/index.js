@@ -49,7 +49,7 @@ export default function AcademicsPage() {
 function Preschool() {
   return (
     <Box>
-      <Container sx={{ py: 5 }}>
+      <Container sx={{ py: 6 }}>
         <SectionTitle title="Preschool" />
 
         <Box
@@ -102,8 +102,8 @@ function Preschool() {
 
 function Elementary() {
   return (
-    <Box sx={{ bgcolor: "background.alternate" }}>
-      <Container sx={{ py: 5 }}>
+    <Box sx={{ bgcolor: "background.alternate", py: 6 }}>
+      <Container>
         <SectionTitle title="Elementary" />
 
         <Grid
@@ -112,14 +112,18 @@ function Elementary() {
           sx={{ alginItems: "center", justifyContent: "center" }}
         >
           <Grid item lg={6} order={{ xs: 2, lg: 1 }}>
-            <Typography variant="p">
-              We understand how important it is to find the right elementary
-              program to fit the needs of your growing child. At Tabernacle, we
-              provide an elementary education that prepares children to think
-              clearly, act responsibly, and live ethically. Our programs and
-              curriculum give our students a competitive edge in an increasingly
-              complex society as they discover their unique giftedness.{" "}
-            </Typography>
+            <Box sx={{ mb: 3 }}>
+              <Typography variant="p">
+                We understand how important it is to find the right elementary
+                program to fit the needs of your growing child. At Tabernacle,
+                we provide an elementary education that prepares children to
+                think clearly, act responsibly, and live ethically. Our programs
+                and curriculum give our students a competitive edge in an
+                increasingly complex society as they discover their unique
+                giftedness.{" "}
+              </Typography>
+            </Box>
+
             <Typography variant="p">
               Our qualified teachers are passionate about providing a
               high-quality education while developing students' love for Christ
@@ -152,9 +156,9 @@ function Elementary() {
 
 function MiddleSchool() {
   return (
-    <Box sx={{ my: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Middle School" />
-      <Container sx={{ pb: 5 }}>
+      <Container>
         <Grid
           spacing={4}
           container
@@ -169,7 +173,7 @@ function MiddleSchool() {
             />
           </Grid>
           <Grid item lg={6}>
-            <Box sx={{ mb: 2 }}>
+            <Box sx={{ mb: 3 }}>
               <Typography variant="p">
                 We are thrilled to welcome you to Tabernacle Middle School,
                 where we help our students navigate the early teen years and
@@ -209,9 +213,9 @@ function MiddleSchool() {
 
 const DistanceLearning = () => {
   return (
-    <Box sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Distance Learning" />
-      <Container sx={{ pb: 5 }}>
+      <Container>
         <Box sx={{ mb: 5 }}>
           <Typography variant="p">
             In case of a resurgence in Coronavirus cases and potential school
@@ -225,7 +229,7 @@ const DistanceLearning = () => {
         <Grid container spacing={5} justifyContent="space-around">
           <Grid item md={6} lg={5}>
             <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
-              <Box sx={{ p: 5, textAlign: "center" }}>
+              <Box sx={{ px: 5, pt: 5, textAlign: "center" }}>
                 <Box
                   component="img"
                   src={googleClassroomImg}
@@ -254,7 +258,7 @@ const DistanceLearning = () => {
           </Grid>
           <Grid item md={6} lg={5}>
             <Paper sx={{ borderRadius: "30px", height: "100%" }} elevation={0}>
-              <Box sx={{ p: 5, textAlign: "center" }}>
+              <Box sx={{ pt: 5, px: 5, textAlign: "center" }}>
                 <Box
                   component="img"
                   src={ignitiaImg}
@@ -295,9 +299,9 @@ function CommonCore() {
   }));
 
   return (
-    <Box sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Common Core" />
-      <Container sx={{ pb: 5 }}>
+      <Container>
         <Grid container spacing={4}>
           <Grid item lg={6}>
             <Box sx={{ mb: 1 }}>
@@ -424,8 +428,8 @@ function CommonCore() {
 
 function ExpectedLearningResults() {
   return (
-    <Box id="Elementary" sx={{ bgcolor: "background.alternate" }}>
-      <Container sx={{ py: 5 }}>
+    <Box id="Elementary" sx={{ bgcolor: "background.alternate", py: 6 }}>
+      <Container>
         <SectionTitle title="Expected Learning Results" />
         <Grid container spacing={4}>
           <Grid item lg={6}>

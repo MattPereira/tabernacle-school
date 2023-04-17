@@ -7,6 +7,7 @@ let theme = createTheme({
     },
     h2: {
       fontFamily: "Copse",
+      fontSize: "3rem",
     },
     h3: {
       fontFamily: "Didact Gothic",

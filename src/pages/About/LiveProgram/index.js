@@ -94,9 +94,9 @@ const characteristics = {
 
 const LiveProgram = () => {
   return (
-    <Box sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Live Program" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Box sx={{ mb: 3 }}>
           <Typography variant="p">
             Teaching character is an important part of our philosophy at

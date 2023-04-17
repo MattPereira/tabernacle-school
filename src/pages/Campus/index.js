@@ -5,11 +5,11 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import { googleApiKey } from "../../secrets";
 import SectionTitle from "../../components/SectionTitle";
 import campusShowcase from "../../assets/images/showcase/campus.jpg";
+import { styled } from "@mui/material/styles";
 
 import {
   Container,
   Box,
-  Button,
   Grid,
   Typography,
   Paper,
@@ -31,6 +31,8 @@ import friends from "../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../assets/images/campus/operation-christmas.jpg";
 
+import daycareImg from "../../assets/images/campus/daycare.jpg";
+
 export default function Campus() {
   return (
     <div>
@@ -48,15 +50,15 @@ function SchoolCalendar() {
   //FULL CALENDAR DOCS: https://fullcalendar.io/docs#toc
 
   return (
-    <Box id="Calendar" sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Calendar" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <FullCalendar
           plugins={[googleCalendarPlugin, dayGridPlugin]}
           googleCalendarApiKey={googleApiKey}
           events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
         />
-        <Box sx={{ textAlign: "end", mt: 3 }}>
+        {/* <Box sx={{ textAlign: "end", mt: 3 }}>
           <Button
             component="a"
             href="https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing"
@@ -64,7 +66,7 @@ function SchoolCalendar() {
           >
             See All Events
           </Button>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );
@@ -72,9 +74,9 @@ function SchoolCalendar() {
 
 function Athletics() {
   return (
-    <Box id="Athletics" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Athletics" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Grid container spacing={5} alignItems="center">
           <Grid item md={6}>
             <Box sx={{ mb: 5 }}>
@@ -88,7 +90,7 @@ function Athletics() {
               </Typography>
             </Box>
             <Box sx={{ mb: 5 }}>
-              <Typography variant="h4" textAlign="center" gutterBottom>
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Physical Education
               </Typography>
               <Typography variant="p">
@@ -100,7 +102,7 @@ function Athletics() {
               </Typography>
             </Box>
             <Box sx={{ mb: 5 }}>
-              <Typography variant="h4" textAlign="center" gutterBottom>
+              <Typography variant="h5" textAlign="center" gutterBottom>
                 Sports Programs
               </Typography>
               <Typography variant="p">
@@ -127,22 +129,54 @@ function Athletics() {
 }
 
 function Daycare() {
+  const StyledHeaderCell = styled(TableCell)(({ theme }) => ({
+    fontWeight: "bold",
+    color: "white",
+  }));
+
   return (
-    <Box id="Daycare" sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Daycare" />
-      <Container sx={{ py: 5 }}>
+      <Container>
         <Grid container spacing={4} alignItems="center" justifyContent="center">
+          <Grid item lg={6}>
+            <Box
+              component="img"
+              src={daycareImg}
+              sx={{
+                width: "100%",
+                borderRadius: "30px",
+                objectFit: "cover",
+                height: "300px",
+                mb: 3,
+              }}
+            />
+            <Box sx={{ mb: 3 }}>
+              <Typography variant="p">
+                Tabernacle daycare is available to any enrolled student age 3
+                years 9 months to a graduated eighth grader through August after
+                graduation. Our program is child centered. The caring and
+                compassionate staff build a family like atmosphere in which your
+                children will thrive. Relationships among families, children and
+                staff are the heart of the program.
+              </Typography>
+            </Box>
+          </Grid>
           <Grid item sm={8} lg={6}>
-            <Typography variant="h4" textAlign="center" gutterBottom>
+            <Typography variant="h5" textAlign="center" gutterBottom>
               Hours
             </Typography>
-            <TableContainer component={Paper} sx={{ mb: 3 }}>
+            <TableContainer
+              component={Paper}
+              elevation={0}
+              sx={{ mb: 3, border: "1px solid black" }}
+            >
               <Table>
                 <TableHead>
-                  <TableRow>
-                    <TableCell>Type</TableCell>
-                    <TableCell>Hours</TableCell>
-                    <TableCell>Days</TableCell>
+                  <TableRow sx={{ bgcolor: "grey.900" }}>
+                    <StyledHeaderCell>Type</StyledHeaderCell>
+                    <StyledHeaderCell>Hours</StyledHeaderCell>
+                    <StyledHeaderCell>Days</StyledHeaderCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -164,16 +198,20 @@ function Daycare() {
                 </TableBody>
               </Table>
             </TableContainer>
-            <Typography variant="h4" textAlign="center" gutterBottom>
+            <Typography variant="h5" textAlign="center" gutterBottom>
               Rates
             </Typography>
-            <TableContainer component={Paper}>
+            <TableContainer
+              component={Paper}
+              elevation={0}
+              sx={{ border: "1px solid #212121" }}
+            >
               <Table>
                 <TableHead>
-                  <TableRow>
-                    <TableCell>Type</TableCell>
-                    <TableCell>Rate</TableCell>
-                    <TableCell>Per</TableCell>
+                  <TableRow sx={{ bgcolor: "grey.900" }}>
+                    <StyledHeaderCell>Type</StyledHeaderCell>
+                    <StyledHeaderCell>Rate</StyledHeaderCell>
+                    <StyledHeaderCell>Per</StyledHeaderCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -195,25 +233,6 @@ function Daycare() {
                 </TableBody>
               </Table>
             </TableContainer>
-          </Grid>
-          <Grid item lg={6}>
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="p">
-                Tabernacle daycare is available to any enrolled student age 3
-                years 9 months to a graduated eighth grader through August after
-                graduation. Our program is child centered. The caring and
-                compassionate staff build a family like atmosphere in which your
-                children will thrive. Relationships among families, children and
-                staff are the heart of the program.
-              </Typography>
-            </Box>
-
-            <Typography variant="p">
-              We welcome you to visit Tabernacle School and see first hand the
-              dedication and commitment our staff has for your children and your
-              family. Many of our daycare workers are former students returning
-              to their Tabernacle roots.
-            </Typography>
           </Grid>
         </Grid>
       </Container>
@@ -247,10 +266,10 @@ function Outreach() {
   ];
 
   return (
-    <Box id="Outreach" sx={{ py: 5, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Outreach" />
-      <Container sx={{ py: 5, mb: 5 }}>
-        <Grid container spacing={3}>
+      <Container>
+        <Grid container spacing={4}>
           {outreachPrograms.map((program) => (
             <Grid item xs={12} md={6} lg={4} key={program.title}>
               <Link
@@ -263,6 +282,7 @@ function Outreach() {
                   sx={{
                     borderRadius: "30px",
                     height: "100%",
+
                     "&:hover": {
                       backgroundColor: "primary.main",
                       color: "white",
@@ -277,7 +297,7 @@ function Outreach() {
                         width: "100%",
                         objectFit: "cover",
                         borderRadius: "30px",
-                        height: "250px",
+                        height: "225px",
                         objectPosition: "center",
                       }}
                       alt=""

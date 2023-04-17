@@ -6,22 +6,48 @@ const SectionTitle = ({ title }) => {
   const anchorId = title.split(" ")[0];
   console.log(anchorId);
   return (
-    <Box sx={{ pb: 5, pt: 2 }}>
+    <Box sx={{ pb: 5, pt: 0 }}>
       <div
         id={anchorId}
         style={{
           display: "block",
           position: "relative",
-          top: "-200px",
+          top: "-175px",
           visibility: "hidden",
         }}
       ></div>
-      <Typography variant="h2" sx={{ textAlign: "center", mb: 2 }}>
-        {title}
-      </Typography>
-      <Divider
-        sx={{ width: "125px", margin: "auto", borderTop: "3px solid" }}
-      />
+      <Box
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Box>
+          <Divider
+            sx={{
+              width: "55px",
+              height: "2px",
+              bgcolor: "black",
+            }}
+          />
+        </Box>
+        <Typography
+          variant="h2"
+          sx={{
+            textAlign: "center",
+            mx: 1.5,
+          }}
+        >
+          {title}
+        </Typography>
+        <Box>
+          <Divider
+            sx={{
+              width: "55px",
+              height: "2px",
+              bgcolor: "black",
+              border: "none",
+            }}
+          />
+        </Box>
+      </Box>
     </Box>
   );
 };
