@@ -59,8 +59,8 @@ const ProfilePage = () => {
   console.log("photos", photos);
 
   return (
-    <Box sx={{ py: 6 }}>
-      <Box sx={{ textAlign: "center", mb: 5 }}>
+    <Box>
+      <Box sx={{ textAlign: "center", pb: 4, pt: 2 }}>
         <Typography variant="h1">{name}</Typography>
 
         <Typography variant="h4" gutterBottom>
@@ -72,7 +72,7 @@ const ProfilePage = () => {
         </a>
       </Box>
 
-      <Box sx={{ bgcolor: "grey.300", py: 5, mb: 2 }}>
+      <Box sx={{ bgcolor: "grey.300", py: 5 }}>
         <Container>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} lg={6} textAlign="center">
@@ -102,7 +102,7 @@ const ProfilePage = () => {
       </Box>
 
       {/* <Container> */}
-      <Grid container spacing={2} alignItems="center" sx={{ px: 2 }}>
+      <Grid container spacing={2} alignItems="center" sx={{ p: 2 }}>
         {photos.data &&
           photos.data.map((photo, idx) => (
             <Grid key={photo.id} item xs={12} md={6} lg={4} textAlign="center">
