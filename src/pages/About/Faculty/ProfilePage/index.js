@@ -59,7 +59,7 @@ const ProfilePage = () => {
   console.log("photos", photos);
 
   return (
-    <Container sx={{ py: 5 }}>
+    <Box sx={{ py: 6 }}>
       <Box sx={{ textAlign: "center", mb: 5 }}>
         <Typography variant="h1">{name}</Typography>
 
@@ -72,26 +72,37 @@ const ProfilePage = () => {
         </a>
       </Box>
 
-      <Grid container alignItems="center" spacing={2} sx={{ mb: 5 }}>
-        <Grid item xs={12} lg={6} textAlign="center">
-          <Box
-            component="img"
-            src={`${profile_picture_url}`}
-            alt="profile pic"
-            sx={{
-              width: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
-              height: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
-              borderRadius: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <Typography variant="p">{description}</Typography>
-        </Grid>
-      </Grid>
-      <Grid container spacing={3} alignItems="center">
+      <Box sx={{ bgcolor: "grey.300", py: 5, mb: 2 }}>
+        <Container>
+          <Grid container alignItems="center" spacing={2}>
+            <Grid item xs={12} lg={6} textAlign="center">
+              <Box
+                component="img"
+                src={`${profile_picture_url}`}
+                alt="profile pic"
+                sx={{
+                  width: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
+                  height: {
+                    xs: "275px",
+                    sm: "325px",
+                    md: "400px",
+                    lg: "500px",
+                  },
+                  borderRadius: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+              <Typography variant="p">{description}</Typography>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* <Container> */}
+      <Grid container spacing={2} alignItems="center" sx={{ px: 2 }}>
         {photos.data &&
           photos.data.map((photo, idx) => (
             <Grid key={photo.id} item xs={12} md={6} lg={4} textAlign="center">
@@ -99,15 +110,17 @@ const ProfilePage = () => {
                 component="img"
                 src={`${photo.attributes.url}`}
                 sx={{
-                  maxHeight: "350px",
-                  maxWidth: "100%",
-                  borderRadius: "30px",
+                  width: "100%",
+                  objectFit: "cover",
+                  height: "350px",
+                  borderRadius: "10px",
                 }}
               />
             </Grid>
           ))}
       </Grid>
-    </Container>
+      {/* </Container> */}
+    </Box>
   );
 };
 
