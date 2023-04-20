@@ -218,7 +218,13 @@ function LandingShowcase() {
           sx={{
             width: "100%",
             objectFit: "cover",
-            height: { xs: "300px", sm: "300px", md: "400px", lg: "500px" },
+            height: {
+              xs: "300px",
+              sm: "300px",
+              md: "400px",
+              lg: "500px",
+              xl: "550px",
+            },
           }}
           alt="showcase"
         />
@@ -294,7 +300,7 @@ function EducationLevels() {
               Preschool
             </Typography>
             <Typography variant="p">
-              Tiny Tigers Preschool provides a warm, nurturing, family
+              The tiny tigers preschool provides a warm, nurturing, family
               atmosphere that is conducive to learning at an early age. Our
               program accepts children that are 3 years old by September 1st. We
               have been providing and promoting high quality early childhood
@@ -319,7 +325,7 @@ function EducationLevels() {
               Elementary
             </Typography>
             <Typography variant="p">
-              At Tabernacle, we provide an elementary education that prepares
+              Our elementary program provides an education that prepares
               children to think clearly, act responsibly, and live ethically.
               Our programs and curriculum give students a competitive edge in an
               increasingly complex society as they discover their unique
@@ -344,11 +350,11 @@ function EducationLevels() {
               Middle School
             </Typography>
             <Typography variant="p">
-              At Tabernacle Middle School, we help our students navigate the
-              early teen years and prepare them to excel in high school and
-              beyond. Throughout the middle school years, our students are
-              challenged academically and grow in confidence as they explore
-              their interests.
+              During middle school, we help our students navigate the early teen
+              years and prepare them to excel in high school and beyond.
+              Throughout the middle school years, our students are challenged
+              academically and grow in confidence as they explore their
+              interests.
             </Typography>
             <Box sx={{ mt: 3, textAlign: "center" }}>
               <StyledButton

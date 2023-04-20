@@ -199,6 +199,7 @@ const NavBar = (props) => {
     color: "#fff",
     fontFamily: "Montserrat",
     paddingLeft: "1rem",
+    fontSize: "15px",
     "&:hover": {
       color: "white",
       fontWeight: "bold",
@@ -251,7 +252,7 @@ const NavBar = (props) => {
               const { icon, path, text } = item;
               return (
                 <StyledTopNavButtons key={text} component={HashLink} to={path}>
-                  {icon} <span style={{ marginLeft: "4px" }}>{text}</span>
+                  {icon} <span style={{ marginLeft: "5px" }}>{text}</span>
                 </StyledTopNavButtons>
               );
             })}
@@ -277,7 +278,7 @@ const NavBar = (props) => {
                 sx={{
                   p: 2,
                   fontFamily: "Didact Gothic",
-                  fontSize: "18px",
+                  fontSize: "20px",
                   fontWeight: 600,
                   letterSpacing: "0.05rem",
                   color: transparent ? "white" : "black",
