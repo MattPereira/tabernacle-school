@@ -6,7 +6,7 @@ const Showcase = ({ title, image }) => {
   return (
     <Box
       sx={{
-        minHeight: { xs: "225px", md: "275px" },
+        height: { xs: "175px", sm: "225px", md: "275px" },
         position: "relative",
         display: "flex",
         justifyContent: "center",
