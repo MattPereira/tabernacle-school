@@ -1,11 +1,15 @@
+// External Imports
+import { useState, useEffect } from "react";
+import axios from "axios";
 import FullCalendar from "@fullcalendar/react";
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import { styled } from "@mui/material/styles";
 
+// Internal Imports
 import { googleApiKey } from "../../secrets";
 import SectionTitle from "../../components/SectionTitle";
 import campusShowcase from "../../assets/images/showcase/campus.jpg";
-import { styled } from "@mui/material/styles";
 
 import {
   Container,
@@ -20,6 +24,11 @@ import {
   TableHead,
   TableRow,
   TableBody,
+  CircularProgress,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
 import Showcase from "../../components/Showcase";
@@ -37,8 +46,17 @@ export default function Campus() {
   return (
     <div>
       <Showcase title="Campus" image={campusShowcase} />
-      <PageNav sections={["Calendar", "Athletics", "Daycare", "Outreach"]} />
+      <PageNav
+        sections={[
+          "Calendar",
+          "Facilities",
+          "Athletics",
+          "Daycare",
+          "Outreach",
+        ]}
+      />
       <SchoolCalendar />
+      <Facilities />
       <Athletics />
       <Daycare />
       <Outreach />
@@ -58,15 +76,115 @@ function SchoolCalendar() {
           googleCalendarApiKey={googleApiKey}
           events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
         />
-        {/* <Box sx={{ textAlign: "end", mt: 3 }}>
-          <Button
-            component="a"
-            href="https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing"
-            variant="contained"
-          >
-            See All Events
-          </Button>
-        </Box> */}
+      </Container>
+    </Box>
+  );
+}
+
+function Facilities() {
+  const [name, setName] = useState("Playground 1");
+  const [facility, setFacility] = useState(null);
+
+  const BASE_URL = "https://tabernacle-backend.herokuapp.com";
+
+  const handleChange = (event) => {
+    setName(event.target.value);
+    setFacility(null);
+  };
+
+  useEffect(
+    function getFacilityPhotos() {
+      async function getPhotos() {
+        try {
+          const response = await axios.get(
+            `${BASE_URL}/api/facilities?filters[name][$eqi]=${name}&populate=*`
+          );
+
+          setFacility(response.data.data[0].attributes);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      getPhotos();
+    },
+    [name]
+  );
+
+  // Handles waiting for the async response from the API call
+  const showLoadingSpinner = (
+    <Box
+      sx={{
+        display: "flex",
+        height: "50vh",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <CircularProgress />
+    </Box>
+  );
+
+  return (
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+      <SectionTitle title="Facilities" />
+      <Container>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 5 }}>
+          <FormControl sx={{ width: "500px" }}>
+            <InputLabel id="demo-simple-select-label">Selection</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={name}
+              label="Selection"
+              onChange={handleChange}
+            >
+              <MenuItem value="Playground 1" selected={true}>
+                Playground 1
+              </MenuItem>
+              <MenuItem value="Playground 2">Playground 2</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+
+        {facility ? (
+          <>
+            <Box sx={{ mb: 3 }}>
+              <Typography variant="h3">{facility.title}</Typography>
+              <Typography variant="p">{facility.description}</Typography>
+            </Box>
+
+            <Grid container spacing={2}>
+              {facility.photos.data.map((photo) => {
+                const { url, caption } = photo.attributes;
+                return (
+                  <Grid
+                    item
+                    key={photo.id}
+                    xs={6}
+                    md={6}
+                    lg={4}
+                    sx={{ textAlign: "center" }}
+                  >
+                    <Box
+                      component="img"
+                      src={url}
+                      sx={{
+                        width: "100%",
+                        objectFit: "cover",
+                        height: { xs: "125px", md: "200px", lg: "300px" },
+                        borderRadius: "10px",
+                      }}
+                    />
+                    <Typography variant="p">{caption}</Typography>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </>
+        ) : (
+          showLoadingSpinner
+        )}
       </Container>
     </Box>
   );
@@ -74,7 +192,7 @@ function SchoolCalendar() {
 
 function Athletics() {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Athletics" />
       <Container>
         <Grid container spacing={5} alignItems="center">
@@ -135,7 +253,7 @@ function Daycare() {
   }));
 
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Daycare" />
       <Container>
         <Grid container spacing={4} alignItems="center" justifyContent="center">
@@ -266,7 +384,7 @@ function Outreach() {
   ];
 
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 6 }}>
       <SectionTitle title="Outreach" />
       <Container>
         <Grid container spacing={4}>
@@ -282,6 +400,7 @@ function Outreach() {
                   sx={{
                     borderRadius: "30px",
                     height: "100%",
+                    border: "1px solid #212121",
 
                     "&:hover": {
                       backgroundColor: "primary.main",

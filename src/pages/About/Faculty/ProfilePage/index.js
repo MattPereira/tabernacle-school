@@ -2,16 +2,17 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-// import { v2 as cloudinary } from "cloudinary";
-
-import { Spinner } from "react-bootstrap";
-import { Typography, Box, Container, Grid } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Container,
+  Grid,
+  CircularProgress,
+} from "@mui/material";
 
 const ProfilePage = () => {
   const [staff, setStaff] = useState(null);
   const { id } = useParams();
-
-  // console.log("cloudinary", cloudinary);
 
   //ID IS CURRENTLY THE EMAIL ADDRESS, WILL EVENTUALLY CHANGE TO INTEGER ID NUMBER
 
@@ -37,12 +38,17 @@ const ProfilePage = () => {
   // Handles waiting for the async response from the API call
   if (!staff)
     return (
-      <div className="loading-screen text-center">
-        <Spinner animation="border" variant="primary" />
-        <div className="text-center fs-4 loading-text text-primary">
-          Loading Profile Page
-        </div>
-      </div>
+      <Box
+        sx={{
+          display: "flex",
+          height: "50vh",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <CircularProgress />
+      </Box>
     );
 
   console.log(staff);
@@ -60,7 +66,13 @@ const ProfilePage = () => {
 
   return (
     <Box>
-      <Box sx={{ textAlign: "center", pb: 4, pt: 2 }}>
+      <Box
+        sx={{
+          textAlign: "center",
+          pt: 5,
+          pb: 8,
+        }}
+      >
         <Typography variant="h1">{name}</Typography>
 
         <Typography variant="h4" gutterBottom>
@@ -72,9 +84,9 @@ const ProfilePage = () => {
         </a>
       </Box>
 
-      <Box sx={{ bgcolor: "grey.300", py: 5 }}>
+      <Box sx={{ py: 7, bgcolor: "background.alternate" }}>
         <Container>
-          <Grid container alignItems="center" spacing={2}>
+          <Grid container alignItems="center" spacing={5}>
             <Grid item xs={12} lg={6} textAlign="center">
               <Box
                 component="img"
@@ -101,8 +113,7 @@ const ProfilePage = () => {
         </Container>
       </Box>
 
-      {/* <Container> */}
-      <Grid container spacing={2} alignItems="center" sx={{ p: 2 }}>
+      <Grid container spacing={2} alignItems="center" sx={{ p: 5 }}>
         {photos.data &&
           photos.data.map((photo, idx) => (
             <Grid key={photo.id} item xs={12} md={6} lg={4} textAlign="center">
@@ -119,7 +130,6 @@ const ProfilePage = () => {
             </Grid>
           ))}
       </Grid>
-      {/* </Container> */}
     </Box>
   );
 };

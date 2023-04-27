@@ -79,7 +79,6 @@ const NavBar = (props) => {
   };
 
   const theme = useTheme();
-  console.log(theme.palette);
 
   const drawer = (
     <Box
@@ -186,7 +185,7 @@ const NavBar = (props) => {
     windoo !== undefined ? () => windoo().document.body : undefined;
 
   const StyledTopToolBar = styled(Toolbar)(({ theme }) => ({
-    backgroundColor: "#1565c0",
+    backgroundColor: theme.palette.primary.main,
     justifyContent: "space-between",
   }));
 

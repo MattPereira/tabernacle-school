@@ -30,6 +30,9 @@ let theme = createTheme({
     },
   },
   palette: {
+    primary: {
+      main: "#1565c0",
+    },
     background: {
       alternate: "#eeeeee",
     },
