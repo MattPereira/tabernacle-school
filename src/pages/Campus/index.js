@@ -29,6 +29,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  InputBase,
 } from "@mui/material";
 
 import Showcase from "../../components/Showcase";
@@ -82,7 +83,13 @@ function SchoolCalendar() {
 }
 
 function Facilities() {
-  const [name, setName] = useState("Playground 1");
+  const areas = [
+    "Elementary Playground",
+    "Kindergarten Playground",
+    "Shade Structures",
+  ];
+
+  const [name, setName] = useState(areas[0]);
   const [facility, setFacility] = useState(null);
 
   const BASE_URL = "https://tabernacle-backend.herokuapp.com";
@@ -129,30 +136,43 @@ function Facilities() {
     <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
       <SectionTitle title="Facilities" />
       <Container>
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 5 }}>
-          <FormControl sx={{ width: "500px" }}>
-            <InputLabel id="demo-simple-select-label">Selection</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={name}
-              label="Selection"
-              onChange={handleChange}
-            >
-              <MenuItem value="Playground 1" selected={true}>
-                Playground 1
-              </MenuItem>
-              <MenuItem value="Playground 2">Playground 2</MenuItem>
-            </Select>
-          </FormControl>
+        <Box sx={{ mb: 3 }}>
+          <Typography variant="p">
+            Tabernacle school is committed to maintaining and improving campus
+            infrastructure for the benefit of our students.
+          </Typography>
         </Box>
+
+        <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h5" gutterBottom>
+              Select a Category
+            </Typography>
+            <FormControl fullWidth>
+              <Select
+                id="area-select"
+                value={name}
+                onChange={handleChange}
+                // sx={{ "& .MuiSelect-select": { fontSize: "2rem" } }}
+              >
+                {areas.map((area) => {
+                  return (
+                    <MenuItem key={area} value={area}>
+                      {area}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
+            </FormControl>
+          </Grid>
+        </Grid>
 
         {facility ? (
           <>
-            <Box sx={{ mb: 3 }}>
+            {/* <Box sx={{ mb: 3 }}>
               <Typography variant="h3">{facility.title}</Typography>
               <Typography variant="p">{facility.description}</Typography>
-            </Box>
+            </Box> */}
 
             <Grid container spacing={2}>
               {facility.photos.data.map((photo) => {

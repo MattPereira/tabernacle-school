@@ -20,6 +20,7 @@ import showcase1 from "../assets/images/showcase/about.jpg";
 import showcase2 from "../assets/images/showcase/admissions.jpg";
 import showcase3 from "../assets/images/showcase/campus.jpg";
 import showcase4 from "../assets/images/showcase/academics.jpg";
+import showcase5 from "../assets/images/showcase/family.jpg";
 
 // Accreditations Image Imports
 import asci from "../assets/images/homepage/acsi.png";
@@ -41,7 +42,7 @@ export default function Homepage() {
 }
 
 function LandingShowcase() {
-  const items = [showcase1, showcase2, showcase4, showcase3];
+  const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
   return (
     <Carousel indicators={false} interval={5000} duration={1500}>
       {items.map((item, idx) => (
