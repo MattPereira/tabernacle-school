@@ -58,7 +58,7 @@ function ScheduleTour() {
   };
 
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Schedule Tour" />
       <Container>
         <Grid container sx={{ justifyContent: "center" }}>
@@ -163,7 +163,7 @@ function Tuition() {
   ];
 
   return (
-    <Box sx={{ bgcolor: "background.alternate", py: 6 }}>
+    <Box sx={{ bgcolor: "background.alternate", py: 8 }}>
       <Container>
         <SectionTitle title="Tuition & Fees" />
 

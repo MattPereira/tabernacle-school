@@ -5,7 +5,7 @@ import { Container, Grid, Box } from "@mui/material";
 
 const Faculty = () => {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Faculty" />
       <Container>
         <Grid container sx={{ justifyContent: "center" }}>

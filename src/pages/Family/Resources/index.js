@@ -34,7 +34,7 @@ const Resources = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Resources" />
       <Container>
         <Grid container spacing={4}>

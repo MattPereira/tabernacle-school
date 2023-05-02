@@ -17,7 +17,7 @@ import { Container, Box, Grid, Typography } from "@mui/material";
 
 const GiftProgram = () => {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Gift Program" />
       <Container>
         <Grid container spacing={4} alignItems="center">

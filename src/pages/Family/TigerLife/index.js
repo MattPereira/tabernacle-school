@@ -7,7 +7,7 @@ import { Container, Box, Paper, Typography, Grid } from "@mui/material";
 
 const TigerLife = () => {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <Container>
         <SectionTitle title="Tiger Life" />
         <Grid container justifyContent="center" sx={{ pb: 5 }}>

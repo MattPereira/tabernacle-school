@@ -13,7 +13,7 @@ import "./index.scss";
 
 const Vision = () => {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Vision" />
       <Container>
         <Carousel indicators={false} controls={false}>

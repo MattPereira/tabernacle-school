@@ -9,6 +9,7 @@ import { styled } from "@mui/material/styles";
 // Internal Imports
 import { googleApiKey } from "../../secrets";
 import SectionTitle from "../../components/SectionTitle";
+import SectionWrapper from "../../components/SectionWrapper";
 import campusShowcase from "../../assets/images/showcase/campus.jpg";
 
 import {
@@ -26,10 +27,10 @@ import {
   TableBody,
   CircularProgress,
   FormControl,
-  InputLabel,
   Select,
   MenuItem,
-  InputBase,
+  Modal,
+  Button,
 } from "@mui/material";
 
 import Showcase from "../../components/Showcase";
@@ -69,7 +70,7 @@ function SchoolCalendar() {
   //FULL CALENDAR DOCS: https://fullcalendar.io/docs#toc
 
   return (
-    <Box sx={{ py: 6 }}>
+    <SectionWrapper>
       <SectionTitle title="Calendar" />
       <Container>
         <FullCalendar
@@ -78,7 +79,7 @@ function SchoolCalendar() {
           events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
         />
       </Container>
-    </Box>
+    </SectionWrapper>
   );
 }
 
@@ -91,6 +92,14 @@ function Facilities() {
 
   const [name, setName] = useState(areas[0]);
   const [facility, setFacility] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [currentImgData, setCurrentImgData] = useState(null);
+
+  const handleOpen = ({ caption, url }) => {
+    setCurrentImgData({ caption, url });
+    setOpen(true);
+  };
+  const handleClose = () => setOpen(false);
 
   const BASE_URL = "https://tabernacle-backend.herokuapp.com";
 
@@ -116,7 +125,6 @@ function Facilities() {
     },
     [name]
   );
-
   // Handles waiting for the async response from the API call
   const showLoadingSpinner = (
     <Box
@@ -133,86 +141,112 @@ function Facilities() {
   );
 
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <SectionWrapper bgcolor="background.alternate">
       <SectionTitle title="Facilities" />
-      <Container>
-        <Box sx={{ mb: 3 }}>
-          <Typography variant="p">
-            Tabernacle school is committed to maintaining and improving campus
-            infrastructure for the benefit of our students.
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="p">
+          Tabernacle school is committed to maintaining and improving campus
+          infrastructure for the benefit of our students.
+        </Typography>
+      </Box>
+
+      <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h5" gutterBottom>
+            Select a Category
           </Typography>
-        </Box>
-
-        <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h5" gutterBottom>
-              Select a Category
-            </Typography>
-            <FormControl fullWidth>
-              <Select
-                id="area-select"
-                value={name}
-                onChange={handleChange}
-                // sx={{ "& .MuiSelect-select": { fontSize: "2rem" } }}
-              >
-                {areas.map((area) => {
-                  return (
-                    <MenuItem key={area} value={area}>
-                      {area}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </FormControl>
-          </Grid>
-        </Grid>
-
-        {facility ? (
-          <>
-            {/* <Box sx={{ mb: 3 }}>
-              <Typography variant="h3">{facility.title}</Typography>
-              <Typography variant="p">{facility.description}</Typography>
-            </Box> */}
-
-            <Grid container spacing={2}>
-              {facility.photos.data.map((photo) => {
-                const { url, caption } = photo.attributes;
+          <FormControl fullWidth>
+            <Select
+              id="area-select"
+              value={name}
+              onChange={handleChange}
+              sx={{ "& .MuiSelect-select": { bgcolor: "white" } }}
+            >
+              {areas.map((area) => {
                 return (
-                  <Grid
-                    item
-                    key={photo.id}
-                    xs={6}
-                    md={6}
-                    lg={4}
-                    sx={{ textAlign: "center" }}
-                  >
-                    <Box
-                      component="img"
-                      src={url}
-                      sx={{
-                        width: "100%",
-                        objectFit: "cover",
-                        height: { xs: "125px", md: "200px", lg: "300px" },
-                        borderRadius: "10px",
-                      }}
-                    />
-                    <Typography variant="p">{caption}</Typography>
-                  </Grid>
+                  <MenuItem key={area} value={area}>
+                    {area}
+                  </MenuItem>
                 );
               })}
-            </Grid>
-          </>
-        ) : (
-          showLoadingSpinner
-        )}
-      </Container>
-    </Box>
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
+
+      {facility ? (
+        <>
+          <Box sx={{ mb: 5, textAlign: "center" }}>
+            {/* <Typography variant="h3">{facility.name}</Typography> */}
+            {/* <Typography variant="p">{facility.description}</Typography> */}
+          </Box>
+
+          <Grid container spacing={2}>
+            {facility.photos.data.map((photo) => {
+              const { url, caption } = photo.attributes;
+              return (
+                <Grid
+                  item
+                  key={photo.id}
+                  xs={6}
+                  md={6}
+                  lg={4}
+                  sx={{ textAlign: "center" }}
+                >
+                  <Box
+                    onClick={() => handleOpen({ url: url, caption: caption })}
+                    component="img"
+                    src={url}
+                    sx={{
+                      width: "100%",
+                      objectFit: "cover",
+                      height: { xs: "125px", md: "200px", lg: "300px" },
+                      borderRadius: "10px",
+                    }}
+                  />
+                  <Typography variant="p">{caption}</Typography>
+                </Grid>
+              );
+            })}
+          </Grid>
+
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box
+              sx={{
+                width: "100vw",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100vh",
+              }}
+            >
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                {currentImgData ? currentImgData.caption : null}!!!
+              </Typography>
+              <Box
+                component="img"
+                src={currentImgData ? currentImgData.url : null}
+                sx={{ maxWidth: "100%", maxHeight: "100%" }}
+              />
+            </Box>
+          </Modal>
+        </>
+      ) : (
+        showLoadingSpinner
+      )}
+    </SectionWrapper>
   );
 }
 
 function Athletics() {
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Athletics" />
       <Container>
         <Grid container spacing={5} alignItems="center">
@@ -273,7 +307,7 @@ function Daycare() {
   }));
 
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Daycare" />
       <Container>
         <Grid container spacing={4} alignItems="center" justifyContent="center">
@@ -404,7 +438,7 @@ function Outreach() {
   ];
 
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Outreach" />
       <Container>
         <Grid container spacing={4}>

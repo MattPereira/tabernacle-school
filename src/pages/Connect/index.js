@@ -21,7 +21,7 @@ export default function ConnectPage() {
 
 function Employment() {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Employment" />
       <Container>
         <Grid container spacing={4}>
@@ -118,7 +118,7 @@ function Employment() {
 
 function Location() {
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Location" />
       <Container>
         <Grid container spacing={2}>

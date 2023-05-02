@@ -16,7 +16,7 @@ import { Container, Box, Typography } from "@mui/material";
 
 const Information = () => {
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Information" />
       <Container>
         <Row className="text-center mb-md-5">

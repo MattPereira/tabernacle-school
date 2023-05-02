@@ -49,7 +49,7 @@ export default function AcademicsPage() {
 function Preschool() {
   return (
     <Box>
-      <Container sx={{ py: 6 }}>
+      <Container sx={{ py: 8 }}>
         <SectionTitle title="Preschool" />
 
         <Box
@@ -102,7 +102,7 @@ function Preschool() {
 
 function Elementary() {
   return (
-    <Box sx={{ bgcolor: "background.alternate", py: 6 }}>
+    <Box sx={{ bgcolor: "background.alternate", py: 8 }}>
       <Container>
         <SectionTitle title="Elementary" />
 
@@ -156,7 +156,7 @@ function Elementary() {
 
 function MiddleSchool() {
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Middle School" />
       <Container>
         <Grid
@@ -213,7 +213,7 @@ function MiddleSchool() {
 
 const DistanceLearning = () => {
   return (
-    <Box sx={{ py: 6, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Distance Learning" />
       <Container>
         <Box sx={{ mb: 5 }}>
@@ -299,7 +299,7 @@ function CommonCore() {
   }));
 
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Common Core" />
       <Container>
         <Grid container spacing={4}>
@@ -428,7 +428,7 @@ function CommonCore() {
 
 function ExpectedLearningResults() {
   return (
-    <Box id="Elementary" sx={{ bgcolor: "background.alternate", py: 6 }}>
+    <Box id="Elementary" sx={{ bgcolor: "background.alternate", py: 8 }}>
       <Container>
         <SectionTitle title="Expected Learning Results" />
         <Grid container spacing={4}>

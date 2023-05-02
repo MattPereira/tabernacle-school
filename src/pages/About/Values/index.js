@@ -6,7 +6,7 @@ import { Container, Typography, Box, Grid } from "@mui/material";
 
 const Values = () => {
   return (
-    <Box sx={{ py: 6 }}>
+    <Box sx={{ py: 8 }}>
       <SectionTitle title="Values" />
       <Container>
         <Grid
