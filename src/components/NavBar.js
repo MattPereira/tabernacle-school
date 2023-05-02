@@ -276,10 +276,9 @@ const NavBar = (props) => {
                 to={`/${item}`}
                 sx={{
                   p: 2,
-                  fontFamily: "Didact Gothic",
+                  fontFamily: "Montserrat",
                   fontSize: "20px",
                   fontWeight: 600,
-                  letterSpacing: "0.05rem",
                   color: transparent ? "white" : "black",
                   "&:hover": {
                     backgroundColor: "#fff",

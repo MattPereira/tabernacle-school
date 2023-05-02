@@ -217,6 +217,7 @@ function Facilities() {
             aria-describedby="modal-modal-description"
           >
             <Box
+              onClick={handleClose}
               sx={{
                 width: "100vw",
                 display: "flex",
@@ -226,9 +227,6 @@ function Facilities() {
                 height: "100vh",
               }}
             >
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                {currentImgData ? currentImgData.caption : null}!!!
-              </Typography>
               <Box
                 component="img"
                 src={currentImgData ? currentImgData.url : null}

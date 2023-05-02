@@ -3,7 +3,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
   typography: {
     h1: {
-      fontFamily: "Lilita One",
+      fontFamily: "Montserrat",
+      fontWeight: "700",
     },
     h2: {
       fontFamily: "Copse",
