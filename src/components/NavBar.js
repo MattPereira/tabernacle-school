@@ -8,8 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 
 import { useTheme, styled } from "@mui/material/styles";
 
@@ -31,7 +31,7 @@ import {
 const topNavItems = [
   {
     text: "Contact",
-    icon: <InfoOutlinedIcon fontSize="small" />,
+    icon: <EmailOutlinedIcon fontSize="small" />,
     path: "/connect#Contact",
   },
   {
@@ -151,7 +151,7 @@ const NavBar = (props) => {
               },
             }}
           >
-            <LockOpenOutlinedIcon fontSize="small" />{" "}
+            <ExitToAppOutlinedIcon fontSize="small" />{" "}
             <span style={{ marginLeft: "4px" }}>Facts</span>
           </Button>
         </div>
@@ -198,7 +198,8 @@ const NavBar = (props) => {
     color: "#fff",
     fontFamily: "Montserrat",
     paddingLeft: "1rem",
-    fontSize: "15px",
+    fontSize: "16px",
+    fontWeight: 500,
     "&:hover": {
       color: "white",
       fontWeight: "bold",
@@ -244,7 +245,7 @@ const NavBar = (props) => {
               href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
               target="_blank"
             >
-              <LockOpenOutlinedIcon fontSize="small" />{" "}
+              <ExitToAppOutlinedIcon fontSize="small" />{" "}
               <span style={{ marginLeft: "4px" }}>Facts</span>
             </StyledTopNavButtons>
             {topNavItems.map((item) => {

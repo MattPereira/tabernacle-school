@@ -5,6 +5,8 @@ import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 import { Link } from "react-router-dom";
 
+import NotificationsIcon from "@mui/icons-material/Notifications";
+
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
 import showcase2 from "../assets/images/showcase/admissions.jpg";
@@ -35,13 +37,19 @@ export default function Homepage() {
 
 function CurrentInfoAlert() {
   return (
-    <Box sx={{ bgcolor: "#FF4136", color: "white", py: 2 }}>
-      <Typography variant="h5" align="center">
-        <Link style={{ color: "white" }} to="/connect#Employment">
-          We are hiring
-        </Link>{" "}
-        support staff and teachers!
-      </Typography>
+    <Box
+      sx={{
+        bgcolor: { xs: "background.alternate", md: "primary.main" },
+        color: { xs: "primary.main", md: "white" },
+        py: 2,
+      }}
+    >
+      <Link to="/connect#Employment" style={{ color: "inherit" }}>
+        <Typography variant="h5" align="center">
+          <NotificationsIcon sx={{ fontSize: "30px", pb: 0.5 }} />
+          We are hiring support staff and teachers!
+        </Typography>
+      </Link>
     </Box>
   );
 }
