@@ -41,6 +41,21 @@ let theme = createTheme({
       main: "#212121",
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Montserrat",
+          // fontSize: { xs: "1rem", md: "1.5rem" },
+          fontSize: "1rem",
+          fontWeight: "bold",
+          "&:hover": {
+            color: "white",
+          },
+        },
+      },
+    },
+  },
 });
 
 theme = responsiveFontSizes(theme);

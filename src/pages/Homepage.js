@@ -1,20 +1,11 @@
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
+import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import useTheme from "@mui/material/styles/useTheme";
+import { Link } from "react-router-dom";
 
-import SectionTitle from "../components/SectionTitle";
-import SectionWrapper from "../components/SectionWrapper";
-
-// Jogathon icons for links
-// import InfoIcon from "@mui/icons-material/Info";
-// import PaidIcon from "@mui/icons-material/Paid";
-// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-// import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-// import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-// import ScheduleIcon from "@mui/icons-material/Schedule";
-// import StorefrontIcon from "@mui/icons-material/Storefront";
-// import LocalDiningIcon from "@mui/icons-material/LocalDining";
-// import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -27,43 +18,79 @@ import showcase5 from "../assets/images/showcase/family.jpg";
 import asci from "../assets/images/homepage/acsi.png";
 import wasc from "../assets/images/homepage/wasc.jpeg";
 
-import { Box, Container, Typography, Grid, Button } from "@mui/material";
-import useTheme from "@mui/material/styles/useTheme";
+// Internal Component Imports
+import SectionTitle from "../components/SectionTitle";
+import SectionWrapper from "../components/SectionWrapper";
 
 export default function Homepage() {
   return (
-    <div>
+    <>
       <LandingShowcase />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
-    </div>
+    </>
   );
 }
 
 function LandingShowcase() {
   const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
   return (
-    <Carousel indicators={false} interval={5000} duration={1500}>
+    <Carousel
+      indicators={false}
+      interval={5000}
+      duration={1500}
+      style={{ position: "relative" }}
+    >
       {items.map((item, idx) => (
-        <Box
-          key={idx}
-          component="img"
-          src={item}
-          sx={{
-            width: "100%",
-            objectFit: "cover",
-            height: {
-              xs: "300px",
-              sm: "300px",
-              md: "400px",
-              lg: "500px",
-              xl: "550px",
-            },
-          }}
-          alt="showcase"
-        />
+        <>
+          <Box
+            key={idx}
+            component="img"
+            src={item}
+            sx={{
+              width: "100%",
+              objectFit: "cover",
+              height: {
+                xs: "300px",
+                sm: "300px",
+                md: "400px",
+                lg: "500px",
+                xl: "550px",
+              },
+            }}
+            alt="showcase"
+          />
+          <Box
+            sx={{
+              width: { xs: "70%", md: "max-content" },
+              // height: "max-content",
+              backgroundColor: "white",
+              position: "absolute",
+              top: { xs: "70%", md: "80%" },
+              left: { xs: "70%", md: "80%" },
+              transform: "translate(-50%, -50%)",
+              padding: 2,
+              borderRadius: "5px",
+              border: "3px solid white",
+            }}
+          >
+            <Typography variant="h5" gutterBottom>
+              We are hiring support staff and junior high teachers!
+            </Typography>
+            <Box sx={{ textAlign: { xs: "center", md: "end" } }}>
+              <Button
+                variant="contained"
+                color="primary"
+                component={Link}
+                to="/connect#Employment"
+              >
+                <InfoOutlinedIcon sx={{ mr: 1 }} /> Details
+              </Button>
+            </Box>
+          </Box>
+        </>
       ))}
     </Carousel>
   );
@@ -327,6 +354,18 @@ function Accreditations() {
   );
 }
 
+/****** ALL JOGATHON CODE BELOW ******/
+
+// Jogathon icons for links
+// import InfoIcon from "@mui/icons-material/Info";
+// import PaidIcon from "@mui/icons-material/Paid";
+// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+// import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+// import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+// import ScheduleIcon from "@mui/icons-material/Schedule";
+// import StorefrontIcon from "@mui/icons-material/Storefront";
+// import LocalDiningIcon from "@mui/icons-material/LocalDining";
+// import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 // function Jogathon() {
 //   const StyledButton = styled(Button)(({ theme }) => ({
 //     fontFamily: "didact gothic",
