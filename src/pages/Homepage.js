@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
-import { Link } from "react-router-dom";
 
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
@@ -44,12 +43,12 @@ function CurrentInfoAlert() {
         py: 2,
       }}
     >
-      <Link to="/connect#Employment" style={{ color: "inherit" }}>
+      <HashLink to="/connect#Employment" style={{ color: "inherit" }}>
         <Typography variant="h5" align="center">
           <NotificationsIcon sx={{ fontSize: "30px", pb: 0.5 }} />
           We are hiring support staff and teachers!
         </Typography>
-      </Link>
+      </HashLink>
     </Box>
   );
 }

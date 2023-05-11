@@ -1,32 +1,19 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
 import { useMediaQuery } from "react-responsive";
+import { useTheme, styled } from "@mui/material/styles";
 
+//prettier-ignore
+import { AppBar, Toolbar, Typography, Box, Divider, List, ListItem, ListItemButton, ListItemText, IconButton, Button, Drawer } from "@mui/material";
+
+// MUI Icons
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
-
-import { useTheme, styled } from "@mui/material/styles";
-
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  IconButton,
-  Button,
-  Drawer,
-} from "@mui/material";
 
 const topNavItems = [
   {
@@ -44,6 +31,12 @@ const topNavItems = [
     icon: <WorkOutlineIcon fontSize="small" />,
     path: "/connect#Employment",
   },
+  {
+    text: "Facts",
+    icon: <ExitToAppOutlinedIcon fontSize="small" />,
+    path: "",
+    url: "https://logins2.renweb.com/logins/ParentsWeb-Login.aspx",
+  },
 ];
 
 const midNavItems = [
@@ -57,6 +50,16 @@ const midNavItems = [
 
 const NavBar = (props) => {
   const [transparent, setTransparent] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isCollapsed = useMediaQuery({ query: "(max-width: 900px)" });
+
+  //Mobile Draweer
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const { window: windoo } = props;
 
   function scrollHandler() {
     if (window.scrollY >= 80) {
@@ -68,128 +71,16 @@ const NavBar = (props) => {
 
   window.addEventListener("scroll", scrollHandler);
 
-  const { window: windoo } = props;
-
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const isCollapsed = useMediaQuery({ query: "(max-width: 900px)" });
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
   const theme = useTheme();
 
-  const drawer = (
-    <Box
-      onClick={handleDrawerToggle}
-      sx={{ bgcolor: theme.palette.primary.main }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          py: 2,
-        }}
-      >
-        <NavLink to="/" style={{ textDecoration: "none", paddingLeft: "1rem" }}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography
-              variant="h4"
-              color="white"
-              sx={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
-            >
-              Tabernacle School
-            </Typography>
-          </Box>
-        </NavLink>
-        <Box>
-          <IconButton
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ display: { md: "none" }, color: "white", mr: 1 }}
-          >
-            <CloseIcon fontSize="large" />
-          </IconButton>
-        </Box>
-      </Box>
-      <Divider sx={{ border: "0.5px solid white" }} />
-      <List sx={{ px: 2 }}>
-        {midNavItems.map((item) => (
-          <div key={item}>
-            <ListItem component={NavLink} to={`/${item}`} disablePadding>
-              <ListItemButton>
-                <ListItemText
-                  primary={item.toUpperCase()}
-                  primaryTypographyProps={{
-                    fontSize: "16px",
-                    color: "white",
-                    fontFamily: "Montserrat",
-                    fontWeight: "bold",
-                  }}
-                />
-              </ListItemButton>
-            </ListItem>
-            <Divider sx={{ border: "1px solid white" }} />
-          </div>
-        ))}
-        <Box sx={{ py: 1 }}></Box>
-        <div>
-          <Button
-            component="a"
-            href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
-            target="_blank"
-            sx={{
-              color: "#fff",
-              fontFamily: "Montserrat",
-              p: 2,
-              "&:hover": {
-                color: "white",
-                fontWeight: "bold",
-              },
-            }}
-          >
-            <ExitToAppOutlinedIcon fontSize="small" />{" "}
-            <span style={{ marginLeft: "4px" }}>Facts</span>
-          </Button>
-        </div>
-        {topNavItems.map((item) => {
-          const { text, icon, path } = item;
-          return (
-            <div key={text}>
-              <Button
-                component={HashLink}
-                to={path}
-                sx={{
-                  color: "#fff",
-                  fontFamily: "Montserrat",
-                  p: 2,
-                  "&:hover": {
-                    color: "white",
-                    fontWeight: "bold",
-                  },
-                }}
-              >
-                {icon} <span style={{ marginLeft: "4px" }}>{text}</span>
-              </Button>
-            </div>
-          );
-        })}
-      </List>
-    </Box>
-  );
-
-  const container =
-    windoo !== undefined ? () => windoo().document.body : undefined;
-
+  /***** STYLES *****/
   const StyledTopToolBar = styled(Toolbar)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     justifyContent: "space-between",
   }));
 
   const StyledSiteTitle = styled(Typography)(({ theme }) => ({
+    color: "white",
     fontFamily: "Roboto Mono",
     fontWeight: "700",
   }));
@@ -198,11 +89,26 @@ const NavBar = (props) => {
     color: "#fff",
     fontFamily: "Montserrat",
     paddingLeft: "1rem",
-    fontSize: "16px",
+    fontSize: "18px",
     fontWeight: 500,
+    textTransform: "none",
     "&:hover": {
       color: "white",
       fontWeight: "bold",
+    },
+  });
+
+  const StyledMidNavButtons = styled(Button)({
+    height: "64px",
+    fontFamily: "Montserrat",
+    fontSize: "20px",
+    fontWeight: 600,
+    borderRadius: "0px",
+    padding: "0px 10px",
+    color: transparent ? "white" : "black",
+    "&:hover": {
+      backgroundColor: "#fff",
+      color: "#1565c0",
     },
   });
 
@@ -213,8 +119,12 @@ const NavBar = (props) => {
       : theme.palette.grey[300],
   }));
 
+  const container =
+    windoo !== undefined ? () => windoo().document.body : undefined;
+
   return (
     <>
+      {/***** TOP NAVBAR *****/}
       <AppBar
         component="nav"
         elevation={0}
@@ -224,8 +134,6 @@ const NavBar = (props) => {
         <StyledTopToolBar sx={{ py: { xs: 1, md: 2 } }}>
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <StyledSiteTitle
-              color="white"
-              variant="h4"
               sx={{ fontSize: { xs: "1.75rem", md: "2rem", lg: "2.25rem" } }}
             >
               Tabernacle School
@@ -240,60 +148,44 @@ const NavBar = (props) => {
             <MenuIcon fontSize="large" />
           </IconButton>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <StyledTopNavButtons
-              component="a"
-              href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
-              target="_blank"
-            >
-              <ExitToAppOutlinedIcon fontSize="small" />{" "}
-              <span style={{ marginLeft: "4px" }}>Facts</span>
-            </StyledTopNavButtons>
             {topNavItems.map((item) => {
-              const { icon, path, text } = item;
+              const { icon, path, text, url } = item;
               return (
-                <StyledTopNavButtons key={text} component={HashLink} to={path}>
-                  {icon} <span style={{ marginLeft: "5px" }}>{text}</span>
+                <StyledTopNavButtons
+                  key={text}
+                  component={url ? "a" : HashLink}
+                  to={url ? null : path}
+                  href={url ? url : null}
+                >
+                  {icon} <span style={{ marginLeft: "7px" }}>{text}</span>
                 </StyledTopNavButtons>
               );
             })}
           </Box>
         </StyledTopToolBar>
       </AppBar>
+
+      {/***** MIDDLE NAV BAR*****/}
       <AppBar
         component="nav"
         elevation={0}
         color="transparent"
         position={transparent ? "fixed" : "relative"}
       >
-        <StyledPagesToolbar
-          sx={{
-            display: { xs: "none", md: "flex" },
-          }}
-        >
-          {midNavItems.map((item) => (
-            <Box key={item}>
-              <Button
-                component={NavLink}
-                to={`/${item}`}
-                sx={{
-                  p: 2,
-                  fontFamily: "Montserrat",
-                  fontSize: "20px",
-                  fontWeight: 600,
-                  color: transparent ? "white" : "black",
-                  "&:hover": {
-                    backgroundColor: "#fff",
-                    color: "#1565c0",
-                  },
-                }}
-              >
-                {item}
-              </Button>
-            </Box>
-          ))}
+        <StyledPagesToolbar sx={{ display: { xs: "none", md: "flex" } }}>
+          {midNavItems.map((item, index) => {
+            return (
+              <Box key={item}>
+                <StyledMidNavButtons component={NavLink} to={`/${item}`}>
+                  {item}
+                </StyledMidNavButtons>
+              </Box>
+            );
+          })}
         </StyledPagesToolbar>
       </AppBar>
 
+      {/***** MOBILE NAVBAR *****/}
       <Box component="nav">
         <Drawer
           anchor="top"
@@ -308,7 +200,82 @@ const NavBar = (props) => {
             display: { xs: "block", md: "none" },
           }}
         >
-          {drawer}
+          <Box
+            onClick={handleDrawerToggle}
+            sx={{ bgcolor: theme.palette.primary.main }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                py: 2,
+              }}
+            >
+              <NavLink
+                to="/"
+                style={{ textDecoration: "none", paddingLeft: "1rem" }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography
+                    variant="h4"
+                    color="white"
+                    sx={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
+                  >
+                    Tabernacle School
+                  </Typography>
+                </Box>
+              </NavLink>
+              <Box>
+                <IconButton
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ display: { md: "none" }, color: "white", mr: 1 }}
+                >
+                  <CloseIcon fontSize="large" />
+                </IconButton>
+              </Box>
+            </Box>
+            <Divider sx={{ border: "0.5px solid white" }} />
+            <List sx={{ px: 2 }}>
+              {midNavItems.map((item) => (
+                <div key={item}>
+                  <ListItem component={NavLink} to={`/${item}`} disablePadding>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={item.toUpperCase()}
+                        primaryTypographyProps={{
+                          fontSize: "16px",
+                          color: "white",
+                          fontFamily: "Montserrat",
+                          fontWeight: "bold",
+                        }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <Divider sx={{ border: "1px solid white" }} />
+                </div>
+              ))}
+              <Box sx={{ py: 1 }}></Box>
+              {topNavItems.map((item) => {
+                const { text, icon, path, url } = item;
+                return (
+                  <div key={text}>
+                    <StyledTopNavButtons
+                      component={url ? "a" : HashLink}
+                      to={path}
+                      href={url}
+                      sx={{ mb: 1 }}
+                      target={url ? "_blank" : "_self"}
+                    >
+                      {icon} <span style={{ marginLeft: "7px" }}>{text}</span>
+                    </StyledTopNavButtons>
+                  </div>
+                );
+              })}
+            </List>
+          </Box>
         </Drawer>
       </Box>
     </>

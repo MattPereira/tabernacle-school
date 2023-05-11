@@ -30,7 +30,6 @@ const Showcase = ({ title, image }) => {
           variant="h1"
           sx={{
             color: "white",
-            letterSpacing: "3px",
             textTransform: "uppercase",
           }}
         >
