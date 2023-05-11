@@ -5,8 +5,6 @@ import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 import { Link } from "react-router-dom";
 
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
 import showcase2 from "../assets/images/showcase/admissions.jpg";
@@ -25,12 +23,26 @@ import SectionWrapper from "../components/SectionWrapper";
 export default function Homepage() {
   return (
     <>
+      <CurrentInfoAlert />
       <LandingShowcase />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />
     </>
+  );
+}
+
+function CurrentInfoAlert() {
+  return (
+    <Box sx={{ bgcolor: "#FF4136", color: "white", py: 2 }}>
+      <Typography variant="h5" align="center">
+        <Link style={{ color: "white" }} to="/connect#Employment">
+          We are hiring
+        </Link>{" "}
+        support staff and teachers!
+      </Typography>
+    </Box>
   );
 }
 
@@ -44,53 +56,23 @@ function LandingShowcase() {
       style={{ position: "relative" }}
     >
       {items.map((item, idx) => (
-        <>
-          <Box
-            key={idx}
-            component="img"
-            src={item}
-            sx={{
-              width: "100%",
-              objectFit: "cover",
-              height: {
-                xs: "300px",
-                sm: "300px",
-                md: "400px",
-                lg: "500px",
-                xl: "550px",
-              },
-            }}
-            alt="showcase"
-          />
-          <Box
-            sx={{
-              width: { xs: "70%", md: "max-content" },
-              // height: "max-content",
-              backgroundColor: "white",
-              position: "absolute",
-              top: { xs: "70%", md: "80%" },
-              left: { xs: "70%", md: "80%" },
-              transform: "translate(-50%, -50%)",
-              padding: 2,
-              borderRadius: "5px",
-              border: "3px solid white",
-            }}
-          >
-            <Typography variant="h5" gutterBottom>
-              We are hiring support staff and junior high teachers!
-            </Typography>
-            <Box sx={{ textAlign: { xs: "center", md: "end" } }}>
-              <Button
-                variant="contained"
-                color="primary"
-                component={Link}
-                to="/connect#Employment"
-              >
-                <InfoOutlinedIcon sx={{ mr: 1 }} /> Details
-              </Button>
-            </Box>
-          </Box>
-        </>
+        <Box
+          key={idx}
+          component="img"
+          src={item}
+          sx={{
+            width: "100%",
+            objectFit: "cover",
+            height: {
+              xs: "300px",
+              sm: "300px",
+              md: "400px",
+              lg: "500px",
+              xl: "550px",
+            },
+          }}
+          alt="showcase"
+        />
       ))}
     </Carousel>
   );

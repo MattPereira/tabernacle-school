@@ -37,6 +37,9 @@ let theme = createTheme({
     background: {
       alternate: "#eeeeee",
     },
+    secondary: {
+      main: "#c0ac15",
+    },
     dark: {
       main: "#212121",
     },
@@ -45,9 +48,8 @@ let theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          fontFamily: "Montserrat",
-          // fontSize: { xs: "1rem", md: "1.5rem" },
-          fontSize: "1rem",
+          fontFamily: "Didact Gothic",
+          fontSize: "1.25rem",
           fontWeight: "bold",
           "&:hover": {
             color: "white",
