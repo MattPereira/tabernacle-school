@@ -84,7 +84,7 @@ function SchoolCalendar() {
 
 function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
-  const [selection, setSelection] = useState(null);
+  const [selection, setSelection] = useState("Track and Field");
   const [facility, setFacility] = useState(null);
   const [open, setOpen] = useState(false);
   const [currentImgData, setCurrentImgData] = useState(null);
@@ -113,7 +113,6 @@ function Facilities() {
           );
 
           setCategoryList(list);
-          setSelection(list[2]);
 
           const response = await axios.get(
             `${BASE_URL}/api/facilities?filters[name][$eqi]=${selection}&populate=*`
