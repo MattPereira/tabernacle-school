@@ -145,19 +145,21 @@ function Facilities() {
   return (
     <SectionWrapper bgcolor="background.alternate">
       <SectionTitle title="Facilities" />
-      <Box sx={{ mb: 3 }}>
-        <Typography variant="p">
-          Tabernacle school is committed to maintaining and improving campus
-          infrastructure for the benefit of our students.
-        </Typography>
-      </Box>
 
       {categoryList ? (
         <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+            <Typography variant="p">
+              Tabernacle school is committed to maintaining and improving campus
+              infrastructure for the benefit of our students. Take a virtual
+              tour right here!
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <Typography variant="h5" gutterBottom>
               Select a Category
             </Typography>
+
             <FormControl fullWidth>
               <Select
                 id="area-select"
@@ -203,6 +205,7 @@ function Facilities() {
                       objectFit: "cover",
                       height: { xs: "125px", md: "200px", lg: "300px" },
                       borderRadius: "10px",
+                      cursor: "pointer",
                     }}
                   />
                   {/* <Typography variant="p">{caption}</Typography> */}
@@ -335,7 +338,7 @@ function Daycare() {
           </Grid>
           <Grid item sm={8} lg={6}>
             <Typography variant="h5" textAlign="center" gutterBottom>
-              Hours
+              Hours of Operation
             </Typography>
             <TableContainer
               component={Paper}
