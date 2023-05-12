@@ -4,7 +4,6 @@ const SectionTitle = ({ title }) => {
   // Weird div is for anchor links on same page
 
   const anchorId = title.split(" ")[0];
-  console.log(anchorId);
   return (
     <Box sx={{ pb: 5, pt: 0 }}>
       <div

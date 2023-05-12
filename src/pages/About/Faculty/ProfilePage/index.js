@@ -51,18 +51,10 @@ const ProfilePage = () => {
       </Box>
     );
 
-  console.log(staff);
-
   const { description, name, title_long, photos, profile_picture, email } =
     staff.data.data[0].attributes;
 
-  console.log(staff.data.data[0].attributes);
-
   const profile_picture_url = profile_picture.data.attributes.url;
-
-  console.log(typeof description);
-
-  console.log("photos", photos);
 
   return (
     <Box>

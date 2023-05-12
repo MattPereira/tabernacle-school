@@ -30,7 +30,6 @@ import {
   Select,
   MenuItem,
   Modal,
-  Button,
 } from "@mui/material";
 
 import Showcase from "../../components/Showcase";
@@ -84,13 +83,8 @@ function SchoolCalendar() {
 }
 
 function Facilities() {
-  const areas = [
-    "Elementary Playground",
-    "Kindergarten Playground",
-    "Shade Structures",
-  ];
-
-  const [name, setName] = useState(areas[0]);
+  const [categoryList, setCategoryList] = useState(null);
+  const [selection, setSelection] = useState(null);
   const [facility, setFacility] = useState(null);
   const [open, setOpen] = useState(false);
   const [currentImgData, setCurrentImgData] = useState(null);
@@ -104,7 +98,7 @@ function Facilities() {
   const BASE_URL = "https://tabernacle-backend.herokuapp.com";
 
   const handleChange = (event) => {
-    setName(event.target.value);
+    setSelection(event.target.value);
     setFacility(null);
   };
 
@@ -112,8 +106,17 @@ function Facilities() {
     function getFacilityPhotos() {
       async function getPhotos() {
         try {
+          const categoryData = await axios.get(`${BASE_URL}/api/facilities`);
+
+          const list = categoryData.data.data.map(
+            (category) => category.attributes.name
+          );
+
+          setCategoryList(list);
+          setSelection(list[2]);
+
           const response = await axios.get(
-            `${BASE_URL}/api/facilities?filters[name][$eqi]=${name}&populate=*`
+            `${BASE_URL}/api/facilities?filters[name][$eqi]=${selection}&populate=*`
           );
 
           setFacility(response.data.data[0].attributes);
@@ -123,7 +126,7 @@ function Facilities() {
       }
       getPhotos();
     },
-    [name]
+    [selection]
   );
   // Handles waiting for the async response from the API call
   const showLoadingSpinner = (
@@ -150,37 +153,36 @@ function Facilities() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h5" gutterBottom>
-            Select a Category
-          </Typography>
-          <FormControl fullWidth>
-            <Select
-              id="area-select"
-              value={name}
-              onChange={handleChange}
-              sx={{ "& .MuiSelect-select": { bgcolor: "white" } }}
-            >
-              {areas.map((area) => {
-                return (
-                  <MenuItem key={area} value={area}>
-                    {area}
-                  </MenuItem>
-                );
-              })}
-            </Select>
-          </FormControl>
+      {categoryList ? (
+        <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h5" gutterBottom>
+              Select a Category
+            </Typography>
+            <FormControl fullWidth>
+              <Select
+                id="area-select"
+                value={selection ? selection : categoryList[0]}
+                onChange={handleChange}
+                sx={{ "& .MuiSelect-select": { bgcolor: "white" } }}
+              >
+                {categoryList.map((category) => {
+                  return (
+                    <MenuItem key={category} value={category}>
+                      {category}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
+            </FormControl>
+          </Grid>
         </Grid>
-      </Grid>
+      ) : (
+        showLoadingSpinner
+      )}
 
       {facility ? (
         <>
-          <Box sx={{ mb: 5, textAlign: "center" }}>
-            {/* <Typography variant="h3">{facility.name}</Typography> */}
-            {/* <Typography variant="p">{facility.description}</Typography> */}
-          </Box>
-
           <Grid container spacing={2}>
             {facility.photos.data.map((photo) => {
               const { url, caption } = photo.attributes;
@@ -204,7 +206,7 @@ function Facilities() {
                       borderRadius: "10px",
                     }}
                   />
-                  <Typography variant="p">{caption}</Typography>
+                  {/* <Typography variant="p">{caption}</Typography> */}
                 </Grid>
               );
             })}

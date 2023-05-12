@@ -38,8 +38,8 @@ function CurrentInfoAlert() {
   return (
     <Box
       sx={{
-        bgcolor: { xs: "background.alternate", md: "primary.main" },
-        color: { xs: "primary.main", md: "white" },
+        bgcolor: "#FF5722",
+        color: "white",
         py: 2,
       }}
     >
@@ -229,7 +229,6 @@ function EducationLevels() {
 function ParentTestimonials() {
   const theme = useTheme();
 
-  console.log(theme.palette);
   return (
     <SectionWrapper bgcolor="background.alternate">
       <SectionTitle title="Parent Testimonials" />

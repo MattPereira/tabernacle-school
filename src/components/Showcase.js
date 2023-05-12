@@ -1,8 +1,6 @@
 import { Typography, Box } from "@mui/material";
-// import backgroundImage from "../assets/images/admissions-showcase.jpg";
 
 const Showcase = ({ title, image }) => {
-  // console.log(window.location.pathname);
   return (
     <Box
       sx={{
