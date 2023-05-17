@@ -5,6 +5,8 @@ import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import Brightness5Icon from "@mui/icons-material/Brightness5";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -26,6 +28,7 @@ export default function Homepage() {
     <>
       <CurrentInfoAlert />
       <LandingShowcase />
+      <SummerDaycare />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
@@ -46,7 +49,7 @@ function CurrentInfoAlert() {
       <HashLink to="/connect#Employment" style={{ color: "inherit" }}>
         <Typography variant="h5" align="center">
           <NotificationsIcon sx={{ fontSize: "30px", pb: 0.5 }} />
-          We are hiring support staff and teachers!
+          now hiring support staff and teachers!
         </Typography>
       </HashLink>
     </Box>
@@ -82,6 +85,35 @@ function LandingShowcase() {
         />
       ))}
     </Carousel>
+  );
+}
+
+function SummerDaycare() {
+  return (
+    <Box
+      sx={{
+        bgcolor: "grey.700",
+
+        py: 2,
+      }}
+    >
+      <Typography
+        variant="h5"
+        component="a"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view?usp=sharing"
+        sx={{
+          color: "white",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <WbSunnyIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />
+        Summer Daycare Calendar
+      </Typography>
+    </Box>
   );
 }
 
