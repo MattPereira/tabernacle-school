@@ -71,13 +71,15 @@ function SchoolCalendar() {
   return (
     <SectionWrapper>
       <SectionTitle title="Calendar" />
-      <Container>
-        <FullCalendar
-          plugins={[googleCalendarPlugin, dayGridPlugin]}
-          googleCalendarApiKey={googleApiKey}
-          events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
-        />
-      </Container>
+      <Box sx={{ overflowX: "auto" }}>
+        <Box sx={{ width: { xs: "700px", md: "auto" } }}>
+          <FullCalendar
+            plugins={[googleCalendarPlugin, dayGridPlugin]}
+            googleCalendarApiKey={googleApiKey}
+            events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
+          />
+        </Box>
+      </Box>
     </SectionWrapper>
   );
 }

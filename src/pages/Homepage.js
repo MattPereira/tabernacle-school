@@ -4,9 +4,8 @@ import Carousel from "react-material-ui-carousel";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import Brightness5Icon from "@mui/icons-material/Brightness5";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -26,9 +25,9 @@ import SectionWrapper from "../components/SectionWrapper";
 export default function Homepage() {
   return (
     <>
-      <CurrentInfoAlert />
       <LandingShowcase />
-      <SummerDaycare />
+      <CurrentInfoAlert />
+
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
@@ -39,20 +38,48 @@ export default function Homepage() {
 
 function CurrentInfoAlert() {
   return (
-    <Box
+    <Grid
+      container
+      justifyContent="center"
+      spacing={{ xs: 2, sm: 4 }}
       sx={{
-        bgcolor: "#FF5722",
-        color: "white",
         py: 2,
+        borderBottom: "1px solid #e0e0e0",
       }}
     >
-      <HashLink to="/connect#Employment" style={{ color: "inherit" }}>
-        <Typography variant="h5" align="center">
-          <NotificationsIcon sx={{ fontSize: "30px", pb: 0.5 }} />
-          now hiring support staff and teachers!
+      <Grid item>
+        <Typography
+          variant="p"
+          component={HashLink}
+          to="/connect#Employment"
+          sx={{
+            overflow: "hidden",
+            color: "grey.900",
+          }}
+        >
+          <NotificationsNoneOutlinedIcon sx={{ fontSize: "30px", pb: 0.5 }} />
+          Hiring Middle School Teachers
         </Typography>
-      </HashLink>
-    </Box>
+      </Grid>
+      <Grid item>
+        <Typography
+          variant="p"
+          component="a"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view?usp=sharing"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "grey.900",
+          }}
+        >
+          <WbSunnyOutlinedIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />
+          Summer Daycare Calendar
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }
 
@@ -85,35 +112,6 @@ function LandingShowcase() {
         />
       ))}
     </Carousel>
-  );
-}
-
-function SummerDaycare() {
-  return (
-    <Box
-      sx={{
-        bgcolor: "grey.700",
-
-        py: 2,
-      }}
-    >
-      <Typography
-        variant="h5"
-        component="a"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view?usp=sharing"
-        sx={{
-          color: "white",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <WbSunnyIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />
-        Summer Daycare Calendar
-      </Typography>
-    </Box>
   );
 }
 

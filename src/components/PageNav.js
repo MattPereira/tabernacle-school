@@ -1,4 +1,6 @@
 import { Typography, Box, Grid } from "@mui/material";
+// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const PageNav = ({ sections }) => {
   return (
@@ -6,12 +8,24 @@ const PageNav = ({ sections }) => {
       sx={{
         py: 2,
         borderBottom: "1px solid #e0e0e0",
-        display: { xs: "none", md: "flex" },
+        // display: "flex",
+        // flexWrap: "nowrap",
       }}
     >
-      <Grid container justifyContent="center">
+      <Grid
+        container
+        justifyContent={{ xs: "start", md: "center" }}
+        sx={{
+          flexWrap: "nowrap",
+          overflow: "auto",
+          "::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+        spacing={4}
+      >
         {sections.map((section) => (
-          <Grid item key={section} sx={{ mx: 3 }}>
+          <Grid item xs="auto" key={section}>
             <Typography
               component="a"
               href={`#${section.split(" ")[0]}`}
@@ -28,6 +42,16 @@ const PageNav = ({ sections }) => {
           </Grid>
         ))}
       </Grid>
+      {/* <Box
+        sx={{
+          display: { xs: "flex", sm: "none" },
+          alignItems: "center",
+          justifyContent: "center",
+          width: "50px",
+        }}
+      >
+        <ArrowForwardIosIcon />
+      </Box> */}
     </Box>
   );
 };
