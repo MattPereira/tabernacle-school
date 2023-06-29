@@ -12,3 +12,7 @@ build
 .env.production.local
 
 .firebase
+
+heroku.md
+
+tabernacle.dump
