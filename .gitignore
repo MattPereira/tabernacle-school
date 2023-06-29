@@ -11,8 +11,8 @@ build
 .env.test.local
 .env.production.local
 
-.firebase
-
 heroku.md
 
 tabernacle.dump
+
+secrets.js
