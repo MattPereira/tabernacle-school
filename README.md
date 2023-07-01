@@ -1,8 +1,4 @@
-# **Tabernacle School Website**
-
-<a href="https://tabernacle.school">
-https://tabernacle.school
-</a>
+# **[Tabernacle School Website](https://tabernacle.school)** 
 
 [tabernacle-website-tour.webm](https://github.com/MattPereira/tabernacle-school/assets/73561520/8d59ae12-6d2a-4425-9721-b4739e835a58)
 
