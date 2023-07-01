@@ -14,19 +14,12 @@ const ProfilePage = () => {
   const [staff, setStaff] = useState(null);
   const { id } = useParams();
 
-  //ID IS CURRENTLY THE EMAIL ADDRESS, WILL EVENTUALLY CHANGE TO INTEGER ID NUMBER
-
-  //https://tabernacle-school-strapi.herokuapp.com/api
-
-  // const BASE_URL = "http://localhost:1337";
-  const BASE_URL = "https://tabernacle-backend.herokuapp.com";
-
   useEffect(
     function getAllStaff() {
       async function getStaff() {
         setStaff(
           await axios.get(
-            `${BASE_URL}/api/staff-members?filters[email][$eqi]=${id}&populate=%2A`
+            `${process.env.REACT_APP_BASE_URL}/api/staff-members?filters[email][$eqi]=${id}&populate=%2A`
           )
         );
       }

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fullcalendar/daygrid": "^5.11.2",
@@ -16,15 +15,18 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
+    "postmark": "^3.0.18",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.1",
     "react-icons": "^4.4.0",
     "react-material-ui-carousel": "^3.4.2",
     "react-responsive": "^9.0.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "sass": "^1.63.6",
     "source-map-explorer": "^2.5.3",
     "web-vitals": "^2.1.4"
   },
@@ -33,7 +35,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "react-scripts build",
+    "build": "REACT_APP_BASE_URL=https://ccgc.up.railway.app react-scripts build",
     "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {

@@ -54,11 +54,12 @@ function CurrentInfoAlert() {
           to="/connect#Employment"
           sx={{
             overflow: "hidden",
-            textDecoration: "none",
+            // textDecoration: "none",
+            color: "black",
           }}
         >
           <NotificationsNoneOutlinedIcon sx={{ fontSize: "30px", pb: 0.5 }} />
-          Now Hiring Middle School Teachers
+          Hiring Middle School Teachers
         </Typography>
       </Grid>
       <Grid item>
@@ -72,7 +73,8 @@ function CurrentInfoAlert() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            textDecoration: "none",
+            // textDecoration: "none",
+            color: "black",
           }}
         >
           <WbSunnyOutlinedIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />

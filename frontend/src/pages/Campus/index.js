@@ -1,13 +1,12 @@
 // External Imports
 import { useState, useEffect } from "react";
 import axios from "axios";
-import FullCalendar from "@fullcalendar/react";
-import googleCalendarPlugin from "@fullcalendar/google-calendar";
-import dayGridPlugin from "@fullcalendar/daygrid";
+// import FullCalendar from "@fullcalendar/react";
+// import googleCalendarPlugin from "@fullcalendar/google-calendar";
+// import dayGridPlugin from "@fullcalendar/daygrid";
 import { styled } from "@mui/material/styles";
 
 // Internal Imports
-import { googleApiKey } from "../../secrets";
 import SectionTitle from "../../components/SectionTitle";
 import SectionWrapper from "../../components/SectionWrapper";
 import campusShowcase from "../../assets/images/showcase/campus.jpg";
@@ -49,40 +48,40 @@ export default function Campus() {
       <Showcase title="Campus" image={campusShowcase} />
       <PageNav
         sections={[
-          "Calendar",
+          // "Calendar",
           "Facilities",
           "Athletics",
           "Daycare",
           "Outreach",
         ]}
       />
-      <SchoolCalendar />
+      {/* <SchoolCalendar /> */}
       <Facilities />
-      <Athletics />
       <Daycare />
+
+      <Athletics />
       <Outreach />
     </div>
   );
 }
 
-function SchoolCalendar() {
-  //FULL CALENDAR DOCS: https://fullcalendar.io/docs#toc
-
-  return (
-    <SectionWrapper>
-      <SectionTitle title="Calendar" />
-      <Box sx={{ overflowX: "auto" }}>
-        <Box sx={{ width: { xs: "700px", md: "auto" } }}>
-          <FullCalendar
-            plugins={[googleCalendarPlugin, dayGridPlugin]}
-            googleCalendarApiKey={googleApiKey}
-            events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
-          />
-        </Box>
-      </Box>
-    </SectionWrapper>
-  );
-}
+// function SchoolCalendar() {
+//   // Don't use REACT_APP env variables for a google api key
+//   return (
+//     <SectionWrapper>
+//       <SectionTitle title="Calendar" />
+//       <Box sx={{ overflowX: "auto" }}>
+//         <Box sx={{ width: { xs: "700px", md: "auto" } }}>
+//           <FullCalendar
+//             plugins={[googleCalendarPlugin, dayGridPlugin]}
+//             googleCalendarApiKey={process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY}
+//             events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
+//           />
+//         </Box>
+//       </Box>
+//     </SectionWrapper>
+//   );
+// }
 
 function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
@@ -145,7 +144,7 @@ function Facilities() {
   );
 
   return (
-    <SectionWrapper bgcolor="background.alternate">
+    <SectionWrapper>
       <SectionTitle title="Facilities" />
 
       {categoryList ? (
@@ -442,7 +441,7 @@ function Outreach() {
   ];
 
   return (
-    <Box sx={{ py: 8 }}>
+    <Box sx={{ pt: 8, pb: 12, bgcolor: "background.alternate" }}>
       <SectionTitle title="Outreach" />
       <Container>
         <Grid container spacing={4}>
@@ -458,7 +457,7 @@ function Outreach() {
                   sx={{
                     borderRadius: "30px",
                     height: "100%",
-                    border: "1px solid #212121",
+                    // border: "1px solid #212121",
 
                     "&:hover": {
                       backgroundColor: "primary.main",

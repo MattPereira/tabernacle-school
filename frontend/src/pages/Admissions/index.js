@@ -1,10 +1,10 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-
+import { useForm } from "react-hook-form";
 import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import SectionTitle from "../../components/SectionTitle";
 import admissionsShowcase from "../../assets/images/showcase/admissions.jpg";
+import { styled } from "@mui/material/styles";
+import { useState } from "react";
 
 import { useTheme } from "@mui/material/styles";
 import {
@@ -13,49 +13,63 @@ import {
   Grid,
   Typography,
   Button,
-  Alert,
+  FormControl,
   TextField,
+  Alert,
 } from "@mui/material";
-
-import { scheduleServiceId } from "../../secrets";
 
 export default function Admissions() {
   return (
     <div>
       <Showcase title="Admissions" image={admissionsShowcase} />
       <PageNav sections={["Schedule Tour", "Tuition & Fees"]} />
-      <ScheduleTour />
+      <ScheduleTourForm />
       <Tuition />
     </div>
   );
 }
 
-function ScheduleTour() {
-  const form = useRef();
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  marginBottom: "5px",
+}));
 
+function ScheduleTourForm() {
   const [status, setStatus] = useState(null);
+  const [statusMessage, setStatusMessage] = useState(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-    emailjs
-      .sendForm(
-        scheduleServiceId,
-        "template_7b0dke8",
-        form.current,
-        "JmFz1hF-3wfdGY2oT"
-      )
-      .then(
-        () => {
-          setStatus(true);
-          window.location.reload(false);
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch("/api/handleAdmissionsForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          setStatus(false);
-          console.log(error.text);
-        }
-      );
+        body: JSON.stringify(data),
+      });
+
+      const res = await response.json();
+
+      if (response.ok) {
+        reset();
+        setStatus("success");
+        setStatusMessage(res.message);
+      } else {
+        setStatus("error");
+        setStatusMessage("Server Error. Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
+
+  // put mui styles here instead of in the return statement
 
   return (
     <Box sx={{ py: 8 }}>
@@ -70,64 +84,65 @@ function ScheduleTour() {
               </Typography>
             </Box>
 
-            <form ref={form} onSubmit={sendEmail}>
-              <TextField
-                id="name"
-                name="name"
-                label="Name"
-                variant="outlined"
-                type="text"
-                required
-                sx={{
-                  width: "100%",
-                  mb: 3,
-                }}
-              />
-              <TextField
-                id="email"
-                name="email"
-                label="Email"
-                variant="outlined"
-                type="email"
-                required
-                sx={{
-                  width: "100%",
-                  mb: 3,
-                }}
-              />
-              <TextField
-                id="message"
-                name="message"
-                label="Preferable dates and times"
-                multiline
-                minRows={5}
-                variant="outlined"
-                sx={{
-                  width: "100%",
-                  mb: 3,
-                }}
-              />
+            <form
+              noValidate
+              autoComplete="off"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <FormControl fullWidth sx={{ height: "100%" }}>
+                <StyledTextField
+                  error={errors.name ? true : false}
+                  id="name"
+                  name="name"
+                  label="Your Name"
+                  variant="outlined"
+                  type="text"
+                  helperText={errors.name ? errors.name.message : " "}
+                  required
+                  {...register("name", {
+                    required: "*Please tell us your name",
+                  })}
+                />
 
-              <input
-                type="hidden"
-                name="subject"
-                defaultValue="Schedule a Tour"
-              />
+                <StyledTextField
+                  error={errors.email ? true : false}
+                  id="email"
+                  name="email"
+                  label="Your Email"
+                  variant="outlined"
+                  type="email"
+                  helperText={errors.email?.message || " "}
+                  required
+                  {...register("email", {
+                    required:
+                      "*Please provide an email address so we can contact you",
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "*Please enter a valid email address",
+                    },
+                  })}
+                />
 
-              {status === true ? (
-                <Alert severity="success">
-                  Message successfully sent! Tabernacle School's registrar will
-                  respond soon!
-                </Alert>
-              ) : status === false ? (
-                <Alert severity="danger">
-                  Failed to send the message, please try again, call{" "}
-                  <a href="tel:9256859169">925.685.9169</a> or send an email to
-                  our registrar at{" "}
-                  <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a>
-                </Alert>
-              ) : null}
-              <Box sx={{ textAlign: "end" }}>
+                <StyledTextField
+                  error={errors.message ? true : false}
+                  id="message"
+                  name="message"
+                  label="Your Availability*"
+                  multiline
+                  minRows={5}
+                  helperText={errors.message ? errors.message.message : " "}
+                  {...register("message", {
+                    required:
+                      "*Please let us know when you are available to visit",
+                  })}
+                  variant="outlined"
+                />
+              </FormControl>
+
+              <Box sx={{ display: "flex", justifyContent: "end" }}>
+                <Box sx={{ flexGrow: 1, mr: 2 }}>
+                  {status && <Alert severity={status}>{statusMessage}</Alert>}
+                </Box>
                 <Button
                   variant="contained"
                   sx={{
