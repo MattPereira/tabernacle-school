@@ -11,7 +11,7 @@ build
 .env.test.local
 .env.production.local
 
-heroku.md
+heroku-database.md
 
 tabernacle.dump
 
