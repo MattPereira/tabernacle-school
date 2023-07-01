@@ -4,8 +4,7 @@
 https://tabernacle.school
 </a>
 
-[Website Tour](https://github.com/MattPereira/tabernacle-school/assets/73561520/865beb64-bd9d-4439-87f0-46eae7fc0472)
-
+[tabernacle-website-tour.webm](https://github.com/MattPereira/tabernacle-school/assets/73561520/8d59ae12-6d2a-4425-9721-b4739e835a58)
 
 
 
