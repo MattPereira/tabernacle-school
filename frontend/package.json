@@ -35,7 +35,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "REACT_APP_BASE_URL=https://ccgc.up.railway.app react-scripts build",
+    "build": "REACT_APP_BASE_URL=https://tabernacle-backend.herokuapp.com/ react-scripts build",
     "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {
