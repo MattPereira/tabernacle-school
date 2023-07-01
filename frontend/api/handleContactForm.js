@@ -16,10 +16,13 @@ export default async function handler(request, response) {
         to: process.env.EMAIL_ADDRESS,
         Subject: "General Message from tabernacle.school",
         HtmlBody: `
-        <h3>name: ${name} </h3>
-        <h3>email: ${email} </h3>
-        <h3>subject: ${subject} </h3>
-        <h3>message:</h3>
+        <h3>Name</h3>
+        <p>${name}</p>
+        <h3>Email</h3>
+        <p>${email}</p>
+        <h3>Subject</h3>
+        <p>${subject}</p>
+        <h3>Message</h3>
         <p>${message}</p>
         `,
       });
