@@ -1,101 +1,101 @@
 import { Link } from "react-router-dom";
 
-import {
-  FaBook,
-  FaMoneyCheck,
-  FaParachuteBox,
-  FaUserTie,
-} from "react-icons/fa";
-import { RiParentFill } from "react-icons/ri";
-import { BsFillQuestionCircleFill } from "react-icons/bs";
-import { IoCalendar, IoWarning } from "react-icons/io5";
+import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
+import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
+import FamilyRestroomOutlinedIcon from "@mui/icons-material/FamilyRestroomOutlined";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
+import StraightenOutlinedIcon from "@mui/icons-material/StraightenOutlined";
+import GavelOutlinedIcon from "@mui/icons-material/GavelOutlined";
 
-import { Row, Col } from "react-bootstrap";
 import SectionTitle from "../../../components/SectionTitle";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Grid } from "@mui/material";
 
 const Information = () => {
+  const infoItems = [
+    {
+      title: "Handbook",
+      icon: <MenuBookOutlinedIcon sx={{ fontSize: "55px" }} />,
+      url: "https://drive.google.com/file/d/1BERNJUWaKWVnerCK0cIbFh9ZVib4xSt0/view?usp=sharing",
+    },
+    {
+      title: "Tuition",
+      icon: <PaymentOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/admissions#Tuition",
+    },
+    {
+      title: "Parent Orientation",
+      icon: <FamilyRestroomOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/family/orientation",
+    },
+    {
+      title: "Facts Help",
+      icon: <HelpOutlineOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/family/facts",
+    },
+    {
+      title: "Calendar",
+      icon: <CalendarMonthOutlinedIcon sx={{ fontSize: "55px" }} />,
+      url: "https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing",
+    },
+    {
+      title: "Supply List",
+      icon: <InventoryOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/family/supply-list",
+    },
+    {
+      title: "Uniform Guidelines",
+      icon: <StraightenOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/family/uniform-guidelines",
+    },
+    {
+      title: "Discipline Policy",
+      icon: <GavelOutlinedIcon sx={{ fontSize: "55px" }} />,
+      path: "/family/discipline",
+    },
+  ];
+
+  const LinkOrAnchor = ({ item }) => {
+    if (item.url) {
+      return (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <Box>{item.icon}</Box>
+          <Typography variant="p">{item.title}</Typography>
+        </a>
+      );
+    } else {
+      return (
+        <Link to={item.path} style={{ color: "black", textDecoration: "none" }}>
+          <Box>{item.icon}</Box>
+          <Typography variant="p">{item.title}</Typography>
+        </Link>
+      );
+    }
+  };
+
   return (
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Information" />
       <Container>
-        <Row className="text-center mb-md-5">
-          <Col xs={6} md={3} className="mb-5">
-            <a
-              href="https://drive.google.com/file/d/1BERNJUWaKWVnerCK0cIbFh9ZVib4xSt0/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-dark text-decoration-none"
+        <Grid container spacing={4}>
+          {infoItems.map((item, index) => (
+            <Grid
+              item
+              xs={6}
+              md={3}
+              key={item.name}
+              sx={{ textAlign: "center", mb: 5 }}
             >
-              <FaBook className="display-4 mb-3" />
-              <Typography variant="h5">Handbook</Typography>
-            </a>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link
-              to="/admissions#Tuition"
-              className="link-dark text-decoration-none"
-            >
-              <FaMoneyCheck className="display-4 mb-3" />
-              <Typography variant="h5">Tuition</Typography>
-            </Link>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link
-              to="/family/orientation"
-              className="link-dark text-decoration-none"
-            >
-              <RiParentFill className="display-4 mb-3" />
-              <Typography variant="h5">Parent Orientation</Typography>
-            </Link>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link to="/family/facts" className="link-dark text-decoration-none">
-              <BsFillQuestionCircleFill className="display-4 mb-3" />
-              <Typography variant="h5">Facts Help</Typography>
-            </Link>
-          </Col>
-        </Row>
-        <Row className="row text-center justify-content-around">
-          <Col xs={6} md={3} className="mb-5">
-            <a
-              href="https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-dark text-decoration-none"
-            >
-              <IoCalendar className="display-4 mb-3" />
-              <Typography variant="h5">Calendar</Typography>
-            </a>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link
-              to="/family/supply_list"
-              className="link-dark text-decoration-none"
-            >
-              <FaParachuteBox className="display-4 mb-3" />
-              <Typography variant="h5">Supply List</Typography>
-            </Link>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link
-              to="/family/uniform_guidelines"
-              className="link-dark text-decoration-none"
-            >
-              <FaUserTie className="display-4 mb-3" />
-              <Typography variant="h5">Uniform Guidelines</Typography>
-            </Link>
-          </Col>
-          <Col xs={6} md={3} className="mb-5">
-            <Link
-              to="/family/discipline"
-              className="link-dark text-decoration-none"
-            >
-              <IoWarning className="display-4 mb-3" />
-              <Typography variant="h5">Jr High Discipline</Typography>
-            </Link>
-          </Col>
-        </Row>
+              <LinkOrAnchor item={item} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );

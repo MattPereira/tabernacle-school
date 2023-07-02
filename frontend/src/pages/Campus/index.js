@@ -62,11 +62,11 @@ export default function Campus() {
   );
 }
 
-function SchoolCalendar() {
-  // New plan for calendar: use Google Calendar API to fetch events from the school calendar
-  // https://developers.google.com/calendar/quickstart/js
-  // build my own UI for the calendar's events
-}
+// New plan for calendar: use Google Calendar API to fetch events from the school calendar
+// https://developers.google.com/calendar/quickstart/js
+// build my own UI for the calendar's events
+
+// function SchoolCalendar() {}
 
 function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
