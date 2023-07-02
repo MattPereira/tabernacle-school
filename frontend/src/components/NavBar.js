@@ -13,7 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+// import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 
 const topNavItems = [
   {
@@ -24,19 +24,20 @@ const topNavItems = [
   {
     text: "Calendar",
     icon: <CalendarTodayIcon fontSize="small" />,
-    path: "/campus#Calendar",
+    path: "",
+    url: "https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view",
   },
   {
     text: "Employment",
     icon: <WorkOutlineIcon fontSize="small" />,
     path: "/connect#Employment",
   },
-  {
-    text: "Facts",
-    icon: <ExitToAppOutlinedIcon fontSize="small" />,
-    path: "",
-    url: "https://logins2.renweb.com/logins/ParentsWeb-Login.aspx",
-  },
+  // {
+  //   text: "Facts",
+  //   icon: <ExitToAppOutlinedIcon fontSize="small" />,
+  //   path: "",
+  //   url: "https://logins2.renweb.com/logins/ParentsWeb-Login.aspx",
+  // },
 ];
 
 const midNavItems = [

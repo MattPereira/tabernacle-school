@@ -1,9 +1,6 @@
 // External Imports
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import FullCalendar from "@fullcalendar/react";
-// import googleCalendarPlugin from "@fullcalendar/google-calendar";
-// import dayGridPlugin from "@fullcalendar/daygrid";
 import { styled } from "@mui/material/styles";
 
 // Internal Imports
@@ -65,23 +62,11 @@ export default function Campus() {
   );
 }
 
-// function SchoolCalendar() {
-//   // Don't use REACT_APP env variables for a google api key
-//   return (
-//     <SectionWrapper>
-//       <SectionTitle title="Calendar" />
-//       <Box sx={{ overflowX: "auto" }}>
-//         <Box sx={{ width: { xs: "700px", md: "auto" } }}>
-//           <FullCalendar
-//             plugins={[googleCalendarPlugin, dayGridPlugin]}
-//             googleCalendarApiKey={process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY}
-//             events={{ googleCalendarId: "tabernacle.school1@gmail.com" }}
-//           />
-//         </Box>
-//       </Box>
-//     </SectionWrapper>
-//   );
-// }
+function SchoolCalendar() {
+  // New plan for calendar: use Google Calendar API to fetch events from the school calendar
+  // https://developers.google.com/calendar/quickstart/js
+  // build my own UI for the calendar's events
+}
 
 function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
