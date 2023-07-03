@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import SectionTitle from "../../../components/SectionTitle";
+import { Container, Box, Typography, Grid } from "@mui/material";
 
 import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
@@ -8,9 +10,6 @@ import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined
 import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 import StraightenOutlinedIcon from "@mui/icons-material/StraightenOutlined";
 import GavelOutlinedIcon from "@mui/icons-material/GavelOutlined";
-
-import SectionTitle from "../../../components/SectionTitle";
-import { Container, Box, Typography, Grid } from "@mui/material";
 
 const Information = () => {
   const infoItems = [
