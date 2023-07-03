@@ -61,10 +61,10 @@ function SendMessageForm() {
       if (response.ok) {
         reset();
         setStatus("success");
-        setStatusMessage(res.message);
+        setStatusMessage(res.status);
       } else {
         setStatus("error");
-        setStatusMessage("Server Error. Failed to send email");
+        setStatusMessage(res.error);
       }
     } catch (error) {
       console.error("Error:", error);
