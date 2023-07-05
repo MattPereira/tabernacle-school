@@ -1,8 +1,8 @@
 {
-  "name": "tabernacle-backend",
+  "name": "tabernacle-cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "content management system for tabernacle.school website",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -18,7 +18,7 @@
     "pg-connection-string": "^2.5.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "matt pereira"
   },
   "strapi": {
     "uuid": "95b61588-0687-4adc-a102-30b81a23a732"

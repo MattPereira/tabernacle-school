@@ -30,13 +30,10 @@ import {
 
 import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
-
 import athletics from "../../assets/images/campus/athletics.jpg";
-
 import friends from "../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../assets/images/campus/operation-christmas.jpg";
-
 import daycareImg from "../../assets/images/campus/daycare.jpg";
 
 export default function Campus() {
@@ -81,8 +78,6 @@ function Facilities() {
   };
   const handleClose = () => setOpen(false);
 
-  const BASE_URL = "https://tabernacle-backend.herokuapp.com";
-
   const handleChange = (event) => {
     setSelection(event.target.value);
     setFacility(null);
@@ -92,7 +87,9 @@ function Facilities() {
     function getFacilityPhotos() {
       async function getPhotos() {
         try {
-          const categoryData = await axios.get(`${BASE_URL}/api/facilities`);
+          const categoryData = await axios.get(
+            `${process.env.REACT_APP_BASE_URL}/api/facilities`
+          );
 
           const list = categoryData.data.data.map(
             (category) => category.attributes.name
@@ -101,7 +98,7 @@ function Facilities() {
           setCategoryList(list);
 
           const response = await axios.get(
-            `${BASE_URL}/api/facilities?filters[name][$eqi]=${selection}&populate=*`
+            `${process.env.REACT_APP_BASE_URL}/api/facilities?filters[name][$eqi]=${selection}&populate=*`
           );
 
           setFacility(response.data.data[0].attributes);
