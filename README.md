@@ -25,5 +25,5 @@ A single page web application for Tabernacle School that advertises to prospecti
 ## **History**
 1. Version 1: ExpressJs, Bootstrap and Jinja Templating
 2. Version 2: Create React App, Strapi, and Material UI
-3. Version 3: NextJs and with strapi deployment moved from heroku to aws
+3. Version 3: NextJs and with strapi deployment moved from heroku to railway
 
