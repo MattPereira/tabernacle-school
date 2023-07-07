@@ -27,7 +27,6 @@ export default function Homepage() {
     <>
       <LandingShowcase />
       <CurrentInfoAlert />
-
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />

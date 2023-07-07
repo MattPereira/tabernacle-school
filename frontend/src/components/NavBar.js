@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useMediaQuery } from "react-responsive";
@@ -14,6 +14,31 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 // import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+
+/***** STATIC STYLES *****/
+const StyledTopToolBar = styled(Toolbar)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  justifyContent: "space-between",
+}));
+
+const StyledSiteTitle = styled(Typography)(({ theme }) => ({
+  color: "white",
+  fontFamily: "Roboto Mono",
+  fontWeight: "700",
+}));
+
+const StyledTopNavButtons = styled(Button)({
+  color: "#fff",
+  fontFamily: "Montserrat",
+  paddingLeft: "1rem",
+  fontSize: "18px",
+  fontWeight: 500,
+  textTransform: "none",
+  "&:hover": {
+    color: "white",
+    fontWeight: "bold",
+  },
+});
 
 const topNavItems = [
   {
@@ -55,49 +80,9 @@ const NavBar = (props) => {
 
   const isCollapsed = useMediaQuery({ query: "(max-width: 900px)" });
 
-  //Mobile Draweer
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const { window: windoo } = props;
-
-  function scrollHandler() {
-    if (window.scrollY >= 80) {
-      setTransparent(true);
-    } else {
-      setTransparent(false);
-    }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
-
   const theme = useTheme();
 
-  /***** STYLES *****/
-  const StyledTopToolBar = styled(Toolbar)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    justifyContent: "space-between",
-  }));
-
-  const StyledSiteTitle = styled(Typography)(({ theme }) => ({
-    color: "white",
-    fontFamily: "Roboto Mono",
-    fontWeight: "700",
-  }));
-
-  const StyledTopNavButtons = styled(Button)({
-    color: "#fff",
-    fontFamily: "Montserrat",
-    paddingLeft: "1rem",
-    fontSize: "18px",
-    fontWeight: 500,
-    textTransform: "none",
-    "&:hover": {
-      color: "white",
-      fontWeight: "bold",
-    },
-  });
+  /***** DYNAMIC STYLES *****/
 
   const StyledMidNavButtons = styled(Button)({
     height: "64px",
@@ -120,8 +105,31 @@ const NavBar = (props) => {
       : theme.palette.grey[300],
   }));
 
+  // Handles mobile drawer opening and closing
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  // Handles bottom navbar changing to transparent on scroll down
+  useEffect(() => {
+    function scrollHandler() {
+      if (window.scrollY >= 80) {
+        setTransparent(true);
+      } else {
+        setTransparent(false);
+      }
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
+  // MUI Drawer component needs container to mount.. or something
   const container =
-    windoo !== undefined ? () => windoo().document.body : undefined;
+    props.window !== undefined ? () => props.window().document.body : undefined;
 
   return (
     <>
@@ -166,7 +174,7 @@ const NavBar = (props) => {
         </StyledTopToolBar>
       </AppBar>
 
-      {/***** MIDDLE NAV BAR*****/}
+      {/***** BOTTOM NAV BAR*****/}
       <AppBar
         component="nav"
         elevation={0}
