@@ -19,7 +19,6 @@ import Family from "./pages/Family";
 import Orientation from "./pages/Family/Information/Orientation";
 import FactsHelp from "./pages/Family/Information/FactsHelp";
 import SupplyList from "./pages/Family/Information/SupplyList";
-import UniformGuidelines from "./pages/Family/Information/UniformGuidelines";
 import Discipline from "./pages/Family/Information/Discipline";
 
 import { ThemeProvider } from "@mui/material";
@@ -39,10 +38,6 @@ function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/connect" element={<Connect />} />
-            <Route
-              path="/family/uniform-guidelines"
-              element={<UniformGuidelines />}
-            />
             <Route path="/family/orientation" element={<Orientation />} />
             <Route path="/family/facts" element={<FactsHelp />} />
             <Route path="/family/supply-list" element={<SupplyList />} />

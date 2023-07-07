@@ -1,11 +1,13 @@
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
-import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Button, Icon } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 
+// Icons for CurrentInfoAlerts
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import { ReactComponent as Uniform } from "../assets/svgs/uniform.svg";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -26,7 +28,7 @@ export default function Homepage() {
   return (
     <>
       <LandingShowcase />
-      <CurrentInfoAlert />
+      <CurrentInfoAlerts />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
@@ -35,7 +37,7 @@ export default function Homepage() {
   );
 }
 
-function CurrentInfoAlert() {
+function CurrentInfoAlerts() {
   return (
     <Grid
       container
@@ -78,6 +80,28 @@ function CurrentInfoAlert() {
         >
           <WbSunnyOutlinedIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />
           Summer Daycare Calendar
+        </Typography>
+      </Grid>
+      <Grid item>
+        <Typography
+          variant="p"
+          component="a"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/1GLoienR9b0TgNC08Dga5hybKXfPp9hgs/view?usp=sharing"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <Icon
+            component={Uniform}
+            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }}
+          />
+          Uniform Standards
         </Typography>
       </Grid>
     </Grid>

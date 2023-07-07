@@ -9,7 +9,9 @@ const Showcase = ({ title, image }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: `url(${image}) center / cover no-repeat`,
+        background: image
+          ? `url(${image}) center / cover no-repeat`
+          : "#212121",
       }}
     >
       <Box

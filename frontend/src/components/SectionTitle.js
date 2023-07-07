@@ -5,7 +5,7 @@ const SectionTitle = ({ title }) => {
 
   const anchorId = title.split(" ")[0];
   return (
-    <Box sx={{ pb: 5, pt: 0 }}>
+    <Box sx={{ pb: 8, pt: 0 }}>
       <div
         id={anchorId}
         style={{
