@@ -55,7 +55,7 @@ function CurrentInfoAlerts() {
           to="/connect#Employment"
           sx={{
             overflow: "hidden",
-            // textDecoration: "none",
+            textDecoration: "none",
             color: "black",
           }}
         >
@@ -74,11 +74,13 @@ function CurrentInfoAlerts() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // textDecoration: "none",
+            textDecoration: "none",
             color: "black",
           }}
         >
-          <WbSunnyOutlinedIcon sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }} />
+          <WbSunnyOutlinedIcon
+            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5, pb: 0.2 }}
+          />
           Summer Daycare Calendar
         </Typography>
       </Grid>
@@ -93,13 +95,18 @@ function CurrentInfoAlerts() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // textDecoration: "none",
+            textDecoration: "none",
             color: "black",
           }}
         >
           <Icon
             component={Uniform}
-            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5 }}
+            sx={{
+              fontSize: "28px",
+              mt: 0.5,
+              mr: 0.5,
+              pb: 0.3,
+            }}
           />
           Uniform Standards
         </Typography>
