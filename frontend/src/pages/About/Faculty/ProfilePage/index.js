@@ -55,46 +55,57 @@ const ProfilePage = () => {
         sx={{
           textAlign: "center",
           pt: 5,
-          pb: 8,
         }}
-      >
-        <Typography variant="h1">{name}</Typography>
+      ></Box>
 
-        <Typography variant="h4" gutterBottom>
-          {title_long}
-        </Typography>
-
-        <a href={`mailto:${email}`} className="lead fs-4">
-          {email}
-        </a>
-      </Box>
-
-      <Box sx={{ py: 7, bgcolor: "background.alternate" }}>
+      <Box sx={{ py: 5 }}>
         <Container>
-          <Grid container alignItems="center" spacing={5}>
-            <Grid item xs={12} lg={6} textAlign="center">
+          <Grid container alignItems="center" spacing={5} sx={{ mb: 5 }}>
+            <Grid item xs={12} lg="auto" textAlign="center">
               <Box
-                component="img"
-                src={`${profile_picture_url}`}
-                alt="profile pic"
                 sx={{
-                  width: { xs: "275px", sm: "325px", md: "400px", lg: "500px" },
-                  height: {
-                    xs: "275px",
-                    sm: "325px",
-                    md: "400px",
-                    lg: "500px",
-                  },
-                  borderRadius: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center",
+                  width: 250,
+                  height: 250,
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  mx: "auto",
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src={`${profile_picture_url}`}
+                  alt="profile pic"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </Box>
             </Grid>
-            <Grid item xs={12} lg={6}>
-              <Typography variant="p">{description}</Typography>
+            <Grid item xs={12} lg="auto">
+              {" "}
+              <Typography
+                variant="h2"
+                gutterBottom
+                sx={{ textAlign: { xs: "center", lg: "start" } }}
+              >
+                {name}
+              </Typography>
+              <Typography
+                variant="h3"
+                gutterBottom
+                sx={{ textAlign: { xs: "center", lg: "start" } }}
+              >
+                {title_long}
+              </Typography>
+              {/* <Typography component="a" variant="p" href={`mailto:${email}`}>
+                {email}
+              </Typography> */}
             </Grid>
           </Grid>
+          <Typography variant="p">{description}</Typography>
         </Container>
       </Box>
 
