@@ -29,10 +29,6 @@ function SelectGrade() {
   const [selection, setSelection] = useState(null);
   const theme = useTheme();
 
-  // ask GPT about how to make sure data is only fetched one time
-  // even as user changes select option which will trigger re-render?
-  // for science!
-
   const handleChange = (event) => {
     setSelection(event.target.value);
   };
@@ -55,7 +51,6 @@ function SelectGrade() {
   }, []);
 
   if (!facultyData) return <LoadingSpinner />;
-  console.log("DATA", facultyData);
 
   const facultyOptions = facultyData.map((group) => group.attributes.name);
   console.log("OPTIONS", facultyOptions);

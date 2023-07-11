@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import { Accordion, Table } from "react-bootstrap";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 import {
   Container,
@@ -12,10 +12,10 @@ import {
   Button,
   Alert,
   FormControl,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import SectionTitle from "../../components/SectionTitle";
-
-import { facultyData } from "../../data/facultyData.js";
 
 export default function Contact() {
   return (
@@ -23,10 +23,10 @@ export default function Contact() {
       <SectionTitle title="Contact" />
       <Container>
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} sm={10} md={6}>
+          <Grid item xs={12} sm={10} lg={6}>
             <SendMessageForm />
           </Grid>
-          <Grid item xs={12} sm={10} md={6}>
+          <Grid item xs={12} sm={10} lg={6}>
             <StaffDirectory />
           </Grid>
         </Grid>
@@ -74,7 +74,7 @@ function SendMessageForm() {
   return (
     <div>
       <Box sx={{ mb: 3 }}>
-        <Typography variant="h5" align="center">
+        <Typography variant="h4" align="center">
           Send Message
         </Typography>
       </Box>
@@ -161,6 +161,50 @@ function SendMessageForm() {
 }
 
 function StaffDirectory() {
+  const [staffData, setStaffData] = useState(null);
+  const [selected, setSelected] = useState(null);
+
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+  };
+
+  useEffect(function fetchStaffData() {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?populate=*`
+        );
+
+        const { data } = await response.json();
+
+        setStaffData(data);
+        setSelected(data[0].attributes?.name);
+      } catch {
+        console.log("error");
+      }
+    }
+    fetchData();
+  }, []);
+
+  if (!staffData) return <LoadingSpinner />;
+
+  const staffOptions = staffData.map((group) => group.attributes.name);
+
+  const selectedGroup = staffData.filter(
+    (group) => group.attributes.name === selected
+  )[0];
+
+  const staffMembersData = selectedGroup.attributes.staff_members.data;
+
+  const staffMembers = staffMembersData.map((member) => ({
+    id: member.id,
+    name: member.attributes.name,
+    titleShort: member.attributes.title_short,
+    email: member.attributes.email,
+  }));
+
+  console.log(staffOptions);
+
   return (
     <div>
       <Box sx={{ mb: 3 }}>
@@ -169,46 +213,45 @@ function StaffDirectory() {
         </Typography>
       </Box>
 
-      <Accordion>
-        {facultyData
-          .filter((level) => level["grade"] !== "Board of Directors")
-          .map((level, idx) => (
-            <Accordion.Item eventKey={`${idx}`} key={level["grade"]}>
-              <Accordion.Header>{level["grade"]}</Accordion.Header>
-              <Accordion.Body>
-                <Table>
-                  <tbody>
-                    {level["grade"] === "Elementary"
-                      ? level.groups.map((group) => {
-                          return group.staff.map((staff, idx) => (
-                            <tr key={staff["name"]}>
-                              <td>{staff["name"]}</td>
-                              <td>{staff["title"]}</td>
-                              <td>
-                                <a href={`mailto:${staff["email"]}`}>
-                                  {staff["email"]}
-                                </a>
-                              </td>
-                            </tr>
-                          ));
-                        })
-                      : level["staff"].map((staff, idx) => (
-                          <tr key={staff["name"]}>
-                            <td>{staff["name"]}</td>
-                            <td>{staff["title"]}</td>
-                            <td>
-                              <a href={`mailto:${staff["email"]}`}>
-                                {staff["email"]}
-                              </a>
-                            </td>
-                          </tr>
-                        ))}
-                  </tbody>
-                </Table>
-              </Accordion.Body>
-            </Accordion.Item>
+      <FormControl fullWidth variant="filled" sx={{ mb: 2 }}>
+        <Select
+          id="faculty-select"
+          value={selected ? selected : staffOptions[0]}
+          onChange={handleChange}
+          sx={{
+            fontFamily: "didact gothic",
+            fontSize: "1.25rem",
+            fontWeight: "bold",
+            pb: 1,
+          }}
+        >
+          {staffOptions.map((name) => (
+            <MenuItem
+              key={name}
+              value={name}
+              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+            >
+              {name}
+            </MenuItem>
           ))}
-      </Accordion>
+        </Select>
+      </FormControl>
+
+      {staffMembers.map((member) => (
+        <Grid container sx={{ px: 2, mb: 1 }} spacing={2}>
+          <Grid item xs={4}>
+            <Typography variant="p">{member.name}</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography variant="p">{member.titleShort}</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography variant="p" component="a">
+              {member.email}
+            </Typography>
+          </Grid>
+        </Grid>
+      ))}
     </div>
   );
 }
