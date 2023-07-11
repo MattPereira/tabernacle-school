@@ -1,8 +1,9 @@
 import Slides from "./Slides";
-import Accordion from "./FacultyAccordion";
 import SectionTitle from "../../../components/SectionTitle";
+import { Link } from "react-router-dom";
 // prettier-ignore
 import { Container, Grid, Box, FormControl, Select, MenuItem, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -16,7 +17,6 @@ export default function Faculty() {
           <Grid item xl={10}>
             <Slides />
             <SelectGrade />
-            <Accordion />
           </Grid>
         </Grid>
       </Container>
@@ -27,6 +27,7 @@ export default function Faculty() {
 function SelectGrade() {
   const [facultyData, setFacultyData] = useState(null);
   const [selection, setSelection] = useState(null);
+  const theme = useTheme();
 
   // ask GPT about how to make sure data is only fetched one time
   // even as user changes select option which will trigger re-render?
@@ -63,34 +64,93 @@ function SelectGrade() {
     (group) => group.attributes.name === selection
   )[0];
 
-  const staffMembers = selectedGroup.attributes.staff_members.data;
-  console.log("staffMembers", staffMembers);
+  const staffMembersData = selectedGroup.attributes.staff_members.data;
+
+  const staffMembers = staffMembersData.map((member) => ({
+    id: member.id,
+    name: member.attributes.name,
+    profilePicture: member.attributes.profile_picture.data.attributes.url,
+    titleShort: member.attributes.title_short,
+    email: member.attributes.email,
+  }));
 
   return (
     <Box>
-      <FormControl fullWidth>
+      <Box sx={{ mb: 5, textAlign: "center" }}>
+        <Typography variant="p">
+          Choose a grade level from the dropdown and select a faculty member to
+          see their profile page!
+        </Typography>
+      </Box>
+
+      <FormControl fullWidth variant="filled">
         <Select
           id="faculty-select"
           value={selection ? selection : facultyOptions[0]}
           onChange={handleChange}
+          sx={{
+            fontFamily: "copse",
+            fontSize: "2rem",
+            textAlign: "center",
+            pb: 1,
+          }}
         >
           {facultyOptions.map((name) => (
-            <MenuItem key={name} value={name}>
+            <MenuItem
+              key={name}
+              value={name}
+              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+            >
               {name}
             </MenuItem>
           ))}
         </Select>
       </FormControl>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{ py: 5 }}>
         {staffMembers.map((member) => (
-          <Grid item key={member.id} xs={12} lg={3}>
-            <Typography variant="p">{member.attributes.name}</Typography>
-            <Box
-              component="img"
-              sx={{ width: "100%" }}
-              src={member.attributes.profile_picture.data.attributes.url}
-            />
+          <Grid
+            item
+            key={member.id}
+            xs={12}
+            sm={6}
+            lg={3}
+            sx={{ textAlign: "center" }}
+          >
+            <Link
+              to={`/about/staff/${member.email}`}
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+              }}
+            >
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="h5" sx={{ whiteSpace: "nowrap" }}>
+                  {member.name}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  width: 150,
+                  height: 150,
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  mx: "auto",
+                }}
+              >
+                <Box
+                  component="img"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                  src={member.profilePicture}
+                />
+              </Box>
+              <Typography variant="h6">{member.titleShort}</Typography>
+            </Link>
           </Grid>
         ))}
       </Grid>
