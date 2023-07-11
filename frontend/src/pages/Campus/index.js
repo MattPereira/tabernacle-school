@@ -7,27 +7,6 @@ import { styled } from "@mui/material/styles";
 import SectionTitle from "../../components/SectionTitle";
 import SectionWrapper from "../../components/SectionWrapper";
 import campusShowcase from "../../assets/images/showcase/campus.jpg";
-
-import {
-  Container,
-  Box,
-  Grid,
-  Typography,
-  Paper,
-  Link,
-  Table,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TableBody,
-  CircularProgress,
-  FormControl,
-  Select,
-  MenuItem,
-  Modal,
-} from "@mui/material";
-
 import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import athletics from "../../assets/images/campus/athletics.jpg";
@@ -35,6 +14,10 @@ import friends from "../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../assets/images/campus/operation-christmas.jpg";
 import daycareImg from "../../assets/images/campus/daycare.jpg";
+import LoadingSpinner from "../../components/LoadingSpinner";
+
+// prettier-ignore
+import {Container,Box,Grid,Typography,Paper,Link,Table,TableCell,TableContainer,TableHead,TableRow,TableBody,FormControl,Select,MenuItem,Modal} from "@mui/material";
 
 export default function Campus() {
   return (
@@ -110,60 +93,43 @@ function Facilities() {
     },
     [selection]
   );
-  // Handles waiting for the async response from the API call
-  const showLoadingSpinner = (
-    <Box
-      sx={{
-        display: "flex",
-        height: "50vh",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <CircularProgress />
-    </Box>
-  );
+
+  if (!categoryList) return <LoadingSpinner />;
 
   return (
     <SectionWrapper>
       <SectionTitle title="Facilities" />
-
-      {categoryList ? (
-        <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
-          <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
-            <Typography variant="p">
-              Tabernacle school is committed to maintaining and improving campus
-              infrastructure for the benefit of our students. Take a virtual
-              tour right here!
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
-            <Typography variant="h5" gutterBottom>
-              Select a Category
-            </Typography>
-
-            <FormControl fullWidth>
-              <Select
-                id="area-select"
-                value={selection ? selection : categoryList[0]}
-                onChange={handleChange}
-                sx={{ "& .MuiSelect-select": { bgcolor: "white" } }}
-              >
-                {categoryList.map((category) => {
-                  return (
-                    <MenuItem key={category} value={category}>
-                      {category}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </FormControl>
-          </Grid>
+      <Grid container spacing={4} alignItems="center" sx={{ mb: 5 }}>
+        <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+          <Typography variant="p">
+            Tabernacle school is committed to maintaining and improving campus
+            infrastructure for the benefit of our students. Take a virtual tour
+            right here!
+          </Typography>
         </Grid>
-      ) : (
-        showLoadingSpinner
-      )}
+        <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
+          <Typography variant="h5" gutterBottom>
+            Select a Category
+          </Typography>
+
+          <FormControl fullWidth>
+            <Select
+              id="area-select"
+              value={selection ? selection : categoryList[0]}
+              onChange={handleChange}
+              sx={{ "& .MuiSelect-select": { bgcolor: "white" } }}
+            >
+              {categoryList.map((category) => {
+                return (
+                  <MenuItem key={category} value={category}>
+                    {category}
+                  </MenuItem>
+                );
+              })}
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
 
       {facility ? (
         <>
@@ -223,7 +189,7 @@ function Facilities() {
           </Modal>
         </>
       ) : (
-        showLoadingSpinner
+        <LoadingSpinner />
       )}
     </SectionWrapper>
   );
