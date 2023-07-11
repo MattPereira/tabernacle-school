@@ -238,15 +238,19 @@ function StaffDirectory() {
       </FormControl>
 
       {staffMembers.map((member) => (
-        <Grid container sx={{ px: 2, mb: 1 }} spacing={2}>
+        <Grid container sx={{ px: 2, mb: 2 }} spacing={2}>
           <Grid item xs={4}>
-            <Typography variant="p">{member.name}</Typography>
+            <Typography variant="p" sx={{ fontSize: "18px" }}>
+              {member.name}
+            </Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography variant="p">{member.titleShort}</Typography>
+            <Typography variant="p" sx={{ fontSize: "18px" }}>
+              {member.titleShort}
+            </Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography variant="p" component="a">
+            <Typography variant="p" sx={{ fontSize: "18px" }} component="a">
               {member.email}
             </Typography>
           </Grid>
