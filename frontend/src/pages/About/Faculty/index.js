@@ -53,7 +53,6 @@ function SelectGrade() {
   if (!facultyData) return <LoadingSpinner />;
 
   const facultyOptions = facultyData.map((group) => group.attributes.name);
-  console.log("OPTIONS", facultyOptions);
 
   const selectedGroup = facultyData.filter(
     (group) => group.attributes.name === selection
@@ -78,7 +77,7 @@ function SelectGrade() {
         </Typography>
       </Box>
 
-      <FormControl fullWidth variant="filled">
+      <FormControl fullWidth variant="standard">
         <Select
           id="faculty-select"
           value={selection ? selection : facultyOptions[0]}

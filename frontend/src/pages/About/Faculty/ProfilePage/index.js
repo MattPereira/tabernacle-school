@@ -44,24 +44,25 @@ const ProfilePage = () => {
       </Box>
     );
 
-  const { description, name, title_long, photos, profile_picture, email } =
+  const { description, name, title_long, photos, profile_picture } =
     staff.data.data[0].attributes;
 
   const profile_picture_url = profile_picture.data.attributes.url;
 
   return (
     <Box>
-      <Box
-        sx={{
-          textAlign: "center",
-          pt: 5,
-        }}
-      ></Box>
-
-      <Box sx={{ py: 5 }}>
+      <Box sx={{ py: { xs: 5, lg: 10 } }}>
         <Container>
-          <Grid container alignItems="center" spacing={5} sx={{ mb: 5 }}>
-            <Grid item xs={12} lg="auto" textAlign="center">
+          <Box sx={{ mb: { xs: 5, lg: 10 }, textAlign: "center" }}>
+            <Typography variant="h2">{name}</Typography>
+            <Typography variant="h5">{title_long}</Typography>
+            {/* <Typography component="a" variant="p" href={`mailto:${email}`}>
+              {email}
+            </Typography> */}
+          </Box>
+
+          <Grid container alignItems="center" spacing={4}>
+            <Grid item xs={12} lg={4} textAlign="center">
               <Box
                 sx={{
                   width: 250,
@@ -84,48 +85,38 @@ const ProfilePage = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} lg="auto">
-              {" "}
-              <Typography
-                variant="h2"
-                gutterBottom
-                sx={{ textAlign: { xs: "center", lg: "start" } }}
-              >
-                {name}
-              </Typography>
-              <Typography
-                variant="h3"
-                gutterBottom
-                sx={{ textAlign: { xs: "center", lg: "start" } }}
-              >
-                {title_long}
-              </Typography>
-              {/* <Typography component="a" variant="p" href={`mailto:${email}`}>
-                {email}
-              </Typography> */}
+            <Grid item xs={12} lg={8}>
+              <Typography variant="p">{description}</Typography>
             </Grid>
           </Grid>
-          <Typography variant="p">{description}</Typography>
         </Container>
       </Box>
-
-      <Grid container spacing={2} alignItems="center" sx={{ p: 5 }}>
-        {photos.data &&
-          photos.data.map((photo, idx) => (
-            <Grid key={photo.id} item xs={12} md={6} lg={4} textAlign="center">
-              <Box
-                component="img"
-                src={`${photo.attributes.url}`}
-                sx={{
-                  width: "100%",
-                  objectFit: "cover",
-                  height: "350px",
-                  borderRadius: "10px",
-                }}
-              />
-            </Grid>
-          ))}
-      </Grid>
+      <Box sx={{ p: 2 }}>
+        <Grid container spacing={2} alignItems="center">
+          {photos.data &&
+            photos.data.map((photo, idx) => (
+              <Grid
+                key={photo.id}
+                item
+                xs={12}
+                md={6}
+                lg={4}
+                textAlign="center"
+              >
+                <Box
+                  component="img"
+                  src={`${photo.attributes.url}`}
+                  sx={{
+                    width: "100%",
+                    objectFit: "cover",
+                    height: "350px",
+                    borderRadius: "10px",
+                  }}
+                />
+              </Grid>
+            ))}
+        </Grid>
+      </Box>
     </Box>
   );
 };

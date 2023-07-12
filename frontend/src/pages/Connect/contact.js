@@ -178,7 +178,7 @@ function StaffDirectory() {
         const { data } = await response.json();
 
         setStaffData(data);
-        setSelected(data[0].attributes?.name);
+        setSelected("Administration");
       } catch {
         console.log("error");
       }
@@ -203,17 +203,15 @@ function StaffDirectory() {
     email: member.attributes.email,
   }));
 
-  console.log(staffOptions);
-
   return (
     <div>
       <Box sx={{ mb: 3 }}>
-        <Typography variant="h5" align="center">
+        <Typography variant="h4" align="center">
           Staff Directory
         </Typography>
       </Box>
 
-      <FormControl fullWidth variant="filled" sx={{ mb: 2 }}>
+      <FormControl fullWidth variant="standard" sx={{ mb: 3 }}>
         <Select
           id="faculty-select"
           value={selected ? selected : staffOptions[0]}
@@ -237,25 +235,39 @@ function StaffDirectory() {
         </Select>
       </FormControl>
 
-      {staffMembers.map((member) => (
-        <Grid container sx={{ px: 2, mb: 2 }} spacing={2}>
-          <Grid item xs={4}>
-            <Typography variant="p" sx={{ fontSize: "18px" }}>
-              {member.name}
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="p" sx={{ fontSize: "18px" }}>
-              {member.titleShort}
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="p" sx={{ fontSize: "18px" }} component="a">
-              {member.email}
-            </Typography>
-          </Grid>
-        </Grid>
-      ))}
+      <table style={{ width: "100%" }}>
+        <tbody>
+          {staffMembers.map((member) => (
+            <tr>
+              <td style={{ padding: "7px 2px" }}>
+                <Typography
+                  variant="p"
+                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                >
+                  {member.name}
+                </Typography>
+              </td>
+              <td>
+                <Typography
+                  variant="p"
+                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                >
+                  {member.titleShort}
+                </Typography>
+              </td>
+              <td>
+                <Typography
+                  variant="p"
+                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                  component="a"
+                >
+                  {member.email}
+                </Typography>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
