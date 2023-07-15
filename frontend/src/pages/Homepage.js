@@ -32,6 +32,7 @@ export default function Homepage() {
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
+
       <Accreditations />
     </>
   );

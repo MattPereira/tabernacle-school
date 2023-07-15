@@ -17,27 +17,27 @@ export default function About() {
       <Showcase title="About" image={aboutShowcase} />
       <PageNav
         sections={[
+          "History",
           "Faculty",
-          "Gift Program",
-          "Live Program",
           "Values",
           "Vision",
-          "History",
+          "Live Program",
+          "Gift Program",
         ]}
       />
-      <Faculty />
-      <GiftProgram />
-      <LiveProgram />
-      <Vision />
-      <Values />
       <History />
+      <Faculty />
+      <Values />
+      <Vision />
+      <LiveProgram />
+      <GiftProgram />
     </div>
   );
 }
 
 function History() {
   return (
-    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8 }}>
       <Container>
         <SectionTitle title="History" />
         <Box sx={{ mb: 3 }}>

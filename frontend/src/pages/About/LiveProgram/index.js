@@ -1,17 +1,23 @@
-import { Tab, Tabs } from "react-bootstrap";
-import { Container, Typography, Box } from "@mui/material";
+// prettier-ignore
+import { Container, Typography, Box, Tabs, Tab, Grid, Table, TableBody, TableCell, TableRow } from "@mui/material";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import responsibleImg from "../../../assets/images/about/live/responsible.jpg";
 import respectfulImg from "../../../assets/images/about/live/respectful.jpg";
 import compassionateImg from "../../../assets/images/about/live/compassionate.jpg";
 import cooperativeImg from "../../../assets/images/about/live/cooperative.jpg";
 import courageousImg from "../../../assets/images/about/live/courageous.jpg";
+import PropTypes from "prop-types";
+import * as React from "react";
 
-import Trait from "./Trait";
+// import Trait from "./Trait";
 import SectionTitle from "../../../components/SectionTitle";
 
-const characteristics = {
-  Responsible: {
+const characterList = [
+  {
+    title: "Responsible",
     image: responsibleImg,
     adjectives: {
       Industrious: "Getting your work done",
@@ -27,7 +33,8 @@ const characteristics = {
       Resistance: "Resisting evil and doing wrong",
     },
   },
-  Respectful: {
+  {
+    title: "Respectful",
     image: respectfulImg,
     adjectives: {
       Polite: "Well mannered and honoring in your attitude",
@@ -42,7 +49,8 @@ const characteristics = {
       Disciplined: "Keeping the rules and doing right",
     },
   },
-  Compassionate: {
+  {
+    title: "Compassionate",
     image: compassionateImg,
     adjectives: {
       Caring: "Kind and considerate",
@@ -57,7 +65,8 @@ const characteristics = {
       Selfless: "Sacrficing to help others",
     },
   },
-  Cooperative: {
+  {
+    title: "Cooperative",
     image: cooperativeImg,
     adjectives: {
       Obedient: "Follow instructions carefully",
@@ -72,7 +81,8 @@ const characteristics = {
       Patient: "Bearing difficult things calmly without complaining",
     },
   },
-  Courageous: {
+  {
+    title: "Courageous",
     image: courageousImg,
     adjectives: {
       Determined: "To know Jesus and make Him known",
@@ -81,18 +91,24 @@ const characteristics = {
       Disciplined: "Doing the right thing",
       Thinking: "Understand logical consequences of choices",
       Vigilant: "Watchful about personal behavior",
-      Thoughtful: "Able to discern appropriate friendships",
       Brave: "Willing to stand alone for their convictions",
       Decisive: "Able to make good choices quickly",
-      Trustworthy: "Very dependable",
-      Controlled: "Able to keep their spirit under control",
       Reliable: "Following through on commitments",
       Focused: "Willingly follow Jesus and obeys Him",
     },
   },
-};
+];
 
-const LiveProgram = () => {
+export default function LiveProgram() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Live Program" />
@@ -114,31 +130,112 @@ const LiveProgram = () => {
           </Typography>
         </Box>
 
-        <div id="live-tabs">
+        <Box
+          sx={{
+            maxWidth: "100%",
+            bgcolor: "background.paper",
+          }}
+        >
           <Tabs
-            defaultActiveKey="Responsible"
-            id="uncontrolled-tab-example"
-            className="mb-3"
-            justify
-            variant="pills"
+            value={value}
+            onChange={handleChange}
+            variant={isSmallScreen ? "scrollable" : "standard"}
+            // scrollButtons
+            // allowScrollButtonsMobile
+            centered={!isSmallScreen}
+            aria-label="scrollable auto tabs example"
+            sx={{ mb: { xs: 0, md: 3 } }}
           >
-            {Object.entries(characteristics).map((characteristic, index) => (
+            {characterList.map((item) => (
               <Tab
-                eventKey={characteristic[0]}
-                title={characteristic[0]}
-                key={characteristic[0]}
-              >
-                <Trait
-                  image={characteristic[1].image}
-                  adjectives={characteristic[1].adjectives}
-                />
-              </Tab>
+                key={item.title}
+                label={item.title}
+                sx={{
+                  fontFamily: "Didact Gothic",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              />
             ))}
           </Tabs>
-        </div>
+          {characterList.map((item, index) => (
+            <CustomTabPanel value={value} index={index} key={item.title}>
+              <Trait image={item.image} adjectives={item.adjectives} />
+            </CustomTabPanel>
+          ))}
+        </Box>
       </Container>
     </Box>
   );
+}
+
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box>{children}</Box>}
+    </div>
+  );
+}
+
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
-export default LiveProgram;
+function Trait({ image, adjectives }) {
+  return (
+    <Grid container spacing={4} alignItems="center">
+      <Grid item xs={12} md={5}>
+        <Box sx={{ height: "100%", overflow: "hidden", p: { xs: 0, md: 3 } }}>
+          <Box
+            component="img"
+            src={image}
+            sx={{
+              display: { xs: "none", md: "block" },
+              height: "100%",
+              width: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              borderRadius: "10px",
+            }}
+            alt="responsible children reading books"
+          />
+        </Box>
+      </Grid>
+      <Grid item xs={12} md={7}>
+        <Table>
+          <TableBody>
+            {Object.entries(adjectives).map((adjective, index) => (
+              <TableRow key={adjective[0]}>
+                <TableCell
+                  sx={{
+                    fontFamily: "didact gothic",
+                    fontSize: "18px",
+                    p: 1,
+                    fontWeight: "bold",
+                  }}
+                >
+                  {adjective[0]}
+                </TableCell>
+                <TableCell
+                  sx={{ fontFamily: "didact gothic", fontSize: "18px", p: 1 }}
+                >
+                  {adjective[1]}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Grid>
+    </Grid>
+  );
+}

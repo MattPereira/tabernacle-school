@@ -238,7 +238,7 @@ function StaffDirectory() {
       <table style={{ width: "100%" }}>
         <tbody>
           {staffMembers.map((member) => (
-            <tr>
+            <tr key={member.name}>
               <td style={{ padding: "7px 2px" }}>
                 <Typography
                   variant="p"

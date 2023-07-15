@@ -3,6 +3,8 @@ import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import SectionTitle from "../../components/SectionTitle";
 import admissionsShowcase from "../../assets/images/showcase/admissions.jpg";
+import tourImg from "../../assets/images/about/gift/display.jpg";
+
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
@@ -75,9 +77,16 @@ function ScheduleTourForm() {
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Schedule Tour" />
       <Container>
-        <Grid container sx={{ justifyContent: "center" }}>
-          <Grid item xs={12} md={8}>
-            <Box sx={{ mb: 5 }}>
+        <Grid container spacing={4}>
+          <Grid item xs={12} lg={6}>
+            <Box
+              component="img"
+              src={tourImg}
+              sx={{ width: "100%", borderRadius: "10px" }}
+            />
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <Box sx={{ mb: 3 }}>
               <Typography variant="p">
                 Request a tour of our campus by filling out the form below or
                 calling us at <a href="tel:9256859169">925.685.9169</a>
