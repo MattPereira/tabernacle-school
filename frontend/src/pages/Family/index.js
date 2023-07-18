@@ -3,7 +3,6 @@ import PageNav from "../../components/PageNav";
 import Information from "./Information";
 import familyShowcase from "../../assets/images/showcase/family.jpg";
 
-import { useTheme } from "@mui/material/styles";
 import SectionTitle from "../../components/SectionTitle";
 
 // Services
@@ -13,29 +12,33 @@ import facts from "../../assets/images/family/facts-logo.png";
 
 // Forms
 import ComputerIcon from "@mui/icons-material/Computer";
+import { ReactComponent as Computer } from "../../assets/svgs/computer.svg";
 import PedalBikeIcon from "@mui/icons-material/PedalBike";
 import MedicalServicesOutlinedIcon from "@mui/icons-material/MedicalServicesOutlined";
 import SportsFootballOutlinedIcon from "@mui/icons-material/SportsFootballOutlined";
 
-import { Container, Grid, Paper, Box, Link, Typography } from "@mui/material";
+import { Container, Grid, Paper, Box, Typography, Icon } from "@mui/material";
 
 export default function Family() {
   return (
     <div>
       <Showcase title="Family" image={familyShowcase} />
-      <PageNav sections={["Information", "Services", "Forms", "Donations"]} />
+      <PageNav
+        sections={["Information", "Forms", "Philanthropy", "Services"]}
+      />
       <Information />
-      <Services />
       <Forms />
       <AmazonSmile />
+
+      <Services />
     </div>
   );
 }
 
 const Services = () => {
-  const resources = [
+  const services = [
     {
-      title: "FACTS",
+      title: "Facts Management",
       description:
         "Facts provides tools and solutions to private K-12 schools that elevate the education experience for administrators, teachers, and families.",
       image: facts,
@@ -57,53 +60,47 @@ const Services = () => {
     },
   ];
 
-  const theme = useTheme();
-
   return (
     <Box sx={{ pt: 8, pb: 12, bgcolor: "background.alternate" }}>
       <SectionTitle title="Services" />
       <Container>
         <Grid container spacing={4}>
-          {resources.map((resource) => (
+          {services.map((resource) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={resource.title}>
-              <Link
-                href={resource.url}
-                style={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Paper
+                elevation={0}
+                sx={{
+                  borderRadius: "30px",
+                  height: "100%",
+                }}
               >
-                <Paper
-                  elevation={0}
+                <Box
                   sx={{
-                    borderRadius: "30px",
-                    height: "100%",
-                    "&:hover": {
-                      border: `5px solid ${theme.palette.primary.light}`,
-                    },
+                    height: "150px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    p: 5,
                   }}
                 >
                   <Box
-                    sx={{
-                      height: "150px",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      p: 5,
-                    }}
-                  >
-                    <Box
-                      component="img"
-                      src={resource.image}
-                      sx={{ width: "100%" }}
-                      alt=""
-                    />
+                    component="img"
+                    src={resource.image}
+                    sx={{ width: "100%" }}
+                    alt=""
+                  />
+                </Box>
+
+                <Box sx={{ p: 3 }}>
+                  <Box sx={{ mb: 1 }}>
+                    <Typography variant="h6" component="a" href={resource.url}>
+                      {resource.title}
+                    </Typography>
                   </Box>
 
-                  <Box sx={{ p: 3 }}>
-                    <Typography variant="p">{resource.description}</Typography>
-                  </Box>
-                </Paper>
-              </Link>
+                  <Typography variant="p">{resource.description}</Typography>
+                </Box>
+              </Paper>
             </Grid>
           ))}
         </Grid>
@@ -115,9 +112,15 @@ const Services = () => {
 const Forms = () => {
   const formData = [
     {
-      name: "Technology Agreement",
-      icon: <ComputerIcon fontSize="large" sx={{ fontSize: "55px" }} />,
+      name: "Technology",
+      icon: <Icon component={Computer} sx={{ fontSize: "55px" }} />,
       url: "https://docs.google.com/document/d/1UG-KgfmIjsgstryN86A6uzKw59r_twLPAP74-3GKGvU/edit?usp=sharing",
+    },
+    {
+      name: "Chromebook",
+      icon: <ComputerIcon fontSize="large" sx={{ fontSize: "55px" }} />,
+
+      url: "https://drive.google.com/file/d/1Go5863um_3eoj--WKEyZcSI_HSNQTeHp/view?usp=sharing",
     },
     {
       name: "Bicycle & Walk",
@@ -142,12 +145,12 @@ const Forms = () => {
   ];
 
   return (
-    <Box sx={{ py: 8 }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Forms" />
       <Container>
-        <Grid container>
+        <Grid container justifyContent="space-around">
           {formData.map((item) => (
-            <Grid key={item.name} item xs={12} md={6} lg={3} sx={{ mb: 5 }}>
+            <Grid key={item.name} item xs={12} md={6} lg={2} sx={{ mb: 5 }}>
               <Typography
                 component="a"
                 href={item.url}
@@ -163,7 +166,7 @@ const Forms = () => {
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   {item.icon}
                 </Box>
-                <Box sx={{ ml: 1 }}>{item.name}</Box>
+                <Box>{item.name}</Box>
               </Typography>
             </Grid>
           ))}
@@ -175,8 +178,8 @@ const Forms = () => {
 
 const AmazonSmile = () => {
   return (
-    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
-      <SectionTitle title="Donations" />
+    <Box sx={{ py: 8 }}>
+      <SectionTitle title="Philanthropy" />
       <Container>
         <div id="amazonSmile">
           {/* <div className="d-flex justify-content-center mb-5">

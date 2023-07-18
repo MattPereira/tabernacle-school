@@ -54,7 +54,7 @@ const Orientation = () => {
                   width="1000"
                   src="https://www.youtube.com/embed/kS7yJQ6MwEc"
                   frameBorder="0"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </Col>

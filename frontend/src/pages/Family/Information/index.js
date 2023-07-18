@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SectionTitle from "../../../components/SectionTitle";
 import { Container, Box, Typography, Grid, Icon } from "@mui/material";
 
+// https://remixicon.com/
 import { ReactComponent as Handbook } from "../../../assets/svgs/handbook.svg";
 import { ReactComponent as Uniform } from "../../../assets/svgs/uniform.svg";
 import { ReactComponent as Parent } from "../../../assets/svgs/parent.svg";

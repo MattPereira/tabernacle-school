@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 // faculty slideshow
-import { Carousel, Row, Col } from "react-bootstrap";
+import Carousel from "react-material-ui-carousel";
 import slide1 from "../../../assets/images/about/slides/slide1.jpg";
 import slide2 from "../../../assets/images/about/slides/slide2.jpg";
 import slide3 from "../../../assets/images/about/slides/slide3.jpg";
@@ -35,40 +35,66 @@ export default function Faculty() {
 
 const Slides = () => {
   return (
-    <div className="mb-5">
-      <Carousel controls={false} indicators={false} fade>
-        <Carousel.Item>
-          <Row className="g-0">
-            <Col md={6}>
-              <img className="img-fluid" src={slide1} alt="First slide" />
-            </Col>
-            <Col md={6} className="d-none d-md-flex">
-              <img className="img-fluid" src={slide6} alt="First slide" />
-            </Col>
-          </Row>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Row className="g-0">
-            <Col md={6}>
-              <img className="img-fluid" src={slide2} alt="First slide" />
-            </Col>
-            <Col md={6} className="d-none d-md-flex">
-              <img className="img-fluid" src={slide3} alt="First slide" />
-            </Col>
-          </Row>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Row className="g-0">
-            <Col md={6}>
-              <img className="img-fluid" src={slide4} alt="First slide" />
-            </Col>
-            <Col md={6} className="d-none d-md-flex">
-              <img className="img-fluid" src={slide5} alt="First slide" />
-            </Col>
-          </Row>
-        </Carousel.Item>
+    <Box sx={{ mb: 5 }}>
+      <Carousel indicators={false} interval={7000} duration={1500}>
+        <Grid container>
+          <Grid item md={6}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide1}
+              alt="First slide"
+            />
+          </Grid>
+          <Grid item md={6} sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide6}
+              alt="First slide"
+            />
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item md={6}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide2}
+              alt="First slide"
+            />
+          </Grid>
+          <Grid item md={6} sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide3}
+              alt="First slide"
+            />
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item md={6}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide4}
+              alt="First slide"
+            />
+          </Grid>
+          <Grid item md={6} sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              component="img"
+              sx={{ width: "100%" }}
+              src={slide5}
+              alt="First slide"
+            />
+          </Grid>
+        </Grid>
       </Carousel>
-    </div>
+    </Box>
   );
 };
 

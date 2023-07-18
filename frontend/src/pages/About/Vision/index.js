@@ -1,4 +1,3 @@
-// import { Carousel } from "react-bootstrap";
 import { Container, Box, Grid, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 
@@ -73,7 +72,7 @@ const Vision = () => {
           indicators={false}
           interval={7000}
           duration={1500}
-          style={{ position: "relative" }}
+          // style={{ position: "relative" }}
         >
           {visionSlides.map((slide, index) => (
             <Grid
