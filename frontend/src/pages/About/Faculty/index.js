@@ -32,8 +32,33 @@ export default function Faculty() {
     </Box>
   );
 }
+const images = [slide1, slide2, slide3, slide4, slide5, slide6];
 
 const Slides = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const preLoadImages = async () => {
+      const promises = images.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+
+    preLoadImages();
+  }, []);
+
+  if (!imagesLoaded) {
+    return null; // or return a placeholder/spinner
+  }
+
   return (
     <Box sx={{ mb: 5 }}>
       <Carousel indicators={false} interval={7000} duration={1500}>
