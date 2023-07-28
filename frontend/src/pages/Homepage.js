@@ -6,7 +6,7 @@ import useTheme from "@mui/material/styles/useTheme";
 
 // Icons for CurrentInfoAlerts
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { ReactComponent as Parent } from "../assets/svgs/parent.svg";
 
 // Hero Images For Slideshow
@@ -59,7 +59,7 @@ function CurrentInfoAlerts() {
             color: "black",
           }}
         >
-          <NotificationsNoneOutlinedIcon sx={{ fontSize: "30px", pb: 0.5 }} />
+          <SchoolOutlinedIcon sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }} />
           Hiring Middle School Teachers
         </Typography>
       </Grid>
