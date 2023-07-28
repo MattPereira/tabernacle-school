@@ -25,27 +25,28 @@ const Information = () => {
       icon: <PaymentOutlinedIcon sx={{ fontSize: "55px" }} />,
       path: "/admissions#Tuition",
     },
-
     {
-      title: "Calendar",
-      icon: <CalendarMonthOutlinedIcon sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing",
+      title: "Parent Orientation",
+      icon: <Icon component={Parent} sx={{ fontSize: "55px" }} />,
+      url: "https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view?usp=sharing",
     },
+
     {
       title: "Uniform Standards",
       icon: <Icon component={Uniform} sx={{ fontSize: "55px" }} />,
       url: "https://drive.google.com/file/d/1GLoienR9b0TgNC08Dga5hybKXfPp9hgs/view?usp=sharing",
     },
     {
+      title: "Calendar",
+      icon: <CalendarMonthOutlinedIcon sx={{ fontSize: "55px" }} />,
+      url: "https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing",
+    },
+    {
       title: "Facts Help",
       icon: <HelpOutlineOutlinedIcon sx={{ fontSize: "55px" }} />,
       path: "/family/facts",
     },
-    {
-      title: "Parent Orientation",
-      icon: <Icon component={Parent} sx={{ fontSize: "55px" }} />,
-      path: "/family/orientation",
-    },
+
     {
       title: "Supply List",
       icon: <InventoryOutlinedIcon sx={{ fontSize: "55px" }} />,

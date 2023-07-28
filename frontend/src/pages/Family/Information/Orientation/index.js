@@ -13,10 +13,12 @@ const Orientation = () => {
           <Row className="justify-content-center">
             <Col xl={6}>
               <p className="lead mb-5">
-                We are excited to have you back on campus for the 2022-2023
+                We are excited to have you back on campus for the 2023-2024
                 school year. No children on campus on parent orientation day
-                please. Meetings will take place in the appropriate student
-                classrooms.
+                please. Meetings will take place in your child's classrooms.
+                Please see the slideshow on the right for highlighted
+                information for the school year. For more information please see
+                the family resource page.
               </p>
               <Table className="table table-bordered bg-white">
                 <thead>

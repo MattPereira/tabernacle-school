@@ -7,7 +7,7 @@ import useTheme from "@mui/material/styles/useTheme";
 // Icons for CurrentInfoAlerts
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import { ReactComponent as Uniform } from "../assets/svgs/uniform.svg";
+import { ReactComponent as Parent } from "../assets/svgs/parent.svg";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -32,7 +32,6 @@ export default function Homepage() {
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
-
       <Accreditations />
     </>
   );
@@ -91,7 +90,7 @@ function CurrentInfoAlerts() {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1GLoienR9b0TgNC08Dga5hybKXfPp9hgs/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view"
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -101,7 +100,7 @@ function CurrentInfoAlerts() {
           }}
         >
           <Icon
-            component={Uniform}
+            component={Parent}
             sx={{
               fontSize: "28px",
               mt: 0.5,
@@ -109,7 +108,7 @@ function CurrentInfoAlerts() {
               pb: 0.3,
             }}
           />
-          Uniform Standards
+          Parent Orientation
         </Typography>
       </Grid>
     </Grid>
