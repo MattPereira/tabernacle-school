@@ -1,51 +1,63 @@
-import Showcase from "../../../../components/Showcase";
+import { Table } from "react-bootstrap";
 
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { Typography, Box, Container, Grid } from "@mui/material";
 
 const Discipline = () => {
   return (
     <>
-      <Showcase title="Jr High Discipline" />
-      <section className="py-5">
-        <Container className="py-5">
-          <p className="lead mb-5">
-            The demerit system is a guide for discipline in the sixth through
-            eighth grades at Tabernacle School. The positive side of discipline
-            is stressed through our Character Counts program. In order to
-            maintain the highest standards of character and academic excellence
-            at all times, the administration expects students to abide by
-            standards of respectfulness and responsibility. Failure to abide by
-            the rules and regulations set forth in the Tabernacle Parent/Student
-            Handbook will result in the issuing of demerits or other
-            disciplinary actions.
-          </p>
-          <Row>
-            <Col lg={6}>
-              <h4 className="fw-bold">Demerit Policy and Procedure</h4>
-              <p>
-                The goal of our discipline policy is to keep students
-                accountable for their behavior and to promote an environment of
-                cooperation and learning. A student will receive a demerit for
-                any disrespectful, defiant, or irresponsible behavior. Demerits
-                accrue each school year from the start of August until the end
-                of the school year. If a student receives a demerit then the
-                teacher or administrator issuing the demerit will fill out a
-                behavior report in FACTS and the parents will be notified of the
-                infraction and the number of demerits issued.
-              </p>
-              <p>
-                Demerits serve as a record of a student’s behavior and a
-                communication tool for parents to aid in the character
-                development of their child. Students will be given various
-                amounts of demerits based on the type and severity of the
-                behavior. Demerits may be given at the discretion of the
-                administration for irregular disciplinary scenarios not covered
-                by the list below. Students can be held responsible for their
-                actions away from campus, and may be asked to withdraw from
-                Tabernacle School at the administration’s request. Demerits may
-                be doubled or otherwise increased for successive violations or
-                when the offense is deliberate and/or defiant.
-              </p>
+      <Box sx={{ py: 10 }}>
+        <Typography variant="h2" align="center">
+          Middle School Discipline
+        </Typography>
+      </Box>
+      <section>
+        <Container>
+          <Box sx={{ mb: 5 }}>
+            <Typography variant="p">
+              The demerit system is a guide for discipline in the sixth through
+              eighth grades at Tabernacle School. The positive side of
+              discipline is stressed through our Character Counts program. In
+              order to maintain the highest standards of character and academic
+              excellence at all times, the administration expects students to
+              abide by standards of respectfulness and responsibility. Failure
+              to abide by the rules and regulations set forth in the Tabernacle
+              Parent/Student Handbook will result in the issuing of demerits or
+              other disciplinary actions.
+            </Typography>
+          </Box>
+          <Grid container spacing={6}>
+            <Grid item lg={6}>
+              <Box sx={{ mb: 5 }}>
+                <Typography variant="h4" gutterBottom>
+                  Demerit Policy and Procedure
+                </Typography>
+                <Typography variant="p">
+                  The goal of our discipline policy is to keep students
+                  accountable for their behavior and to promote an environment
+                  of cooperation and learning. A student will receive a demerit
+                  for any disrespectful, defiant, or irresponsible behavior.
+                  Demerits accrue each school year from the start of August
+                  until the end of the school year. If a student receives a
+                  demerit then the teacher or administrator issuing the demerit
+                  will fill out a behavior report in FACTS and the parents will
+                  be notified of the infraction and the number of demerits
+                  issued.
+                </Typography>
+                <Typography variant="p">
+                  Demerits serve as a record of a student’s behavior and a
+                  communication tool for parents to aid in the character
+                  development of their child. Students will be given various
+                  amounts of demerits based on the type and severity of the
+                  behavior. Demerits may be given at the discretion of the
+                  administration for irregular disciplinary scenarios not
+                  covered by the list below. Students can be held responsible
+                  for their actions away from campus, and may be asked to
+                  withdraw from Tabernacle School at the administration’s
+                  request. Demerits may be doubled or otherwise increased for
+                  successive violations or when the offense is deliberate and/or
+                  defiant.
+                </Typography>
+              </Box>
               <Table bordered>
                 <thead>
                   <tr>
@@ -105,9 +117,9 @@ const Discipline = () => {
                   </tr>
                 </tbody>
               </Table>
-            </Col>
-            <Col lg={6}>
-              <Table bordered className="text-center">
+            </Grid>
+            <Grid item lg={6}>
+              <Table bordered>
                 <thead>
                   <tr className="table-dark text-white">
                     <th>Infraction</th>
@@ -265,8 +277,8 @@ const Discipline = () => {
                   </tr>
                 </tbody>
               </Table>
-            </Col>
-          </Row>
+            </Grid>
+          </Grid>
 
           <div className="row justify-content-center mt-5">
             <div className="col-md-7"></div>

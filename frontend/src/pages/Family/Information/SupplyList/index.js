@@ -1,17 +1,27 @@
-import Showcase from "../../../../components/Showcase";
-
 import { Container, Row, Col, Accordion } from "react-bootstrap";
+import { Typography, Box } from "@mui/material";
 
 const Orientation = () => {
   return (
     <>
-      <Showcase title="Supply List" />
-      <section className="py-5">
-        <Container className="py-5">
-          <h3 className="text-center mb-5">
-            <u>DO NOT BRING:</u> iPods, tablets, game boys, cell phones, toys,
-            or mechanical pencils
-          </h3>
+      <Box sx={{ py: 5 }}>
+        <Typography variant="h2" align="center" gutterBottom>
+          Supply Lists
+        </Typography>
+      </Box>
+
+      <section className="pb-5">
+        <Container className="pb-5">
+          <Box sx={{ textAlign: "center", mb: 5 }}>
+            <Typography
+              variant="p"
+              sx={{ fontSize: { xs: "20px", md: "25px" } }}
+            >
+              <u>DO NOT BRING:</u> iPods, tablets, game boys, cell phones, toys,
+              or mechanical pencils
+            </Typography>
+          </Box>
+
           <Row className="justify-content-center">
             <Col lg={8}>
               <Accordion>
