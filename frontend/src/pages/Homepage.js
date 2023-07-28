@@ -90,7 +90,7 @@ function CurrentInfoAlerts() {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view"
+          href="https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view?usp=sharing"
           sx={{
             display: "flex",
             justifyContent: "center",
