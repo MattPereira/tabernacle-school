@@ -114,33 +114,28 @@ const Forms = () => {
     {
       name: "Technology",
       icon: <Icon component={Computer} sx={{ fontSize: "55px" }} />,
-      url: "https://docs.google.com/document/d/1UG-KgfmIjsgstryN86A6uzKw59r_twLPAP74-3GKGvU/edit?usp=sharing",
+      url: "/pdfs/forms/technology.pdf",
     },
     {
       name: "Chromebook",
-      icon: <ComputerIcon fontSize="large" sx={{ fontSize: "55px" }} />,
+      icon: <ComputerIcon sx={{ fontSize: "55px" }} />,
 
-      url: "https://drive.google.com/file/d/1Go5863um_3eoj--WKEyZcSI_HSNQTeHp/view?usp=sharing",
+      url: "/pdfs/forms/chromebook.pdf",
     },
     {
       name: "Bicycle & Walk",
-      icon: <PedalBikeIcon fontSize="large" sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1CpmlHSZ23FMp4UxCpLKw80nDpNEO6sze/view?usp=sharing",
+      icon: <PedalBikeIcon sx={{ fontSize: "55px" }} />,
+      url: "/pdfs/forms/bicycle-walk.pdf",
     },
     {
       name: "Medication",
-      icon: (
-        <MedicalServicesOutlinedIcon
-          fontSize="large"
-          sx={{ fontSize: "55px" }}
-        />
-      ),
-      url: "https://drive.google.com/file/d/1EIfpUITQCQpeMKXpzInPcFAO5cdHzA4X/view?usp=sharing",
+      icon: <MedicalServicesOutlinedIcon sx={{ fontSize: "55px" }} />,
+      url: "/pdfs/forms/medication.pdf",
     },
     {
       name: "Sports Physical",
       icon: <SportsFootballOutlinedIcon sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1XMxpVPuQXgngYSy_SeEpGvOZ2EoBA7RL/view?usp=sharing",
+      url: "/pdfs/forms/sports.pdf",
     },
   ];
 

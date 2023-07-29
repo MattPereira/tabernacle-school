@@ -69,7 +69,7 @@ function CurrentInfoAlerts() {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view?usp=sharing"
+          href="/pdfs/summer-daycare.pdf"
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -90,7 +90,7 @@ function CurrentInfoAlerts() {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view?usp=sharing"
+          href="/pdfs/information/parent-orientation.pdf"
           sx={{
             display: "flex",
             justifyContent: "center",

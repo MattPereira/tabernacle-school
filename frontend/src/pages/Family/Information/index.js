@@ -18,7 +18,7 @@ const Information = () => {
     {
       title: "Handbook",
       icon: <Icon component={Handbook} sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1BERNJUWaKWVnerCK0cIbFh9ZVib4xSt0/view?usp=sharing",
+      url: "/pdfs/information/handbook.pdf",
     },
     {
       title: "Tuition",
@@ -28,13 +28,13 @@ const Information = () => {
     {
       title: "Parent Orientation",
       icon: <Icon component={Parent} sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1ZcCrezQcslFavDoUf0ocuTSZqv_9-Ftu/view?usp=sharing",
+      url: "/pdfs/information/parent-orientation.pdf",
     },
 
     {
       title: "Uniform Standards",
       icon: <Icon component={Uniform} sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1GLoienR9b0TgNC08Dga5hybKXfPp9hgs/view?usp=sharing",
+      url: "/pdfs/information/uniform.pdf",
     },
     {
       title: "Calendar",
