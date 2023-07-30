@@ -49,12 +49,28 @@ export default function ParentOrientation() {
               </table>
             </Grid>
           </Grid>
-          <iframe
-            title="orientation"
-            src="/pdfs/information/parent-orientation.pdf"
-            width="100%"
-            height="700px"
-          ></iframe>
+          <div
+            style={{
+              position: "relative",
+              height: 0,
+              overflow: "hidden",
+              paddingBottom: "56.25%", // For an aspect ratio of 16:9
+              maxWidth: "100%",
+            }}
+          >
+            <iframe
+              title="parent orientation"
+              src="/pdfs/information/parent-orientation.pdf"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            ></iframe>
+          </div>
         </Container>
       </section>
     </>
