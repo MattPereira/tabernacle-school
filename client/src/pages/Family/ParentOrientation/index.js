@@ -31,19 +31,19 @@ export default function ParentOrientation() {
                 <tbody>
                   <tr>
                     <th scope="row">10:00 AM</th>
-                    <td>KINDERGARTEN and TK</td>
+                    <td>Kindergarten & TK</td>
                   </tr>
                   <tr>
                     <th scope="row">11:00 AM</th>
-                    <td>FIRST AND SECOND GRADE</td>
+                    <td>1st - 2nd Grades</td>
                   </tr>
                   <tr>
                     <th scope="row">1:00 PM</th>
-                    <td colSpan="2">THIRD, FOURTH, AND FIFTH GRADE</td>
+                    <td colSpan="2">3rd - 5th Grades</td>
                   </tr>
                   <tr>
                     <th scope="row">2:00 PM</th>
-                    <td colSpan="2">SIXTH, SEVENTH AND EIGHTH GRADE</td>
+                    <td colSpan="2">6th - 8th Grade</td>
                   </tr>
                 </tbody>
               </table>
