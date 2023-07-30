@@ -16,7 +16,6 @@ import Connect from "./pages/Connect";
 import Family from "./pages/Family";
 
 /***** The "/family/information" Pages */
-import Orientation from "./pages/Family/Information/Orientation";
 import FactsHelp from "./pages/Family/Information/FactsHelp";
 import SupplyList from "./pages/Family/Information/SupplyList";
 import Discipline from "./pages/Family/Information/Discipline";
@@ -38,7 +37,6 @@ function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/connect" element={<Connect />} />
-            <Route path="/family/orientation" element={<Orientation />} />
             <Route path="/family/facts" element={<FactsHelp />} />
             <Route path="/family/supply-list" element={<SupplyList />} />
             <Route path="/family/discipline" element={<Discipline />} />

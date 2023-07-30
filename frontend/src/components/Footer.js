@@ -158,7 +158,10 @@ const Footer = () => {
                   </StyledIconButton>
                 </Grid>
                 <Grid item>
-                  <StyledIconButton component={Link} to="/campus#calendar">
+                  <StyledIconButton
+                    component="a"
+                    href="/pdfs/summer-daycare.pdf"
+                  >
                     <CalendarMonthIcon />
                   </StyledIconButton>
                 </Grid>

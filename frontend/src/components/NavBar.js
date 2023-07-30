@@ -49,8 +49,7 @@ const topNavItems = [
   {
     text: "Calendar",
     icon: <CalendarTodayIcon fontSize="small" />,
-    path: "",
-    url: "https://drive.google.com/file/d/12j65dFjKT7rlKiUFz6axUjdY5afTwYW0/view",
+    url: "/pdfs/summer-daycare.pdf",
   },
   {
     text: "Employment",

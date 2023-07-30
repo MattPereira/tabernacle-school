@@ -39,7 +39,7 @@ const Information = () => {
     {
       title: "Calendar",
       icon: <CalendarMonthOutlinedIcon sx={{ fontSize: "55px" }} />,
-      url: "https://drive.google.com/file/d/1GZ1bmXDNX4m3_PeZMA5e6ley9Z3n_RjU/view?usp=sharing",
+      url: "/pdfs/summer-daycare.pdf",
     },
     {
       title: "Facts Help",
