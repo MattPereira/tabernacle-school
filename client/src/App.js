@@ -5,7 +5,7 @@ import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-/***** The "main" pages accessible throught the navbar *****/
+/***** The main pages accessible throught the navbar *****/
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
@@ -15,10 +15,11 @@ import Campus from "./pages/Campus";
 import Connect from "./pages/Connect";
 import Family from "./pages/Family";
 
-/***** The "/family/information" Pages */
-import FactsHelp from "./pages/Family/Information/FactsHelp";
-import SupplyList from "./pages/Family/Information/SupplyList";
-import Discipline from "./pages/Family/Information/Discipline";
+/***** The pages accessible through family page's information section */
+import ParentOrientation from "./pages/Family/ParentOrientation";
+import FactsHelp from "./pages/Family/FactsHelp";
+import SupplyList from "./pages/Family/SupplyList";
+import Discipline from "./pages/Family/Discipline";
 
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
@@ -37,6 +38,10 @@ function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/connect" element={<Connect />} />
+            <Route
+              path="/family/parent-orientation"
+              element={<ParentOrientation />}
+            />
             <Route path="/family/facts" element={<FactsHelp />} />
             <Route path="/family/supply-list" element={<SupplyList />} />
             <Route path="/family/discipline" element={<Discipline />} />

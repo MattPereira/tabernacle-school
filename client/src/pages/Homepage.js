@@ -1,13 +1,14 @@
 import { HashLink } from "react-router-hash-link";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
-import { Box, Container, Typography, Grid, Button, Icon } from "@mui/material";
+import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
+import { Link } from "react-router-dom";
 
 // Icons for CurrentInfoAlerts
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import { ReactComponent as Parent } from "../assets/svgs/parent.svg";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 // Hero Images For Slideshow
 import showcase1 from "../assets/images/showcase/about.jpg";
@@ -87,10 +88,8 @@ function CurrentInfoAlerts() {
       <Grid item>
         <Typography
           variant="p"
-          component="a"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/pdfs/information/parent-orientation.pdf"
+          component={Link}
+          to="/family/parent-orientation"
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -99,8 +98,7 @@ function CurrentInfoAlerts() {
             color: "black",
           }}
         >
-          <Icon
-            component={Parent}
+          <InfoOutlinedIcon
             sx={{
               fontSize: "28px",
               mt: 0.5,

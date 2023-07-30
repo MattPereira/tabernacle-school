@@ -1,4 +1,4 @@
-import facts from "../../../../assets/images/family/facts-help.png";
+import facts from "../../../assets/images/family/facts-help.png";
 
 import { Typography, Container, Grid, Box } from "@mui/material";
 
