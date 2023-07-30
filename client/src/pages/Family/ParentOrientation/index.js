@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Typography, Container, Grid } from "@mui/material";
+import { Typography, Container, Grid, Box, Button } from "@mui/material";
 
 export default function ParentOrientation() {
   return (
@@ -49,28 +49,28 @@ export default function ParentOrientation() {
               </table>
             </Grid>
           </Grid>
-          <div
-            style={{
-              position: "relative",
-              height: 0,
-              overflow: "hidden",
-              paddingBottom: "56.25%", // For an aspect ratio of 16:9
-              maxWidth: "100%",
+          <Box sx={{ display: { xs: "none", lg: "block" } }}>
+            <iframe
+              title="orientation"
+              src="/pdfs/information/parent-orientation.pdf"
+              width="100%"
+              height="700px"
+            ></iframe>
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "flex", lg: "none" },
+              justifyContent: "center",
             }}
           >
-            <iframe
-              title="parent orientation"
-              src="/pdfs/information/parent-orientation.pdf"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: "none",
-              }}
-            ></iframe>
-          </div>
+            <Button
+              variant="contained"
+              href="/pdfs/information/parent-orientation.pdf"
+              target="_blank"
+            >
+              See Slideshow
+            </Button>
+          </Box>
         </Container>
       </section>
     </>
