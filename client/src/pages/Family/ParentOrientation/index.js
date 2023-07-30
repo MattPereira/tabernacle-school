@@ -49,20 +49,7 @@ export default function ParentOrientation() {
               </table>
             </Grid>
           </Grid>
-          <Box sx={{ display: { xs: "none", lg: "block" } }}>
-            <iframe
-              title="orientation"
-              src="/pdfs/information/parent-orientation.pdf"
-              width="100%"
-              height="700px"
-            ></iframe>
-          </Box>
-          <Box
-            sx={{
-              display: { xs: "flex", lg: "none" },
-              justifyContent: "center",
-            }}
-          >
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 5 }}>
             <Button
               variant="contained"
               href="/pdfs/information/parent-orientation.pdf"
@@ -70,6 +57,14 @@ export default function ParentOrientation() {
             >
               See Slideshow
             </Button>
+          </Box>
+          <Box sx={{ display: { xs: "none", lg: "block" } }}>
+            <iframe
+              title="orientation"
+              src="/pdfs/information/parent-orientation.pdf"
+              width="100%"
+              height="800px"
+            ></iframe>
           </Box>
         </Container>
       </section>
