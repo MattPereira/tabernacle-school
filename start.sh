@@ -1,3 +1,2 @@
 #!/bin/bash
-vercel dev &
-cd ./backend && npm run develop
+vercel dev 
