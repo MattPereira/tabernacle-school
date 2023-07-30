@@ -3,8 +3,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
   typography: {
     h1: {
-      fontFamily: "Montserrat",
-      fontWeight: "700",
+      fontFamily: "Cubano",
+      letterSpacing: "0.15rem",
     },
     h2: {
       fontFamily: "Copse",

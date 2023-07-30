@@ -1,5 +1,3 @@
-import { Table } from "react-bootstrap";
-
 import { Typography, Box, Container, Grid } from "@mui/material";
 
 const Discipline = () => {
@@ -28,7 +26,7 @@ const Discipline = () => {
           <Grid container spacing={6}>
             <Grid item lg={6}>
               <Box sx={{ mb: 5 }}>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h5" gutterBottom>
                   Demerit Policy and Procedure
                 </Typography>
                 <Typography variant="p">
@@ -58,10 +56,10 @@ const Discipline = () => {
                   defiant.
                 </Typography>
               </Box>
-              <Table bordered>
+              <table className="table table-bordered">
                 <thead>
                   <tr>
-                    <th colspan="2" className="text-center table-dark">
+                    <th colSpan="2" className="text-center table-dark">
                       Levels Of Discipline
                     </th>
                   </tr>
@@ -116,10 +114,10 @@ const Discipline = () => {
                     </td>
                   </tr>
                 </tbody>
-              </Table>
+              </table>
             </Grid>
             <Grid item lg={6}>
-              <Table bordered>
+              <table className="table table-bordered">
                 <thead>
                   <tr className="table-dark text-white">
                     <th>Infraction</th>
@@ -276,7 +274,7 @@ const Discipline = () => {
                     <td>Expulsion</td>
                   </tr>
                 </tbody>
-              </Table>
+              </table>
             </Grid>
           </Grid>
 
