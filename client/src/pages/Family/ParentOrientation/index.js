@@ -54,6 +54,7 @@ export default function ParentOrientation() {
               variant="contained"
               href="/pdfs/information/parent-orientation.pdf"
               target="_blank"
+              sx={{ borderRadius: "30px", px: 3 }}
             >
               See Slideshow
             </Button>
