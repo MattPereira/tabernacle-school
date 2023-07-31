@@ -46,7 +46,13 @@ export default function Tuition() {
                           color: theme.palette.primary.contrastText,
                         }}
                       >
-                        <th colspan="4" className="table-primary">
+                        <th
+                          colspan="4"
+                          style={{
+                            backgroundColor: theme.palette.primary.main,
+                          }}
+                          className="text-white"
+                        >
                           {group["title"]}
                         </th>
                       </tr>
