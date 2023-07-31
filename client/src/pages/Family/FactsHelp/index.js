@@ -13,22 +13,28 @@ const FactsHelp = () => {
           <Grid container alignItems="center" spacing={4}>
             <Grid item lg={6}>
               <Box sx={{ mb: 5 }}>
-                <Typography variant="p">
-                  To log into FACTS (formally known as RenWeb) you will need the
-                  <strong> school code</strong> and an
-                  <strong>
-                    {" "}
-                    email account registered with Tabernacle School
-                  </strong>
-                  .
-                </Typography>
-                <Typography variant="p">
-                  Please provide your email address to the front office before
-                  attempting to login to FACTS.
-                </Typography>
-                <Typography variant="p">
-                  The School District Code is: <strong>TCS-CA</strong>
-                </Typography>
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="p">
+                    To log into FACTS (formally known as RenWeb) you will need
+                    the
+                    <strong> school code</strong> and an
+                    <strong>
+                      {" "}
+                      email account registered with Tabernacle School{" "}
+                    </strong>
+                    .
+                  </Typography>
+                  <Typography variant="p">
+                    Please provide your email address to the front office before
+                    attempting to login to FACTS.
+                  </Typography>
+                </Box>
+
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="p">
+                    The School District Code is: <strong>TCS-CA</strong>
+                  </Typography>
+                </Box>
                 <Typography variant="p">
                   The user name will be your email address as given to the
                   school.
