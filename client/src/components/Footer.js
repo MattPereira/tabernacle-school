@@ -159,7 +159,7 @@ const Footer = () => {
                 <Grid item>
                   <StyledIconButton
                     component="a"
-                    href="/pdfs/summer-daycare.pdf"
+                    href="/pdfs/calendar-23-24.pdf"
                   >
                     <CalendarMonthIcon />
                   </StyledIconButton>

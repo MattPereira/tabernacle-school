@@ -7,9 +7,16 @@ export default function ParentOrientation() {
       <Typography variant="h2" align="center" sx={{ pt: 10 }}>
         Parent Orientation
       </Typography>
+
       <section>
         <Container sx={{ py: 10 }}>
-          <Grid container justifyContent="center" spacing={4} sx={{ mb: 5 }}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}
+            sx={{ mb: 5 }}
+          >
             <Grid item xs={12} md={10} lg={8} xl={6}>
               <Typography variant="p">
                 We are excited to have you back on campus for the 2023-2024
@@ -21,6 +28,9 @@ export default function ParentOrientation() {
               </Typography>
             </Grid>
             <Grid item xs={12} md={10} lg={8} xl={6}>
+              <Typography variant="h5" gutterBottom align="center">
+                August 7th, 2023
+              </Typography>
               <table className="table table-bordered bg-white">
                 <thead>
                   <tr className="table-dark text-white">
