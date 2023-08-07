@@ -6,16 +6,8 @@ import useTheme from "@mui/material/styles/useTheme";
 import { Link } from "react-router-dom";
 
 // Icons for CurrentInfoAlerts
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-
-// Hero Images For Slideshow
-import showcase1 from "../assets/images/showcase/about.jpg";
-import showcase2 from "../assets/images/showcase/admissions.jpg";
-import showcase3 from "../assets/images/showcase/campus.jpg";
-import showcase4 from "../assets/images/showcase/academics.jpg";
-import showcase5 from "../assets/images/showcase/family.jpg";
 
 // Accreditations Image Imports
 import asci from "../assets/images/homepage/acsi.png";
@@ -96,34 +88,61 @@ function CurrentInfoAlerts() {
 }
 
 function LandingShowcase() {
-  const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
+  // const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
   return (
-    <Carousel
-      indicators={false}
-      interval={5000}
-      duration={1500}
-      style={{ position: "relative" }}
-    >
-      {items.map((item, idx) => (
+    <Grid container>
+      <Grid item xs={12} md={6} lg={4}>
         <Box
-          key={idx}
+          sx={{ width: "100%" }}
           component="img"
-          src={item}
-          sx={{
-            width: "100%",
-            objectFit: "cover",
-            height: {
-              xs: "300px",
-              sm: "300px",
-              md: "400px",
-              lg: "500px",
-              xl: "550px",
-            },
-          }}
-          alt="showcase"
+          src="/images/home-showcase-1.jpg"
+          alt="showcase image"
         />
-      ))}
-    </Carousel>
+      </Grid>
+      <Grid item md={6} lg={4} sx={{ display: { xs: "none", md: "flex" } }}>
+        <Box
+          sx={{ width: "100%" }}
+          component="img"
+          src="/images/home-showcase-2.jpg"
+          alt="showcase image"
+        />
+      </Grid>
+      <Grid item lg={4} sx={{ display: { xs: "none", lg: "flex" } }}>
+        <Box
+          sx={{ width: "100%" }}
+          component="img"
+          src="/images/home-showcase-3.jpg"
+          alt="showcase image"
+        />
+      </Grid>
+    </Grid>
+
+    // <Carousel
+    //   indicators={false}
+    //   interval={5000}
+    //   duration={1500}
+    //   style={{ position: "relative" }}
+    // >
+    //   {items.map((item, idx) => (
+    //     <Box
+    //       key={idx}
+    //       component="img"
+    //       src={item}
+    //       sx={{
+    //         width: "100%",
+    //         objectFit: "cover",
+    //         height: {
+    //           xs: "300px",
+    //           sm: "300px",
+    //           md: "400px",
+    //           lg: "500px",
+    //           xl: "550px",
+    //         },
+    //       }}
+    //       alt="showcase"
+    //     />
+    //   ))}
+    // </Carousel>
   );
 }
 
