@@ -174,7 +174,7 @@ function StaffDirectory() {
     async function fetchData() {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?populate=*`
+          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?_sort=id&populate=*`
         );
 
         const { data } = await response.json();

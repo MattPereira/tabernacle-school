@@ -138,7 +138,7 @@ function SelectGrade() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?populate[staff_members][populate][0]=profile_picture`
+          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?_sort=id&populate[staff_members][populate][0]=profile_picture`
         );
 
         setFacultyData(response?.data?.data);
