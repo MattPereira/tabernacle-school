@@ -161,8 +161,10 @@ function SendMessageForm() {
 }
 
 function StaffDirectory() {
+  const DEFAULT_OPTION = "Select Grade";
+
   const [staffData, setStaffData] = useState(null);
-  const [selected, setSelected] = useState("Select Grade");
+  const [selected, setSelected] = useState(DEFAULT_OPTION);
 
   const handleChange = (event) => {
     setSelected(event.target.value);
@@ -178,7 +180,6 @@ function StaffDirectory() {
         const { data } = await response.json();
 
         setStaffData(data);
-        // setSelected("Administration");
       } catch {
         console.log("error");
       }
@@ -190,21 +191,21 @@ function StaffDirectory() {
 
   const staffOptions = staffData.map((group) => group.attributes.name);
 
-  const selectedGroup = selected
-    ? staffData.filter((group) => group.attributes.name === selected)[0]
-    : null;
+  let staffMembers;
+  if (selected !== DEFAULT_OPTION) {
+    const selectedGroup = staffData.filter(
+      (group) => group.attributes.name === selected
+    )[0];
 
-  // We will now check if selectedGroup is defined before accessing its properties
-  const staffMembersData = selectedGroup
-    ? selectedGroup.attributes.staff_members.data
-    : [];
+    const staffMembersData = selectedGroup.attributes.staff_members.data;
 
-  const staffMembers = staffMembersData.map((member) => ({
-    id: member.id,
-    name: member.attributes.name,
-    titleShort: member.attributes.title_short,
-    email: member.attributes.email,
-  }));
+    staffMembers = staffMembersData.map((member) => ({
+      id: member.id,
+      name: member.attributes.name,
+      titleShort: member.attributes.title_short,
+      email: member.attributes.email,
+    }));
+  }
 
   return (
     <div>
@@ -219,6 +220,7 @@ function StaffDirectory() {
           id="faculty-select"
           value={selected}
           onChange={handleChange}
+          variant="standard"
           sx={{
             fontFamily: "didact gothic",
             fontSize: "1.25rem",
@@ -227,7 +229,7 @@ function StaffDirectory() {
           }}
         >
           <MenuItem
-            value="Select Grade"
+            value={DEFAULT_OPTION}
             sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
           >
             Select Grade
@@ -245,7 +247,7 @@ function StaffDirectory() {
         </Select>
       </FormControl>
 
-      {selected !== "Select Grade" ? (
+      {selected !== DEFAULT_OPTION ? (
         <table style={{ width: "100%" }}>
           <tbody>
             {staffMembers.map((member) => (

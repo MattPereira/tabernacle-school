@@ -2,7 +2,7 @@
 import SectionTitle from "../../../components/SectionTitle";
 import { Link } from "react-router-dom";
 // prettier-ignore
-import { Container, Grid, Box, FormControl, Select, MenuItem, Typography } from "@mui/material";
+import { Container, Grid, Box, FormControl, Select, MenuItem, Typography, Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 import { useEffect, useState } from "react";
@@ -124,8 +124,10 @@ const Slides = () => {
 };
 
 function SelectGrade() {
+  const DEFAULT_OPTION = "Select Grade";
+
   const [facultyData, setFacultyData] = useState(null);
-  const [selection, setSelection] = useState(null);
+  const [selection, setSelection] = useState(DEFAULT_OPTION);
   const theme = useTheme();
 
   const handleChange = (event) => {
@@ -140,7 +142,6 @@ function SelectGrade() {
         );
 
         setFacultyData(response?.data?.data);
-        setSelection(response?.data?.data[0].attributes.name);
       } catch (error) {
         console.log(error);
       }
@@ -153,19 +154,22 @@ function SelectGrade() {
 
   const facultyOptions = facultyData.map((group) => group.attributes.name);
 
-  const selectedGroup = facultyData.filter(
-    (group) => group.attributes.name === selection
-  )[0];
+  let staffMembers;
+  if (selection !== DEFAULT_OPTION) {
+    const selectedGroup = facultyData.filter(
+      (group) => group.attributes.name === selection
+    )[0];
 
-  const staffMembersData = selectedGroup.attributes.staff_members.data;
+    const staffMembersData = selectedGroup.attributes.staff_members.data;
 
-  const staffMembers = staffMembersData.map((member) => ({
-    id: member.id,
-    name: member.attributes.name,
-    profilePicture: member.attributes.profile_picture.data.attributes.url,
-    titleShort: member.attributes.title_short,
-    email: member.attributes.email,
-  }));
+    staffMembers = staffMembersData.map((member) => ({
+      id: member.id,
+      name: member.attributes.name,
+      profilePicture: member.attributes.profile_picture.data.attributes.url,
+      titleShort: member.attributes.title_short,
+      email: member.attributes.email,
+    }));
+  }
 
   return (
     <Box>
@@ -179,15 +183,22 @@ function SelectGrade() {
       <FormControl fullWidth variant="standard">
         <Select
           id="faculty-select"
-          value={selection ? selection : facultyOptions[0]}
+          value={selection}
           onChange={handleChange}
           sx={{
             fontFamily: "copse",
             fontSize: "2rem",
             textAlign: "center",
             pb: 1,
+            mb: 3,
           }}
         >
+          <MenuItem
+            value={DEFAULT_OPTION}
+            sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+          >
+            Select Grade
+          </MenuItem>
           {facultyOptions.map((name) => (
             <MenuItem
               key={name}
@@ -201,51 +212,82 @@ function SelectGrade() {
       </FormControl>
 
       <Grid container spacing={4} sx={{ py: 5 }}>
-        {staffMembers.map((member) => (
-          <Grid
-            item
-            key={member.id}
-            xs={12}
-            sm={6}
-            lg={3}
-            sx={{ textAlign: "center" }}
-          >
-            <Link
-              to={`/about/staff/${member.email}`}
-              style={{
-                textDecoration: "none",
-                color: theme.palette.text.primary,
-              }}
+        {selection !== DEFAULT_OPTION ? (
+          staffMembers.map((member) => (
+            <Grid
+              item
+              key={member.id}
+              xs={6}
+              sm={6}
+              lg={3}
+              sx={{ textAlign: "center" }}
             >
-              <Box sx={{ mb: 1 }}>
-                <Typography variant="h5" sx={{ whiteSpace: "nowrap" }}>
-                  {member.name}
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  mx: "auto",
+              <Link
+                to={`/about/staff/${member.email}`}
+                style={{
+                  textDecoration: "none",
+                  color: theme.palette.text.primary,
                 }}
               >
+                <Box sx={{ mb: 1 }}>
+                  <Typography variant="h5" sx={{ whiteSpace: "nowrap" }}>
+                    {member.name}
+                  </Typography>
+                </Box>
                 <Box
-                  component="img"
                   sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center",
+                    width: 150,
+                    height: 150,
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    mx: "auto",
                   }}
-                  src={member.profilePicture}
-                />
-              </Box>
-              <Typography variant="h6">{member.titleShort}</Typography>
-            </Link>
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
+                    src={member.profilePicture}
+                  />
+                </Box>
+                <Typography variant="h6">{member.titleShort}</Typography>
+              </Link>
+            </Grid>
+          ))
+        ) : (
+          <Grid container spacing="6">
+            {facultyOptions.map((option) => (
+              <Grid
+                item
+                xs={6}
+                key={option}
+                sx={{ display: "flex", justifyContent: "center" }}
+              >
+                <Button
+                  variant="outlined"
+                  onClick={() => setSelection(option)}
+                  sx={{
+                    borderRadius: "25px",
+                    width: "90%",
+                    color: "black",
+                    borderColor: "black",
+                    "&:hover": {
+                      bgcolor: "black",
+                      color: "white",
+                      borderColor: "black",
+                    },
+                  }}
+                >
+                  {option}
+                </Button>
+              </Grid>
+            ))}
           </Grid>
-        ))}
+        )}
       </Grid>
     </Box>
   );
