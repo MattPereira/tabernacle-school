@@ -162,7 +162,7 @@ function SendMessageForm() {
 
 function StaffDirectory() {
   const [staffData, setStaffData] = useState(null);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("Select Grade");
 
   const handleChange = (event) => {
     setSelected(event.target.value);
@@ -217,7 +217,7 @@ function StaffDirectory() {
       <FormControl fullWidth variant="standard" sx={{ mb: 3 }}>
         <Select
           id="faculty-select"
-          value={selected || "default"}
+          value={selected}
           onChange={handleChange}
           sx={{
             fontFamily: "didact gothic",
@@ -227,58 +227,79 @@ function StaffDirectory() {
           }}
         >
           <MenuItem
-            value="default"
+            value="Select Grade"
             sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
           >
-            Choose a staff group
+            Select Grade
           </MenuItem>
 
-          {selected !== "Select a staff group" &&
-            staffOptions.map((name) => (
-              <MenuItem
-                key={name}
-                value={name}
-                sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
-              >
-                {name}
-              </MenuItem>
-            ))}
+          {staffOptions.map((name) => (
+            <MenuItem
+              key={name}
+              value={name}
+              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+            >
+              {name}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
 
-      <table style={{ width: "100%" }}>
-        <tbody>
-          {staffMembers.map((member) => (
-            <tr key={member.name}>
-              <td style={{ padding: "7px 2px" }}>
-                <Typography
-                  variant="p"
-                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                >
-                  {member.name}
-                </Typography>
-              </td>
-              <td>
-                <Typography
-                  variant="p"
-                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                >
-                  {member.titleShort}
-                </Typography>
-              </td>
-              <td>
-                <Typography
-                  variant="p"
-                  sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                  component="a"
-                >
-                  {member.email}
-                </Typography>
-              </td>
-            </tr>
+      {selected !== "Select Grade" ? (
+        <table style={{ width: "100%" }}>
+          <tbody>
+            {staffMembers.map((member) => (
+              <tr key={member.name}>
+                <td style={{ padding: "7px 2px" }}>
+                  <Typography
+                    variant="p"
+                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                  >
+                    {member.name}
+                  </Typography>
+                </td>
+                <td>
+                  <Typography
+                    variant="p"
+                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                  >
+                    {member.titleShort}
+                  </Typography>
+                </td>
+                <td>
+                  <Typography
+                    variant="p"
+                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                    component="a"
+                  >
+                    {member.email}
+                  </Typography>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <Grid container spacing="6">
+          {staffOptions.map((option) => (
+            <Grid item xs={6} key={option}>
+              <Button
+                variant="outlined"
+                onClick={() => setSelected(option)}
+                sx={{
+                  borderRadius: "25px",
+                  width: "100%",
+                  "&:hover": {
+                    bgcolor: "primary.main",
+                  },
+                }}
+              >
+                {option}
+              </Button>
+            </Grid>
           ))}
-        </tbody>
-      </table>
+        </Grid>
+      )}
     </div>
   );
 }

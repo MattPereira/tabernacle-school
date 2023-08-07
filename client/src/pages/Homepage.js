@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 // Icons for CurrentInfoAlerts
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 // Hero Images For Slideshow
@@ -52,42 +52,6 @@ function CurrentInfoAlerts() {
       <Grid item>
         <Typography
           variant="p"
-          component={HashLink}
-          to="/connect#Employment"
-          sx={{
-            overflow: "hidden",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <SchoolOutlinedIcon sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }} />
-          Hiring Middle School Teachers
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography
-          variant="p"
-          component="a"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/pdfs/summer-daycare.pdf"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <WbSunnyOutlinedIcon
-            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5, pb: 0.2 }}
-          />
-          Summer Daycare Calendar
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography
-          variant="p"
           component={Link}
           to="/family/parent-orientation"
           sx={{
@@ -107,6 +71,46 @@ function CurrentInfoAlerts() {
             }}
           />
           Parent Orientation
+        </Typography>
+      </Grid>
+
+      <Grid item>
+        <Typography
+          variant="p"
+          component={HashLink}
+          to="/connect#Employment"
+          sx={{
+            overflow: "hidden",
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <WorkOutlineOutlinedIcon
+            sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }}
+          />
+          Employment Opportunities
+        </Typography>
+      </Grid>
+
+      <Grid item>
+        <Typography
+          variant="p"
+          component="a"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="/pdfs/summer-daycare.pdf"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <WbSunnyOutlinedIcon
+            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5, pb: 0.2 }}
+          />
+          Summer Daycare Calendar
         </Typography>
       </Grid>
     </Grid>
