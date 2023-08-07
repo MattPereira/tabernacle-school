@@ -45,8 +45,8 @@ export default function Employment() {
                 science teacher for the current 2023-2024 school year. All
                 applicants must hold a bachelor's degree from an accredited
                 university and be able to sign the school Statement of Faith.
-                Please contact Lesley{" "}
-                <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a> or call
+                Please contact Lesley Nutting at{" "}
+                <a href="mailto:LesleyN@tbs.org">LesleyN@tbs.org</a> or call{" "}
                 <a href="tel:925-685-9169">925-685-9169</a> for more
                 information. Applications may also be picked up in the school's
                 front office.

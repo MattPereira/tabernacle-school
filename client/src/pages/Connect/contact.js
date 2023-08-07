@@ -178,7 +178,7 @@ function StaffDirectory() {
         const { data } = await response.json();
 
         setStaffData(data);
-        setSelected("Administration");
+        // setSelected("Administration");
       } catch {
         console.log("error");
       }
@@ -190,11 +190,14 @@ function StaffDirectory() {
 
   const staffOptions = staffData.map((group) => group.attributes.name);
 
-  const selectedGroup = staffData.filter(
-    (group) => group.attributes.name === selected
-  )[0];
+  const selectedGroup = selected
+    ? staffData.filter((group) => group.attributes.name === selected)[0]
+    : null;
 
-  const staffMembersData = selectedGroup.attributes.staff_members.data;
+  // We will now check if selectedGroup is defined before accessing its properties
+  const staffMembersData = selectedGroup
+    ? selectedGroup.attributes.staff_members.data
+    : [];
 
   const staffMembers = staffMembersData.map((member) => ({
     id: member.id,
@@ -214,7 +217,7 @@ function StaffDirectory() {
       <FormControl fullWidth variant="standard" sx={{ mb: 3 }}>
         <Select
           id="faculty-select"
-          value={selected ? selected : staffOptions[0]}
+          value={selected || "default"}
           onChange={handleChange}
           sx={{
             fontFamily: "didact gothic",
@@ -223,15 +226,23 @@ function StaffDirectory() {
             pb: 1,
           }}
         >
-          {staffOptions.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
-            >
-              {name}
-            </MenuItem>
-          ))}
+          <MenuItem
+            value="default"
+            sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+          >
+            Choose a staff group
+          </MenuItem>
+
+          {selected !== "Select a staff group" &&
+            staffOptions.map((name) => (
+              <MenuItem
+                key={name}
+                value={name}
+                sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+              >
+                {name}
+              </MenuItem>
+            ))}
         </Select>
       </FormControl>
 
