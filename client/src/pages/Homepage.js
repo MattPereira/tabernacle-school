@@ -91,28 +91,6 @@ function CurrentInfoAlerts() {
           Employment Opportunities
         </Typography>
       </Grid>
-
-      <Grid item>
-        <Typography
-          variant="p"
-          component="a"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/pdfs/summer-daycare.pdf"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <WbSunnyOutlinedIcon
-            sx={{ fontSize: "28px", mt: 0.5, mr: 0.5, pb: 0.2 }}
-          />
-          Summer Daycare Calendar
-        </Typography>
-      </Grid>
     </Grid>
   );
 }
