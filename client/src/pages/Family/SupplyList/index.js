@@ -187,12 +187,13 @@ const supplyLists = [
       {
         name: "English",
         items: [
-          "Composition Notebooks (2)",
-          "College-ruled paper",
-          "Index cards (100)",
-          "Index card holder",
-          "Report cover for project",
-          "Library card",
+          "Pencils",
+          "Pens (Blue/Black and Red)",
+          "Highlighters",
+          "Composition notebooks (2)",
+          "College-ruled paper ",
+          "Folder (1)",
+          "Independent reading book",
         ],
       },
       {
@@ -242,12 +243,13 @@ const supplyLists = [
       {
         name: "English",
         items: [
-          "Composition Notebooks (2)",
-          "College-ruled paper",
-          "Index cards (100)",
-          "Index card holder",
-          "Report cover for project",
-          "Library card",
+          "Pencils",
+          "Pens (Blue/Black and Red)",
+          "Highlighters",
+          "Composition notebooks (2)",
+          "College-ruled paper ",
+          "Folder (1)",
+          "Independent reading book",
         ],
       },
       {
