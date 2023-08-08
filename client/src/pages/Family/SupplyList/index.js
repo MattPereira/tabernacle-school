@@ -332,7 +332,7 @@ export default function SupplyLists() {
                     {list.categories ? (
                       list.categories.map((category, catIndex) => (
                         <div key={catIndex}>
-                          <Typography variant="h5">{category.name}</Typography>
+                          <Typography variant="h6">{category.name}</Typography>
                           <ul>
                             {category.items.map((item, itemIndex) => (
                               <li key={itemIndex}>{item}</li>

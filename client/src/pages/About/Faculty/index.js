@@ -186,14 +186,16 @@ function SelectGrade() {
                       borderRadius: "15px",
                       width: "100%",
                       color: "black",
-                      borderColor: "black",
+                      border: "none",
                       fontFamily: "didact gothic",
                       fontWeight: "normal",
+                      bgcolor: "white",
                       py: 3,
+
                       "&:hover": {
-                        bgcolor: "black",
+                        bgcolor: "primary.main",
                         color: "white",
-                        borderColor: "black",
+                        border: "none",
                       },
                     }}
                   >
