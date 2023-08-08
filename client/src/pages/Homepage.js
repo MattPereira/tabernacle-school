@@ -91,7 +91,22 @@ function LandingShowcase() {
   // const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
   return (
     <Grid container>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid item xs={12} md={6} lg={4} xl={3}>
+        <Box
+          sx={{ width: "100%", height: "100%" }}
+          component="img"
+          src="/images/home-showcase-4.jpg"
+          alt="showcase image"
+        />
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        lg={4}
+        xl={3}
+        sx={{ display: { xs: "none", md: "flex" } }}
+      >
         <Box
           sx={{ width: "100%" }}
           component="img"
@@ -99,7 +114,13 @@ function LandingShowcase() {
           alt="showcase image"
         />
       </Grid>
-      <Grid item md={6} lg={4} sx={{ display: { xs: "none", md: "flex" } }}>
+      <Grid
+        item
+        md={6}
+        lg={4}
+        xl={3}
+        sx={{ display: { xs: "none", xl: "flex" } }}
+      >
         <Box
           sx={{ width: "100%" }}
           component="img"
@@ -107,7 +128,7 @@ function LandingShowcase() {
           alt="showcase image"
         />
       </Grid>
-      <Grid item lg={4} sx={{ display: { xs: "none", lg: "flex" } }}>
+      <Grid item lg={4} xl={3} sx={{ display: { xs: "none", lg: "flex" } }}>
         <Box
           sx={{ width: "100%" }}
           component="img"
