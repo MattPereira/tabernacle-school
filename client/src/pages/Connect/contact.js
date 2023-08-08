@@ -12,8 +12,6 @@ import {
   Button,
   Alert,
   FormControl,
-  Select,
-  MenuItem,
 } from "@mui/material";
 import SectionTitle from "../../components/SectionTitle";
 
@@ -161,14 +159,8 @@ function SendMessageForm() {
 }
 
 function StaffDirectory() {
-  const DEFAULT_OPTION = "Select Grade";
-
   const [staffData, setStaffData] = useState(null);
-  const [selected, setSelected] = useState(DEFAULT_OPTION);
-
-  const handleChange = (event) => {
-    setSelected(event.target.value);
-  };
+  const [selected, setSelected] = useState(null);
 
   useEffect(function fetchStaffData() {
     async function fetchData() {
@@ -189,10 +181,11 @@ function StaffDirectory() {
 
   if (!staffData) return <LoadingSpinner />;
 
+  staffData.sort((a, b) => a.id - b.id);
   const staffOptions = staffData.map((group) => group.attributes.name);
 
   let staffMembers;
-  if (selected !== DEFAULT_OPTION) {
+  if (selected) {
     const selectedGroup = staffData.filter(
       (group) => group.attributes.name === selected
     )[0];
@@ -215,93 +208,105 @@ function StaffDirectory() {
         </Typography>
       </Box>
 
-      <FormControl fullWidth variant="standard" sx={{ mb: 3 }}>
-        <Select
-          id="faculty-select"
-          value={selected}
-          onChange={handleChange}
-          variant="standard"
-          sx={{
-            fontFamily: "didact gothic",
-            fontSize: "1.25rem",
-            fontWeight: "bold",
-            pb: 1,
-          }}
-        >
-          <MenuItem
-            value={DEFAULT_OPTION}
-            sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
-          >
-            Select Grade
-          </MenuItem>
-
-          {staffOptions.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
-            >
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-
-      {selected !== DEFAULT_OPTION ? (
-        <table style={{ width: "100%" }}>
-          <tbody>
-            {staffMembers.map((member) => (
-              <tr key={member.name}>
-                <td style={{ padding: "7px 2px" }}>
-                  <Typography
-                    variant="p"
-                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                  >
-                    {member.name}
-                  </Typography>
-                </td>
-                <td>
-                  <Typography
-                    variant="p"
-                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                  >
-                    {member.titleShort}
-                  </Typography>
-                </td>
-                <td>
-                  <Typography
-                    variant="p"
-                    sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                    component="a"
-                  >
-                    {member.email}
-                  </Typography>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <Grid container spacing="6">
-          {staffOptions.map((option) => (
-            <Grid item xs={6} key={option}>
-              <Button
-                variant="outlined"
-                onClick={() => setSelected(option)}
+      <Box
+        sx={{
+          minHeight: "400px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        {selected ? (
+          <Box>
+            <table style={{ width: "100%" }}>
+              <tbody>
+                {staffMembers.map((member) => (
+                  <tr key={member.name}>
+                    <td style={{ padding: "7px 2px" }}>
+                      <Typography
+                        variant="p"
+                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                      >
+                        {member.name}
+                      </Typography>
+                    </td>
+                    <td>
+                      <Typography
+                        variant="p"
+                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                      >
+                        {member.titleShort}
+                      </Typography>
+                    </td>
+                    <td>
+                      <Typography
+                        variant="p"
+                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
+                        component="a"
+                      >
+                        {member.email}
+                      </Typography>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <Box sx={{ display: "flex", justifyContent: "end", mt: 3 }}>
+              <Typography
+                variant="p"
+                onClick={() => setSelected(null)}
                 sx={{
-                  borderRadius: "25px",
-                  width: "100%",
-                  "&:hover": {
-                    bgcolor: "primary.main",
-                  },
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                  color: "primary.main",
                 }}
               >
-                {option}
-              </Button>
-            </Grid>
-          ))}
-        </Grid>
-      )}
+                See all staff
+              </Typography>
+            </Box>
+          </Box>
+        ) : (
+          <Grid container spacing="10">
+            {staffOptions.map((option) => {
+              let shortName;
+
+              if (option === "Middle School") {
+                shortName = "Jr High";
+              } else if (option === "Physical Education") {
+                shortName = "Phys Ed";
+              } else {
+                shortName = option;
+              }
+
+              return (
+                <Grid item xs={6} key={option}>
+                  <Button
+                    variant="outlined"
+                    onClick={() => setSelected(option)}
+                    sx={{
+                      borderRadius: "15px",
+                      width: "100%",
+                      fontFamily: "didact gothic",
+                      fontWeight: "normal",
+                      bgcolor: "background.alternate",
+                      border: "none",
+                      color: "black",
+                      textTransform: "none",
+                      "&:hover": {
+                        bgcolor: "primary.main",
+                        color: "white",
+                        border: "none",
+                      },
+                    }}
+                  >
+                    {shortName}
+                  </Button>
+                </Grid>
+              );
+            })}
+          </Grid>
+        )}
+      </Box>
     </div>
   );
 }
