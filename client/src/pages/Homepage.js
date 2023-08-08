@@ -95,7 +95,7 @@ function LandingShowcase() {
         <Box
           sx={{ width: "100%", height: "100%" }}
           component="img"
-          src="/images/home-showcase-4.jpg"
+          src="/images/home-showcase-1.jpg"
           alt="showcase image"
         />
       </Grid>
@@ -110,7 +110,7 @@ function LandingShowcase() {
         <Box
           sx={{ width: "100%" }}
           component="img"
-          src="/images/home-showcase-1.jpg"
+          src="/images/home-showcase-2.jpg"
           alt="showcase image"
         />
       </Grid>
@@ -124,7 +124,7 @@ function LandingShowcase() {
         <Box
           sx={{ width: "100%" }}
           component="img"
-          src="/images/home-showcase-2.jpg"
+          src="/images/home-showcase-4.jpg"
           alt="showcase image"
         />
       </Grid>
