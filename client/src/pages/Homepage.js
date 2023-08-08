@@ -31,7 +31,7 @@ export default function Homepage() {
   );
 }
 
-const CURRENT_ITEMS = [
+const CURRENT_INFO_ITEMS = [
   {
     text: "Calendar",
     url: "/pdfs/calendar-23-24.pdf",
@@ -60,7 +60,7 @@ function CurrentInfoAlerts() {
         borderBottom: "1px solid #e0e0e0",
       }}
     >
-      {CURRENT_ITEMS.map((item) => {
+      {CURRENT_INFO_ITEMS.map((item) => {
         let componentType;
         if (item.url) {
           componentType = "a";
@@ -91,65 +91,6 @@ function CurrentInfoAlerts() {
           </Grid>
         );
       })}
-      {/* <Grid item>
-        <Typography
-          variant="p"
-          component={Link}
-          to="/family/parent-orientation"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <InfoOutlinedIcon
-            sx={{
-              fontSize: "28px",
-              mt: 0.5,
-              mr: 0.5,
-              pb: 0.3,
-            }}
-          />
-          Parent Orientation
-        </Typography>
-      </Grid>
-
-      <Grid item>
-        <Typography
-          variant="p"
-          component={HashLink}
-          to="/connect#Employment"
-          sx={{
-            overflow: "hidden",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <WorkOutlineOutlinedIcon
-            sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }}
-          />
-          Employment
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography
-          variant="p"
-          component={HashLink}
-          to="/connect#Employment"
-          sx={{
-            overflow: "hidden",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <WorkOutlineOutlinedIcon
-            sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }}
-          />
-          Calendar
-        </Typography>
-      </Grid> */}
     </Grid>
   );
 }

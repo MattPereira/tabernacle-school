@@ -78,7 +78,7 @@ export default function Tuition() {
                   );
                 })}
               </table>
-              <Typography>
+              <Typography variant="p" sx={{ fontSize: "15px" }}>
                 *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for
                 PIF discount is due by 8/10/2023
               </Typography>
@@ -122,13 +122,13 @@ export default function Tuition() {
               </tbody>
             </table>
             <Box sx={{ mb: 1 }}>
-              <Typography>
+              <Typography variant="p" sx={{ fontSize: "15px" }}>
                 *Classroom placement is secured upon payment of registration and
                 consumable fee and first month's tuition.
               </Typography>
             </Box>
 
-            <Typography>
+            <Typography variant="p" sx={{ fontSize: "15px" }}>
               *Registration is non-refundable. Consumable fee is non-refundable
               after May 1st or at time of enrollment for new students. First
               month's tuition is non-refundable.
@@ -188,69 +188,59 @@ export default function Tuition() {
               <thead className="table-dark ">
                 <tr>
                   <th>Type</th>
-                  <th>Description</th>
                   <th>Price</th>
-                  <th>Billed</th>
+                  <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Full Time Daycare</td>
+                  <td>$200/month</td>
                   <td> During School Year (August - May)</td>
-                  <td>$200</td>
-                  <td>Monthly</td>
                 </tr>
                 <tr>
                   <td>FTDC Family Plan (2) </td>
+                  <td>$350/month</td>
                   <td>Two child discount during school year</td>
-                  <td>$350</td>
-                  <td>Monthly</td>
                 </tr>
                 <tr>
                   <td>FTDC Family Plan (3+)</td>
-                  <td>Three or more children discount during school year</td>
-                  <td>$425</td>
-                  <td>Monthly</td>
+                  <td>$425/month</td>
+                  <td>3+ children discount during school year</td>
                 </tr>
                 <tr>
                   <td>Full Time Daycare</td>
+                  <td>$700/month</td>
                   <td> Summer Months K-8</td>
-                  <td>$700</td>
-                  <td>Monthly</td>
                 </tr>
                 <tr>
                   <td>Summer Celebration</td>
+                  <td>$800/month</td>
                   <td> Incoming Kindergarteners</td>
-                  <td>$800</td>
-                  <td>Monthly</td>
-                </tr>
-                <tr>
-                  <td>Summer Celebration</td>
-                  <td>Hourly 9-12 am</td>
-                  <td>$10</td>
-                  <td>Hourly</td>
                 </tr>
                 <tr>
                   <td>Joyful Beginnings</td>
-                  <td>Preschool</td>
-                  <td>$850</td>
-                  <td>Monthly</td>
+                  <td>$850/month</td>
+                  <td>Preschool ages</td>
                 </tr>
                 <tr>
                   <td>Hourly Daycare</td>
+                  <td>$10/hour</td>
                   <td>For students not enrolled in FTDC</td>
-                  <td>$10</td>
-                  <td>Hourly</td>
+                </tr>
+                <tr>
+                  <td>Summer Celebration</td>
+                  <td>$10/hour</td>
+                  <td>Available 9-12 am</td>
                 </tr>
                 <tr>
                   <td>After Hours Daycare</td>
+                  <td>$1/minute</td>
                   <td>After 6:00 pm (late pick-up)</td>
-                  <td>$1</td>
-                  <td>Minute</td>
                 </tr>
               </tbody>
             </table>
-            <Typography>
+            <Typography variant="p" sx={{ fontSize: "15px" }}>
               *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
               <a href="/campus#calendar">calendar</a> for closures.
             </Typography>

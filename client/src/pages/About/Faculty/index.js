@@ -191,7 +191,8 @@ function SelectGrade() {
                       fontWeight: "normal",
                       bgcolor: "white",
                       py: 3,
-
+                      textTransform: "none",
+                      fontSize: { xs: "1.25rem", sm: "1.5rem" },
                       "&:hover": {
                         bgcolor: "primary.main",
                         color: "white",

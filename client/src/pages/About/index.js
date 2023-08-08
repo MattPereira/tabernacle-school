@@ -2,7 +2,7 @@ import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import Faculty from "./Faculty";
 import Values from "./Values";
-import Vision from "./Vision";
+// import Vision from "./Vision";
 import GiftProgram from "./GiftProgram";
 import LiveProgram from "./LiveProgram";
 import aboutShowcase from "../../assets/images/showcase/about.jpg";
@@ -20,17 +20,17 @@ export default function About() {
           "History",
           "Faculty",
           "Values",
-          "Vision",
-          "Live Program",
+          // "Vision",
           "Gift Program",
+          "Live Program",
         ]}
       />
       <History />
       <Faculty />
       <Values />
-      <Vision />
-      <LiveProgram />
+      {/* <Vision /> */}
       <GiftProgram />
+      <LiveProgram />
     </div>
   );
 }

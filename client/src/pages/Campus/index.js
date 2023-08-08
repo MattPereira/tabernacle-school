@@ -1,7 +1,6 @@
 // External Imports
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { styled } from "@mui/material/styles";
 
 // Internal Imports
 import SectionTitle from "../../components/SectionTitle";
@@ -13,11 +12,10 @@ import athletics from "../../assets/images/campus/athletics.jpg";
 import friends from "../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../assets/images/campus/operation-christmas.jpg";
-import daycareImg from "../../assets/images/campus/daycare.jpg";
 import LoadingSpinner from "../../components/LoadingSpinner";
 
 // prettier-ignore
-import {Container,Box,Grid,Typography,Paper,Link,Table,TableCell,TableContainer,TableHead,TableRow,TableBody,FormControl,Select,MenuItem,Modal} from "@mui/material";
+import {Container,Box,Grid,Typography,Paper,FormControl,Select,MenuItem,Modal} from "@mui/material";
 
 export default function Campus() {
   return (
@@ -152,7 +150,7 @@ function Facilities() {
                     sx={{
                       width: "100%",
                       objectFit: "cover",
-                      height: { xs: "125px", md: "200px", lg: "300px" },
+                      height: { xs: "125px", md: "200px", lg: "225px" },
                       borderRadius: "10px",
                       cursor: "pointer",
                     }}
@@ -200,18 +198,18 @@ function Athletics() {
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Athletics" />
       <Container>
-        <Grid container spacing={5} alignItems="center">
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="p">
+            The focus behind the athletic program at Tabernacle is to instill
+            Christ-centered character traits within the lives of our student
+            athletes. While the program includes training to enhance the ability
+            of the student and education to develop a better understanding of
+            sports, at the end of each day, we strive to glorify Him in all that
+            we do.
+          </Typography>
+        </Box>
+        <Grid container spacing={5} alignItems="center" justifyContent="center">
           <Grid item md={6}>
-            <Box sx={{ mb: 5 }}>
-              <Typography variant="p">
-                The focus behind the athletic program at Tabernacle is to
-                instill Christ-centered character traits within the lives of our
-                student athletes. While the program includes training to enhance
-                the ability of the student and education to develop a better
-                understanding of sports, at the end of each day, we strive to
-                glorify Him in all that we do.
-              </Typography>
-            </Box>
             <Box sx={{ mb: 5 }}>
               <Typography variant="h5" textAlign="center" gutterBottom>
                 Physical Education
@@ -237,11 +235,22 @@ function Athletics() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item md={6}>
+          <Grid
+            item
+            md={6}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             <Box
               component="img"
               src={athletics}
-              sx={{ width: "100%", borderRadius: "30px" }}
+              sx={{
+                maxHeight: "500px",
+                maxWidth: "100%",
+                borderRadius: "30px",
+              }}
               alt="Child running on track"
             />
           </Grid>
@@ -252,110 +261,96 @@ function Athletics() {
 }
 
 function Daycare() {
-  const StyledHeaderCell = styled(TableCell)(({ theme }) => ({
-    fontWeight: "bold",
-    color: "white",
-  }));
-
   return (
     <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Daycare" />
       <Container>
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          <Grid item lg={6}>
+        <Box sx={{ mb: 7 }}>
+          <Typography variant="p">
+            Tabernacle daycare is available to any enrolled student age 3 years
+            9 months to a graduated eighth grader through August after
+            graduation. Our program is child centered. The caring and
+            compassionate staff build a family like atmosphere in which your
+            children will thrive. Relationships among families, children and
+            staff are the heart of the program.
+          </Typography>
+        </Box>
+
+        <Grid container spacing={4} alignItems="center">
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: { xs: "none", md: "block" },
+            }}
+          >
             <Box
               component="img"
-              src={daycareImg}
-              sx={{
-                width: "100%",
-                borderRadius: "30px",
-                objectFit: "cover",
-                height: "300px",
-                mb: 3,
-              }}
+              src="/images/daycare.jpg"
+              sx={{ width: "100%", borderRadius: "10px" }}
             />
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="p">
-                Tabernacle daycare is available to any enrolled student age 3
-                years 9 months to a graduated eighth grader through August after
-                graduation. Our program is child centered. The caring and
-                compassionate staff build a family like atmosphere in which your
-                children will thrive. Relationships among families, children and
-                staff are the heart of the program.
-              </Typography>
-            </Box>
           </Grid>
-          <Grid item sm={8} lg={6}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h5" textAlign="center" gutterBottom>
               Hours of Operation
             </Typography>
-            <TableContainer
-              component={Paper}
-              elevation={0}
-              sx={{ mb: 3, border: "1px solid black" }}
-            >
-              <Table>
-                <TableHead>
-                  <TableRow sx={{ bgcolor: "grey.900" }}>
-                    <StyledHeaderCell>Type</StyledHeaderCell>
-                    <StyledHeaderCell>Hours</StyledHeaderCell>
-                    <StyledHeaderCell>Days</StyledHeaderCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>Summer</TableCell>
-                    <TableCell>6:45 am - 6:00 pm</TableCell>
-                    <TableCell>Monday - Friday</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Before School</TableCell>
-                    <TableCell>6:45 am – 8:00 am</TableCell>
-                    <TableCell>Monday - Friday</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>After School</TableCell>
-                    <TableCell>3:15 pm – 6:00 pm</TableCell>
-                    <TableCell>Monday - Friday</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
+
+            <table className="table table-bordered">
+              <thead>
+                <tr className="table-dark">
+                  <th>Type</th>
+                  <th>Hours</th>
+                  <th>Days</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Summer</td>
+                  <td>6:45 am - 6:00 pm</td>
+                  <td>Monday - Friday</td>
+                </tr>
+                <tr>
+                  <td>Before School</td>
+                  <td>6:45 am – 8:00 am</td>
+                  <td>Monday - Friday</td>
+                </tr>
+                <tr>
+                  <td>After School</td>
+                  <td>3:15 pm – 6:00 pm</td>
+                  <td>Monday - Friday</td>
+                </tr>
+              </tbody>
+            </table>
             <Typography variant="h5" textAlign="center" gutterBottom>
               Rates
             </Typography>
-            <TableContainer
-              component={Paper}
-              elevation={0}
-              sx={{ border: "1px solid #212121" }}
-            >
-              <Table>
-                <TableHead>
-                  <TableRow sx={{ bgcolor: "grey.900" }}>
-                    <StyledHeaderCell>Type</StyledHeaderCell>
-                    <StyledHeaderCell>Rate</StyledHeaderCell>
-                    <StyledHeaderCell>Per</StyledHeaderCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>Drop-In</TableCell>
-                    <TableCell>$10</TableCell>
-                    <TableCell>Hour</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Full-Time Summer</TableCell>
-                    <TableCell>$700</TableCell>
-                    <TableCell>Month</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Full-Time School Year</TableCell>
-                    <TableCell>$200</TableCell>
-                    <TableCell>Month</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
+            <table className="table table-bordered">
+              <thead>
+                <tr className="table-dark">
+                  <td>Type</td>
+                  <td>Rate</td>
+                  <td>Per</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Drop-In</td>
+                  <td>$10</td>
+                  <td>Hour</td>
+                </tr>
+                <tr>
+                  <td>Full-Time Summer</td>
+                  <td>$700</td>
+                  <td>Month</td>
+                </tr>
+                <tr>
+                  <td>Full-Time School Year</td>
+                  <td>$200</td>
+                  <td>Month</td>
+                </tr>
+              </tbody>
+            </table>
           </Grid>
         </Grid>
       </Container>
@@ -389,55 +384,43 @@ function Outreach() {
   ];
 
   return (
-    <Box sx={{ pt: 8, pb: 12, bgcolor: "background.alternate" }}>
+    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
       <SectionTitle title="Outreach" />
       <Container>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ py: 5 }}>
           {outreachPrograms.map((program) => (
             <Grid item xs={12} md={6} lg={4} key={program.title}>
-              <Link
-                href={program.url}
-                target="_blank"
-                style={{ textDecoration: "none", cursor: "pointer" }}
+              <Paper
+                elevation={0}
+                sx={{
+                  borderRadius: "20px",
+                  height: "100%",
+                }}
               >
-                <Paper
-                  elevation={0}
-                  sx={{
-                    borderRadius: "30px",
-                    height: "100%",
-                    // border: "1px solid #212121",
+                <Box>
+                  <Box
+                    component="img"
+                    src={program.image}
+                    sx={{
+                      width: "100%",
+                      objectFit: "cover",
+                      borderRadius: "30px",
+                      height: "225px",
+                      objectPosition: "center",
+                    }}
+                    alt=""
+                  />
+                </Box>
 
-                    "&:hover": {
-                      backgroundColor: "primary.main",
-                      color: "white",
-                    },
-                  }}
-                >
-                  <Box>
-                    <Box
-                      component="img"
-                      src={program.image}
-                      sx={{
-                        width: "100%",
-                        objectFit: "cover",
-                        borderRadius: "30px",
-                        height: "225px",
-                        objectPosition: "center",
-                      }}
-                      alt=""
-                    />
+                <Box sx={{ px: 3, py: 2 }}>
+                  <Box sx={{ mb: 1 }}>
+                    <a rel="noreferrer" href={program.url} target="_blank">
+                      <Typography variant="h6">{program.title}</Typography>
+                    </a>
                   </Box>
-
-                  <Box sx={{ p: 3 }}>
-                    <Box sx={{ mb: 1 }}>
-                      <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                        {program.title}
-                      </Typography>
-                    </Box>
-                    <Typography variant="p">{program.description}</Typography>
-                  </Box>
-                </Paper>
-              </Link>
+                  <Typography variant="p">{program.description}</Typography>
+                </Box>
+              </Paper>
             </Grid>
           ))}
         </Grid>

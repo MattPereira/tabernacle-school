@@ -29,11 +29,12 @@ export default function Employment() {
             variant="contained"
             sx={{
               fontFamily: "Didact Gothic",
-              fontWeight: "bold",
+              borderRadius: "30px",
+              px: 3,
               fontSize: "1.2rem",
             }}
           >
-            Employment Application
+            Download Application
           </Button>
         </Box>
         <Grid container spacing={4}>

@@ -9,32 +9,8 @@ const Values = () => {
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Values" />
       <Container>
-        <Grid
-          container
-          spacing={4}
-          alignItems="center"
-          justifyContent="center"
-          sx={{ mb: 3 }}
-        >
+        <Grid container spacing={4} alignItems="center" justifyContent="center">
           <Grid item lg={6}>
-            <Box
-              component="img"
-              src={value1}
-              sx={{ width: "100%", borderRadius: "30px", mb: 3 }}
-              alt=""
-            />
-          </Grid>
-          <Grid item lg={6}>
-            <Typography variant="h5" align="center">
-              Truth Centered
-            </Typography>
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="p">
-                Committed to education which will mold students’ hearts and
-                minds to effectively impact their lives forever.
-              </Typography>
-            </Box>
-
             <Box sx={{ mb: 3 }}>
               <Typography variant="h5" align="center">
                 Excellence Based
@@ -48,12 +24,7 @@ const Values = () => {
                 abilities.
               </Typography>
             </Box>
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          <Grid item lg={6}>
-            <Box sx={{ mb: 3 }}>
+            <Box>
               <Typography variant="h5" align="center">
                 Relationally Engaged
               </Typography>
@@ -64,6 +35,28 @@ const Values = () => {
                   ethics. Every child knows that they will be a servant leader.
                 </Typography>
               </div>
+            </Box>
+          </Grid>
+          <Grid item lg={6}>
+            <Box
+              component="img"
+              src={value1}
+              sx={{ width: "100%", borderRadius: "30px", mb: 3 }}
+              alt=""
+            />
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={4} alignItems="center" justifyContent="center">
+          <Grid item lg={6}>
+            <Box sx={{ mb: 3 }}>
+              <Typography variant="h5" align="center">
+                Truth Centered
+              </Typography>
+              <Typography variant="p">
+                Committed to education which will mold students’ hearts and
+                minds to effectively impact their lives forever.
+              </Typography>
             </Box>
             <div className="">
               <Typography variant="h5" align="center">

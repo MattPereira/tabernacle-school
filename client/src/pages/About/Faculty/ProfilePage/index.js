@@ -44,7 +44,7 @@ const ProfilePage = () => {
       </Box>
     );
 
-  const { description, name, title_long, photos, profile_picture } =
+  const { description, name, title_long, photos, profile_picture, email } =
     staff.data.data[0].attributes;
 
   const profile_picture_url = profile_picture.data.attributes.url;
@@ -55,10 +55,9 @@ const ProfilePage = () => {
         <Container>
           <Box sx={{ mb: { xs: 5, lg: 10 }, textAlign: "center" }}>
             <Typography variant="h2">{name}</Typography>
-            <Typography variant="h5">{title_long}</Typography>
-            {/* <Typography component="a" variant="p" href={`mailto:${email}`}>
+            <Typography component="a" variant="p" href={`mailto:${email}`}>
               {email}
-            </Typography> */}
+            </Typography>
           </Box>
 
           <Grid container alignItems="center" spacing={4}>
@@ -70,6 +69,7 @@ const ProfilePage = () => {
                   borderRadius: "50%",
                   overflow: "hidden",
                   mx: "auto",
+                  mb: 2,
                 }}
               >
                 <Box
@@ -84,6 +84,7 @@ const ProfilePage = () => {
                   }}
                 />
               </Box>
+              <Typography variant="h5">{title_long}</Typography>
             </Grid>
             <Grid item xs={12} lg={8}>
               <Typography variant="p">{description}</Typography>
@@ -91,31 +92,29 @@ const ProfilePage = () => {
           </Grid>
         </Container>
       </Box>
-      <Box sx={{ p: 2 }}>
-        <Grid container spacing={2} alignItems="center">
+      <Box sx={{ pb: 10, pt: 3 }}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 2,
+            justifyContent: "start",
+            flexWrap: "nowrap",
+            overflowX: "auto",
+            px: 2,
+          }}
+        >
           {photos.data &&
             photos.data.map((photo, idx) => (
-              <Grid
-                key={photo.id}
-                item
-                xs={12}
-                md={6}
-                lg={4}
-                textAlign="center"
-              >
-                <Box
-                  component="img"
-                  src={`${photo.attributes.url}`}
-                  sx={{
-                    width: "100%",
-                    objectFit: "cover",
-                    height: "350px",
-                    borderRadius: "10px",
-                  }}
-                />
-              </Grid>
+              <Box
+                component="img"
+                src={`${photo.attributes.url}`}
+                sx={{
+                  maxHeight: "350px",
+                  borderRadius: "15px",
+                }}
+              />
             ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

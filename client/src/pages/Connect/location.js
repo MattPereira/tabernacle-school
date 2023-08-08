@@ -6,7 +6,7 @@ export default function Location() {
     <Box sx={{ py: 8 }}>
       <SectionTitle title="Location" />
       <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ mb: { xs: 2, lg: 5 } }}>
           <Grid item xs={12} lg={9}>
             <div
               style={{
