@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // Icons for CurrentInfoAlerts
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 // Accreditations Image Imports
 import asci from "../assets/images/homepage/acsi.png";
@@ -30,6 +31,24 @@ export default function Homepage() {
   );
 }
 
+const CURRENT_ITEMS = [
+  {
+    text: "Calendar",
+    url: "/pdfs/calendar-23-24.pdf",
+    icon: <CalendarTodayIcon />,
+  },
+  {
+    text: "Employment",
+    path: "/connect#Employment",
+    icon: <WorkOutlineOutlinedIcon />,
+  },
+  {
+    text: "Parent Orientation",
+    path: "/family/parent-orientation",
+    icon: <InfoOutlinedIcon />,
+  },
+];
+
 function CurrentInfoAlerts() {
   return (
     <Grid
@@ -41,7 +60,38 @@ function CurrentInfoAlerts() {
         borderBottom: "1px solid #e0e0e0",
       }}
     >
-      <Grid item>
+      {CURRENT_ITEMS.map((item) => {
+        let componentType;
+        if (item.url) {
+          componentType = "a";
+        } else if (item.path.includes("#")) {
+          componentType = HashLink;
+        } else {
+          componentType = Link;
+        }
+        return (
+          <Grid item key={item.text}>
+            <Typography
+              variant="p"
+              component={componentType}
+              to={item.path ? item.path : null}
+              href={item.url ? item.url : null}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textDecoration: "none",
+                color: "black",
+                gap: "0.25rem",
+              }}
+            >
+              {item.icon}
+              {item.text}
+            </Typography>
+          </Grid>
+        );
+      })}
+      {/* <Grid item>
         <Typography
           variant="p"
           component={Link}
@@ -80,15 +130,31 @@ function CurrentInfoAlerts() {
           <WorkOutlineOutlinedIcon
             sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }}
           />
-          Employment Opportunities
+          Employment
         </Typography>
       </Grid>
+      <Grid item>
+        <Typography
+          variant="p"
+          component={HashLink}
+          to="/connect#Employment"
+          sx={{
+            overflow: "hidden",
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <WorkOutlineOutlinedIcon
+            sx={{ fontSize: "30px", pb: 0.5, mr: 0.5 }}
+          />
+          Calendar
+        </Typography>
+      </Grid> */}
     </Grid>
   );
 }
 
 function LandingShowcase() {
-  // const items = [showcase1, showcase2, showcase4, showcase3, showcase5];
   return (
     <Grid container>
       <Grid item xs={12} md={6} lg={4} xl={3}>
@@ -137,52 +203,25 @@ function LandingShowcase() {
         />
       </Grid>
     </Grid>
-
-    // <Carousel
-    //   indicators={false}
-    //   interval={5000}
-    //   duration={1500}
-    //   style={{ position: "relative" }}
-    // >
-    //   {items.map((item, idx) => (
-    //     <Box
-    //       key={idx}
-    //       component="img"
-    //       src={item}
-    //       sx={{
-    //         width: "100%",
-    //         objectFit: "cover",
-    //         height: {
-    //           xs: "300px",
-    //           sm: "300px",
-    //           md: "400px",
-    //           lg: "500px",
-    //           xl: "550px",
-    //         },
-    //       }}
-    //       alt="showcase"
-    //     />
-    //   ))}
-    // </Carousel>
   );
 }
 
-function StatementSlider() {
-  const statements = [
-    {
-      title: "Mission",
-      text: "Teaching in all areas of life, the Truth, as centered in the Lord Jesus of the Bible.",
-    },
-    {
-      title: "Vision",
-      text: "To see children grow up and reach their full potential by providing an environment that allows students to blossom as unique individuals created in the image of God.",
-    },
-    {
-      title: "Philosophy",
-      text: "All children are gifted, and our responsibility is to help students discover and develop the unique abilities that God has given them.",
-    },
-  ];
+const STATEMENTS = [
+  {
+    title: "Mission",
+    text: "Teaching in all areas of life, the Truth, as centered in the Lord Jesus of the Bible.",
+  },
+  {
+    title: "Vision",
+    text: "To see children grow up and reach their full potential by providing an environment that allows students to blossom as unique individuals created in the image of God.",
+  },
+  {
+    title: "Philosophy",
+    text: "All children are gifted, and our responsibility is to help students discover and develop the unique abilities that God has given them.",
+  },
+];
 
+function StatementSlider() {
   return (
     <Container
       sx={{
@@ -194,7 +233,7 @@ function StatementSlider() {
       }}
     >
       <Carousel interval={5000} duration={1500}>
-        {statements.map((statement, idx) => (
+        {STATEMENTS.map((statement, idx) => (
           <div key={idx}>
             <Typography variant="h4" gutterBottom>
               {statement.title}
@@ -207,21 +246,20 @@ function StatementSlider() {
   );
 }
 
-function EducationLevels() {
-  const StyledButton = styled(Button)({
-    color: "white",
+const StyledButton = styled(Button)({
+  color: "white",
+  border: "1px solid white",
+  textTransform: "none",
+  borderRadius: "30px",
+  fontFamily: "Didact Gothic",
+  fontSize: "1.2rem",
+  "&:hover": {
+    backgroundColor: "white",
+    color: "black",
     border: "1px solid white",
-    textTransform: "none",
-    borderRadius: "30px",
-    fontFamily: "Didact Gothic",
-    fontSize: "1.2rem",
-    "&:hover": {
-      backgroundColor: "white",
-      color: "black",
-      border: "1px solid white",
-    },
-  });
-
+  },
+});
+function EducationLevels() {
   return (
     <SectionWrapper bgcolor="rgb(53, 94, 59)">
       <Grid
@@ -423,170 +461,3 @@ function Accreditations() {
     </SectionWrapper>
   );
 }
-
-/****** ALL JOGATHON CODE BELOW ******/
-
-// Jogathon icons for links
-// import InfoIcon from "@mui/icons-material/Info";
-// import PaidIcon from "@mui/icons-material/Paid";
-// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-// import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-// import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-// import ScheduleIcon from "@mui/icons-material/Schedule";
-// import StorefrontIcon from "@mui/icons-material/Storefront";
-// import LocalDiningIcon from "@mui/icons-material/LocalDining";
-// import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
-// function Jogathon() {
-//   const StyledButton = styled(Button)(({ theme }) => ({
-//     fontFamily: "didact gothic",
-//     fontSize: "22px",
-//     textTransform: "none",
-//     width: "100%",
-//     fontWeight: "bold",
-//     justifyContent: "start",
-//     borderRadius: "30px",
-//     backgroundColor: theme.palette.dark.main,
-//     "&:hover": {
-//       color: "white",
-//     },
-//   }));
-
-//   const jogLinks = [
-//     {
-//       title: "Information",
-//       href: "https://drive.google.com/file/d/1URvjpRCrNm6JMVKk-EhlBuVOCcfAaWXL/view",
-//       icon: InfoIcon,
-//     },
-//     {
-//       title: "Schedule",
-//       href: "https://drive.google.com/file/d/19XpnOu4jb1J13oxpBmsnRPvhl-iYBCa7/view?usp=sharing",
-//       icon: ScheduleIcon,
-//     },
-//     {
-//       title: "Lunch Orders",
-//       href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-taco",
-//       icon: LocalDiningIcon,
-//     },
-//     {
-//       title: "Volunteer",
-//       href: "https://www.signupgenius.com/go/10c094baaab2aa1f4c52-2023#/",
-//       icon: VolunteerActivismIcon,
-//     },
-//     {
-//       title: "Distance Pledge Form",
-//       href: "https://drive.google.com/file/d/16hU7RNSpjHs08kLaPG7hsbFVXJb3zqjg/view",
-//       icon: FormatListBulletedIcon,
-//     },
-//     {
-//       title: "Request Sponsor Form",
-//       href: "https://drive.google.com/file/d/1UcQBiipGlwPy2CKNCl_xUw9frVzzuZCL/view",
-//       icon: PaidIcon,
-//     },
-//     {
-//       title: "Business Sponsor Form",
-//       href: "https://drive.google.com/file/d/1U7E7Jv2lRcck7EBQBz8fd75MELWBrxj6/view?usp=sharing",
-//       icon: StorefrontIcon,
-//     },
-//     {
-//       title: "Prizes",
-//       href: "https://drive.google.com/file/d/1WoCDaC1ki3FHWhT1-j5WR_omUOCrLuYP/view?usp=sharing",
-//       icon: EmojiEventsIcon,
-//     },
-//     {
-//       title: "Garden Competition",
-//       href: "https://drive.google.com/file/d/1GjtrnM2d_RttlF1td5FPl9YucEbYXyO2/view?usp=sharing",
-//       icon: LocalFloristIcon,
-//     },
-//   ];
-
-//   return (
-//     <Box sx={{ bgcolor: "background.alternate" }}>
-//       <Container sx={{ py: 5 }}>
-//         <Grid container spacing={2} sx={{ mb: 7 }} alignItems="center">
-//           <Grid item xs={12} md={6}>
-//             <Box component="img" sx={{ width: "100%", pr: 4 }} src={jogHero} />
-//           </Grid>
-//           <Grid item xs={12} md={6}>
-//             <Typography
-//               sx={{
-//                 fontFamily: "copse",
-//                 fontSize: { xs: "2rem", md: "2.5rem" },
-//                 textAlign: "center",
-//               }}
-//             >
-//               Friday, April 8th
-//             </Typography>
-//             <Typography variant="p">
-//               Join us for Tabernacle's 2023 jogathon fundraiser! Please mark
-//               your calendars and review the resource links below. If you are
-//               available to volunteer or have any additional questions, please
-//               contact Lisa Mazzoncini at LisaM@tbs.org
-//             </Typography>
-//           </Grid>
-//         </Grid>
-//         <Grid container spacing={2}>
-//           {jogLinks.map((link) => (
-//             <Grid item xs={12} sm={6} lg={4} key={link.title}>
-//               <StyledButton
-//                 variant="contained"
-//                 component="a"
-//                 href={link.href}
-//                 target="_blank"
-//                 size="small"
-//               >
-//                 <link.icon sx={{ fontSize: "25px", marginLeft: "10px" }} />
-//                 <span style={{ marginLeft: "15px" }}>{link.title}</span>
-//               </StyledButton>
-//             </Grid>
-//           ))}
-//         </Grid>
-//       </Container>
-//     </Box>
-//   );
-// }
-
-// function LandingCarousel() {
-//   const carouselImages = [
-//     carousel1,
-//     carousel2,
-//     carousel3,
-//     carousel4,
-//     carousel5,
-//     carousel6,
-//     carousel7,
-//     carousel8,
-//   ];
-
-//   return (
-//     <Box
-//       sx={{
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//         width: "100%",
-//       }}
-//     >
-//       <Box sx={{ width: "100%" }}>
-//         <Marquee
-//           gradient={false}
-//           speed={80}
-//           pauseOnHover={true}
-//           pauseOnClick={true}
-//           delay={0}
-//           play={true}
-//           direction="left"
-//         >
-//           {carouselImages.map((image, idx) => (
-//             <Box
-//               key={idx}
-//               sx={{ width: { xs: "400px", md: "500px", lg: "600px" } }}
-//               component="img"
-//               src={image}
-//               alt="carousel image"
-//             />
-//           ))}
-//         </Marquee>
-//       </Box>
-//     </Box>
-//   );
-// }
