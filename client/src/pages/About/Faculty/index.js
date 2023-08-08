@@ -124,11 +124,10 @@ const Slides = () => {
 };
 
 function SelectGrade() {
-  const DEFAULT_OPTION = "Select Grade";
-
   const [facultyData, setFacultyData] = useState(null);
-  const [selection, setSelection] = useState(DEFAULT_OPTION);
+  const [selection, setSelection] = useState(null);
   const theme = useTheme();
+  console.log("selection", selection);
 
   const handleChange = (event) => {
     setSelection(event.target.value);
@@ -138,7 +137,7 @@ function SelectGrade() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?_sort=id&populate[staff_members][populate][0]=profile_picture`
+          `${process.env.REACT_APP_BASE_URL}/api/staff-groups?populate[staff_members][populate][0]=profile_picture`
         );
 
         setFacultyData(response?.data?.data);
@@ -152,118 +151,123 @@ function SelectGrade() {
 
   if (!facultyData) return <LoadingSpinner />;
 
+  facultyData.sort((a, b) => a.id - b.id);
   const facultyOptions = facultyData.map((group) => group.attributes.name);
 
-  let staffMembers;
-  if (selection !== DEFAULT_OPTION) {
-    const selectedGroup = facultyData.filter(
-      (group) => group.attributes.name === selection
-    )[0];
+  const facultyObj = facultyData.reduce((acc, curr) => {
+    acc[curr.attributes.name] = curr.attributes;
+    return acc;
+  }, {});
 
-    const staffMembersData = selectedGroup.attributes.staff_members.data;
-
-    staffMembers = staffMembersData.map((member) => ({
-      id: member.id,
-      name: member.attributes.name,
-      profilePicture: member.attributes.profile_picture.data.attributes.url,
-      titleShort: member.attributes.title_short,
-      email: member.attributes.email,
-    }));
-  }
+  console.log("selection", facultyObj[selection]);
 
   return (
     <Box>
       <Box sx={{ mb: 5, textAlign: "center" }}>
         <Typography variant="p">
-          Choose a grade level from the dropdown and select a faculty member to
-          see their profile page!
+          Choose a grade level and select a faculty member to see their profile
+          page.
         </Typography>
       </Box>
 
-      <FormControl fullWidth variant="standard">
-        <Select
-          id="faculty-select"
-          value={selection}
-          onChange={handleChange}
-          sx={{
-            fontFamily: "copse",
-            fontSize: "2rem",
-            textAlign: "center",
-            pb: 1,
-            mb: 3,
-          }}
-        >
-          <MenuItem
-            value={DEFAULT_OPTION}
-            sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
+      {selection ? (
+        <>
+          <Typography
+            variant="h4"
+            sx={{ textDecoration: "underline" }}
+            textAlign="center"
           >
-            Select Grade
-          </MenuItem>
-          {facultyOptions.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              sx={{ fontFamily: "didact gothic", fontSize: "1.5rem" }}
-            >
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+            {facultyObj[selection].name}
+          </Typography>
+          <Grid container spacing={4} sx={{ py: 5 }}>
+            {facultyObj[selection].staff_members.data.map((member) => {
+              const {
+                email,
+                name,
+                profile_picture,
+                title_short: titleShort,
+              } = member.attributes;
 
-      <Grid container spacing={4} sx={{ py: 5 }}>
-        {selection !== DEFAULT_OPTION ? (
-          staffMembers.map((member) => (
-            <Grid
-              item
-              key={member.id}
-              xs={6}
-              sm={6}
-              lg={3}
-              sx={{ textAlign: "center" }}
-            >
-              <Link
-                to={`/about/staff/${member.email}`}
-                style={{
-                  textDecoration: "none",
-                  color: theme.palette.text.primary,
-                }}
-              >
-                <Box sx={{ mb: 1 }}>
-                  <Typography variant="h5" sx={{ whiteSpace: "nowrap" }}>
-                    {member.name}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    width: 150,
-                    height: 150,
-                    borderRadius: "50%",
-                    overflow: "hidden",
-                    mx: "auto",
-                  }}
+              const profilePicture = profile_picture.data.attributes.url;
+              return (
+                <Grid
+                  item
+                  key={member.id}
+                  xs={6}
+                  sm={6}
+                  lg={3}
+                  sx={{ textAlign: "center" }}
                 >
-                  <Box
-                    component="img"
-                    sx={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      objectPosition: "center",
+                  <Link
+                    to={`/about/staff/${email}`}
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
                     }}
-                    src={member.profilePicture}
-                  />
-                </Box>
-                <Typography variant="h6">{member.titleShort}</Typography>
-              </Link>
-            </Grid>
-          ))
-        ) : (
-          <Grid container spacing="6">
-            {facultyOptions.map((option) => (
+                  >
+                    <Box sx={{ mb: 1 }}>
+                      <Typography variant="p" sx={{ whiteSpace: "nowrap" }}>
+                        {name}
+                      </Typography>
+                    </Box>
+                    <Box
+                      sx={{
+                        width: 150,
+                        height: 150,
+                        borderRadius: "50%",
+                        overflow: "hidden",
+                        mx: "auto",
+                      }}
+                    >
+                      <Box
+                        component="img"
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                        src={profilePicture}
+                      />
+                    </Box>
+                    <Typography variant="p">{titleShort}</Typography>
+                  </Link>
+                </Grid>
+              );
+            })}
+          </Grid>
+          <Box sx={{ textAlign: "end" }}>
+            <Typography
+              variant="p"
+              sx={{
+                textDecoration: "underline",
+                cursor: "pointer",
+                color: theme.palette.primary.main,
+              }}
+              onClick={() => setSelection(null)}
+            >
+              See all faculty
+            </Typography>
+          </Box>
+        </>
+      ) : (
+        <Grid container spacing="20">
+          {facultyOptions.map((option) => {
+            let shortName;
+
+            if (option === "Middle School") {
+              shortName = "Jr High";
+            } else if (option === "Physical Education") {
+              shortName = "Phys Ed";
+            } else {
+              shortName = option;
+            }
+
+            return (
               <Grid
                 item
                 xs={6}
+                lg={4}
                 key={option}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
@@ -271,10 +275,12 @@ function SelectGrade() {
                   variant="outlined"
                   onClick={() => setSelection(option)}
                   sx={{
-                    borderRadius: "25px",
-                    width: "90%",
+                    borderRadius: "15px",
+                    width: "100%",
                     color: "black",
                     borderColor: "black",
+                    fontFamily: "didact gothic",
+                    fontWeight: "normal",
                     "&:hover": {
                       bgcolor: "black",
                       color: "white",
@@ -282,13 +288,13 @@ function SelectGrade() {
                     },
                   }}
                 >
-                  {option}
+                  {shortName}
                 </Button>
               </Grid>
-            ))}
-          </Grid>
-        )}
-      </Grid>
+            );
+          })}
+        </Grid>
+      )}
     </Box>
   );
 }
