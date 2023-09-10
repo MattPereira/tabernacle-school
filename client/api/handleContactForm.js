@@ -1,7 +1,7 @@
 const postmark = require("postmark");
 
 const client = new postmark.ServerClient(
-  process.env.POSTMARK_TOKEN_CONTACT_FORM
+  import.meta.env.POSTMARK_TOKEN_CONTACT_FORM
 );
 
 const validator = require("validator");
@@ -49,8 +49,8 @@ export default async function handler(request, response) {
     try {
       // console.log("request.body", request.body);
       await client.sendEmail({
-        From: process.env.EMAIL_ADDRESS,
-        to: process.env.EMAIL_ADDRESS,
+        From: import.meta.env.EMAIL_ADDRESS,
+        to: import.meta.env.EMAIL_ADDRESS,
         Subject: "General Message from tabernacle.school",
         HtmlBody: `
         <h3>Name</h3>

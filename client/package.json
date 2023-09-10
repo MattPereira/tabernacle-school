@@ -8,7 +8,6 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "axios": "^0.27.2",
-    "bootstrap": "^5.2.0",
     "postmark": "^3.0.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,17 +16,15 @@
     "react-responsive": "^9.0.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
-    "sass": "^1.63.6",
     "validator": "^13.9.0",
+    "vite-plugin-rewrite-all": "^1.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build": "REACT_APP_BASE_URL=https://tabernacle-cms.up.railway.app react-scripts build"
+    "start": "vite",
+    "preview": "vite preview",
+    "build": "VITE_BASE_URL=https://tabernacle-cms.up.railway.app vite build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +46,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "source-map-explorer": "^2.5.3"
+    "@vitejs/plugin-react": "^4.0.4",
+    "source-map-explorer": "^2.5.3",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^3.2.0"
   }
 }

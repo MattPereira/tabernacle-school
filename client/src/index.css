@@ -2,8 +2,6 @@
 
 @import url("https://fonts.cdnfonts.com/css/cubano");
 
-@import "~bootstrap/scss/bootstrap.scss";
-
 table {
   font-family: "didact gothic", sans-serif;
 }

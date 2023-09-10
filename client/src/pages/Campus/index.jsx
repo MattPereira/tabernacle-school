@@ -69,7 +69,7 @@ function Facilities() {
       async function getPhotos() {
         try {
           const categoryData = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/facilities`
+            `${import.meta.env.VITE_BASE_URL}/api/facilities`
           );
 
           const list = categoryData.data.data.map(
@@ -79,7 +79,9 @@ function Facilities() {
           setCategoryList(list);
 
           const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/facilities?filters[name][$eqi]=${selection}&populate=*`
+            `${
+              import.meta.env.VITE_BASE_URL
+            }/api/facilities?filters[name][$eqi]=${selection}&populate=*`
           );
 
           setFacility(response.data.data[0].attributes);

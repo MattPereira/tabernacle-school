@@ -19,7 +19,9 @@ const ProfilePage = () => {
       async function getStaff() {
         setStaff(
           await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/staff-members?filters[email][$eqi]=${id}&populate=%2A`
+            `${
+              import.meta.env.VITE_BASE_URL
+            }/api/staff-members?filters[email][$eqi]=${id}&populate=%2A`
           )
         );
       }
