@@ -3,12 +3,6 @@ import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
-import { Link } from "react-router-dom";
-
-// Icons for CurrentInfoAlerts
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 // Accreditations Image Imports
 import asci from "../assets/images/homepage/acsi.png";
@@ -22,7 +16,6 @@ export default function Homepage() {
   return (
     <>
       <LandingShowcase />
-      <CurrentInfoAlerts />
       <StatementSlider />
       <EducationLevels />
       <ParentTestimonials />
@@ -31,119 +24,41 @@ export default function Homepage() {
   );
 }
 
-const CURRENT_INFO_ITEMS = [
-  {
-    text: "Calendar",
-    url: "/pdfs/calendar-23-24.pdf",
-    icon: <CalendarTodayIcon />,
-  },
-  {
-    text: "Employment",
-    path: "/connect#Employment",
-    icon: <WorkOutlineOutlinedIcon />,
-  },
-  {
-    text: "Parent Orientation",
-    path: "/family/parent-orientation",
-    icon: <InfoOutlinedIcon />,
-  },
-];
-
-function CurrentInfoAlerts() {
-  return (
-    <Grid
-      container
-      justifyContent="center"
-      spacing={{ xs: 2, sm: 4 }}
-      sx={{
-        py: 2,
-        borderBottom: "1px solid #e0e0e0",
-      }}
-    >
-      {CURRENT_INFO_ITEMS.map((item) => {
-        let componentType;
-        if (item.url) {
-          componentType = "a";
-        } else if (item.path.includes("#")) {
-          componentType = HashLink;
-        } else {
-          componentType = Link;
-        }
-        return (
-          <Grid item key={item.text}>
-            <Typography
-              variant="p"
-              component={componentType}
-              to={item.path ? item.path : null}
-              href={item.url ? item.url : null}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                textDecoration: "none",
-                color: "black",
-                gap: "0.25rem",
-              }}
-            >
-              {item.icon}
-              {item.text}
-            </Typography>
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
-}
-
 function LandingShowcase() {
   return (
-    <Grid container>
-      <Grid item xs={12} md={6} lg={4} xl={3}>
-        <Box
-          sx={{ width: "100%", height: "100%" }}
-          component="img"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="col-span-1">
+        <img
+          className="w-full h-full"
           src="/images/home-showcase-1.jpg"
           alt="showcase image"
         />
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        md={6}
-        lg={4}
-        xl={3}
-        sx={{ display: { xs: "none", md: "flex" } }}
-      >
-        <Box
-          sx={{ width: "100%" }}
-          component="img"
+      </div>
+
+      <div className="col-span-1 md:flex md:col-span-1 hidden">
+        <img
+          className="w-full"
           src="/images/home-showcase-2.jpg"
           alt="showcase image"
         />
-      </Grid>
-      <Grid
-        item
-        md={6}
-        lg={4}
-        xl={3}
-        sx={{ display: { xs: "none", xl: "flex" } }}
-      >
-        <Box
-          sx={{ width: "100%" }}
-          component="img"
+      </div>
+
+      <div className="col-span-1 xl:flex hidden">
+        <img
+          className="w-full"
           src="/images/home-showcase-4.jpg"
           alt="showcase image"
         />
-      </Grid>
-      <Grid item lg={4} xl={3} sx={{ display: { xs: "none", lg: "flex" } }}>
-        <Box
-          sx={{ width: "100%" }}
-          component="img"
+      </div>
+
+      <div className="col-span-1 lg:flex hidden">
+        <img
+          className="w-full"
           src="/images/home-showcase-3.jpg"
           alt="showcase image"
         />
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
 
@@ -176,10 +91,10 @@ function StatementSlider() {
       <Carousel interval={5000} duration={1500}>
         {STATEMENTS.map((statement, idx) => (
           <div key={idx}>
-            <Typography variant="h4" gutterBottom>
+            <h4 className="font-copse text-2xl md:text-3xl">
               {statement.title}
-            </Typography>
-            <Typography variant="p">{statement.text}</Typography>
+            </h4>
+            <p className="font-gothic text-xl">{statement.text}</p>
           </div>
         ))}
       </Carousel>
@@ -276,7 +191,7 @@ function EducationLevels() {
               size="large"
               component={HashLink}
               variant="outlined"
-              to="/academics#Junior"
+              to="/academics#Middle"
             >
               Learn More
             </StyledButton>

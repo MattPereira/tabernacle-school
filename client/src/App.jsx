@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 /***** The main pages accessible throught the navbar *****/
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/page";
 import About from "./pages/About";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
 import Admissions from "./pages/Admissions";
