@@ -11,6 +11,10 @@ body {
   color: #212529; /* default font color */
 }
 
+* {
+  box-sizing: border-box;
+}
+
 table {
   font-family: "didact gothic", sans-serif;
 }

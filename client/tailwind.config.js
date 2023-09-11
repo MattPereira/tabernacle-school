@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: "#1565c0",
         alternate: "#eeeeee",
+        dark: "#212529",
       },
       fontFamily: {
         cubano: ["cubano", "sans-serif"],

@@ -1,10 +1,8 @@
-import { useTheme } from "@mui/material/styles";
-import { Container, Box, Grid, Typography } from "@mui/material";
 import SectionTitle from "../../components/SectionTitle";
+import SectionWrapper from "../../components/SectionWrapper";
+import { Table, TableHead, TableRow } from "../../components/Table";
 
 export default function Tuition() {
-  const theme = useTheme();
-
   const tuitionPrices = [
     {
       title: "Preschool & Transitional Kindergarten",
@@ -16,237 +14,202 @@ export default function Tuition() {
   ];
 
   return (
-    <Box sx={{ bgcolor: "background.alternate", py: 8 }}>
-      <Container>
-        <SectionTitle title="Tuition & Fees" />
-
-        <Grid container spacing={4}>
-          <Grid item lg={6}>
-            <Box sx={{ mb: 2 }}>
-              <Typography variant="h5" gutterBottom textAlign="center">
-                2023-24 Tuition
-              </Typography>
-
-              <table className="table table-bordered table-hover bg-white">
+    <SectionWrapper classNames="bg-alternate">
+      <SectionTitle title="Tuition & Fees" />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="">
+          <div className="mb-3">
+            <h5 className="text-2xl font-gothic font-bold text-center mb-1">
+              2023-24 Tuition
+            </h5>
+            <div className="border">
+              <table className="w-full bg-white ">
                 <thead>
-                  <tr className="text-center table-dark">
-                    <th>Child</th>
-                    <th>Annual Plan</th>
-                    <th scope="">PIF Discount</th>
-                    <th scope="">Monthly Plan</th>
+                  <tr className="text-center bg-dark text-white">
+                    <th className="py-2 border-r border-collapse border-neutral-600">
+                      Child
+                    </th>
+                    <th className="py-2 border-r border-neutral-600">
+                      Annual Plan
+                    </th>
+                    <th className="py-2 border-r border-neutral-600">
+                      PIF Discount
+                    </th>
+                    <th className="py-2">Monthly Plan</th>
                   </tr>
                 </thead>
 
                 {tuitionPrices.map((group) => {
                   return (
                     <tbody key={group.title}>
-                      <tr
-                        style={{
-                          backgroundColor: theme.palette.primary.main,
-                          color: theme.palette.primary.contrastText,
-                        }}
-                      >
-                        <th
-                          colspan="4"
-                          style={{
-                            backgroundColor: theme.palette.primary.main,
-                          }}
-                          className="text-white"
-                        >
+                      <tr className="bg-primary text-white">
+                        <th colSpan="4" className="text-start px-2 py-2">
                           {group["title"]}
                         </th>
                       </tr>
                       <tr className="text-center">
-                        <td>1st</td>
-                        <td>${group.annual}</td>
-                        <td>${group.annual - 150}</td>
-                        <td>${group.monthly}</td>
+                        <td className="py-2 border-b border-r">1st</td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual}
+                        </td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual - 150}
+                        </td>
+                        <td className="py-2 border-b">${group.monthly}</td>
                       </tr>
                       <tr className="text-center">
-                        <td>2nd</td>
-                        <td>${group.annual - 550}</td>
-                        <td>${group.annual - 150 - 550}</td>
-                        <td>${group.monthly - 55}</td>
+                        <td className="py-2 border-b border-r">2nd</td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual - 550}
+                        </td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual - 150 - 550}
+                        </td>
+                        <td className="py-2 border-b">${group.monthly - 55}</td>
                       </tr>
                       <tr className="text-center">
-                        <td>3rd</td>
-                        <td>${group.annual - 550}</td>
-                        <td>${group.annual - 150 - 550}</td>
-                        <td>${group.monthly - 55}</td>
+                        <td className="py-2 border-b border-r">3rd</td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual - 550}
+                        </td>
+                        <td className="py-2 border-b border-r">
+                          ${group.annual - 150 - 550}
+                        </td>
+                        <td className="py-2 border-b">${group.monthly - 55}</td>
                       </tr>
                     </tbody>
                   );
                 })}
               </table>
-              <Typography variant="p" sx={{ fontSize: "15px" }}>
-                *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for
-                PIF discount is due by 8/10/2023
-              </Typography>
-            </Box>
-            <Typography variant="h5" gutterBottom textAlign="center">
-              Annual Fees
-            </Typography>
-            <table className="table table-bordered table-hover bg-white">
-              <thead>
-                <tr className="table-dark">
-                  <th>Fee</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Registration</td>
-                  <td>$100</td>
-                  <td>
-                    Accounts must be current for re-enrolling students and
-                    registration fee paid by January 31
-                  </td>
-                </tr>
-                <tr>
-                  <td>Preschool Consumables</td>
-                  <td>$350</td>
-                  <td>
-                    Fee includes curriculum, emergency kit, yearbook, and craft
-                    supplies.
-                  </td>
-                </tr>
-                <tr>
-                  <td>K-8 Consumables</td>
-                  <td>$375</td>
-                  <td>
-                    Fee includes textbooks, emergency supplies, yearbook, and
-                    online resources. Maximum consumable fee per family is $850
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <Box sx={{ mb: 1 }}>
-              <Typography variant="p" sx={{ fontSize: "15px" }}>
-                *Classroom placement is secured upon payment of registration and
-                consumable fee and first month's tuition.
-              </Typography>
-            </Box>
+            </div>
+            <p className="text-sm text-neutral-700">
+              *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for PIF
+              discount is due by 8/10/2023
+            </p>
+          </div>
+          <h5 className="text-center text-2xl font-gothic font-bold mb-1">
+            Annual Fees
+          </h5>
+          <Table className="bg-white">
+            <TableHead headers={["Fee", "Price", "Description"]} />
+            <tbody>
+              <TableRow
+                data={[
+                  "Registration",
+                  "$100",
+                  "Accounts must be current for re-enrolling students and registration fee paid by January 31",
+                ]}
+              />
+              <TableRow
+                data={[
+                  "Preschool Consumables",
+                  "$350",
+                  "Fee includes curriculum, emergency kit, yearbook, and craft supplies.",
+                ]}
+              />
+              <TableRow
+                data={[
+                  "K-8 Consumables",
+                  "$375",
+                  "Fee includes textbooks, emergency supplies, yearbook, and online resources. Maximum consumable fee per family is $850",
+                ]}
+              />
+            </tbody>
+          </Table>
 
-            <Typography variant="p" sx={{ fontSize: "15px" }}>
-              *Registration is non-refundable. Consumable fee is non-refundable
-              after May 1st or at time of enrollment for new students. First
-              month's tuition is non-refundable.
-            </Typography>
-          </Grid>
-          <Grid item lg={6}>
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="h5" gutterBottom textAlign="center">
-                Other Fees
-              </Typography>
-              <table className="table table-bordered table-hover bg-white">
-                <thead>
-                  <tr className="table-dark">
-                    <th>Fee</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Athletic</td>
-                    <td>$150</td>
-                    <td>Per sport played</td>
-                  </tr>
-                  <tr>
-                    <td>Tutoring</td>
-                    <td>$50</td>
-                    <td>Per hour</td>
-                  </tr>
-                  <tr>
-                    <td>Field Trip</td>
-                    <td>TBD</td>
-                    <td>Per trip</td>
-                  </tr>
-                  <tr>
-                    <td>Emergency Lunch</td>
-                    <td>$7</td>
-                    <td>Per lunch</td>
-                  </tr>
-                  <tr>
-                    <td>Returned Check</td>
-                    <td>$30</td>
-                    <td>Per check</td>
-                  </tr>
-                  <tr>
-                    <td>Academic Assessment</td>
-                    <td>$50</td>
-                    <td>For new students only</td>
-                  </tr>
-                </tbody>
-              </table>
-            </Box>
-            <Typography variant="h5" gutterBottom textAlign="center">
-              Daycare Fees
-            </Typography>
-            <table className="table table-bordered table-hover bg-white">
-              <thead className="table-dark ">
-                <tr>
-                  <th>Type</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
+          <div className="mb-1 ">
+            <p className="text-sm text-neutral-700">
+              *Classroom placement is secured upon payment of registration and
+              consumable fee and first month's tuition.
+            </p>
+          </div>
+
+          <p className="text-sm  text-neutral-700">
+            *Registration is non-refundable. Consumable fee is non-refundable
+            after May 1st or at time of enrollment for new students. First
+            month's tuition is non-refundable.
+          </p>
+        </div>
+        <div className="">
+          <div className="mb-3">
+            <h5 className="text-2xl font-gothic font-bold text-center mb-1">
+              Other Fees
+            </h5>
+            <Table className="bg-white">
+              <TableHead headers={["Fee", "Price", "Description"]} />
               <tbody>
-                <tr>
-                  <td>Full Time Daycare</td>
-                  <td>$200/month</td>
-                  <td> During School Year (August - May)</td>
-                </tr>
-                <tr>
-                  <td>FTDC Family Plan (2) </td>
-                  <td>$350/month</td>
-                  <td>Two child discount during school year</td>
-                </tr>
-                <tr>
-                  <td>FTDC Family Plan (3+)</td>
-                  <td>$425/month</td>
-                  <td>3+ children discount during school year</td>
-                </tr>
-                <tr>
-                  <td>Full Time Daycare</td>
-                  <td>$700/month</td>
-                  <td> Summer Months K-8</td>
-                </tr>
-                <tr>
-                  <td>Summer Celebration</td>
-                  <td>$800/month</td>
-                  <td> Incoming Kindergarteners</td>
-                </tr>
-                <tr>
-                  <td>Joyful Beginnings</td>
-                  <td>$850/month</td>
-                  <td>Preschool ages</td>
-                </tr>
-                <tr>
-                  <td>Hourly Daycare</td>
-                  <td>$10/hour</td>
-                  <td>For students not enrolled in FTDC</td>
-                </tr>
-                <tr>
-                  <td>Summer Celebration</td>
-                  <td>$10/hour</td>
-                  <td>Available 9-12 am</td>
-                </tr>
-                <tr>
-                  <td>After Hours Daycare</td>
-                  <td>$1/minute</td>
-                  <td>After 6:00 pm (late pick-up)</td>
-                </tr>
+                <TableRow data={["Athletic", "$150", "Per sport played"]} />
+                <TableRow data={["Tutoring", "$50", "Per hour"]} />
+                <TableRow data={["Field Trip", "TBD", "Per trip"]} />
+                <TableRow data={["Emergency Lunch", "$7", "Per lunch"]} />
+                <TableRow data={["Returned Check", "$30", "Per check"]} />
+                <TableRow
+                  data={["Academic Assessment", "$50", "For new students only"]}
+                />
               </tbody>
-            </table>
-            <Typography variant="p" sx={{ fontSize: "15px" }}>
-              *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
-              <a href="/campus#calendar">calendar</a> for closures.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+            </Table>
+          </div>
+          <h5 className="text-2xl font-gothic font-bold text-center mb-1">
+            Daycare Fees
+          </h5>
+          <Table className="bg-white">
+            <TableHead headers={["Type", "Price", "Description"]} />
+            <tbody>
+              <TableRow
+                data={[
+                  "Full Time Daycare",
+                  "$200/month",
+                  "During School Year (August - May)",
+                ]}
+              />
+              <TableRow
+                data={[
+                  "FTDC Family Plan (2)",
+                  "$350/month",
+                  "Two child discount during school year",
+                ]}
+              />
+              <TableRow
+                data={[
+                  "FTDC Family Plan (3+)",
+                  "$425/month",
+                  "3+ children discount during school year",
+                ]}
+              />
+              <TableRow
+                data={["Full Time Daycare", "$700/month", "Summer Months K-8"]}
+              />
+              <TableRow
+                data={[
+                  "Summer Celebration",
+                  "$800/month",
+                  " Incoming Kindergarteners",
+                ]}
+              />
+              <TableRow
+                data={["Joyful Beginnings", "$850/month", "Preschool ages"]}
+              />
+              <TableRow
+                data={[
+                  "Hourly Daycare",
+                  "$10/hour",
+                  "For students not enrolled in FTDC",
+                ]}
+              />
+              <TableRow
+                data={["Summer Celebration", "$10/hour", "Available 9-12 am"]}
+              />
+              <TableRow
+                data={["After Hours Daycare", "$1/minute", "After 6:00 pm"]}
+              />
+            </tbody>
+          </Table>
+          <p className="text-sm text-neutral-700">
+            *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
+            <a href="/campus#calendar">calendar</a> for closures.
+          </p>
+        </div>
+      </div>
+    </SectionWrapper>
   );
 }
