@@ -13,6 +13,7 @@ import friends from "../../assets/images/campus/friends-feeding.jpg";
 import thanksgiving from "../../assets/images/campus/thanksgiving-food.jpg";
 import christmas from "../../assets/images/campus/operation-christmas.jpg";
 import LoadingSpinner from "../../components/LoadingSpinner";
+import { Table, TableHead, TableRow } from "../../components/Table";
 
 // prettier-ignore
 import {Container,Box,Grid,Typography,Paper,FormControl,Select,MenuItem,Modal} from "@mui/material";
@@ -294,65 +295,47 @@ function Daycare() {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="h5" textAlign="center" gutterBottom>
-              Hours of Operation
-            </Typography>
+            <div className="mb-5">
+              <h5 className="mb-2 text-2xl text-center font-gothic font-bold">
+                Hours of Operation
+              </h5>
 
-            <table className="table table-bordered">
-              <thead>
-                <tr className="table-dark">
-                  <th>Type</th>
-                  <th>Hours</th>
-                  <th>Days</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Summer</td>
-                  <td>6:45 am - 6:00 pm</td>
-                  <td>Monday - Friday</td>
-                </tr>
-                <tr>
-                  <td>Before School</td>
-                  <td>6:45 am – 8:00 am</td>
-                  <td>Monday - Friday</td>
-                </tr>
-                <tr>
-                  <td>After School</td>
-                  <td>3:15 pm – 6:00 pm</td>
-                  <td>Monday - Friday</td>
-                </tr>
-              </tbody>
-            </table>
-            <Typography variant="h5" textAlign="center" gutterBottom>
-              Rates
-            </Typography>
-            <table className="table table-bordered">
-              <thead>
-                <tr className="table-dark">
-                  <td>Type</td>
-                  <td>Rate</td>
-                  <td>Per</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Drop-In</td>
-                  <td>$10</td>
-                  <td>Hour</td>
-                </tr>
-                <tr>
-                  <td>Full-Time Summer</td>
-                  <td>$700</td>
-                  <td>Month</td>
-                </tr>
-                <tr>
-                  <td>Full-Time School Year</td>
-                  <td>$200</td>
-                  <td>Month</td>
-                </tr>
-              </tbody>
-            </table>
+              <Table className="bg-white">
+                <TableHead headers={["Type", "Hours", "Days"]} />
+                <tbody>
+                  <TableRow
+                    data={["Summer", "6:45 am - 6:00 pm", "Monday - Friday"]}
+                  />
+                  <TableRow
+                    data={[
+                      "Before School",
+                      "6:45 am - 8:00 am",
+                      "Monday - Friday",
+                    ]}
+                  />
+                  <TableRow
+                    data={[
+                      "After School",
+                      "3:15 pm – 6:00 pm",
+                      "Monday - Friday",
+                    ]}
+                  />
+                </tbody>
+              </Table>
+            </div>
+            <div className="mb-5">
+              <h5 className="mb-2 text-2xl text-center font-gothic font-bold">
+                Rates
+              </h5>
+              <Table className="bg-white">
+                <TableHead headers={["Type", "Rate", "Per"]} />
+                <tbody>
+                  <TableRow data={["Drop-In", "$10", "Hour"]} />
+                  <TableRow data={["Full-Time Summer", "$700", "Month"]} />
+                  <TableRow data={["Full-Time School Year", "$200", "Month"]} />
+                </tbody>
+              </Table>
+            </div>
           </Grid>
         </Grid>
       </Container>
