@@ -46,7 +46,7 @@ function SendMessageForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("/api/handleContactForm", {
+      const response = await fetch("/api/send-contact-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

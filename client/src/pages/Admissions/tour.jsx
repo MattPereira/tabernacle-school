@@ -35,7 +35,7 @@ export default function ScheduleTourForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("/api/handleAdmissionsForm", {
+      const response = await fetch("/api/send-admissions-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

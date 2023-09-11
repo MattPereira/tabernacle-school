@@ -1,0 +1,11 @@
+{
+  "name": "tabernacle-school",
+  "version": "1.0.0",
+  "description": "Official website for Tabernacle School",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
