@@ -1,8 +1,6 @@
-import { HashLink } from "react-router-hash-link";
-import { styled } from "@mui/material/styles";
+// External imports
 import Carousel from "react-material-ui-carousel";
-import { Box, Container, Typography, Grid, Button } from "@mui/material";
-import useTheme from "@mui/material/styles/useTheme";
+import { HashLink } from "react-router-hash-link";
 
 // Accreditations Image Imports
 import asci from "../assets/images/homepage/acsi.png";
@@ -79,15 +77,7 @@ const STATEMENTS = [
 
 function StatementSlider() {
   return (
-    <Container
-      sx={{
-        height: { xs: "250px", md: "275px" },
-        display: "flex",
-        flexDirection: "column",
-        textAlign: "center",
-        justifyContent: "center",
-      }}
-    >
+    <SectionWrapper classNames="text-center">
       <Carousel interval={5000} duration={1500}>
         {STATEMENTS.map((statement, idx) => (
           <div key={idx}>
@@ -98,134 +88,78 @@ function StatementSlider() {
           </div>
         ))}
       </Carousel>
-    </Container>
+    </SectionWrapper>
   );
 }
 
-const StyledButton = styled(Button)({
-  color: "white",
-  border: "1px solid white",
-  textTransform: "none",
-  borderRadius: "30px",
-  fontFamily: "Didact Gothic",
-  fontSize: "1.2rem",
-  "&:hover": {
-    backgroundColor: "white",
-    color: "black",
-    border: "1px solid white",
+const EducationLevelsContent = [
+  {
+    title: "Preschool",
+    link: "/academics#Preschool",
+    description:
+      "The tiny tigers preschool provides a warm, nurturing, family atmosphere that is conducive to learning at an early age. Our program accepts children that are 3 years old by September 1st. We have been providing and promoting high quality early childhood education since 1971.",
   },
-});
+  {
+    title: "Elementary",
+    link: "/academics#Elementary",
+    description:
+      "Our elementary program provides an education that prepares children to think clearly, act responsibly, and live ethically. Our programs and curriculum give students a competitive edge in an increasingly complex society as they discover their unique giftedness.",
+  },
+  {
+    title: "Middle School",
+    link: "/academics#Middle",
+    description:
+      "During middle school, we help our students navigate the early teen years and prepare them to excel in high school and beyond. Throughout the middle school years, our students are challenged academically and grow in confidence as they explore their interests.",
+  },
+];
+
 function EducationLevels() {
   return (
-    <SectionWrapper bgcolor="rgb(53, 94, 59)">
-      <Grid
-        container
-        spacing={4}
-        justifyContent="center"
-        sx={{ color: "white" }}
-      >
-        <Grid item sm={10} md={8} lg={4}>
-          <Typography
-            variant="h3"
-            sx={{ mb: 3, textAlign: "center", fontFamily: "Copse" }}
-          >
-            Preschool
-          </Typography>
-          <Typography variant="p">
-            The tiny tigers preschool provides a warm, nurturing, family
-            atmosphere that is conducive to learning at an early age. Our
-            program accepts children that are 3 years old by September 1st. We
-            have been providing and promoting high quality early childhood
-            education since 1971.
-          </Typography>
-          <Box sx={{ mt: 3, textAlign: "center" }}>
-            <StyledButton
-              size="large"
-              component={HashLink}
-              variant="outlined"
-              to="/academics#Preschool"
-            >
-              Learn More
-            </StyledButton>
-          </Box>
-        </Grid>
-        <Grid item sm={10} md={8} lg={4}>
-          <Typography
-            variant="h3"
-            sx={{ mb: 3, textAlign: "center", fontFamily: "Copse" }}
-          >
-            Elementary
-          </Typography>
-          <Typography variant="p">
-            Our elementary program provides an education that prepares children
-            to think clearly, act responsibly, and live ethically. Our programs
-            and curriculum give students a competitive edge in an increasingly
-            complex society as they discover their unique giftedness.
-          </Typography>
-          <Box sx={{ mt: 3, textAlign: "center" }}>
-            <StyledButton
-              size="large"
-              component={HashLink}
-              variant="outlined"
-              to="/academics#Elementary"
-            >
-              Learn More
-            </StyledButton>
-          </Box>
-        </Grid>
-        <Grid item sm={10} md={8} lg={4}>
-          <Typography
-            variant="h3"
-            sx={{ mb: 3, textAlign: "center", fontFamily: "Copse" }}
-          >
-            Middle School
-          </Typography>
-          <Typography variant="p">
-            During middle school, we help our students navigate the early teen
-            years and prepare them to excel in high school and beyond.
-            Throughout the middle school years, our students are challenged
-            academically and grow in confidence as they explore their interests.
-          </Typography>
-          <Box sx={{ mt: 3, textAlign: "center" }}>
-            <StyledButton
-              size="large"
-              component={HashLink}
-              variant="outlined"
-              to="/academics#Middle"
-            >
-              Learn More
-            </StyledButton>
-          </Box>
-        </Grid>
-      </Grid>
+    <SectionWrapper classNames="bg-[#355e3b] text-white">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
+        {EducationLevelsContent.map((group) => (
+          <div key={group.title}>
+            <h3 className="font-copse text-3xl md:text-4xl text-center mb-4">
+              {group.title}
+            </h3>
+            <p className="text-xl font-gothic mb-6">{group.description}</p>
+            <div className="text-center">
+              <HashLink
+                className="inline-block text-xl font-copse text-white border border-white rounded-full px-8 py-2 hover:bg-white hover:text-black transition"
+                to={group.link}
+              >
+                Learn More
+              </HashLink>
+            </div>
+          </div>
+        ))}
+      </div>
     </SectionWrapper>
   );
 }
 
 function ParentTestimonials() {
-  const theme = useTheme();
-
   return (
-    <SectionWrapper bgcolor="background.alternate">
+    <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Parent Testimonials" />
 
-      <Box sx={{ mb: 5 }}>
+      <div className="mb-6">
         <blockquote>
-          <Typography variant="p">
+          <p className="text-xl">
             “I couldn’t say enough great things about Tabernacle’s preschool
             program. I appreciate them so much and wish I could have them be my
             daughter’s teachers forever. They are the most loving, smart, kind
             hearted, caring teachers I have ever met. We are so blessed to have
             them in our kids lives! They are the very best.”
-          </Typography>
+          </p>
         </blockquote>
-        <figcaption style={{ color: theme.palette.grey[600] }}>
+        <figcaption className="text-neutral-400 text-lg">
           — Preschool parent, 2019
         </figcaption>
-      </Box>
-      <Box sx={{ mb: 5 }}>
+      </div>
+      <div className="mb-6">
         <blockquote>
-          <Typography variant="p">
+          <p className="text-xl">
             “My child’s third grade teacher is incredible! She is caring,
             encouraging and supportive, while still holding high expectations to
             ensure the students are ready for 4th grade and beyond. With any
@@ -236,15 +170,15 @@ function ParentTestimonials() {
             concepts throughout the year. I have seen my son grow into a more
             confident learner and this is a huge thank you to his teacher and
             the safe learning environment she creates in her classroom.”
-          </Typography>
+          </p>
         </blockquote>
-        <figcaption style={{ color: theme.palette.grey[600] }}>
+        <figcaption figcaption className="text-neutral-400 text-lg">
           — Third grade parent, 2019
         </figcaption>
-      </Box>
-      <Box>
+      </div>
+      <div className="mb-6">
         <blockquote>
-          <Typography variant="p">
+          <p className="text-xl">
             “We feel blessed that two of our three children have attended
             Tabernacle. Knowing that the teachers care, that they can be
             themselves without a ‘direct worldly attack’, and that there are
@@ -252,12 +186,12 @@ function ParentTestimonials() {
             the sacrifices we make as parents for them to attend here. We
             appreciate all the Tabernacle offers their students, families, and
             staff.”
-          </Typography>
+          </p>
         </blockquote>
-        <figcaption style={{ color: theme.palette.grey[600] }}>
+        <figcaption figcaption className="text-neutral-400 text-lg">
           — Middle school parent, 2016
         </figcaption>
-      </Box>
+      </div>
     </SectionWrapper>
   );
 }
@@ -267,34 +201,33 @@ function Accreditations() {
     <SectionWrapper>
       <SectionTitle title="Accreditations" />
 
-      <Grid container columnSpacing={3} sx={{ mb: 5 }}>
-        <Grid item xs={12} md={6} lg={8}>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center mb-10">
+        <div className="col-span-4">
+          <h5 className="text-xl font-bold mb-1">
             ASSOCIATION OF CHRISTIAN SCHOOLS INTERNATIONAL
-          </Typography>
-          <Typography variant="p">
+          </h5>
+          <p className="text-xl">
             Tabernacle School is accredited by the Association of Christian
             Schools International (ACSI). ACSI endeavors to "strengthen
             Christian schools and equip Christian educators worldwide as they
             prepare students academically and inspire them to become devoted
             followers of Jesus Christ."
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} sx={{ textAlign: "center" }}>
-          <Box
-            component="img"
-            sx={{ width: "100%" }}
+          </p>
+        </div>
+        <div className="col-span-2">
+          <img
+            className="w-full sm:w-1/2 lg:w-full mx-auto"
             src={asci}
             alt="ACSI accreditaiton logo"
           />
-        </Grid>
-      </Grid>
-      <Grid container columnSpacing={3} sx={{ mb: 5 }}>
-        <Grid item md={6} lg={8}>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center mb-10">
+        <div className="col-span-4">
+          <h5 className="text-xl font-bold mb-1">
             WESTERN ASSOCIATION OF SCHOOLS AND COLLEGES
-          </Typography>
-          <Typography variant="p">
+          </h5>
+          <p className="text-xl">
             Tabernacle School is also accredited by the Western Association of
             Schools and Colleges (WASC). WASC fosters "excellence in elementary,
             secondary, adult and postsecondary institutions, and supplementary
@@ -303,17 +236,16 @@ function Accreditations() {
             institutions through granting accreditation to the schools that meet
             an acceptable level of quality in accordance with the established
             criteria."
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} sx={{ textAlign: "center" }}>
-          <Box
-            component="img"
-            sx={{ width: "50%" }}
+          </p>
+        </div>
+        <div className="col-span-2">
+          <img
+            className="w-1/2 sm:w-1/4 lg:w-1/2 mx-auto"
             src={wasc}
             alt="Western Association of Schools and Colleges"
           />
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </SectionWrapper>
   );
 }

@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global styles */
+
+body {
+  color: #212529; /* default font color */
+}
+
 table {
   font-family: "didact gothic", sans-serif;
 }

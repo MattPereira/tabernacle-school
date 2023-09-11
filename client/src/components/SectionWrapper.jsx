@@ -1,14 +1,9 @@
 import { Box, Container } from "@mui/material";
 
-export default function SectionWrapper({ children, bgcolor, ...props }) {
+export default function SectionWrapper({ children, classNames, ...props }) {
   return (
-    <Box
-      sx={{
-        py: { xs: 7, md: 10 },
-        bgcolor: bgcolor || "white",
-      }}
-    >
+    <div className={`py-14 md:py-20 ${classNames ? classNames : ""}`}>
       <Container>{children}</Container>
-    </Box>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ const SectionTitle = ({ title }) => {
 
   const anchorId = title.split(" ")[0];
   return (
-    <Box sx={{ pb: 8, pt: 0 }}>
+    <div className="pb-14 lg:pb-20 pt-0">
       <div
         id={anchorId}
         style={{
@@ -15,39 +15,10 @@ const SectionTitle = ({ title }) => {
           visibility: "hidden",
         }}
       ></div>
-      <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <Box>
-          <Divider
-            sx={{
-              width: "55px",
-              height: "2px",
-              bgcolor: "black",
-            }}
-          />
-        </Box>
-        <Typography
-          variant="h2"
-          sx={{
-            textAlign: "center",
-            mx: 1.5,
-          }}
-        >
-          {title}
-        </Typography>
-        <Box>
-          <Divider
-            sx={{
-              width: "55px",
-              height: "2px",
-              bgcolor: "black",
-              border: "none",
-            }}
-          />
-        </Box>
-      </Box>
-    </Box>
+      <div className="text-center">
+        <h2 className="text-4xl lg:text-5xl font-copse">{title}</h2>
+      </div>
+    </div>
   );
 };
 
