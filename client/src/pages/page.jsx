@@ -77,7 +77,7 @@ const STATEMENTS = [
 
 function StatementSlider() {
   return (
-    <SectionWrapper classNames="text-center">
+    <SectionWrapper classNames="text-center h-72 flex flex-col justify-center">
       <Carousel interval={5000} duration={1500}>
         {STATEMENTS.map((statement, idx) => (
           <div key={idx}>
@@ -172,7 +172,7 @@ function ParentTestimonials() {
             the safe learning environment she creates in her classroom.”
           </p>
         </blockquote>
-        <figcaption figcaption className="text-neutral-400 text-lg">
+        <figcaption className="text-neutral-400 text-lg">
           — Third grade parent, 2019
         </figcaption>
       </div>
@@ -188,7 +188,7 @@ function ParentTestimonials() {
             staff.”
           </p>
         </blockquote>
-        <figcaption figcaption className="text-neutral-400 text-lg">
+        <figcaption className="text-neutral-400 text-lg">
           — Middle school parent, 2016
         </figcaption>
       </div>

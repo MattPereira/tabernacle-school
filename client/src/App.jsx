@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 /***** The main pages accessible throught the navbar *****/
 import Homepage from "./pages/page";
-import About from "./pages/About";
+import About from "./pages/About/page";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
 import Admissions from "./pages/Admissions";
 import Academics from "./pages/Academics";
