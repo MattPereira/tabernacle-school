@@ -31,9 +31,9 @@ export default async function handler(request, response) {
       !validator.isLength(userMessage, { min: 1, max: 1000 }) ||
       validator.isEmpty(userMessage)
     ) {
-      return response
-        .status(400)
-        .json({ message: "Message must be less than 1000 characters" });
+      return response.status(400).json({
+        message: "Availability message must be less than 1000 characters",
+      });
     }
 
     try {
@@ -57,7 +57,7 @@ export default async function handler(request, response) {
     } catch (error) {
       return response
         .status(500)
-        .json({ error: "Server error email not sent" });
+        .json({ message: "Server error email not sent" });
     }
   } else {
     return response.status(405).json({ message: "Method Not Allowed!!!" });

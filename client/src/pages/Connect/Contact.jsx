@@ -3,33 +3,32 @@ import { useState, useEffect } from "react";
 
 import LoadingSpinner from "../../components/LoadingSpinner";
 
+import { SectionTitle, SectionWrapper, Input, Toast } from "../../components";
+
 import {
+  Button,
   Container,
   Grid,
   Typography,
   Box,
   TextField,
-  Button,
   Alert,
   FormControl,
 } from "@mui/material";
-import SectionTitle from "../../components/SectionTitle";
 
 export default function Contact() {
   return (
-    <Box sx={{ py: 8 }}>
+    <SectionWrapper>
       <SectionTitle title="Contact" />
-      <Container>
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} sm={10} lg={6}>
-            <SendMessageForm />
-          </Grid>
-          <Grid item xs={12} sm={10} lg={6}>
-            <StaffDirectory />
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <SendMessageForm />
+        </div>
+        <div>
+          <StaffDirectory />
+        </div>
+      </div>
+    </SectionWrapper>
   );
 }
 

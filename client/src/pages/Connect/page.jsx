@@ -2,9 +2,9 @@ import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import connectShowcase from "../../assets/images/showcase/connect.jpg";
 
-import Contact from "./contact";
-import Location from "./location";
-import Employment from "./employment";
+import Contact from "./Contact";
+import Location from "./Location";
+import Employment from "./Employment";
 
 export default function ConnectPage() {
   return (
