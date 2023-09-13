@@ -2,85 +2,68 @@ import SectionTitle from "../../components/SectionTitle";
 import SectionWrapper from "../../components/SectionWrapper";
 import { Table, TableHead, TableRow } from "../../components/Table";
 
-export default function Tuition() {
-  const tuitionPrices = [
-    {
-      title: "Preschool & Transitional Kindergarten",
-      annual: 7850,
-      monthly: 785,
-    },
-    { title: "Grades K-5", annual: 7500, monthly: 750 },
-    { title: "Grades 6-8", annual: 7900, monthly: 790 },
-  ];
+const TUITION_PRICES = [
+  {
+    title: "Preschool & Transitional Kindergarten",
+    annual: 7850,
+    pif: 7700,
+    monthly: 785,
+  },
+  { title: "Grades K-5", annual: 7500, pif: 7350, monthly: 750 },
+  { title: "Grades 6-8", annual: 7900, monthly: 790 },
+];
 
+export default function Tuition() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Tuition & Fees" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="">
           <div className="mb-3">
             <h5 className="text-2xl font-gothic font-bold text-center mb-1">
               2023-24 Tuition
             </h5>
             <div className="border">
-              <table className="w-full bg-white ">
-                <thead>
-                  <tr className="text-center bg-dark text-white">
-                    <th className="py-2 border-r border-collapse border-neutral-600">
-                      Child
-                    </th>
-                    <th className="py-2 border-r border-neutral-600">
-                      Annual Plan
-                    </th>
-                    <th className="py-2 border-r border-neutral-600">
-                      PIF Discount
-                    </th>
-                    <th className="py-2">Monthly Plan</th>
-                  </tr>
-                </thead>
-
-                {tuitionPrices.map((group) => {
+              <Table className="bg-white">
+                <TableHead
+                  headers={["Child", "Annual", "PIF Discount", "Monthly"]}
+                />
+                {TUITION_PRICES.map((group) => {
                   return (
-                    <tbody key={group.title}>
+                    <tbody key={group.title} className="text-center">
                       <tr className="bg-primary text-white">
                         <th colSpan="4" className="text-start px-2 py-2">
                           {group["title"]}
                         </th>
                       </tr>
-                      <tr className="text-center">
-                        <td className="py-2 border-b border-r">1st</td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual}
-                        </td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual - 150}
-                        </td>
-                        <td className="py-2 border-b">${group.monthly}</td>
-                      </tr>
-                      <tr className="text-center">
-                        <td className="py-2 border-b border-r">2nd</td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual - 550}
-                        </td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual - 150 - 550}
-                        </td>
-                        <td className="py-2 border-b">${group.monthly - 55}</td>
-                      </tr>
-                      <tr className="text-center">
-                        <td className="py-2 border-b border-r">3rd</td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual - 550}
-                        </td>
-                        <td className="py-2 border-b border-r">
-                          ${group.annual - 150 - 550}
-                        </td>
-                        <td className="py-2 border-b">${group.monthly - 55}</td>
-                      </tr>
+                      <TableRow
+                        data={[
+                          "1st",
+                          `$${group.annual}`,
+                          `$${group.annual - 150}`,
+                          `$${group.monthly}`,
+                        ]}
+                      />
+                      <TableRow
+                        data={[
+                          "1st",
+                          `$${group.annual - 550}`,
+                          `$${group.annual - 550 - 150}`,
+                          `$${group.monthly}`,
+                        ]}
+                      />
+                      <TableRow
+                        data={[
+                          "1st",
+                          `$${group.annual - 550}`,
+                          `$${group.annual - 550 - 150}`,
+                          `$${group.monthly}`,
+                        ]}
+                      />
                     </tbody>
                   );
                 })}
-              </table>
+              </Table>
             </div>
             <p className="text-sm text-neutral-700">
               *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for PIF

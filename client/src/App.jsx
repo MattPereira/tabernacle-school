@@ -9,11 +9,11 @@ import Footer from "./components/Footer";
 import Homepage from "./pages/page";
 import About from "./pages/About/page";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
-import Admissions from "./pages/Admissions";
-import Academics from "./pages/Academics";
-import Campus from "./pages/Campus";
-import Connect from "./pages/Connect";
-import Family from "./pages/Family";
+import AdmissionsPage from "./pages/Admissions/page";
+import Academics from "./pages/Academics/page";
+import Campus from "./pages/Campus/page";
+import Connect from "./pages/Connect/page";
+import Family from "./pages/Family/page";
 
 /***** The pages accessible through family page's information section */
 import ParentOrientation from "./pages/Family/ParentOrientation";
@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
             <Route exact path="/about/staff/:id" element={<ProfilePage />} />
-            <Route path="/admissions" element={<Admissions />} />
+            <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/connect" element={<Connect />} />

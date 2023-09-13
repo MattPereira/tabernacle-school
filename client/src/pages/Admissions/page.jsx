@@ -2,10 +2,10 @@ import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
 import admissionsShowcase from "../../assets/images/showcase/admissions.jpg";
 
-import ScheduleTour from "./tour";
-import Tuition from "./tuition";
+import ScheduleTour from "./Tour";
+import Tuition from "./Tuition";
 
-export default function Admissions() {
+export default function AdmissionsPage() {
   return (
     <div>
       <Showcase title="Admissions" image={admissionsShowcase} />

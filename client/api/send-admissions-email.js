@@ -9,6 +9,8 @@ const validator = require("validator");
 // endpoint is "/api/send-admissions-email"
 export default async function handler(request, response) {
   if (request.method === "POST") {
+    console.log("request.body", request.body);
+
     const { name, email, message } = request.body;
 
     // Input validations
@@ -37,22 +39,21 @@ export default async function handler(request, response) {
     }
 
     try {
-      // console.log("request.body", request.body);
-      await client.sendEmail({
-        From: process.env.EMAIL_ADDRESS,
-        to: process.env.EMAIL_ADDRESS,
-        Subject: "Schedule Tour Request from tabernacle.school",
-        HtmlBody: `
-        <h3>Name </h3>
-        <p>${name}</p>
-        <h3>Email </h3>
-        <p>${email}</p>
-        <h3>Subject</h3>
-        <p>Scheduling a tour of tabernacle campus</p>
-        <h3>Message</h3>
-        <p>${message}</p>
-        `,
-      });
+      // await client.sendEmail({
+      //   From: process.env.EMAIL_ADDRESS,
+      //   to: process.env.EMAIL_ADDRESS,
+      //   Subject: "Schedule Tour Request from tabernacle.school",
+      //   HtmlBody: `
+      //   <h3>Name </h3>
+      //   <p>${name}</p>
+      //   <h3>Email </h3>
+      //   <p>${email}</p>
+      //   <h3>Subject</h3>
+      //   <p>Scheduling a tour of tabernacle campus</p>
+      //   <h3>Message</h3>
+      //   <p>${message}</p>
+      //   `,
+      // });
 
       return response.status(200).json({ status: "Email sent successfully!" });
     } catch (error) {
