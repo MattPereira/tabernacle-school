@@ -1,7 +1,13 @@
-export default function Button({ type, children, className }) {
+export default function Button({
+  type,
+  children,
+  className,
+  disabled = false,
+}) {
   return (
     <button
       type={type}
+      disabled={disabled}
       className={`bg-primary hover:bg-primary-dark text-white font-gothic py-2 text-xl font-bold rounded-md w-32 ${className}`}
     >
       {children}

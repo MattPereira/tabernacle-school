@@ -9,11 +9,9 @@ const validator = require("validator");
 // endpoint is "/api/send-admissions-email"
 export default async function handler(request, response) {
   if (request.method === "POST") {
-    console.log("request.body", request.body);
+    const { name, email, message: userMessage } = request.body;
 
-    const { name, email, message } = request.body;
-
-    // Input validations
+    // req.body validations
     if (
       !name ||
       !validator.isLength(name, { min: 1, max: 70 }) ||
@@ -21,21 +19,21 @@ export default async function handler(request, response) {
     ) {
       return response
         .status(400)
-        .json({ error: "Name must be less than 70 characters" });
+        .json({ message: "Name must be less than 70 characters" });
     }
 
     if (!email || !validator.isEmail(email)) {
-      return response.status(400).json({ error: "Invalid email address" });
+      return response.status(400).json({ message: "Invalid email address" });
     }
 
     if (
-      !message ||
-      !validator.isLength(message, { min: 1, max: 1000 }) ||
-      validator.isEmpty(message)
+      !userMessage ||
+      !validator.isLength(userMessage, { min: 1, max: 1000 }) ||
+      validator.isEmpty(userMessage)
     ) {
       return response
         .status(400)
-        .json({ error: "Message must be less than 1000 characters" });
+        .json({ message: "Message must be less than 1000 characters" });
     }
 
     try {
@@ -51,11 +49,11 @@ export default async function handler(request, response) {
         <h3>Subject</h3>
         <p>Scheduling a tour of tabernacle campus</p>
         <h3>Message</h3>
-        <p>${message}</p>
+        <p>${userMessage}</p>
         `,
       });
 
-      return response.status(200).json({ status: "Email sent successfully!" });
+      return response.status(200).json({ message: "Email sent successfully!" });
     } catch (error) {
       return response
         .status(500)

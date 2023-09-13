@@ -12,8 +12,12 @@ import {
 
 import tourImg from "../../assets/images/about/gift/display.jpg";
 
+/**
+ * NOTE: when user submits form, status is set to "info" which disables the submit button
+ */
+
 export default function ScheduleTourForm() {
-  const [formStatus, setFormStatus] = useState({ status: null, message: null });
+  const [status, setStatus] = useState({ type: null, message: null });
 
   const {
     register,
@@ -23,17 +27,16 @@ export default function ScheduleTourForm() {
   } = useForm();
 
   const onSubmit = async (data) => {
+    setStatus({ type: "info", message: "Sending..." });
     let response;
     try {
       response = await axios.post("/api/send-admissions-email", data);
-
-      reset();
-      setFormStatus({ status: "success", message: response.data.status });
+      reset(); // clear form inputs
+      setStatus({ type: "success", message: response.data.message });
     } catch (error) {
-      setFormStatus({ status: "error", message: error.response.data.error });
+      setStatus({ type: "error", message: error.response.data.message });
     }
   };
-  console.log(formStatus);
 
   return (
     <SectionWrapper>
@@ -84,14 +87,13 @@ export default function ScheduleTourForm() {
             />
             <div className="flex justify-end gap-5">
               <div className="grow">
-                {formStatus.status && (
-                  <Toast
-                    status={formStatus.status}
-                    message={formStatus.message}
-                  />
+                {status.type && (
+                  <Toast variant={status.type} message={status.message} />
                 )}
               </div>
-              <Button type="submit">Submit</Button>
+              <Button type="submit" disabled={status.type === "info"}>
+                Submit
+              </Button>
             </div>
           </form>
         </div>
