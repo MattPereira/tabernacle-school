@@ -47,7 +47,7 @@ export default async function handler(request, response) {
     }
 
     try {
-      // console.log("request.body", request.body);
+      console.log("request.body", request.body);
       await client.sendEmail({
         From: process.env.EMAIL_ADDRESS,
         to: process.env.EMAIL_ADDRESS,

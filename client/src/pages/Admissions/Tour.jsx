@@ -81,7 +81,7 @@ export default function ScheduleTourForm() {
               register={register}
               validations={{
                 required: "Please provide your availability",
-                maxLength: 300,
+                maxLength: 500,
               }}
               errors={errors.message}
             />

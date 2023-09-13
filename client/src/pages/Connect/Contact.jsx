@@ -1,20 +1,18 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 import LoadingSpinner from "../../components/LoadingSpinner";
 
-import { SectionTitle, SectionWrapper, Input, Toast } from "../../components";
-
 import {
-  Button,
-  Container,
-  Grid,
-  Typography,
-  Box,
-  TextField,
-  Alert,
-  FormControl,
-} from "@mui/material";
+  SectionTitle,
+  SectionWrapper,
+  Input,
+  Toast,
+  Button as TwButton,
+} from "../../components";
+
+import { Button, Grid, Typography, Box } from "@mui/material";
 
 export default function Contact() {
   return (
@@ -33,8 +31,7 @@ export default function Contact() {
 }
 
 function SendMessageForm() {
-  const [status, setStatus] = useState(null);
-  const [statusMessage, setStatusMessage] = useState(null);
+  const [status, setStatus] = useState({ type: null, message: null });
 
   const {
     register,
@@ -44,114 +41,78 @@ function SendMessageForm() {
   } = useForm();
 
   const onSubmit = async (data) => {
+    setStatus({ type: "info", message: "Sending..." });
+    let response;
     try {
-      const response = await fetch("/api/send-contact-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const res = await response.json();
-
-      if (response.ok) {
-        reset();
-        setStatus("success");
-        setStatusMessage(res.status);
-      } else {
-        setStatus("error");
-        setStatusMessage(res.error);
-      }
+      response = await axios.post("/api/send-contact-email", data);
+      reset(); // clear form inputs
+      setStatus({ type: "success", message: response.data.message });
     } catch (error) {
-      console.error("Error:", error);
+      setStatus({ type: "error", message: error.response.data.message });
     }
   };
 
   return (
     <div>
-      <Box sx={{ mb: 3 }}>
-        <Typography variant="h4" align="center">
-          Send Message
-        </Typography>
-      </Box>
+      <div className="mb-5">
+        <h4 className="font-copse text-3xl text-center">Send Message</h4>
+      </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
-        <FormControl fullWidth>
-          <TextField
-            error={errors.name ? true : false}
-            id="name"
-            name="name"
-            label="Your Name"
-            variant="outlined"
-            type="text"
-            helperText={errors.name ? errors.name.message : " "}
-            {...register("name", { required: "*Please tell us your name" })}
-            required
-          />
+        <Input
+          id="name"
+          label="Name"
+          type="text"
+          placeholder="enter your name"
+          register={register}
+          validations={{ required: "Please provide your name" }}
+          errors={errors.name}
+        />
 
-          <TextField
-            error={errors.email ? true : false}
-            id="email"
-            name="email"
-            label="Your Email"
-            variant="outlined"
-            type="email"
-            helperText={errors.email?.message || " "}
-            required
-            {...register("email", {
-              required: "*Please provide an email address so we can respond",
-              pattern: {
-                value: /^\S+@\S+$/i,
-                message: "*Please enter a valid email address",
-              },
-            })}
-          />
+        <Input
+          id="email"
+          label="Email"
+          type="text"
+          placeholder="enter your email"
+          register={register}
+          validations={{ required: "Please provide your email" }}
+          errors={errors.email}
+        />
+        <Input
+          id="subject"
+          label="Subject"
+          type="text"
+          placeholder="enter a topic for your message"
+          register={register}
+          validations={{
+            required: "Please enter a subject for your message",
+          }}
+          errors={errors.subject}
+        />
 
-          <TextField
-            error={errors.subject ? true : false}
-            id="subject"
-            name="subject"
-            label="Subject"
-            variant="outlined"
-            type="text"
-            required
-            helperText={errors.subject ? errors.subject.message : " "}
-            {...register("subject", {
-              required: "*Please enter a subject for your message",
-            })}
-          />
+        <Input
+          id="message"
+          label="Message"
+          type="textarea"
+          placeholder="enter your message"
+          register={register}
+          validations={{
+            required: "Please provide a message",
+            maxLength: 1000,
+          }}
+          errors={errors.message}
+        />
 
-          <TextField
-            error={!!errors.message}
-            id="message"
-            name="message"
-            label="Message"
-            required
-            multiline
-            minRows={5}
-            variant="outlined"
-            helperText={errors.message ? errors.message.message : " "}
-            {...register("message", { required: "*Please enter a message" })}
-          />
-        </FormControl>
-        <Box sx={{ display: "flex", justifyContent: "end" }}>
-          <Box sx={{ flexGrow: 1, mr: 2 }}>
-            {status && <Alert severity={status}>{statusMessage}</Alert>}
-          </Box>
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: "bold",
-              fontFamily: "Didact Gothic",
-              textTransform: "none",
-              fontSize: "1.2rem",
-            }}
-            type="submit"
-          >
+        <div className="flex justify-end gap-5">
+          <div className="grow">
+            {status.type && (
+              <Toast variant={status.type} message={status.message} />
+            )}
+          </div>
+          <TwButton type="submit" disabled={status.type === "info"}>
             Submit
-          </Button>
-        </Box>
+          </TwButton>
+        </div>
       </form>
     </div>
   );
@@ -203,12 +164,9 @@ function StaffDirectory() {
 
   return (
     <div>
-      <Box sx={{ mb: 3 }}>
-        <Typography variant="h4" align="center">
-          Staff Directory
-        </Typography>
-      </Box>
-
+      <div className="mb-10">
+        <h4 className="font-copse text-3xl text-center">Staff Directory</h4>
+      </div>
       <Box
         sx={{
           minHeight: "400px",
@@ -293,6 +251,7 @@ function StaffDirectory() {
                       border: "none",
                       color: "black",
                       textTransform: "none",
+                      py: 2,
                       "&:hover": {
                         bgcolor: "primary.main",
                         color: "white",
