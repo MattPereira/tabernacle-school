@@ -1,5 +1,6 @@
 import Button from "./Button";
-import Input from "./Input";
+import TextField from "./Inputs/TextField";
+import Select from "./Inputs/Select";
 import LoadingSpinner from "./LoadingSpinner";
 import SectionTitle from "./SectionTitle";
 import SectionWrapper from "./SectionWrapper";
@@ -8,7 +9,7 @@ import Toast from "./Toast";
 
 export {
   Button,
-  Input,
+  TextField,
   LoadingSpinner,
   SectionTitle,
   SectionWrapper,
@@ -16,4 +17,5 @@ export {
   TableHead,
   TableRow,
   Toast,
+  Select,
 };

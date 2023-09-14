@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Official website for Tabernacle School",
   "scripts": {
-    "start": "vercel dev"
+    "start": "vercel dev --local-config ./client/vercel.dev.json"
   },
   "keywords": [],
   "author": "",

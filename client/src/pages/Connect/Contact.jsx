@@ -7,7 +7,7 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 import {
   SectionTitle,
   SectionWrapper,
-  Input,
+  TextField,
   Toast,
   Button as TwButton,
 } from "../../components";
@@ -59,7 +59,7 @@ function SendMessageForm() {
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
-        <Input
+        <TextField
           id="name"
           label="Name"
           type="text"
@@ -69,7 +69,7 @@ function SendMessageForm() {
           errors={errors.name}
         />
 
-        <Input
+        <TextField
           id="email"
           label="Email"
           type="text"
@@ -78,7 +78,7 @@ function SendMessageForm() {
           validations={{ required: "Please provide your email" }}
           errors={errors.email}
         />
-        <Input
+        <TextField
           id="subject"
           label="Subject"
           type="text"
@@ -90,7 +90,7 @@ function SendMessageForm() {
           errors={errors.subject}
         />
 
-        <Input
+        <TextField
           id="message"
           label="Message"
           type="textarea"

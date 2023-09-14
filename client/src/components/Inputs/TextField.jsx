@@ -2,7 +2,7 @@
  * NOTE: the register function automatically applies input "name" based on id prop value
  */
 
-export default function Input({
+export default function TextField({
   label,
   id,
   type,
@@ -22,7 +22,9 @@ export default function Input({
   return (
     <div className="w-full">
       <div className="mb-1 ml-1 text-xl">
-        <label htmlFor={id}>{label}</label>
+        <label className="font-bold" htmlFor={id}>
+          {label}
+        </label>
       </div>
       {type === "textarea" ? (
         <textarea
