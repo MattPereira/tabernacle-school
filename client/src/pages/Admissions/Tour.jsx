@@ -62,7 +62,7 @@ export default function ScheduleTourForm() {
     <SectionWrapper>
       <SectionTitle title="Schedule Tour" />
       <div>
-        <p className="font-gothic mb-10 lg:mb-20 text-xl text-center">
+        <p className="font-gothic mb-10 text-xl text-center">
           Schedule a tour by filling out the form below or calling us at{" "}
           <a href="tel:9256859169" className="text-blue-600 underline">
             925.685.9169
