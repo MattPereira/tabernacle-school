@@ -96,7 +96,7 @@ export default function ScheduleTourForm() {
                   id="studentLastName"
                   label="Last Name"
                   type="text"
-                  placeholder="students's last name"
+                  placeholder="student's last name"
                   register={register}
                   validations={{ required: "Please provide your last name" }}
                   errors={errors.studentLastName}

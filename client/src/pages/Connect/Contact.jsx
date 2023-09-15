@@ -78,17 +78,6 @@ function SendMessageForm() {
           validations={{ required: "Please provide your email" }}
           errors={errors.email}
         />
-        <TextField
-          id="subject"
-          label="Subject"
-          type="text"
-          placeholder="enter a topic for your message"
-          register={register}
-          validations={{
-            required: "Please enter a subject for your message",
-          }}
-          errors={errors.subject}
-        />
 
         <TextField
           id="message"

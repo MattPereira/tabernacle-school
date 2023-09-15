@@ -9,7 +9,7 @@ const validator = require("validator");
 // endpoint is "/api/send-contact-email"
 export default async function handler(request, response) {
   if (request.method === "POST") {
-    const { name, email, message: userMessage, subject } = request.body;
+    const { name, email, message: userMessage } = request.body;
 
     // Input validations
     if (
@@ -36,29 +36,17 @@ export default async function handler(request, response) {
         .json({ message: "Message must be less than 1000 characters" });
     }
 
-    if (
-      !subject ||
-      !validator.isLength(subject, { min: 1, max: 100 }) ||
-      validator.isEmpty(subject)
-    ) {
-      return response
-        .status(400)
-        .json({ message: "Subject must be less than 100 characters" });
-    }
-
     try {
       console.log("request.body", request.body);
       await client.sendEmail({
         From: process.env.EMAIL_ADDRESS,
         to: process.env.EMAIL_ADDRESS,
-        Subject: "General Message from tabernacle.school",
+        Subject: "Connect message from tabernacle.school",
         HtmlBody: `
         <h3>Name</h3>
         <p>${name}</p>
         <h3>Email</h3>
         <p>${email}</p>
-        <h3>Subject</h3>
-        <p>${subject}</p>
         <h3>Message</h3>
         <p>${message}</p>
         `,
