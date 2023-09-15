@@ -73,7 +73,7 @@ const midNavItems = [
   "connect",
 ];
 
-const NavBar = (props) => {
+export default function Header(props) {
   const [transparent, setTransparent] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -288,6 +288,4 @@ const NavBar = (props) => {
       </Box>
     </>
   );
-};
-
-export default NavBar;
+}

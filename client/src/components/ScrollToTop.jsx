@@ -1,6 +1,23 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 import { useState } from "react";
+
+export default function ScrollToTop(props) {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return (
+    <>
+      {props.children}
+      <ScrollToTopButton />
+    </>
+  );
+}
 
 const ScrollToTopButton = () => {
   const [show, setShow] = useState(false);
@@ -40,5 +57,3 @@ const ScrollToTopButton = () => {
     </>
   );
 };
-
-export default ScrollToTopButton;

@@ -6,6 +6,11 @@ import SectionTitle from "./SectionTitle";
 import SectionWrapper from "./SectionWrapper";
 import { Table, TableHead, TableRow } from "./Table";
 import Toast from "./Toast";
+import ScrollToTop from "./ScrollToTop";
+import Header from "./Header";
+import Footer from "./Footer";
+import Showcase from "./Showcase";
+import PageNav from "./PageNav";
 
 export {
   Button,
@@ -18,4 +23,9 @@ export {
   TableRow,
   Toast,
   Select,
+  ScrollToTop,
+  Header,
+  Footer,
+  Showcase,
+  PageNav,
 };

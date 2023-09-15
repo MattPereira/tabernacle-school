@@ -7,8 +7,7 @@ import asci from "../assets/images/homepage/acsi.png";
 import wasc from "../assets/images/homepage/wasc.jpeg";
 
 // Internal Component Imports
-import SectionTitle from "../components/SectionTitle";
-import SectionWrapper from "../components/SectionWrapper";
+import { SectionTitle, SectionWrapper } from "../components";
 
 export default function Homepage() {
   return (

@@ -1,11 +1,9 @@
 import { Box } from "@mui/material";
 import { Route, Routes, Navigate } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 
-/***** The main pages accessible throught the navbar *****/
+import { ScrollToTop, Header, Footer } from "./components";
+
+/***** The main pages accessible via the navbar *****/
 import Homepage from "./pages/page";
 import About from "./pages/About/page";
 import ProfilePage from "./pages/About/Faculty/ProfilePage";
@@ -27,7 +25,7 @@ import theme from "./theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
+      <Header />
       <ScrollToTop>
         <Box sx={{ mt: { xs: "67px", md: 0 } }}>
           <Routes>
@@ -50,7 +48,6 @@ function App() {
           </Routes>
         </Box>
       </ScrollToTop>
-      <ScrollToTopButton />
       <Footer />
     </ThemeProvider>
   );
