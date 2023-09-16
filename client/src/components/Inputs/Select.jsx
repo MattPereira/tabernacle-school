@@ -11,6 +11,8 @@ export default function Select({
   placeholder = "Select an option",
   errors,
   options,
+  handleChange,
+  defaultValue = "",
   ...props
 }) {
   let classNames =
@@ -21,6 +23,9 @@ export default function Select({
   } else {
     classNames += " border-gray-400";
   }
+
+  // handles if no register function is passed
+  const registrationProps = register ? { ...register(id, validations) } : {};
 
   return (
     <div className="w-full">
@@ -33,10 +38,11 @@ export default function Select({
       )}
 
       <select
-        defaultValue=""
+        onChange={handleChange}
+        defaultValue={defaultValue}
         className={classNames}
         id={id}
-        {...register(id, validations)}
+        {...registrationProps}
       >
         <option value="" disabled>
           {placeholder}

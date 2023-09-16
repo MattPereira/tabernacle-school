@@ -14,10 +14,10 @@ import Connect from "./pages/Connect/page";
 import Family from "./pages/Family/page";
 
 /***** The pages accessible through family page's information section */
-import ParentOrientation from "./pages/Family/ParentOrientation";
-import FactsHelp from "./pages/Family/FactsHelp";
-import SupplyList from "./pages/Family/SupplyList";
-import Discipline from "./pages/Family/Discipline";
+import ParentOrientation from "./pages/Family/parent-orientation/page";
+import FactsHelp from "./pages/Family/facts/page";
+import SupplyList from "./pages/Family/supply-list/page";
+import Discipline from "./pages/Family/discipline/page";
 
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
