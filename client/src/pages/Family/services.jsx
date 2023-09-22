@@ -64,9 +64,12 @@ export default function Services() {
 
                 <Box sx={{ p: 3 }}>
                   <Box sx={{ mb: 1 }}>
-                    <Typography variant="h6" component="a" href={resource.url}>
+                    <a
+                      className="text-primary underline text-xl font-bold"
+                      href={resource.url}
+                    >
                       {resource.title}
-                    </Typography>
+                    </a>
                   </Box>
 
                   <Typography variant="p">{resource.description}</Typography>

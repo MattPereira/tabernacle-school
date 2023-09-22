@@ -48,12 +48,12 @@ export default function Outreach() {
             <div>
               <img
                 src={program.image}
-                className="w-full object-cover rounded-2xl h-48 object-center"
+                className="w-full object-cover rounded-2xl h-60 object-center"
                 alt=""
               />
             </div>
 
-            <div className="p-5">
+            <div className="px-5 py-8">
               <div className="mb-3">
                 <a rel="noreferrer" href={program.url} target="_blank">
                   <h6 className="text-primary text-xl font-bold underline">
