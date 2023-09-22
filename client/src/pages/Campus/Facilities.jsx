@@ -6,22 +6,14 @@ import {
   LoadingSpinner,
   SectionTitle,
   SectionWrapper,
-  Select as TwSelect,
+  Select,
 } from "../../components";
-import { Box, Modal } from "@mui/material";
 
 export default function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
   const [selection, setSelection] = useState("Track and Field");
   const [facility, setFacility] = useState(null);
-  const [open, setOpen] = useState(false);
-  const [currentImgData, setCurrentImgData] = useState(null);
-
-  const handleOpen = ({ caption, url }) => {
-    setCurrentImgData({ caption, url });
-    setOpen(true);
-  };
-  const handleClose = () => setOpen(false);
+  const [expandedImage, setExpandedImage] = useState(null);
 
   const handleChange = (event) => {
     setSelection(event.target.value);
@@ -60,15 +52,17 @@ export default function Facilities() {
   return (
     <SectionWrapper>
       <SectionTitle title="Facilities" />
-      <div className="mb-5">
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-12">
         <div>
-          <p className="text-xl mb-10 text-center">
+          <p className="text-xl text-center lg:text-start">
             Tabernacle school is committed to maintaining and improving campus
             infrastructure for the benefit of our students.
           </p>
         </div>
-        <div className="w-full lg:w-1/2 mx-auto ">
-          <TwSelect
+        <div className="w-full">
+          <Select
+            label="Pick a category"
             handleChange={handleChange}
             defaultValue={selection}
             options={categoryList.map((category) => {
@@ -87,7 +81,10 @@ export default function Facilities() {
               return (
                 <div key={url}>
                   <img
-                    onClick={() => handleOpen({ url: url, caption: caption })}
+                    onClick={() => {
+                      document.getElementById("my_modal_2").showModal();
+                      setExpandedImage(url);
+                    }}
                     src={url}
                     className="object-cover h-28 sm:h-32 md:h-48 lg:h-60 rounded-xl cursor-pointer w-full"
                   />
@@ -97,30 +94,15 @@ export default function Facilities() {
             })}
           </div>
 
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box
-              onClick={handleClose}
-              sx={{
-                width: "100vw",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100vh",
-              }}
-            >
-              <Box
-                component="img"
-                src={currentImgData ? currentImgData.url : null}
-                sx={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
-          </Modal>
+          {/* Open the modal using document.getElementById('ID').showModal() method */}
+          <dialog id="my_modal_2" className="modal">
+            <div className="modal-box w-full max-w-6xl">
+              <img src={expandedImage} className="object-cover h-full w-full" />
+            </div>
+            <form method="dialog" className="modal-backdrop">
+              <button>close</button>
+            </form>
+          </dialog>
         </>
       ) : (
         <LoadingSpinner />

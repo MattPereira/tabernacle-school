@@ -8,7 +8,7 @@ export default function Select({
   type,
   register,
   validations,
-  placeholder = "Select an option",
+  placeholder,
   errors,
   options,
   handleChange,
@@ -16,7 +16,7 @@ export default function Select({
   ...props
 }) {
   let classNames =
-    "h-14 w-full px-4 py-2 border rounded-md text-xl cursor-pointer bg-white";
+    "select select-primary h-14 w-full px-4 py-2 text-xl bg-white rounded-3xl";
 
   if (errors) {
     classNames += " border-red-500";
@@ -31,8 +31,8 @@ export default function Select({
     <div className="w-full">
       {label && (
         <div className="mb-1 ml-1 text-xl">
-          <label className="font-bold" htmlFor={id}>
-            {label}
+          <label className="label" htmlFor={id}>
+            <span className="label-text text-xl font-bold">{label}</span>
           </label>
         </div>
       )}
@@ -44,9 +44,11 @@ export default function Select({
         id={id}
         {...registrationProps}
       >
-        <option value="" disabled>
-          {placeholder}
-        </option>
+        {placeholder && (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        )}
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
