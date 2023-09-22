@@ -8,17 +8,7 @@ import {
   SectionWrapper,
   Select as TwSelect,
 } from "../../components";
-import {
-  Container,
-  Box,
-  Grid,
-  Typography,
-  Paper,
-  FormControl,
-  Select,
-  MenuItem,
-  Modal,
-} from "@mui/material";
+import { Box, Modal } from "@mui/material";
 
 export default function Facilities() {
   const [categoryList, setCategoryList] = useState(null);
@@ -37,9 +27,6 @@ export default function Facilities() {
     setSelection(event.target.value);
     setFacility(null);
   };
-
-  console.log(facility);
-  console.log(selection);
 
   useEffect(() => {
     async function getPhotos() {

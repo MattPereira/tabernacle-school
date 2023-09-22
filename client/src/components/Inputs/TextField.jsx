@@ -28,14 +28,14 @@ export default function TextField({
       </div>
       {type === "textarea" ? (
         <textarea
-          className={classNames + " h-24"}
+          className={classNames + " h-20"}
           id={id}
           placeholder={placeholder}
           {...register(id, validations)}
         />
       ) : (
         <input
-          className={classNames + " h-14"}
+          className={classNames + " h-12"}
           type={type}
           id={id}
           placeholder={placeholder}

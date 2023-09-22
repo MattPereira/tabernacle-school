@@ -7,8 +7,8 @@ export default function DistanceLearning() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Distance Learning" />
-      <div>
-        <p className="text-xl mb-10">
+      <div className=" mb-16">
+        <p className="text-xl">
           In case of a resurgence in Coronavirus cases and potential school
           closure, Tabernacle has implemented a Distance Learning Program using
           Google Classroom. Each student has been assigned to a Google

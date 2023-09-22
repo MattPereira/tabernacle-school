@@ -72,7 +72,7 @@ export default function ScheduleTourForm() {
       <div>
         <div>
           <form
-            className="w-full md:w-3/4 mx-auto"
+            className="w-full md:w-2/3 mx-auto"
             noValidate
             autoComplete="off"
             onSubmit={handleSubmit(onSubmit)}

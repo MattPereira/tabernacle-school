@@ -197,7 +197,7 @@ function ParentTestimonials() {
 
 function Accreditations() {
   return (
-    <SectionWrapper>
+    <SectionWrapper classNames="bg-white">
       <SectionTitle title="Accreditations" />
 
       <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center mb-10">
