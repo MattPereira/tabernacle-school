@@ -92,16 +92,20 @@ function SendMessageForm() {
           errors={errors.message}
         />
 
-        <div className="flex justify-end gap-5">
-          <div className="grow">
-            {status.type && (
-              <Toast variant={status.type} message={status.message} />
-            )}
-          </div>
-          <TwButton type="submit" disabled={status.type === "info"}>
+        <div className="flex">
+          <TwButton
+            type="submit"
+            className="w-full"
+            disabled={status.type === "info"}
+          >
             Submit
           </TwButton>
         </div>
+        {status.type && (
+          <div className="mt-5">
+            <Toast variant={status.type} message={status.message} />
+          </div>
+        )}
       </form>
     </div>
   );

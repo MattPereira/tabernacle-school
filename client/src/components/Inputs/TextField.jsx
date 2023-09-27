@@ -11,7 +11,7 @@ export default function TextField({
   placeholder,
   errors,
 }) {
-  let classNames = "h-14 w-full px-4 py-2 border rounded-3xl text-xl";
+  let classNames = "h-14 w-full px-4 py-2 border rounded-2xl text-xl";
 
   if (errors) {
     classNames += " border-red-500";

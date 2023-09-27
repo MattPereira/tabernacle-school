@@ -10,7 +10,7 @@ import slide1 from "../../assets/images/about/slides/slide1.jpg";
 import slide3 from "../../assets/images/about/slides/slide3.jpg";
 import slide5 from "../../assets/images/about/slides/slide5.jpg";
 
-export default function FacultySection() {
+export default function Faculty() {
   const [facultyData, setFacultyData] = useState(null);
   const [selection, setSelection] = useState(null);
 
@@ -73,7 +73,7 @@ export default function FacultySection() {
 
                 const profilePicture = profile_picture.data.attributes.url;
                 return (
-                  <div>
+                  <div key={member.name}>
                     <Link to={`/about/${email}`} className="text-center">
                       <p className="text-xl mb-1">{titleShort}</p>
 
@@ -112,7 +112,7 @@ export default function FacultySection() {
               }
 
               return (
-                <div>
+                <div key={option}>
                   <button
                     variant="outlined"
                     onClick={() => setSelection(option)}

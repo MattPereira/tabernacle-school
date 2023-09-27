@@ -64,7 +64,7 @@ export default function CommonCore() {
           {ACCORDION_ITEMS.map((item, index) => (
             <div
               key={index}
-              className="collapse collapse-plus bg-base-200 mb-3"
+              className="collapse collapse-plus bg-alternate mb-3"
             >
               <input type="radio" name="my-accordion-3" />
               <div className="collapse-title text-xl font-bold">

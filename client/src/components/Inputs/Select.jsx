@@ -16,7 +16,7 @@ export default function Select({
   ...props
 }) {
   let classNames =
-    "select select-primary h-14 w-full px-4 py-2 text-xl bg-white rounded-3xl";
+    "select select-primary h-14 w-full px-4 py-2 text-xl bg-white rounded-2xl";
 
   if (errors) {
     classNames += " border-red-500";
