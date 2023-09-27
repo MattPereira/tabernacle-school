@@ -98,7 +98,6 @@ function SendMessageForm() {
             Submit
           </TwButton>
         </div>
-        np
         {status.type && (
           <div className="mt-5">
             <Toast variant={status.type} message={status.message} />
