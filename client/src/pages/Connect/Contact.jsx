@@ -68,7 +68,6 @@ function SendMessageForm() {
           validations={{ required: "Please provide your name" }}
           errors={errors.name}
         />
-
         <TextField
           id="email"
           label="Email"
@@ -78,7 +77,6 @@ function SendMessageForm() {
           validations={{ required: "Please provide your email" }}
           errors={errors.email}
         />
-
         <TextField
           id="message"
           label="Message"
@@ -91,7 +89,6 @@ function SendMessageForm() {
           }}
           errors={errors.message}
         />
-
         <div className="flex">
           <TwButton
             type="submit"
@@ -101,6 +98,7 @@ function SendMessageForm() {
             Submit
           </TwButton>
         </div>
+        np
         {status.type && (
           <div className="mt-5">
             <Toast variant={status.type} message={status.message} />

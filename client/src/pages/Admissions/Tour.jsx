@@ -62,7 +62,7 @@ export default function ScheduleTourForm() {
     <SectionWrapper>
       <SectionTitle title="Schedule Tour" />
       <div>
-        <p className="font-gothic mb-10 text-xl text-center">
+        <p className="font-gothic mb-20 text-xl text-center">
           Schedule a tour by filling out the form below or calling us at{" "}
           <a href="tel:9256859169" className="text-blue-600 underline">
             925.685.9169
@@ -72,64 +72,11 @@ export default function ScheduleTourForm() {
       <div>
         <div>
           <form
-            className="w-full md:w-2/3 mx-auto"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             noValidate
             autoComplete="off"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="mb-5">
-              <h3 className="text-center text-2xl mb-5 underline">
-                Student Information
-              </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                <TextField
-                  id="studentFirstName"
-                  label="First Name"
-                  type="text"
-                  placeholder="student's first name"
-                  register={register}
-                  validations={{ required: "Please provide your first name" }}
-                  errors={errors.studentFirstName}
-                />
-
-                <TextField
-                  id="studentLastName"
-                  label="Last Name"
-                  type="text"
-                  placeholder="student's last name"
-                  register={register}
-                  validations={{ required: "Please provide your last name" }}
-                  errors={errors.studentLastName}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                <Select
-                  id="gradeLevel"
-                  label="Grade Level"
-                  placeholder="Choose grade level"
-                  options={gradeLevelOptions}
-                  register={register}
-                  validations={{
-                    required: "Please provide student's grade level",
-                  }}
-                  errors={errors.gradeLevel}
-                />
-
-                <TextField
-                  id="birthdate"
-                  label="Birthdate"
-                  type="date"
-                  placeholder="student's birthdate"
-                  register={register}
-                  validations={{
-                    required: "Please provide student's birthdate",
-                  }}
-                  errors={errors.birthdate}
-                />
-              </div>
-            </div>
-
             <div>
               <h3 className="text-center text-2xl mb-5 underline">
                 Parent Information
@@ -190,22 +137,74 @@ export default function ScheduleTourForm() {
                 errors={errors.availability}
               />
             </div>
+            <div className="flex flex-col">
+              <h3 className="text-center text-2xl mb-5 underline">
+                Student Information
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                <TextField
+                  id="studentFirstName"
+                  label="First Name"
+                  type="text"
+                  placeholder="student's first name"
+                  register={register}
+                  validations={{ required: "Please provide your first name" }}
+                  errors={errors.studentFirstName}
+                />
 
-            <div className="w-full  ml-auto">
-              <Button
-                className="w-full"
-                type="submit"
-                disabled={status.type === "info"}
-              >
-                Submit
-              </Button>
-            </div>
-            <div className="w-full h-16 flex flex-col justify-end">
-              {status.type && (
-                <Toast variant={status.type} message={status.message} />
-              )}
+                <TextField
+                  id="studentLastName"
+                  label="Last Name"
+                  type="text"
+                  placeholder="student's last name"
+                  register={register}
+                  validations={{ required: "Please provide your last name" }}
+                  errors={errors.studentLastName}
+                />
+              </div>
+              <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                  <Select
+                    id="gradeLevel"
+                    label="Grade Level"
+                    placeholder="Choose grade level"
+                    options={gradeLevelOptions}
+                    register={register}
+                    validations={{
+                      required: "Please provide student's grade level",
+                    }}
+                    errors={errors.gradeLevel}
+                  />
+
+                  <TextField
+                    id="birthdate"
+                    label="Birthdate"
+                    type="date"
+                    placeholder="student's birthdate"
+                    register={register}
+                    validations={{
+                      required: "Please provide student's birthdate",
+                    }}
+                    errors={errors.birthdate}
+                  />
+                </div>
+              </div>
+              <div className="w-full ml-auto grow flex flex-col justify-end">
+                <Button
+                  className="w-full mb-0 lg:mb-7"
+                  type="submit"
+                  disabled={status.type === "info"}
+                >
+                  Submit
+                </Button>
+              </div>
             </div>
           </form>
+          <div className="w-full h-16 flex flex-col justify-end">
+            {status.type && (
+              <Toast variant={status.type} message={status.message} />
+            )}
+          </div>
         </div>
       </div>
     </SectionWrapper>

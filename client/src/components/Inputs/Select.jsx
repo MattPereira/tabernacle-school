@@ -31,8 +31,8 @@ export default function Select({
     <div className="w-full">
       {label && (
         <div className="mb-1 ml-1 text-xl">
-          <label className="label" htmlFor={id}>
-            <span className="label-text text-xl font-bold">{label}</span>
+          <label className="" htmlFor={id}>
+            <span className="text-xl font-bold">{label}</span>
           </label>
         </div>
       )}
