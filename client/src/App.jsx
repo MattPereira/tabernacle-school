@@ -6,7 +6,7 @@ import { ScrollToTop, Header, Footer } from "./components";
 /***** The main pages accessible via the navbar *****/
 import Homepage from "./pages/page";
 import About from "./pages/About/page";
-import ProfilePage from "./pages/About/Faculty/ProfilePage";
+import ProfilePage from "./pages/About/[email]/page";
 import AdmissionsPage from "./pages/Admissions/page";
 import Academics from "./pages/Academics/page";
 import Campus from "./pages/Campus/page";
@@ -31,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
-            <Route exact path="/about/staff/:id" element={<ProfilePage />} />
+            <Route exact path="/about/:id" element={<ProfilePage />} />
             <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
