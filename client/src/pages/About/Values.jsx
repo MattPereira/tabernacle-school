@@ -41,8 +41,24 @@ export default function Values() {
   return (
     <SectionWrapper>
       <SectionTitle title="Values" />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+        <div className=" h-60 lg:h-72 object-center overflow-hidden rounded-xl">
+          <img
+            className="w-full h-full object-center object-cover"
+            src={value1}
+            alt="children holding up thank you sign"
+          />
+        </div>
+        <div className="h-72 hidden lg:block">
+          <img
+            className="w-full h-full object-center object-cover rounded-xl"
+            src={value2}
+            alt="children singing at christmas performance"
+          />
+        </div>
+      </div>
       <div>
-        <div className="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {values.map((value) => (
             <div key={value.title}>
               <h5 className="text-2xl font-gothic font-bold mb-1 text-center">
@@ -51,22 +67,6 @@ export default function Values() {
               <p className="text-xl">{value.description}</p>
             </div>
           ))}
-        </div>
-        <div className="hidden md:grid grid-cols-2 gap-6 ">
-          <div>
-            <img
-              className="w-full rounded-2xl"
-              src={value1}
-              alt="children holding up thank you sign"
-            />
-          </div>
-          <div>
-            <img
-              className="w-full rounded-2xl"
-              src={value2}
-              alt="children singing at christmas performance"
-            />
-          </div>
         </div>
       </div>
     </SectionWrapper>

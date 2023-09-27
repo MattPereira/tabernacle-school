@@ -1,5 +1,4 @@
-import SectionTitle from "../../../components/SectionTitle";
-import { Container, Box, Grid, Typography } from "@mui/material";
+import { SectionTitle, SectionWrapper } from "../../../components";
 
 import bodily from "../../../assets/images/about/gift/bodily.jpg";
 import linguistic from "../../../assets/images/about/gift/linguistic.jpg";
@@ -97,99 +96,56 @@ const giftList = [
 
 export default function GiftProgram() {
   return (
-    <Box sx={{ py: 8, bgcolor: "background.alternate" }}>
+    <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Gift Program" />
-      <Container>
-        <Box sx={{ mb: 8 }}>
-          <Typography variant="p">
-            At Tabernacle we believe every child is a gifted child, and we
-            respect the unique giftedness of all children by working to help
-            them discover and develop their gifts. Because children are gifted
-            in different ways, we offer a broad range of programs designed to
-            help them develop their own unique strengths. We respect and work to
-            develop the following universally recognized areas of giftedness.
-          </Typography>
-        </Box>
 
-        <Grid
-          container
-          spacing={2}
-          sx={{ flexWrap: "nowrap", overflowX: "auto" }}
-        >
-          {giftList.map((gift) => (
-            <Grid item key={gift.title}>
-              <GiftCard
-                image={gift.image}
-                bgColor={gift.bgColor}
-                title={gift.title}
-                definition={gift.definition}
-                description={gift.description}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
+      <div>
+        <p className="text-xl mb-20">
+          At Tabernacle we believe every child is a gifted child, and we respect
+          the unique giftedness of all children by working to help them discover
+          and develop their gifts. Because children are gifted in different
+          ways, we offer a broad range of programs designed to help them develop
+          their own unique strengths. We respect and work to develop the
+          following universally recognized areas of giftedness.
+        </p>
+      </div>
+
+      {giftList.map((gift) => (
+        <div key={gift.title} className="collapse collapse-plus bg-white mb-3">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-2xl">{gift.title}</div>
+          <div className="collapse-content">
+            <GiftCard
+              image={gift.image}
+              bgColor={gift.bgColor}
+              title={gift.title}
+              definition={gift.definition}
+              description={gift.description}
+            />
+          </div>
+        </div>
+      ))}
+    </SectionWrapper>
   );
 }
 
 function GiftCard({ image, title, definition, description, bgColor }) {
   return (
-    <Box
-      className={`${bgColor}`}
-      sx={{
-        width: "350px",
-        height: "550px",
-        px: 3,
-        pb: 3,
-        pt: 2,
-        mb: 3,
-        color: "white",
-        borderRadius: "10px",
-        bgcolor: bgColor,
-      }}
-    >
-      <Typography variant="h4" textAlign="center" gutterBottom>
-        {title}
-      </Typography>
-
-      <Box sx={{ mb: 2 }}>
-        <Box
-          sx={{
-            width: 300,
-            height: 200,
-            borderRadius: "10px",
-            overflow: "hidden",
-            mx: "auto",
-          }}
-        >
-          <Box
+    <div>
+      <div className="grid cols-1 lg:grid-cols-8 gap-8">
+        <div className="w-full h-[250px] rounded-xl overflow-hidden col-span-8 lg:col-span-3">
+          <img
+            className="w-full h-full object-center object-cover"
             component="img"
             src={image}
             alt={title}
-            sx={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
           />
-        </Box>
-      </Box>
-      <Box>
-        <Box sx={{ mb: 1 }}>
-          <Typography
-            variant="p"
-            sx={{ fontStyle: "italic", fontWeight: "bold" }}
-          >
-            {definition}
-          </Typography>
-        </Box>
-
-        <Box>
-          <Typography variant="p">{description}</Typography>
-        </Box>
-      </Box>
-    </Box>
+        </div>
+        <div className="col-span-8 lg:col-span-5">
+          <p className="text-xl font-bold">{definition}</p>
+          <p className="text-xl">{description}</p>
+        </div>
+      </div>
+    </div>
   );
 }
