@@ -9,6 +9,7 @@ import axios from "axios";
 import slide1 from "../../assets/images/about/slides/slide1.jpg";
 import slide3 from "../../assets/images/about/slides/slide3.jpg";
 import slide5 from "../../assets/images/about/slides/slide5.jpg";
+import { ButtonGroup } from "../../components";
 
 export default function Faculty() {
   const [facultyData, setFacultyData] = useState(null);
@@ -35,7 +36,13 @@ export default function Faculty() {
   if (!facultyData) return <LoadingSpinner />;
 
   facultyData.sort((a, b) => a.id - b.id);
-  const facultyOptions = facultyData.map((group) => group.attributes.name);
+  const facultyOptions = facultyData.map((group) => {
+    if (group.attributes.name === "Physical Education") {
+      return "Phys Ed";
+    } else {
+      return group.attributes.name;
+    }
+  });
 
   const facultyObj = facultyData.reduce((acc, curr) => {
     acc[curr.attributes.name] = curr.attributes;
@@ -99,31 +106,11 @@ export default function Faculty() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-            {facultyOptions.map((option) => {
-              let shortName;
-
-              if (option === "Middle School") {
-                shortName = "Jr High";
-              } else if (option === "Physical Education") {
-                shortName = "Phys Ed";
-              } else {
-                shortName = option;
-              }
-
-              return (
-                <div key={option}>
-                  <button
-                    variant="outlined"
-                    onClick={() => setSelection(option)}
-                    className="bg-white py-6 rounded-xl text-2xl w-full hover:bg-primary hover:text-white"
-                  >
-                    {shortName}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
+          <ButtonGroup
+            options={facultyOptions}
+            setSelection={setSelection}
+            classNames="bg-white"
+          />
         )}
       </div>
     </SectionWrapper>
