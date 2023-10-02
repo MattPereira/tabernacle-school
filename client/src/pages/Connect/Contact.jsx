@@ -9,22 +9,18 @@ import {
   SectionWrapper,
   TextField,
   Toast,
-  Button as TwButton,
+  ButtonGroup,
+  Button,
 } from "../../components";
-
-import { Button, Grid, Typography, Box } from "@mui/material";
 
 export default function Contact() {
   return (
     <SectionWrapper>
       <SectionTitle title="Contact" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div>
-          <SendMessageForm />
-        </div>
-        <div>
-          <StaffDirectory />
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 mb-5">
+        <SendMessageForm />
+
+        <StaffDirectory />
       </div>
     </SectionWrapper>
   );
@@ -90,13 +86,13 @@ function SendMessageForm() {
           errors={errors.message}
         />
         <div className="flex">
-          <TwButton
+          <Button
             type="submit"
             className="w-full"
             disabled={status.type === "info"}
           >
             Submit
-          </TwButton>
+          </Button>
         </div>
         {status.type && (
           <div className="mt-5">
@@ -134,8 +130,9 @@ function StaffDirectory() {
   if (!staffData) return <LoadingSpinner />;
 
   staffData.sort((a, b) => a.id - b.id);
-  const staffOptions = staffData.map((group) => group.attributes.name);
-
+  const staffOptions = staffData.map((group) => {
+    return group.attributes.name;
+  });
   let staffMembers;
   if (selected) {
     const selectedGroup = staffData.filter(
@@ -153,110 +150,52 @@ function StaffDirectory() {
   }
 
   return (
-    <div>
+    <div className="">
       <div className="mb-10">
         <h4 className="font-copse text-3xl text-center">Staff Directory</h4>
       </div>
-      <Box
-        sx={{
-          minHeight: "400px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        {selected ? (
-          <Box>
-            <table style={{ width: "100%" }}>
-              <tbody>
-                {staffMembers.map((member) => (
-                  <tr key={member.name}>
-                    <td style={{ padding: "7px 2px" }}>
-                      <Typography
-                        variant="p"
-                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                      >
-                        {member.name}
-                      </Typography>
-                    </td>
-                    <td>
-                      <Typography
-                        variant="p"
-                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                      >
-                        {member.titleShort}
-                      </Typography>
-                    </td>
-                    <td>
-                      <Typography
-                        variant="p"
-                        sx={{ fontSize: { xs: "14px", md: "18px" } }}
-                        component="a"
-                      >
-                        {member.email}
-                      </Typography>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <Box sx={{ display: "flex", justifyContent: "end", mt: 3 }}>
-              <Typography
-                variant="p"
-                onClick={() => setSelected(null)}
-                sx={{
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                  color: "primary.main",
-                }}
-              >
-                See all staff
-              </Typography>
-            </Box>
-          </Box>
-        ) : (
-          <Grid container spacing="10">
-            {staffOptions.map((option) => {
-              let shortName;
 
-              if (option === "Middle School") {
-                shortName = "Jr High";
-              } else if (option === "Physical Education") {
-                shortName = "Phys Ed";
-              } else {
-                shortName = option;
-              }
+      {selected ? (
+        <div className="flex flex-col justify-between">
+          <table className="table mb-5">
+            <tbody>
+              {staffMembers.map((member) => (
+                <tr key={member.name}>
+                  <td className="p-0">
+                    <p className="text-xl">{member.name}</p>
+                  </td>
+                  <td>
+                    <p className="text-xl">{member.titleShort}</p>
+                  </td>
+                  <td>
+                    <a
+                      className="underline text-primary text-xl"
+                      href={`mailto:${member.email}`}
+                    >
+                      {member.email}
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-              return (
-                <Grid item xs={6} key={option}>
-                  <Button
-                    variant="outlined"
-                    onClick={() => setSelected(option)}
-                    sx={{
-                      borderRadius: "15px",
-                      width: "100%",
-                      fontFamily: "didact gothic",
-                      fontWeight: "normal",
-                      bgcolor: "background.alternate",
-                      border: "none",
-                      color: "black",
-                      textTransform: "none",
-                      py: 2,
-                      "&:hover": {
-                        bgcolor: "primary.main",
-                        color: "white",
-                        border: "none",
-                      },
-                    }}
-                  >
-                    {shortName}
-                  </Button>
-                </Grid>
-              );
-            })}
-          </Grid>
-        )}
-      </Box>
+          <div className="text-end">
+            <button
+              className="btn btn-primary capitalize text-xl"
+              onClick={() => setSelected(null)}
+            >
+              See all staff
+            </button>
+          </div>
+        </div>
+      ) : (
+        <ButtonGroup
+          setSelection={setSelected}
+          options={staffOptions}
+          classNames="bg-alternate text-xl"
+        />
+      )}
     </div>
   );
 }

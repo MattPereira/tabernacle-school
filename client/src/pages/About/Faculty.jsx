@@ -37,11 +37,7 @@ export default function Faculty() {
 
   facultyData.sort((a, b) => a.id - b.id);
   const facultyOptions = facultyData.map((group) => {
-    if (group.attributes.name === "Physical Education") {
-      return "Phys Ed";
-    } else {
-      return group.attributes.name;
-    }
+    return group.attributes.name;
   });
 
   const facultyObj = facultyData.reduce((acc, curr) => {
