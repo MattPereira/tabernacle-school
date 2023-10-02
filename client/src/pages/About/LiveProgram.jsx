@@ -113,11 +113,12 @@ export default function LiveProgram() {
       <div className="carousel w-full">
         {characterList.map((item, index) => (
           <div
+            key={item.title}
             id={`slide${index + 1}`}
-            className="carousel-item relative w-full"
+            className="carousel-item relative w-full justify-center"
           >
             <div>
-              <h5 className="text-3xl font-bold mb-10 text-center">
+              <h5 className="text-3xl font-bold pt-5 mb-10 text-center">
                 {item.title}
               </h5>
 
@@ -147,10 +148,10 @@ export default function LiveProgram() {
                 </div>
               </div>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-8">
               <a
                 href={`#slide${index === 0 ? characterList.length : index}`}
-                className="btn btn-circle"
+                className="btn btn-primary btn-circle"
               >
                 ❮
               </a>
@@ -158,7 +159,7 @@ export default function LiveProgram() {
                 href={`#slide${
                   index === characterList.length - 1 ? 1 : index + 2
                 }`}
-                className="btn btn-circle"
+                className="btn btn-primary btn-circle"
               >
                 ❯
               </a>
