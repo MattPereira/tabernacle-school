@@ -1,14 +1,6 @@
 import { useState } from "react";
-import {
-  Typography,
-  Box,
-  Container,
-  Grid,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Typography, Box, Container, Grid } from "@mui/material";
+
 const supplyLists = [
   {
     grade: "Transitional Kindergarten",
@@ -318,22 +310,22 @@ export default function SupplyLists() {
           <Grid container justifyContent="center">
             <Grid item lg={8}>
               {supplyLists.map((list, index) => (
-                <Accordion
+                <div
                   key={index}
-                  expanded={expanded === list.grade}
-                  onChange={handleChange(list.grade)}
-                  elevation={0}
-                  sx={{ border: "1px solid black", mb: 1 }}
+                  className="collapse collapse-plus bg-alternate mb-2"
                 >
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="h5">{list.grade}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
+                  <input type="radio" name="my-accordion-3" />
+                  <div className="collapse-title text-xl font-medium">
+                    <h5 className="text-2xl font-bold">{list.grade}</h5>
+                  </div>
+                  <div className="collapse-content">
                     {list.categories ? (
                       list.categories.map((category, catIndex) => (
-                        <div key={catIndex}>
-                          <Typography variant="h6">{category.name}</Typography>
-                          <ul>
+                        <div key={catIndex} className="mb-5">
+                          <h5 className="text-2xl underline">
+                            {category.name}
+                          </h5>
+                          <ul className="list-disc list-inside">
                             {category.items.map((item, itemIndex) => (
                               <li key={itemIndex}>{item}</li>
                             ))}
@@ -341,14 +333,14 @@ export default function SupplyLists() {
                         </div>
                       ))
                     ) : (
-                      <ul>
+                      <ul className="list-disc list-inside">
                         {list.items.map((item, i) => (
                           <li key={i}>{item}</li>
                         ))}
                       </ul>
                     )}
-                  </AccordionDetails>
-                </Accordion>
+                  </div>
+                </div>
               ))}
             </Grid>
           </Grid>

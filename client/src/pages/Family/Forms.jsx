@@ -1,10 +1,3 @@
-import ComputerIcon from "@mui/icons-material/Computer";
-import { ReactComponent as Computer } from "../../assets/svgs/computer.svg";
-import PedalBikeIcon from "@mui/icons-material/PedalBike";
-import MedicalServicesOutlinedIcon from "@mui/icons-material/MedicalServicesOutlined";
-import SportsFootballOutlinedIcon from "@mui/icons-material/SportsFootballOutlined";
-
-import { Container, Grid, Box, Typography, Icon } from "@mui/material";
 import { SectionTitle, SectionWrapper } from "../../components";
 
 const formData = [

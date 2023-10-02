@@ -1,6 +1,4 @@
 import { HashLink } from "react-router-hash-link";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import {
   Grid,
   Button,
@@ -153,7 +151,14 @@ const Footer = () => {
                     component="a"
                     href="https://www.facebook.com/people/Tabernacle-School/100064024872370/"
                   >
-                    <FacebookOutlinedIcon />
+                    <svg
+                      fill="white"
+                      className="w-6 h-6"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z" />
+                    </svg>
                   </StyledIconButton>
                 </Grid>
                 <Grid item>
@@ -161,7 +166,20 @@ const Footer = () => {
                     component="a"
                     href="/pdfs/calendar-23-24.pdf"
                   >
-                    <CalendarMonthIcon />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                      />
+                    </svg>
                   </StyledIconButton>
                 </Grid>
               </Grid>

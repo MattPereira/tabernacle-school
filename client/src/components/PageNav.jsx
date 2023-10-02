@@ -1,6 +1,4 @@
 import { Typography, Box, Grid } from "@mui/material";
-// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-// import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 import * as React from "react";
 

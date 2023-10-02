@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-
 import { useState } from "react";
 
 export default function ScrollToTop(props) {
@@ -50,9 +48,24 @@ const ScrollToTopButton = () => {
           borderRadius: "50%",
           border: "3px solid #c0ac15",
           display: show ? "flex" : "none",
+          color: "white",
+          padding: "5px",
         }}
       >
-        <ArrowUpwardIcon sx={{ fontSize: "2.5rem", color: "white" }} />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-8 h-8"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+          />
+        </svg>
       </span>
     </>
   );
