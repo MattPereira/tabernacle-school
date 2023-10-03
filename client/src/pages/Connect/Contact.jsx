@@ -1,7 +1,8 @@
+"use client";
+
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import LoadingSpinner from "../../components/LoadingSpinner";
 
 import {
@@ -51,7 +52,7 @@ function SendMessageForm() {
   return (
     <div>
       <div className="mb-5">
-        <h4 className="font-copse text-3xl text-center">Send Message</h4>
+        <h4 className="text-3xl text-center">Send Message</h4>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
@@ -152,11 +153,11 @@ function StaffDirectory() {
   return (
     <div className="">
       <div className="mb-10">
-        <h4 className="font-copse text-3xl text-center">Staff Directory</h4>
+        <h4 className="text-3xl text-center">Staff Directory</h4>
       </div>
 
       {selected ? (
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between h-min md:h-[392px]">
           <table className="table mb-5">
             <tbody>
               {staffMembers.map((member) => (
