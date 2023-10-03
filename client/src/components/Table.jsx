@@ -1,6 +1,10 @@
 function Table({ children, className = "" }) {
   return (
-    <table className={`border-collapse w-full ${className}`}>{children}</table>
+    <div className="overflow-x-auto rounded-xl">
+      <table className={`border-collapse w-full table ${className}`}>
+        {children}
+      </table>
+    </div>
   );
 }
 
@@ -11,7 +15,9 @@ function TableHead({ headers }) {
         {headers.map((header, idx) => (
           <th
             key={idx}
-            className="border border-neutral-700 py-2 px-4 bg-dark text-white"
+            className={`bg-dark text-white ${
+              idx === headers.length - 1 ? "" : "border-r border-neutral-700"
+            }`}
           >
             {header}
           </th>
@@ -23,7 +29,7 @@ function TableHead({ headers }) {
 
 function TableRow({ data }) {
   return (
-    <tr>
+    <tr className="hover:bg-alternate">
       {data.map((cell, idx) => (
         <td key={idx} className="border py-2 px-2">
           {cell}

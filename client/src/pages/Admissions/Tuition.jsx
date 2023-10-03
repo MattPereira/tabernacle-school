@@ -65,7 +65,7 @@ export default function Tuition() {
                 })}
               </Table>
             </div>
-            <p className="text-sm text-neutral-700">
+            <p className="px-3 text-sm text-neutral-700">
               *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for PIF
               discount is due by 8/10/2023
             </p>
@@ -100,17 +100,12 @@ export default function Tuition() {
             </tbody>
           </Table>
 
-          <div className="mb-1 ">
-            <p className="text-sm text-neutral-700">
-              *Classroom placement is secured upon payment of registration and
-              consumable fee and first month's tuition.
-            </p>
-          </div>
-
-          <p className="text-sm  text-neutral-700">
-            *Registration is non-refundable. Consumable fee is non-refundable
-            after May 1st or at time of enrollment for new students. First
-            month's tuition is non-refundable.
+          <p className="px-3 text-sm text-neutral-700 px-5">
+            *Classroom placement is secured upon payment of registration and
+            consumable fee and first month's tuition. Registration is
+            non-refundable. Consumable fee is non-refundable after May 1st or at
+            time of enrollment for new students. First month's tuition is
+            non-refundable.
           </p>
         </div>
         <div className="">
@@ -187,7 +182,7 @@ export default function Tuition() {
               />
             </tbody>
           </Table>
-          <p className="text-sm text-neutral-700">
+          <p className="px-3 text-sm text-neutral-700">
             *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
             <a href="/campus#calendar">calendar</a> for closures.
           </p>
