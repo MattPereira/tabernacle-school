@@ -61,13 +61,26 @@ export default function ScheduleTourForm() {
   return (
     <SectionWrapper>
       <SectionTitle title="Schedule Tour" />
-      <div>
-        <p className="font-gothic mb-20 text-xl text-center">
+      <div className="alert bg-alternate border-neutral-300 text-black mb-14 flex justify-center text-xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="hidden lg:block stroke-current shrink-0 w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <span>
           Schedule a tour by filling out the form below or calling us at{" "}
           <a href="tel:9256859169" className="text-blue-600 underline">
             925.685.9169
           </a>
-        </p>
+        </span>
       </div>
       <div>
         <div>
