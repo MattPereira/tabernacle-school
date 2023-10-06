@@ -32,7 +32,7 @@ export default function Select({
       {label && (
         <div className="mb-1 ml-1 text-xl">
           <label className="" htmlFor={id}>
-            <span className="text-xl font-bold">{label}</span>
+            <span className="text-xl">{label}</span>
           </label>
         </div>
       )}

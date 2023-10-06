@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Typography, Box, Container, Grid } from "@mui/material";
+import { SectionTitle, SectionWrapper } from "../../../components";
 
 const supplyLists = [
   {
@@ -281,71 +280,52 @@ const supplyLists = [
 ];
 
 export default function SupplyLists() {
-  const [expanded, setExpanded] = useState(false);
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
-
   return (
-    <main>
-      <Box sx={{ py: 8 }}>
-        <Typography variant="h2" align="center">
-          Supply Lists
-        </Typography>
-      </Box>
+    <SectionWrapper>
+      <SectionTitle title="Supply Lists" />
 
-      <section>
-        <Container sx={{ pb: 10 }}>
-          <Box sx={{ textAlign: "center", mb: 5 }}>
-            <Typography
-              variant="p"
-              sx={{ fontSize: { xs: "20px", md: "25px" } }}
+      <div>
+        <p className="text-2xl text-center mb-14">
+          <u>DO NOT BRING:</u> iPods, tablets, game boys, cell phones, toys, or
+          mechanical pencils
+        </p>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="w-full lg:w-3/4">
+          {supplyLists.map((list, index) => (
+            <div
+              key={index}
+              className="collapse collapse-plus bg-alternate mb-2"
             >
-              <u>DO NOT BRING:</u> iPods, tablets, game boys, cell phones, toys,
-              or mechanical pencils
-            </Typography>
-          </Box>
-
-          <Grid container justifyContent="center">
-            <Grid item lg={8}>
-              {supplyLists.map((list, index) => (
-                <div
-                  key={index}
-                  className="collapse collapse-plus bg-alternate mb-2"
-                >
-                  <input type="radio" name="my-accordion-3" />
-                  <div className="collapse-title text-xl font-medium">
-                    <h5 className="text-2xl font-bold">{list.grade}</h5>
-                  </div>
-                  <div className="collapse-content">
-                    {list.categories ? (
-                      list.categories.map((category, catIndex) => (
-                        <div key={catIndex} className="mb-5">
-                          <h5 className="text-2xl underline">
-                            {category.name}
-                          </h5>
-                          <ul className="list-disc list-inside">
-                            {category.items.map((item, itemIndex) => (
-                              <li key={itemIndex}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))
-                    ) : (
+              <input type="radio" name="my-accordion-3" />
+              <div className="collapse-title text-xl font-medium">
+                <h5 className="text-2xl">{list.grade}</h5>
+              </div>
+              <div className="collapse-content">
+                {list.categories ? (
+                  list.categories.map((category, catIndex) => (
+                    <div key={catIndex} className="mb-5">
+                      <h5 className="text-2xl underline">{category.name}</h5>
                       <ul className="list-disc list-inside">
-                        {list.items.map((item, i) => (
-                          <li key={i}>{item}</li>
+                        {category.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
                         ))}
                       </ul>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </Grid>
-          </Grid>
-        </Container>
-      </section>
-    </main>
+                    </div>
+                  ))
+                ) : (
+                  <ul className="list-disc list-inside">
+                    {list.items.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </SectionWrapper>
   );
 }

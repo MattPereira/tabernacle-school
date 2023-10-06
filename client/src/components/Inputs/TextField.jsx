@@ -22,7 +22,7 @@ export default function TextField({
   return (
     <div className="w-full">
       <div className="mb-1 ml-1 text-xl">
-        <label className="font-bold" htmlFor={id}>
+        <label className="" htmlFor={id}>
           {label}
         </label>
       </div>

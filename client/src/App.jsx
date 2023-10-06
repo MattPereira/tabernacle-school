@@ -1,23 +1,22 @@
-import { Box } from "@mui/material";
 import { Route, Routes, Navigate } from "react-router-dom";
 
 import { ScrollToTop, Header, Footer } from "./components";
 
 /***** The main pages accessible via the navbar *****/
 import Homepage from "./pages/page";
-import About from "./pages/About/page";
-import ProfilePage from "./pages/About/[email]/page";
-import AdmissionsPage from "./pages/Admissions/page";
-import Academics from "./pages/Academics/page";
-import Campus from "./pages/Campus/page";
-import Connect from "./pages/Connect/page";
-import Family from "./pages/Family/page";
+import About from "./pages/about/page";
+import ProfilePage from "./pages/about/[email]/page";
+import AdmissionsPage from "./pages/admissions/page";
+import Academics from "./pages/academics/page";
+import Campus from "./pages/campus/page";
+import Connect from "./pages/connect/page";
+import Family from "./pages/family/page";
 
 /***** The pages accessible through family page's information section */
-import ParentOrientation from "./pages/Family/parent-orientation/page";
-import FactsHelp from "./pages/Family/facts/page";
-import SupplyList from "./pages/Family/supply-list/page";
-import Discipline from "./pages/Family/discipline/page";
+import ParentOrientation from "./pages/family/parent-orientation/page";
+import FactsHelp from "./pages/family/facts/page";
+import SupplyList from "./pages/family/supply-list/page";
+import Discipline from "./pages/family/discipline/page";
 
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
@@ -27,7 +26,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <ScrollToTop>
-        <Box sx={{ mt: { xs: "67px", md: 0 } }}>
+        <div className="mt-[67px] md:mt-0">
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
@@ -46,7 +45,7 @@ function App() {
             <Route path="/family" element={<Family />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </Box>
+        </div>
       </ScrollToTop>
       <Footer />
     </ThemeProvider>

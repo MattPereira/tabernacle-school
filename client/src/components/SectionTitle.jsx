@@ -1,5 +1,3 @@
-import { Typography, Divider, Box } from "@mui/material";
-
 const SectionTitle = ({ title }) => {
   // Weird div is for anchor links on same page
 
