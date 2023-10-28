@@ -35,11 +35,9 @@ export default function Employment() {
           <div className="mb-5">
             <h5 className="font-bold text-2xl">Open Positions</h5>
             <p className="text-xl">
-              Tabernacle School is looking for a part time middle school science
-              teacher for the current 2023-2024 school year. All applicants must
-              hold a bachelor's degree from an accredited university and be able
-              to sign the school Statement of Faith. Please contact Lesley
-              Nutting at{" "}
+              All applicants must hold a bachelor's degree from an accredited
+              university and be able to sign the school Statement of Faith.
+              Please contact Lesley Nutting at{" "}
               <a
                 className="underline text-primary"
                 href="mailto:LesleyN@tbs.org"
