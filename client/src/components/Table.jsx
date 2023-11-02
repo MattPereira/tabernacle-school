@@ -15,10 +15,8 @@ function TableHead({ headers }) {
         {headers.map((header, idx) => (
           <th
             key={idx}
-            className={`bg-dark text-white ${
-              idx === headers.length - 1
-                ? ""
-                : "border-r border-neutral-700 text-lg"
+            className={`bg-dark text-white text-lg ${
+              idx === headers.length - 1 ? "" : "border-r border-neutral-700"
             }`}
           >
             {header}
