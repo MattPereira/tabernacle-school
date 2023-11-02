@@ -11,13 +11,6 @@ import {
   Select,
 } from "../../components";
 
-import tourImg from "../../assets/images/about/gift/display.jpg";
-{
-  /* <div>
-<img src={tourImg} className="w-full rounded-lg hidden lg:block" />
-</div> */
-}
-
 const gradeLevelOptions = [
   { value: "Preschool", label: "Preschool" },
   { value: "Kindergarten", label: "Kindergarten" },
@@ -61,81 +54,148 @@ export default function ScheduleTourForm() {
   return (
     <SectionWrapper>
       <SectionTitle title="Schedule Tour" />
-      <div className="alert bg-alternate border-neutral-300 text-black mb-14 flex justify-center text-xl">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          className="hidden lg:block stroke-current shrink-0 w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          ></path>
-        </svg>
-        <span>
-          Schedule a tour by filling out the form below or calling us at{" "}
-          <a href="tel:9256859169" className="text-blue-600 underline">
-            925.685.9169
-          </a>
-        </span>
-      </div>
-      <div>
-        <div>
-          <form
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            noValidate
-            autoComplete="off"
-            onSubmit={handleSubmit(onSubmit)}
+      <div className="px-0 ">
+        <div className="alert bg-alternate border-neutral-300 text-black mb-10 flex justify-center text-xl">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="hidden lg:block stroke-current shrink-0 w-6 h-6"
           >
-            <div>
-              <h3 className="text-center text-2xl mb-5 underline">
-                Parent Information
-              </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                <TextField
-                  id="parentFirstName"
-                  label="First Name"
-                  type="text"
-                  placeholder="your first name"
-                  register={register}
-                  validations={{ required: "Please provide your first name" }}
-                  errors={errors.parentFirstName}
-                />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <span>
+            Schedule a tour by filling out the form below or calling us at{" "}
+            <a href="tel:9256859169" className="text-blue-600 underline">
+              925.685.9169
+            </a>
+          </span>
+        </div>
+        <div>
+          <div>
+            <form
+              noValidate
+              autoComplete="off"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="grid grid-cols-1 gap-8">
+                <div className="flex flex-col">
+                  <h3 className="text-center text-2xl mb-5 underline">
+                    Student Information
+                  </h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                    <TextField
+                      id="studentFirstName"
+                      label="First Name"
+                      type="text"
+                      placeholder="student's first name"
+                      register={register}
+                      validations={{
+                        required: "Please provide your first name",
+                      }}
+                      errors={errors.studentFirstName}
+                    />
 
-                <TextField
-                  id="parentLastName"
-                  label="Last Name"
-                  type="text"
-                  placeholder="your last name"
-                  register={register}
-                  validations={{ required: "Please provide your last name" }}
-                  errors={errors.parentLastName}
-                />
-              </div>
+                    <TextField
+                      id="studentLastName"
+                      label="Last Name"
+                      type="text"
+                      placeholder="student's last name"
+                      register={register}
+                      validations={{
+                        required: "Please provide your last name",
+                      }}
+                      errors={errors.studentLastName}
+                    />
+                  </div>
+                  <div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                      <Select
+                        id="gradeLevel"
+                        label="Grade Level"
+                        placeholder="Choose grade level"
+                        options={gradeLevelOptions}
+                        register={register}
+                        validations={{
+                          required: "Please provide student's grade level",
+                        }}
+                        errors={errors.gradeLevel}
+                      />
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                <TextField
-                  id="email"
-                  label="Email"
-                  type="text"
-                  placeholder="youremail@example.com"
-                  register={register}
-                  validations={{ required: "Please provide your email" }}
-                  errors={errors.email}
-                />
+                      <TextField
+                        id="birthdate"
+                        label="Birthdate"
+                        type="date"
+                        placeholder="student's birthdate"
+                        register={register}
+                        validations={{
+                          required: "Please provide student's birthdate",
+                        }}
+                        errors={errors.birthdate}
+                      />
+                    </div>
+                  </div>
+                </div>
 
-                <TextField
-                  id="phoneNumber"
-                  label="Phone Number"
-                  type="tel"
-                  placeholder="(123) 456-7890"
-                  register={register}
-                  validations={{ required: "Please provide your phone number" }}
-                  errors={errors.phoneNumber}
-                />
+                <div>
+                  <h3 className="text-center text-2xl mb-5 underline">
+                    Parent Information
+                  </h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                    <TextField
+                      id="parentFirstName"
+                      label="First Name"
+                      type="text"
+                      placeholder="your first name"
+                      register={register}
+                      validations={{
+                        required: "Please provide your first name",
+                      }}
+                      errors={errors.parentFirstName}
+                    />
+
+                    <TextField
+                      id="parentLastName"
+                      label="Last Name"
+                      type="text"
+                      placeholder="your last name"
+                      register={register}
+                      validations={{
+                        required: "Please provide your last name",
+                      }}
+                      errors={errors.parentLastName}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
+                    <TextField
+                      id="email"
+                      label="Email"
+                      type="text"
+                      placeholder="youremail@example.com"
+                      register={register}
+                      validations={{ required: "Please provide your email" }}
+                      errors={errors.email}
+                    />
+
+                    <TextField
+                      id="phoneNumber"
+                      label="Phone Number"
+                      type="tel"
+                      placeholder="(123) 456-7890"
+                      register={register}
+                      validations={{
+                        required: "Please provide your phone number",
+                      }}
+                      errors={errors.phoneNumber}
+                    />
+                  </div>
+                </div>
               </div>
 
               <TextField
@@ -149,60 +209,8 @@ export default function ScheduleTourForm() {
                 }}
                 errors={errors.availability}
               />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-center text-2xl mb-5 underline">
-                Student Information
-              </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                <TextField
-                  id="studentFirstName"
-                  label="First Name"
-                  type="text"
-                  placeholder="student's first name"
-                  register={register}
-                  validations={{ required: "Please provide your first name" }}
-                  errors={errors.studentFirstName}
-                />
 
-                <TextField
-                  id="studentLastName"
-                  label="Last Name"
-                  type="text"
-                  placeholder="student's last name"
-                  register={register}
-                  validations={{ required: "Please provide your last name" }}
-                  errors={errors.studentLastName}
-                />
-              </div>
-              <div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center">
-                  <Select
-                    id="gradeLevel"
-                    label="Grade Level"
-                    placeholder="Choose grade level"
-                    options={gradeLevelOptions}
-                    register={register}
-                    validations={{
-                      required: "Please provide student's grade level",
-                    }}
-                    errors={errors.gradeLevel}
-                  />
-
-                  <TextField
-                    id="birthdate"
-                    label="Birthdate"
-                    type="date"
-                    placeholder="student's birthdate"
-                    register={register}
-                    validations={{
-                      required: "Please provide student's birthdate",
-                    }}
-                    errors={errors.birthdate}
-                  />
-                </div>
-              </div>
-              <div className="w-full ml-auto grow flex flex-col justify-end">
+              <div className="w-full lg:w-1/4 ml-auto grow flex flex-col justify-end">
                 <Button
                   className="w-full mb-0 lg:mb-7"
                   type="submit"
@@ -211,12 +219,12 @@ export default function ScheduleTourForm() {
                   Submit
                 </Button>
               </div>
+            </form>
+            <div className="w-full h-16 flex flex-col justify-end">
+              {status.type && (
+                <Toast variant={status.type} message={status.message} />
+              )}
             </div>
-          </form>
-          <div className="w-full h-16 flex flex-col justify-end">
-            {status.type && (
-              <Toast variant={status.type} message={status.message} />
-            )}
           </div>
         </div>
       </div>
