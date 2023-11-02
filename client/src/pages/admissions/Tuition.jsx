@@ -17,7 +17,7 @@ export default function Tuition() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Tuition & Fees" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="">
           <div className="mb-3">
             <h5 className="text-2xl font-gothic font-bold text-center mb-1">
@@ -32,7 +32,10 @@ export default function Tuition() {
                   return (
                     <tbody key={group.title} className="text-center">
                       <tr className="bg-primary text-white">
-                        <th colSpan="4" className="text-start px-2 py-2">
+                        <th
+                          colSpan="4"
+                          className="text-start px-2 py-2 text-lg"
+                        >
                           {group["title"]}
                         </th>
                       </tr>
@@ -46,18 +49,18 @@ export default function Tuition() {
                       />
                       <TableRow
                         data={[
-                          "1st",
+                          "2nd",
                           `$${group.annual - 550}`,
                           `$${group.annual - 550 - 150}`,
-                          `$${group.monthly}`,
+                          `$${group.monthly - 55}`,
                         ]}
                       />
                       <TableRow
                         data={[
-                          "1st",
+                          "3rd",
                           `$${group.annual - 550}`,
                           `$${group.annual - 550 - 150}`,
-                          `$${group.monthly}`,
+                          `$${group.monthly - 55}`,
                         ]}
                       />
                     </tbody>
@@ -65,7 +68,7 @@ export default function Tuition() {
                 })}
               </Table>
             </div>
-            <p className="px-3 text-sm text-neutral-700">
+            <p className="px-3 text-neutral-700 mt-3 mb-5">
               *Tuition payments begin 8/1/2023 and end 5/1/2024. Payment for PIF
               discount is due by 8/10/2023
             </p>
@@ -100,7 +103,7 @@ export default function Tuition() {
             </tbody>
           </Table>
 
-          <p className="px-3 text-sm text-neutral-700 px-5">
+          <p className="px-3 text-neutral-700 px-3 mt-3">
             *Classroom placement is secured upon payment of registration and
             consumable fee and first month's tuition. Registration is
             non-refundable. Consumable fee is non-refundable after May 1st or at
@@ -109,7 +112,7 @@ export default function Tuition() {
           </p>
         </div>
         <div className="">
-          <div className="mb-3">
+          <div className="mb-10">
             <h5 className="text-2xl font-gothic font-bold text-center mb-1">
               Other Fees
             </h5>
@@ -182,7 +185,7 @@ export default function Tuition() {
               />
             </tbody>
           </Table>
-          <p className="px-3 text-sm text-neutral-700">
+          <p className="px-3 text-neutral-700 mt-3">
             *Daycare is open 6:45AM - 8:00AM and 3:30PM-6:00PM. See school{" "}
             <a href="/campus#calendar">calendar</a> for closures.
           </p>

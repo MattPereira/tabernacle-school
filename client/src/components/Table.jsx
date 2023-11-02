@@ -16,7 +16,9 @@ function TableHead({ headers }) {
           <th
             key={idx}
             className={`bg-dark text-white ${
-              idx === headers.length - 1 ? "" : "border-r border-neutral-700"
+              idx === headers.length - 1
+                ? ""
+                : "border-r border-neutral-700 text-lg"
             }`}
           >
             {header}
@@ -31,7 +33,7 @@ function TableRow({ data }) {
   return (
     <tr className="hover:bg-alternate">
       {data.map((cell, idx) => (
-        <td key={idx} className="border py-2 px-2">
+        <td key={idx} className="border py-2 px-2 text-lg">
           {cell}
         </td>
       ))}
