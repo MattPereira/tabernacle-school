@@ -3,7 +3,6 @@
  */
 
 const Showcase = ({ title, image }) => {
-  console.log("image", image);
   return (
     <div
       className={`relative flex justify-center items-center h-[175px] sm:h-[225px] md:h-[275px]`}

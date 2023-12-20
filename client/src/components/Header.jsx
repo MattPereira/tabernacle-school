@@ -58,7 +58,7 @@ export default function Header(props) {
   return (
     <div>
       {/* Top Navbar */}
-      <div className="bg-primary text-primary-content flex justify-between py-4 xl:py-5 px-5 xl:px-8 items-center">
+      <div className="bg-primary text-primary-content flex justify-between py-3 md:py-5 px-5 xl:px-8 items-center">
         <div>
           <NavLink
             to="/"
@@ -99,7 +99,7 @@ export default function Header(props) {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost rounded-btn"
+              className="btn btn-ghost rounded-btn px-2"
               onClick={toggleDropdown}
             >
               <Bars3Icon className="h-8 w-8" />
