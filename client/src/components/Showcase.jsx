@@ -1,42 +1,26 @@
-import { Typography, Box } from "@mui/material";
+/**
+ * tailwind class "inset-0" provides full coverage of parent component
+ */
 
 const Showcase = ({ title, image }) => {
+  console.log("image", image);
   return (
-    <Box
-      sx={{
-        height: { xs: "175px", sm: "225px", md: "275px" },
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: image
-          ? `url(${image}) center / cover no-repeat`
-          : "#212121",
+    <div
+      className={`relative flex justify-center items-center h-[175px] sm:h-[225px] md:h-[275px]`}
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <Box
-        sx={{
-          background: "rgba(0, 0, 0, 0.45)",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 1,
-        }}
-      ></Box>
-      <Box sx={{ zIndex: 2 }}>
-        <Typography
-          variant="h1"
-          sx={{
-            color: "white",
-            textTransform: "uppercase",
-          }}
-        >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="z-10">
+        <h1 className="text-white font-cubano text-5xl md:text-6xl lg:text-7xl">
           {title}
-        </Typography>
-      </Box>
-    </Box>
+        </h1>
+      </div>
+    </div>
   );
 };
 

@@ -19,6 +19,7 @@ module.exports = {
         cubano: ["cubano", "sans-serif"],
         gothic: ["didact gothic", "sans-serif"],
         copse: ["copse", "sans-serif"],
+        "roboto-mono": ["roboto mono", "sans-serif"],
       },
     },
   },

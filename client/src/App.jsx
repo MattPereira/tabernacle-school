@@ -26,26 +26,24 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <ScrollToTop>
-        <div className="mt-[67px] md:mt-0">
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about" element={<About />} />
-            <Route exact path="/about/:id" element={<ProfilePage />} />
-            <Route path="/admissions" element={<AdmissionsPage />} />
-            <Route path="/academics" element={<Academics />} />
-            <Route path="/campus" element={<Campus />} />
-            <Route path="/connect" element={<Connect />} />
-            <Route
-              path="/family/parent-orientation"
-              element={<ParentOrientation />}
-            />
-            <Route path="/family/facts" element={<FactsHelp />} />
-            <Route path="/family/supply-list" element={<SupplyList />} />
-            <Route path="/family/discipline" element={<Discipline />} />
-            <Route path="/family" element={<Family />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route exact path="/about/:id" element={<ProfilePage />} />
+          <Route path="/admissions" element={<AdmissionsPage />} />
+          <Route path="/academics" element={<Academics />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route
+            path="/family/parent-orientation"
+            element={<ParentOrientation />}
+          />
+          <Route path="/family/facts" element={<FactsHelp />} />
+          <Route path="/family/supply-list" element={<SupplyList />} />
+          <Route path="/family/discipline" element={<Discipline />} />
+          <Route path="/family" element={<Family />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </ScrollToTop>
       <Footer />
     </ThemeProvider>
