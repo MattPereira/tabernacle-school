@@ -16,10 +16,10 @@ module.exports = {
         dark: "#212529",
       },
       fontFamily: {
-        cubano: ["cubano", "sans-serif"],
         gothic: ["didact gothic", "sans-serif"],
         copse: ["copse", "sans-serif"],
         "roboto-mono": ["roboto mono", "sans-serif"],
+        montserrat: ["montserrat", "sans-serif"],
       },
     },
   },

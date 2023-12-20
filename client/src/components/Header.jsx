@@ -123,13 +123,13 @@ export default function Header(props) {
           </div>
         </div>
       </div>
-      {/* Mid Navbar */}
+      {/* Mid Navbar (shown only on screen sizes greater than medium)*/}
       <div className="hidden bg-zinc-200 lg:flex justify-center">
         {midNavItems.map((item) => (
           <NavLink
             key={item}
             to={`/${item}`}
-            className="text-xl uppercase hover:bg-white p-5 hover:text-primary hover:font-bold"
+            className="text-xl uppercase hover:bg-white p-5 hover:text-primary font-montserrat font-semibold"
           >
             {item}
           </NavLink>

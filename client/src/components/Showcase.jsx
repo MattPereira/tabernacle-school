@@ -16,7 +16,7 @@ const Showcase = ({ title, image }) => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="z-10">
-        <h1 className="text-white font-cubano text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-white font-montserrat uppercase font-bold text-5xl md:text-6xl lg:text-7xl">
           {title}
         </h1>
       </div>
