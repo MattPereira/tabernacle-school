@@ -54,14 +54,12 @@ export default function Employment() {
           </div>
 
           <h5 className="font-bold text-2xl">Required Application Materials</h5>
-          <p className="text-xl">
-            <ol className="list-disc list-inside">
-              <li>Completed employment application.</li>
-              <li>Current Resume</li>
-              <li>Copy of College Transcripts (For Faculty Positions)</li>
-              <li>Three letters of reference</li>
-            </ol>
-          </p>
+          <ol className="list-disc list-inside">
+            <li>Completed employment application.</li>
+            <li>Current Resume</li>
+            <li>Copy of College Transcripts (For Faculty Positions)</li>
+            <li>Three letters of reference</li>
+          </ol>
         </div>
         <div>
           <div className="mb-5">

@@ -82,7 +82,13 @@ const STATEMENTS = [
 function StatementSlider() {
   return (
     <SectionWrapper classNames="text-center h-64 flex flex-col justify-center">
-      <swiper-container slides-per-view="1" loop="true">
+      <swiper-container
+        slides-per-view="1"
+        loop="true"
+        autoplay="true"
+        delay="5000"
+        // fadeEffect="true"
+      >
         {STATEMENTS.map((statement, idx) => (
           <swiper-slide key={idx}>
             <h4 className="font-copse text-2xl md:text-3xl">
