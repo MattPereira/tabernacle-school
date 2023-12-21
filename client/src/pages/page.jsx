@@ -1,8 +1,8 @@
 // StatementsSlider imports
-// import function to register Swiper custom elements
-import { register } from "swiper/element/bundle";
-// register Swiper custom elements
-register();
+// // import function to register Swiper custom elements
+// import { register } from "swiper/element/bundle";
+// // register Swiper custom elements
+// register();
 
 // Education levels imports
 import { HashLink } from "react-router-hash-link";
