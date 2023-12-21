@@ -7,8 +7,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  optimizeDeps: {
-    include: ["swiper/css", "swiper/css/effect-fade"],
-  },
   plugins: [react(), pluginRewriteAll(), svgrPlugin({ icon: true })],
 });

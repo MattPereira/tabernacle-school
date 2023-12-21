@@ -1,8 +1,8 @@
 // StatementsSlider imports
-import "swiper/css";
-import "swiper/css/effect-fade";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay, Pagination } from "swiper/modules";
+// import function to register Swiper custom elements
+import { register } from "swiper/element/bundle";
+// register Swiper custom elements
+register();
 
 // Education levels imports
 import { HashLink } from "react-router-hash-link";
@@ -82,25 +82,16 @@ const STATEMENTS = [
 function StatementSlider() {
   return (
     <SectionWrapper classNames="text-center h-64 flex flex-col justify-center">
-      <Swiper
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        speed={2000}
-        effect="fade"
-        modules={[Autoplay, EffectFade, Pagination]}
-        pagination={{ clickable: true }}
-        className="mySwiper"
-      >
+      <swiper-container slides-per-view="1" loop="true">
         {STATEMENTS.map((statement, idx) => (
-          <SwiperSlide key={idx}>
+          <swiper-slide key={idx}>
             <h4 className="font-copse text-2xl md:text-3xl">
               {statement.title}
             </h4>
             <p className="font-gothic text-xl">{statement.text}</p>
-          </SwiperSlide>
+          </swiper-slide>
         ))}
-      </Swiper>
+      </swiper-container>
     </SectionWrapper>
   );
 }
