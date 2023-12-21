@@ -22,3 +22,8 @@ li {
   font-family: "didact gothic", sans-serif;
   font-size: 1.2rem;
 }
+
+/* handles swiper package quirk for fade/in out effect */
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}

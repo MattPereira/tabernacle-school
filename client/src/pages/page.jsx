@@ -1,5 +1,10 @@
-// External imports
-import Carousel from "react-material-ui-carousel";
+// StatementsSlider imports
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay, Pagination } from "swiper/modules";
+
+// Education levels imports
 import { HashLink } from "react-router-hash-link";
 
 // Accreditations Image Imports
@@ -23,7 +28,7 @@ export default function Homepage() {
 
 function LandingShowcase() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
       <div className="col-span-1">
         <img
           className="w-full h-full"
@@ -40,7 +45,7 @@ function LandingShowcase() {
         />
       </div>
 
-      <div className="col-span-1 xl:flex hidden">
+      <div className="col-span-1 lg:flex hidden">
         <img
           className="w-full"
           src="/images/home-showcase-4.jpg"
@@ -48,7 +53,7 @@ function LandingShowcase() {
         />
       </div>
 
-      <div className="col-span-1 lg:flex hidden">
+      <div className="col-span-1 2xl:flex hidden">
         <img
           className="w-full"
           src="/images/home-showcase-3.jpg"
@@ -76,17 +81,26 @@ const STATEMENTS = [
 
 function StatementSlider() {
   return (
-    <SectionWrapper classNames="text-center h-72 flex flex-col justify-center">
-      <Carousel interval={5000} duration={1500}>
+    <SectionWrapper classNames="text-center h-64 flex flex-col justify-center">
+      <Swiper
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        speed={2000}
+        effect="fade"
+        modules={[Autoplay, EffectFade, Pagination]}
+        pagination={{ clickable: true }}
+        className="mySwiper"
+      >
         {STATEMENTS.map((statement, idx) => (
-          <div key={idx}>
+          <SwiperSlide key={idx}>
             <h4 className="font-copse text-2xl md:text-3xl">
               {statement.title}
             </h4>
             <p className="font-gothic text-xl">{statement.text}</p>
-          </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
     </SectionWrapper>
   );
 }
