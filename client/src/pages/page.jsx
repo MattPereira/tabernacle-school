@@ -124,7 +124,7 @@ function EducationLevels() {
             <p className="text-xl font-gothic mb-6">{group.description}</p>
             <div className="text-center">
               <HashLink
-                className="inline-block text-xl font-copse text-white border border-white rounded-full px-8 py-2 hover:bg-white hover:text-black transition"
+                className="inline-block text-xl font-gothic text-white border border-white rounded-full px-8 py-2 hover:bg-white hover:text-black transition"
                 to={group.link}
               >
                 Learn More

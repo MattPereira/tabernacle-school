@@ -18,12 +18,9 @@ import FactsHelp from "./pages/family/facts/page";
 import SupplyList from "./pages/family/supply-list/page";
 import Discipline from "./pages/family/discipline/page";
 
-import { ThemeProvider } from "@mui/material";
-import theme from "./theme";
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Header />
       <ScrollToTop>
         <Routes>
@@ -46,7 +43,7 @@ function App() {
         </Routes>
       </ScrollToTop>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }
 

@@ -32,6 +32,8 @@ module.exports = {
           primary: "#1565c0",
           "primary-focus": "#0d47a1",
           "primary-content": "#ffffff",
+          accent: "#c0ac15",
+          "accent-content": "#ffffff",
         },
       },
     ],

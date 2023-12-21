@@ -1,12 +1,14 @@
 {
   "name": "tabernacle-school",
-  "version": "0.1.0",
-  "private": true,
+  "version": "2.1.0",
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "vite",
+    "preview": "vite preview",
+    "build": "VITE_BASE_URL=https://tabernacle-cms.up.railway.app vite build"
+  },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
     "@heroicons/react": "^2.1.1",
-    "@mui/material": "^5.10.10",
     "axios": "^0.27.2",
     "express-validator": "^7.0.1",
     "postmark": "^3.0.18",
@@ -14,36 +16,11 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",
     "react-material-ui-carousel": "^3.4.2",
-    "react-responsive": "^9.0.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "validator": "^13.9.0",
     "vite-plugin-rewrite-all": "^1.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "vite",
-    "preview": "vite preview",
-    "build": "VITE_BASE_URL=https://tabernacle-cms.up.railway.app vite build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
