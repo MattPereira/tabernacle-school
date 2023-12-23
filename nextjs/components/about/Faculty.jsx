@@ -92,7 +92,10 @@ export function Faculty() {
                 const profilePicture = profile_picture.data.attributes.url;
                 return (
                   <div key={email}>
-                    <Link href={`/about/${email}`} className="text-center">
+                    <Link
+                      href={`/about/${email.split("@")[0]}`}
+                      className="text-center"
+                    >
                       <p className="text-xl mb-1">{titleShort}</p>
 
                       <div className="w-[150px] h-[150px] object-center rounded-full overflow-hidden mx-auto mb-1">
