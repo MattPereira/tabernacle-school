@@ -1,5 +1,5 @@
 "use client";
-import { SectionWrapper } from "..";
+import { SectionWrapper } from "../common";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -25,7 +25,7 @@ const STATEMENTS = [
  * @TODO: figure out fade effect
  * https://swiperjs.com/swiper-api#param-fadeEffect
  */
-export default function StatementSlider() {
+export function StatementSlider() {
   return (
     <SectionWrapper classNames="text-center h-64 flex flex-col justify-center">
       <Swiper

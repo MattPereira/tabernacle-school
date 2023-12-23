@@ -1,5 +1,4 @@
-import { HashLink } from "../components/HashLink";
-import { SectionWrapper } from "../components";
+import { HashLink, SectionWrapper } from "@/components/common";
 
 const rectangleButtonStyles =
   "border-white text-white py-4 border-2 text-xl rounded-xl hover:bg-accent hover:border-accent uppercase font-bold text-center";
@@ -7,7 +6,7 @@ const rectangleButtonStyles =
 const circleButtonStyles =
   "border border-white rounded-full h-14 w-14 flex items-center justify-center hover:bg-accent hover:border-accent";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <div
@@ -109,5 +108,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

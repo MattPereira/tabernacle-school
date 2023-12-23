@@ -1,10 +1,11 @@
-import Showcase from "../../components/Showcase";
-import PageNav from "../../components/PageNav";
-import Faculty from "./Faculty";
-import GiftProgram from "./GiftProgram";
-import LiveProgram from "./LiveProgram";
-import History from "./History";
-import Values from "./Values";
+import { Showcase, PageNav } from "@/components/common";
+import {
+  Faculty,
+  GiftProgram,
+  LiveProgram,
+  History,
+  Values,
+} from "@/components/about";
 
 export default function AboutPage() {
   return (

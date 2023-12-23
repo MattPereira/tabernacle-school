@@ -1,6 +1,6 @@
-import { SectionTitle, SectionWrapper } from "..";
+import { SectionTitle, SectionWrapper } from "../common";
 
-export default function ParentTestimonials() {
+export function ParentTestimonials() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Parent Testimonials" />

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionTitle, SectionWrapper } from "../../components";
+import { SectionTitle, SectionWrapper } from "@/components/common";
 
 const characterList = [
   {
@@ -85,7 +85,7 @@ const characterList = [
   },
 ];
 
-export default function LiveProgram() {
+export function LiveProgram() {
   return (
     <SectionWrapper>
       <SectionTitle title="Live Program" />

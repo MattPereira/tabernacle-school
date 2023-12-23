@@ -1,10 +1,16 @@
-import PhotosBanner from "@/components/homepage/PhotosBanner";
-import StatementSlider from "@/components/homepage/StatementSlider";
-import EducationLevels from "@/components/homepage/EducationLevels";
-import ParentTestimonials from "@/components/homepage/ParentTestimonials";
-import Accreditations from "@/components/homepage/Accreditations";
+import {
+  PhotosBanner,
+  StatementSlider,
+  EducationLevels,
+  ParentTestimonials,
+  Accreditations,
+} from "@/components/home";
 
-export default function Homepage() {
+/**
+ * Homepage component
+ */
+
+export default function HomePage() {
   return (
     <>
       <PhotosBanner />

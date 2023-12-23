@@ -1,5 +1,4 @@
-import SectionTitle from "../../components/SectionTitle";
-import SectionWrapper from "../../components/SectionWrapper";
+import { SectionTitle, SectionWrapper } from "@/components/common";
 
 const historyItems = [
   {
@@ -32,7 +31,7 @@ const historyItems = [
   },
 ];
 
-export default function History() {
+export function History() {
   return (
     <SectionWrapper classNames="">
       <SectionTitle title="History" />

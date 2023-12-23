@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { useState } from "react";
 
-export default function ScrollToTop({ children }) {
+export function ScrollToTop({ children }) {
   const router = useRouter();
   useEffect(() => {
     window.scrollTo(0, 0);

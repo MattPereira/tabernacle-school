@@ -3,7 +3,7 @@
  * @prop {string} message - string or array of strings
  */
 
-export default function Toast({ variant, message }) {
+export function Toast({ variant, message }) {
   let classNames = "text-center py-2 border text-xl px-2 rounded-lg ";
 
   if (variant === "success") {

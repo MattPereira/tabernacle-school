@@ -1,9 +1,4 @@
-export default function Button({
-  type,
-  children,
-  className,
-  disabled = false,
-}) {
+export function Button({ type, children, className, disabled = false }) {
   return (
     <button
       type={type}

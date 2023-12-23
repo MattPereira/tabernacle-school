@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { HashLink } from "../components/HashLink";
+import { HashLink } from "@/components/common";
 import { useState } from "react";
 
 import {
@@ -43,7 +43,7 @@ const midNavItems = [
   "connect",
 ];
 
-const Header = () => {
+export const Header = () => {
   // State to toggle dropdown visibility
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -139,5 +139,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { SectionTitle, SectionWrapper } from "..";
+import { SectionTitle, SectionWrapper } from "../common";
 
-export default function Accreditations() {
+export function Accreditations() {
   return (
     <SectionWrapper classNames="bg-white">
       <SectionTitle title="Accreditations" />

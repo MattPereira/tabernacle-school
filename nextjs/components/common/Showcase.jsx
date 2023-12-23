@@ -2,7 +2,7 @@
  * tailwind class "inset-0" provides full coverage of parent component
  */
 
-const Showcase = ({ title, image }) => {
+export const Showcase = ({ title, image }) => {
   return (
     <div
       className={`relative flex justify-center items-center h-[175px] sm:h-[225px] md:h-[275px]`}
@@ -22,5 +22,3 @@ const Showcase = ({ title, image }) => {
     </div>
   );
 };
-
-export default Showcase;

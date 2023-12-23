@@ -1,5 +1,5 @@
 "use client";
-import { SectionTitle, SectionWrapper, ButtonGroup } from "../../components";
+import { SectionTitle, SectionWrapper, ButtonGroup } from "@/components/common";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -86,7 +86,7 @@ const gifts = {
   },
 };
 
-export default function GiftProgram() {
+export function GiftProgram() {
   const [selection, setSelection] = useState(null);
 
   const giftOptions = Object.keys(gifts);

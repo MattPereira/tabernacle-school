@@ -1,4 +1,4 @@
-const SectionTitle = ({ title }) => {
+export const SectionTitle = ({ title }) => {
   // Weird div is for anchor links on same page
 
   const anchorId = title.split(" ")[0];
@@ -19,5 +19,3 @@ const SectionTitle = ({ title }) => {
     </div>
   );
 };
-
-export default SectionTitle;

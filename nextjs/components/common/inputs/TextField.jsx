@@ -2,7 +2,7 @@
  * NOTE: the register function automatically applies input "name" based on id prop value
  */
 
-export default function TextField({
+export function TextField({
   label,
   id,
   type,

@@ -1,4 +1,4 @@
-import { SectionWrapper } from "..";
+import { SectionWrapper } from "../common";
 
 const EducationLevelsContent = [
   {
@@ -21,7 +21,7 @@ const EducationLevelsContent = [
   },
 ];
 
-export default function EducationLevels() {
+export function EducationLevels() {
   return (
     <SectionWrapper classNames="bg-[#355e3b] text-white">
       <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">

@@ -1,14 +1,16 @@
 "use client";
 import axios from "axios";
-import SectionTitle from "../../components/SectionTitle";
-import SectionWrapper from "../../components/SectionWrapper";
 import Image from "next/image";
 import Link from "next/link";
-import LoadingSpinner from "../../components/LoadingSpinner";
 import { useEffect, useState } from "react";
-import { ButtonGroup } from "../../components";
+import {
+  SectionTitle,
+  SectionWrapper,
+  LoadingSpinner,
+  ButtonGroup,
+} from "@/components/common";
 
-export default function Faculty() {
+export function Faculty() {
   const [facultyData, setFacultyData] = useState(null);
   const [selection, setSelection] = useState(null);
 

@@ -1,5 +1,4 @@
-import SectionTitle from "../../components/SectionTitle";
-import SectionWrapper from "../../components/SectionWrapper";
+import { SectionTitle, SectionWrapper } from "@/components/common";
 import Image from "next/image";
 
 const values = [
@@ -35,7 +34,7 @@ const values = [
   },
 ];
 
-export default function Values() {
+export function Values() {
   return (
     <SectionWrapper>
       <SectionTitle title="Values" />
