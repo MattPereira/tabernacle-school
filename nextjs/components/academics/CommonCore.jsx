@@ -67,9 +67,7 @@ export default function CommonCore() {
               className="collapse collapse-plus bg-alternate mb-3"
             >
               <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-bold">
-                {item.title}
-              </div>
+              <div className="collapse-title text-xl">{item.title}</div>
               <div className="collapse-content">
                 <p className="text-xl">{item.content}</p>
               </div>
