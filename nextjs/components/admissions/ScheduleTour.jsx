@@ -44,11 +44,11 @@ export default function ScheduleTour() {
     setStatus({ type: "info", message: "Sending..." });
     let response;
     try {
-      response = await axios.post("/api/admissions", data);
+      response = await axios.post("/api/send-tour-email", data);
       reset(); // clear form inputs
       setStatus({ type: "success", message: response.data.message });
     } catch (error) {
-      setStatus({ type: "error", message: error.response.data.message });
+      setStatus({ type: "error", message: error.response.data.error });
     }
   };
 
