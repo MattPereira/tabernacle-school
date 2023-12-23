@@ -85,7 +85,7 @@ const characterList = [
   },
 ];
 
-export function LiveProgram() {
+export default function LiveProgram() {
   return (
     <SectionWrapper>
       <SectionTitle title="Live Program" />

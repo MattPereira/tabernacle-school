@@ -10,7 +10,7 @@ import {
   ButtonGroup,
 } from "@/components/common";
 
-export function Faculty() {
+export default function Faculty() {
   const [facultyData, setFacultyData] = useState(null);
   const [selection, setSelection] = useState(null);
 

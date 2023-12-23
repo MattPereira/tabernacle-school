@@ -19,7 +19,7 @@ async function getStaffMemberData(name) {
 /**
  * Page component that is rendered on the client side
  */
-export default async function Page({ params }) {
+export default async function ProfilePage({ params }) {
   const response = await getStaffMemberData(params.name);
 
   const { description, name, title_long, photos, profile_picture, email } =

@@ -34,7 +34,7 @@ const values = [
   },
 ];
 
-export function Values() {
+export default function Values() {
   return (
     <SectionWrapper>
       <SectionTitle title="Values" />

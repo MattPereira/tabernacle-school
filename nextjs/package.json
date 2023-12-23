@@ -11,9 +11,12 @@
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "axios": "^1.6.2",
+    "express-validator": "^7.0.1",
     "next": "14.0.4",
+    "postmark": "^4.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

@@ -9,3 +9,4 @@ export * from "./SectionWrapper";
 export * from "./Showcase";
 export * from "./Table";
 export * from "./Toast";
+export * from "./inputs";

@@ -31,7 +31,7 @@ const historyItems = [
   },
 ];
 
-export function History() {
+export default function History() {
   return (
     <SectionWrapper classNames="">
       <SectionTitle title="History" />

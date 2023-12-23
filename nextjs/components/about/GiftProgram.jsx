@@ -86,7 +86,7 @@ const gifts = {
   },
 };
 
-export function GiftProgram() {
+export default function GiftProgram() {
   const [selection, setSelection] = useState(null);
 
   const giftOptions = Object.keys(gifts);
