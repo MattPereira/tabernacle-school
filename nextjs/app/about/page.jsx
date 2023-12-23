@@ -1,18 +1,15 @@
 import Showcase from "../../components/Showcase";
 import PageNav from "../../components/PageNav";
-
 import Faculty from "./Faculty";
 import GiftProgram from "./GiftProgram";
 import LiveProgram from "./LiveProgram";
 import History from "./History";
 import Values from "./Values";
 
-import aboutShowcaseImg from "../../assets/images/showcase/about.jpg";
-
 export default function AboutPage() {
   return (
     <div>
-      <Showcase title="About" image={aboutShowcaseImg} />
+      <Showcase title="About" image="/about/showcase.jpg" />
       <PageNav
         sections={[
           "History",
