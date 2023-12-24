@@ -38,7 +38,7 @@ const gifts = {
   },
   Kinesthetic: {
     title: "Kinesthetic",
-    image: "/about/gift/kinesthetic.jpg",
+    image: "/about/gift/bodily.jpg",
     bgColor: "#0066CC",
     definition: "Using one's body with grace or agility",
     description:
