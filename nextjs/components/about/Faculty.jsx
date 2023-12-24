@@ -1,36 +1,11 @@
 "use client";
-import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import {
-  SectionTitle,
-  SectionWrapper,
-  LoadingSpinner,
-  ButtonGroup,
-} from "@/components/common";
+import { useState } from "react";
+import { SectionTitle, SectionWrapper, ButtonGroup } from "@/components/common";
 
-export default function Faculty() {
-  const [facultyData, setFacultyData] = useState(null);
+export default function Faculty({ facultyData }) {
   const [selection, setSelection] = useState(null);
-
-  useEffect(() => {
-    async function getFacultyData() {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/api/staff-groups?populate[staff_members][populate][0]=profile_picture`
-        );
-
-        setFacultyData(response?.data?.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    getFacultyData();
-  }, []);
-
-  if (!facultyData) return <LoadingSpinner />;
 
   facultyData.sort((a, b) => a.id - b.id);
   const facultyOptions = facultyData.map((group) => {

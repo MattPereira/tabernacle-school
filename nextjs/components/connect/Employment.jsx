@@ -4,8 +4,7 @@ export default function Employment() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Employment" />
-
-      <div className="mb-10">
+      <div className="mb-14">
         <p className="text-xl">
           We are hiring! Tabernacle School is hiring substitute teachers and
           support staff for the 2023-2024 school year. All elementary and middle
@@ -19,7 +18,7 @@ export default function Employment() {
           and Academic Achievers.{" "}
         </p>
       </div>
-      <div className="text-center mb-10">
+      {/* <div className="text-center mb-10">
         <a
           className="btn btn-primary capitalize text-xl"
           href="https://drive.google.com/file/d/155waZK-5Jq3IwcDit2wTdlNtBAxpqeKW/view?usp=sharing"
@@ -29,10 +28,11 @@ export default function Employment() {
         >
           Download Application
         </a>
-      </div>
+      </div> */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
-          <div className="mb-5">
+          <div className="mb-10">
             <h5 className="font-bold text-2xl">Open Positions</h5>
             <p className="text-xl">
               All applicants must hold a bachelor's degree from an accredited
@@ -62,7 +62,7 @@ export default function Employment() {
           </ol>
         </div>
         <div>
-          <div className="mb-5">
+          <div className="mb-10">
             <h5 className="font-bold text-2xl">Spiritual Requirements</h5>
             <p className="text-xl">
               Must be a professing believer of Jesus Christ and attend a

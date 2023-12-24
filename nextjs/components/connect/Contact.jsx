@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 import {
@@ -10,18 +10,15 @@ import {
   TextField,
   Toast,
   ButtonGroup,
-  Button,
-  LoadingSpinner,
 } from "@/components/common";
 
-export default function Contact() {
+export default function Contact({ directoryData }) {
   return (
     <SectionWrapper>
       <SectionTitle title="Contact" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 mb-5">
+      <div className="grid grid-cols-1 2xl:grid-cols-2 gap-14 mb-5">
         <SendMessageForm />
-
-        <StaffDirectory />
+        <StaffDirectory directoryData={directoryData} />
       </div>
     </SectionWrapper>
   );
@@ -87,14 +84,14 @@ function SendMessageForm() {
           }}
           errors={errors.message}
         />
-        <div className="flex">
-          <Button
+        <div className="flex justify-end">
+          <button
+            className="btn btn-primary capitalize text-xl"
             type="submit"
-            className="w-full"
             disabled={status.type === "info"}
           >
             Submit
-          </Button>
+          </button>
         </div>
         {status.type && (
           <div className="mt-5">
@@ -106,36 +103,16 @@ function SendMessageForm() {
   );
 }
 
-function StaffDirectory() {
-  const [staffData, setStaffData] = useState(null);
+function StaffDirectory({ directoryData }) {
   const [selected, setSelected] = useState(null);
 
-  useEffect(function fetchStaffData() {
-    async function fetchData() {
-      try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/api/staff-groups?_sort=id&populate=*`
-        );
-
-        const { data } = await response.json();
-
-        setStaffData(data);
-      } catch {
-        console.log("error");
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (!staffData) return <LoadingSpinner />;
-
-  staffData.sort((a, b) => a.id - b.id);
-  const staffOptions = staffData.map((group) => {
+  directoryData.sort((a, b) => a.id - b.id);
+  const staffOptions = directoryData.map((group) => {
     return group.attributes.name;
   });
   let staffMembers;
   if (selected) {
-    const selectedGroup = staffData.filter(
+    const selectedGroup = directoryData.filter(
       (group) => group.attributes.name === selected
     )[0];
 
@@ -156,36 +133,38 @@ function StaffDirectory() {
       </div>
 
       {selected ? (
-        <div className="flex flex-col justify-between h-min md:h-[392px]">
-          <table className="table mb-5">
-            <tbody>
-              {staffMembers.map((member) => (
-                <tr key={member.name}>
-                  <td className="p-0">
-                    <p className="text-xl">{member.name}</p>
-                  </td>
-                  <td>
-                    <p className="text-xl">{member.titleShort}</p>
-                  </td>
-                  <td>
-                    <a
-                      className="underline text-primary text-xl"
-                      href={`mailto:${member.email}`}
-                    >
-                      {member.email}
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="flex flex-col justify-between h-min md:h-[392px] ">
+          <div className="p-5 rounded-lg overflow-y-auto grow border rounded-lg mb-5">
+            <table className="table">
+              <tbody>
+                {staffMembers.map((member) => (
+                  <tr key={member.name}>
+                    <td className="p-0">
+                      <p className="text-xl">{member.name}</p>
+                    </td>
+                    <td>
+                      <p className="text-xl">{member.titleShort}</p>
+                    </td>
+                    <td className="hidden md:inline-block">
+                      <a
+                        className="underline text-primary text-xl"
+                        href={`mailto:${member.email}`}
+                      >
+                        {member.email}
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <div className="text-end">
             <button
-              className="btn btn-primary capitalize text-xl"
+              className="btn btn-primary capitalize text-xl px-6"
               onClick={() => setSelected(null)}
             >
-              See all staff
+              Back
             </button>
           </div>
         </div>

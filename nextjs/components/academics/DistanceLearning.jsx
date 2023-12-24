@@ -48,13 +48,15 @@ export default function DistanceLearning() {
 
         <div className="bg-white rounded-2xl h-full flex flex-col justify-between p-10 w-full md:w-[500px]">
           <div className="flex justify-center">
-            <Image
-              width={500}
-              height={500}
-              className="h-60 lg:h-72"
-              src="/academics/ignitia.png"
-              alt=""
-            />
+            <div>
+              <Image
+                width={500}
+                height={500}
+                className="h-60 lg:h-72 w-full"
+                src="/academics/ignitia.png"
+                alt=""
+              />
+            </div>
           </div>
           <div>
             <div className="mb-3">
