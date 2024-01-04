@@ -119,6 +119,18 @@ export const Header = () => {
                     <Link href={`/${item}`}>{item}</Link>
                   </li>
                 ))}
+                <li
+                  className="text-black hover:bg-primary hover:text-white hover:rounded-lg text-xl capitalize hover:font-bold"
+                  onClick={closeDropdown} // Close dropdown on link click
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`/pdfs/calendar-23-24.pdf`}
+                  >
+                    Calendar
+                  </a>
+                </li>
               </ul>
             )}
           </div>

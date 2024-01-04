@@ -110,7 +110,7 @@ export default function FamilyForms() {
     <SectionWrapper>
       <SectionTitle title="Forms" />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-14 mb-10">
         {formData.map((item, index) => (
           <div
             key={index}

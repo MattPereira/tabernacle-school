@@ -193,7 +193,7 @@ const Information = () => {
     <SectionWrapper>
       <SectionTitle title="Information" />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-20">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-14 lg:gap-20">
         {infoItems.map((item, index) => (
           <InfoItem key={index} item={item} />
         ))}
