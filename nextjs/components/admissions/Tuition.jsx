@@ -9,12 +9,11 @@ import {
 const TUITION_PRICES = [
   {
     title: "Preschool & Transitional Kindergarten",
-    annual: 7850,
-    pif: 7700,
-    monthly: 785,
+    annual: 8200,
+    monthly: 820,
   },
-  { title: "Grades K-5", annual: 7500, pif: 7350, monthly: 750 },
-  { title: "Grades 6-8", annual: 7900, monthly: 790 },
+  { title: "Grades K-5", annual: 7850, monthly: 785 },
+  { title: "Grades 6-8", annual: 8250, monthly: 825 },
 ];
 
 export default function Tuition() {
@@ -59,14 +58,14 @@ export default function Tuition() {
                           `$${group.monthly - 55}`,
                         ]}
                       />
-                      <TableRow
+                      {/* <TableRow
                         data={[
                           "3rd",
                           `$${group.annual - 550}`,
                           `$${group.annual - 550 - 150}`,
                           `$${group.monthly - 55}`,
                         ]}
-                      />
+                      /> */}
                     </tbody>
                   );
                 })}

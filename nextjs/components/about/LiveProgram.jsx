@@ -1,5 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { SectionTitle, SectionWrapper } from "@/components/common";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const characterList = [
   {
@@ -10,7 +18,6 @@ const characterList = [
       Truthful: "Honest and conscientious",
       Productive: "Tangible results from your work",
       Reliable: "Dependable and trustworthy",
-
       Determined: "Exerting personal effort to complete tasks",
       Persistent: "Nothing stops you from doing the right",
       Ambitious: "Willingness to do the work to be successful",
@@ -104,65 +111,56 @@ export default function LiveProgram() {
         character trait is displayed in our students.
       </p>
 
-      <div className="carousel w-full">
+      <Swiper
+        loop
+        autoplay={{ delay: 4000 }}
+        modules={[Autoplay]}
+        // effect="fade"
+        // fadeEffect={{ crossFade: true }}
+      >
         {characterList.map((item, index) => (
-          <div
-            key={item.title}
-            id={`slide${index + 1}`}
-            className="carousel-item relative w-full justify-center"
-          >
-            <div>
-              <h5 className="text-3xl font-bold pt-5 mb-10 text-center">
-                {item.title}
-              </h5>
+          <SwiperSlide key={index}>
+            <div
+              id={`slide${index + 1}`}
+              className="relative w-full justify-center"
+            >
+              <div>
+                <h5 className="text-3xl font-bold pt-5 mb-10 text-center">
+                  {item.title}
+                </h5>
 
-              <div className="flex gap-0 lg:gap-8">
-                <div>
-                  <div className="">
-                    <Image
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-center object-cover rounded-xl hidden lg:block"
-                      src={item.image}
-                      alt="responsible children reading books"
-                    />
+                <div className="flex gap-0 lg:gap-8">
+                  <div>
+                    <div className="">
+                      <Image
+                        width={500}
+                        height={500}
+                        className="w-full h-full object-center object-cover rounded-xl hidden lg:block"
+                        src={item.image}
+                        alt="responsible children reading books"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="overflow-x-auto">
-                  <table className="table text-xl">
-                    <tbody>
-                      {Object.entries(item.adjectives).map(
-                        (adjective, index) => (
-                          <tr key={adjective[0]}>
-                            <th>{adjective[0]}</th>
-                            <td>{adjective[1]}</td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
+                  <div className="overflow-x-auto">
+                    <table className="table text-xl">
+                      <tbody>
+                        {Object.entries(item.adjectives).map(
+                          (adjective, index) => (
+                            <tr key={adjective[0]}>
+                              <th>{adjective[0]}</th>
+                              <td>{adjective[1]}</td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-8">
-              <a
-                href={`#slide${index === 0 ? characterList.length : index}`}
-                className="btn btn-primary btn-circle"
-              >
-                ❮
-              </a>
-              <a
-                href={`#slide${
-                  index === characterList.length - 1 ? 1 : index + 2
-                }`}
-                className="btn btn-primary btn-circle"
-              >
-                ❯
-              </a>
-            </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </SectionWrapper>
   );
 }
