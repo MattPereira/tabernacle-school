@@ -4,6 +4,7 @@ import {
   EducationLevels,
   ParentTestimonials,
   Accreditations,
+  SchoolSpotlight,
 } from "@/components/home";
 
 /**
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <PhotosBanner />
       <StatementSlider />
+      <SchoolSpotlight />
       <EducationLevels />
       <ParentTestimonials />
       <Accreditations />

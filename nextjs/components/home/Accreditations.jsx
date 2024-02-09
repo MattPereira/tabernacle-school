@@ -6,7 +6,7 @@ export function Accreditations() {
     <SectionWrapper classNames="bg-white">
       <SectionTitle title="Accreditations" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-10 lg:gap-14 items-center mb-10">
         <div className="col-span-4">
           <h5 className="text-xl font-bold mb-1">
             ASSOCIATION OF CHRISTIAN SCHOOLS INTERNATIONAL

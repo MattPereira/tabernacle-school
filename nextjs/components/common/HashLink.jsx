@@ -15,7 +15,7 @@ export const HashLink = ({ href, children, className }) => {
   }, [router.asPath]); // Trigger the effect when the path changes
 
   return (
-    <Link href={href} scroll={false} className={className}>
+    <Link href={href} className={className}>
       {" "}
       {/* Disable automatic scrolling */}
       {children}

@@ -30,7 +30,7 @@ export function StatementSlider() {
     <SectionWrapper classNames="text-center h-64 flex flex-col justify-center">
       <Swiper
         loop
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 5000 }}
         modules={[Autoplay]}
         // effect="fade"
         // fadeEffect={{ crossFade: true }}
