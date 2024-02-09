@@ -3,9 +3,9 @@ import { SectionWrapper, HashLink } from "../common";
 export const SchoolSpotlight = () => {
   return (
     <SectionWrapper classNames="bg-alternate">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
         <div>
-          <h5 className="text-2xl md:text-3xl font-bold text-center mb-8">
+          <h5 className="text-2xl font-bold text-center mb-5">
             Employment Opportunities
           </h5>
           <p className="text-xl mb-5">
@@ -27,7 +27,7 @@ export const SchoolSpotlight = () => {
           </p>
         </div>
         <div>
-          <h5 className="text-2xl md:text-3xl font-bold text-center mb-8">
+          <h5 className="text-2xl font-bold text-center mb-5">
             Upcoming Events
           </h5>
           <p className="text-xl mb-5">
