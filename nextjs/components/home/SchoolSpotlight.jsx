@@ -5,7 +5,7 @@ export const SchoolSpotlight = () => {
   return (
     <div className="bg-alternate flex justify-center py-3 items-center gap-5">
       <HashLink
-        className="text-center text-2xl flex items-center gap-1 text-primary underline"
+        className="text-center text-xl flex items-center gap-1 text-primary underline"
         href="/pdfs/summer-daycare-calendar-2024.pdf"
       >
         {/* <SunIcon className="h-7 w-7 mt-1" /> */}
@@ -14,8 +14,8 @@ export const SchoolSpotlight = () => {
       <div>•</div>
       <div>
         <HashLink
-          className="text-center text-2xl flex items-center gap-1 text-primary underline"
-          href="/pdfs/summer-daycare-calendar-2024.pdf"
+          className="text-center text-xl flex items-center gap-1 text-primary underline"
+          href="/connect#Employment"
         >
           {/* <BriefcaseIcon className="h-6 w-6 mt-1" /> */}
           Employment Opportunities
