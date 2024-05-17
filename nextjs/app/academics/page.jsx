@@ -3,7 +3,7 @@ import { Showcase, PageNav } from "@/components/common";
 import Preschool from "@/components/academics/Preschool";
 import Elementary from "@/components/academics/Elementary";
 import MiddleSchool from "@/components/academics/MiddleSchool";
-import DistanceLearning from "@/components/academics/DistanceLearning";
+import TestResults from "@/components/academics/TestResults";
 import CommonCore from "@/components/academics/CommonCore";
 import ExpectedLearningResults from "@/components/academics/ExpectedLearningResults";
 
@@ -16,14 +16,14 @@ export default function AcademicsPage() {
           "Preschool",
           "Elementary",
           "Middle School",
-          "Distance Learning",
+          "Test Results",
           "Common Core",
         ]}
       />
       <Preschool />
       <Elementary />
       <MiddleSchool />
-      <DistanceLearning />
+      <TestResults />
       <CommonCore />
       <ExpectedLearningResults />
     </div>
