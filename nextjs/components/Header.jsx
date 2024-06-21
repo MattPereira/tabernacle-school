@@ -20,7 +20,7 @@ const topNavItems = [
   {
     text: "Calendar",
     icon: <CalendarDaysIcon className="h-5 w-5 mt-0.5" />,
-    path: "/pdfs/summer-daycare-calendar-2024.pdf",
+    path: "/pdfs/calendar-24-25.pdf",
   },
   {
     text: "Employment",

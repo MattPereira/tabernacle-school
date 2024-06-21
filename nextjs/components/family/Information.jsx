@@ -87,7 +87,7 @@ const Information = () => {
           />
         </svg>
       ),
-      url: "/pdfs/calendar-23-24.pdf",
+      url: "/pdfs/calendar-24-25.pdf",
     },
     {
       title: "Tuition",
