@@ -94,16 +94,6 @@ export const Footer = () => {
           </div>
         </div>
         <hr className="border-t border-white" />
-        <div className="flex justify-center md:justify-end">
-          <a
-            href="https://matt-pereira.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-content mt-5 "
-          >
-            Website by Matt Pereira
-          </a>
-        </div>
       </SectionWrapper>
     </>
   );

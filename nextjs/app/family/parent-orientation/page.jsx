@@ -11,12 +11,12 @@ export default function ParentOrientation() {
   return (
     <SectionWrapper>
       <SectionTitle title="Parent Orientation" />
-      <h5 className="text-center text-3xl mb-10">August 7th, 2023</h5>
+      <h5 className="text-center text-3xl mb-10">August 12th, 2024</h5>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-14">
         <div>
           <p className="text-xl">
-            We are excited to have you back on campus for the 2023-2024 school
+            We are excited to have you back on campus for the 2024-2025 school
             year. No children on campus on parent orientation day please.
             Meetings will take place in your child's classrooms. Please see the
             slideshow below for highlighted information for the school year. For

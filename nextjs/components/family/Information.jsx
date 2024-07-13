@@ -67,7 +67,7 @@ const Information = () => {
           />
         </svg>
       ),
-      path: "/family/supply-list",
+      url: "/pdfs/information/supply-lists.pdf",
     },
     {
       title: "Calendar",
@@ -127,7 +127,7 @@ const Information = () => {
           />
         </svg>
       ),
-      url: "/pdfs/information/uniform.pdf",
+      url: "/pdfs/information/uniform-standards.pdf",
     },
     {
       title: "Discipline Policy",
