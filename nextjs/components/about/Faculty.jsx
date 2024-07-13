@@ -8,11 +8,11 @@ export default function Faculty({ facultyData }) {
   const [selection, setSelection] = useState(null);
 
   facultyData.sort((a, b) => a.id - b.id);
-  const facultyOptions = facultyData.map((group) => {
+  const facultyOptions = facultyData?.map((group) => {
     return group.attributes.name;
   });
 
-  const facultyObj = facultyData.reduce((acc, curr) => {
+  const facultyObj = facultyData?.reduce((acc, curr) => {
     acc[curr.attributes.name] = curr.attributes;
     return acc;
   }, {});
@@ -64,7 +64,7 @@ export default function Faculty({ facultyData }) {
                   title_short: titleShort,
                 } = member.attributes;
 
-                const profilePicture = profile_picture.data.attributes.url;
+                const profilePicture = profile_picture?.data?.attributes?.url;
                 return (
                   <div key={email}>
                     <Link
