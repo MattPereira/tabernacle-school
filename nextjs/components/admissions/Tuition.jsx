@@ -24,7 +24,7 @@ export default function Tuition() {
         <div className="">
           <div className="mb-3">
             <h5 className="text-2xl font-gothic font-bold text-center mb-1">
-              2023-24 Tuition
+              2024-25 Tuition
             </h5>
             <div className="border">
               <Table className="bg-white">
