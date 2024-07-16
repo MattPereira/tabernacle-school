@@ -25,7 +25,7 @@ export default async function ProfilePage({ params }) {
   const { description, name, title_long, photos, profile_picture, email } =
     response.data[0].attributes;
 
-  const profile_picture_url = profile_picture.data.attributes.url;
+  const profile_picture_url = profile_picture?.data?.attributes?.url;
 
   return (
     <div>
@@ -44,11 +44,13 @@ export default async function ProfilePage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-8 items-center">
             <div className="col-span-3">
               <div className="rounded-xl overflow-hidden h-[275px] w-[275px] mx-auto mb-10 lg:mb-0">
-                <img
-                  className="w-full h-full object-cover object-center"
-                  src={`${profile_picture_url}`}
-                  alt="profile picture"
-                />
+                {profile_picture_url && (
+                  <img
+                    className="w-full h-full object-cover object-center"
+                    src={`${profile_picture_url}`}
+                    alt="profile picture"
+                  />
+                )}
               </div>
             </div>
             <div className="col-span-5">
