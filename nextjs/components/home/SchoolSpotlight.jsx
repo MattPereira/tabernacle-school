@@ -9,7 +9,7 @@ export const SchoolSpotlight = () => {
         href="/pdfs/summer-daycare-calendar-2024.pdf"
       >
         {/* <SunIcon className="h-7 w-7 mt-1" /> */}
-        Summer Daycare Calendar
+        Summer Calendar
       </HashLink>
       <div className="text-neutral-400">•</div>
       <div>
