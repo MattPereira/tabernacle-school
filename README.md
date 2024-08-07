@@ -1,6 +1,6 @@
 # **[Tabernacle School Website](https://tabernacle.school)**
 
-A web app for Tabernacle School that advertises to prospective families and provides current families with requisite documents, calendars, and instructions. Features include forms that allow users to send emails to the school and a headless CMS for updating the data and photos displayed on the website
+A web app for Tabernacle School that advertises to prospective families and provides current families with requisite documents, calendars, and instructions. Features include forms that allow users to send emails to the school and a headless CMS for updating the data and photos displayed on the website.
 
 ## **Getting Started**
 

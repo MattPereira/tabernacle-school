@@ -61,8 +61,8 @@ export default async function ProfilePage({ params }) {
       </div>
 
       {photos.data && (
-        <div className="mb-20 px-5">
-          <div className="carousel carousel-center rounded-box">
+        <div className="mb-20 px-7">
+          <div className="carousel rounded-box">
             {photos.data.map((photo, idx) => (
               <div key={idx} className="carousel-item">
                 <img src={`${photo.attributes.url}`} className="h-96" />
