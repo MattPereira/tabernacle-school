@@ -6,9 +6,11 @@ import { SectionWrapper } from "@/components/common";
  */
 async function getStaffMemberData(name) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/staff-members?filters[email][$eqi]=${name}@tbs.org&populate=*`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/staff-members?filters[email][$eqi]=${name}@tbs.org&populate=*`,
+    { cache: "no-store" }
   );
 
+  revalidateTag("test");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
