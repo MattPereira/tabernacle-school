@@ -10,7 +10,6 @@ async function getStaffMemberData(name) {
     { cache: "no-store" }
   );
 
-  revalidateTag("test");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
