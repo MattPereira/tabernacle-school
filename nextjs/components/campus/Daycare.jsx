@@ -15,7 +15,7 @@ export default function Daycare() {
 
       <div className="mb-20">
         <p className="text-xl text-center">
-          Tabernacle daycare is available to any enrolled student age 3 years 9
+          Tabernacle daycare is available to any enrolled student age 2 years 9
           months to a graduated eighth grader through August after graduation.
           Our program is child centered. The caring and compassionate staff
           build a family like atmosphere in which your children will thrive.
