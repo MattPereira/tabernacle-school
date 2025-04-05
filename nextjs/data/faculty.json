@@ -1,0 +1,374 @@
+{
+  "Preschool": {
+    "order": 1,
+    "staff": [
+      {
+        "name": "Rebecca Hoellwoarth",
+        "titleShort": "JK3",
+        "titleLong": "Preschool Teacher",
+        "email": "RebeccaH@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732719/0172_HOELLWARTH_REBECCA_MRS_01_661797e86f.jpg"
+      },
+      {
+        "name": "Onita Chavez",
+        "titleShort": "JKB",
+        "titleLong": "Preschool Teacher Aide",
+        "email": "OnitaC@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535249/onita_Chavez_70ae36ed26a52d8a256a_7d407a524e.jpg"
+      },
+      {
+        "name": "Debbie Keough",
+        "titleShort": "JKA",
+        "titleLong": "Preschool Teacher",
+        "email": "Deborahk@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535102/debbie_Keough_2c104ec82077225d2d6b_c2dbb8262d.jpg"
+      },
+      {
+        "name": "Theresa Kukla",
+        "titleShort": "Vice Principal",
+        "titleLong": "Vice Principal",
+        "email": "TheresaK@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg"
+      },
+      {
+        "name": "Jessie Mason",
+        "titleShort": "JKB",
+        "titleLong": "Preschool Teacher",
+        "email": "JessyM@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535187/jessie_Mason_5dedbbeeb96b46582d6f_2cc355f620.jpg"
+      }
+    ]
+  },
+  "Kindergarten": {
+    "order": 2,
+    "staff": [
+      {
+        "name": "Cecilia Prior",
+        "titleShort": "KB",
+        "titleLong": "Kindergarten Teacher",
+        "email": "CeciliaP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097990/cecilia_Main_3b71164f02.jpg"
+      },
+      {
+        "name": "Sylvia Borde",
+        "titleShort": "KA",
+        "titleLong": "Kindergarten Teacher",
+        "email": "Sylviab@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097940/sylvia_Main_e0ad902062.jpg"
+      },
+      {
+        "name": "Charina Moore",
+        "titleShort": "TK",
+        "titleLong": "Transitional Kindergarten Teacher",
+        "email": "CharinaM@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097869/charina10_64baa8ea29.jpg"
+      }
+    ]
+  },
+  "First Grade": {
+    "order": 3,
+    "staff": [
+      {
+        "name": "Elsy Herrera",
+        "titleShort": "1B",
+        "titleLong": "Second Grade Teacher",
+        "email": "ElsyH@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732447/0139_HERRERA_ELSY_MRS_02_6b4a0f8219.jpg"
+      },
+      {
+        "name": "Betty Mason",
+        "titleShort": "1C",
+        "titleLong": "Preschool Director",
+        "email": "Elizabethm@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098143/betty_Main_d23f9964b4.jpg"
+      },
+      {
+        "name": "Alexis Jue",
+        "titleShort": "1A",
+        "titleLong": "First Grade Teacher",
+        "email": "Alexisj@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098225/alexis_Main_51b3f5eb6a.jpg"
+      }
+    ]
+  },
+  "Second Grade": {
+    "order": 4,
+    "staff": [
+      {
+        "name": "Tracy Herrera",
+        "titleShort": "2B",
+        "titleLong": "Second Grade Teacher",
+        "email": "TracyH@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732491/0165_HERRERA_TRACY_MRS_01_3654c1a194.jpg"
+      },
+      {
+        "name": "Rachael Wood",
+        "titleShort": "2A",
+        "titleLong": "Second Grade Teacher",
+        "email": "RachaelW@tbs.org"
+      },
+      {
+        "name": "Heather Cochnauer",
+        "titleShort": "2A",
+        "titleLong": "Second Grade Teacher",
+        "email": "HeatherC@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098479/heather_Main_0ba587aa0d.jpg"
+      }
+    ]
+  },
+  "Third Grade": {
+    "order": 5,
+    "staff": [
+      {
+        "name": "Meg Peacock",
+        "titleShort": "3A",
+        "titleLong": "Third Grade Teacher",
+        "email": "MegP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732739/0465_PEACOCK_LAURIE_MRS_01_1a0a9bb8b0.jpg"
+      },
+      {
+        "name": "Pamela Lucido",
+        "titleShort": "3B",
+        "titleLong": "Third Grade Teacher",
+        "email": "Paml@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732513/0323_LUCIDO_PAMELA_MRS_01_b2d337ce0a.jpg"
+      }
+    ]
+  },
+  "Fourth Grade": {
+    "order": 6,
+    "staff": [
+      {
+        "name": "Kirsten Pauline",
+        "titleShort": "4B",
+        "titleLong": "Fourth Grade Teacher",
+        "email": "KirstenP@tbs.org"
+      },
+      {
+        "name": "Carol Frost",
+        "titleShort": "4A",
+        "titleLong": "Fourth Grade Teacher",
+        "email": "CarolF@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098678/Carol_Nissen_9863a7f545.jpg"
+      },
+      {
+        "name": "Christy Morgan",
+        "titleShort": "Science",
+        "titleLong": "Science Teacher",
+        "email": "ChristyM@tbs.org"
+      }
+    ]
+  },
+  "Fifth Grade": {
+    "order": 7,
+    "staff": [
+      {
+        "name": "Brenda Chapman",
+        "titleShort": "5A",
+        "titleLong": "Fifth Grade Teacher",
+        "email": "BrendaC@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732605/0071_CHAPMAN_BRENDA_MRS_01_8a6a55d877.jpg"
+      },
+      {
+        "name": "Aurelius Morgan",
+        "titleShort": "5B",
+        "titleLong": "Fifth Grade Teacher",
+        "email": "AureliusM@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732557/0420_MORGAN_AURELIUS_MR_01_bbf3c849ff.jpg"
+      }
+    ]
+  },
+  "Middle School": {
+    "order": 8,
+    "staff": [
+      {
+        "name": "Andy Prior",
+        "titleShort": "Science",
+        "titleLong": "Junior High Science",
+        "email": "AndyP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547028/andy_Main_aa853feace.jpg"
+      },
+      {
+        "name": "Haley Max",
+        "titleShort": "English",
+        "titleLong": "Middle School English Teacher",
+        "email": "Haleym@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732637/0355_MAX_HALEY_MRS_01_0c9766f764.jpg"
+      },
+      {
+        "name": "Todd Keough",
+        "titleShort": "Bible",
+        "titleLong": "Junior High Bible",
+        "email": "Toddk@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546831/todd_Main_9b2f2c2597.jpg"
+      },
+      {
+        "name": "Steve Souza",
+        "titleShort": "Math",
+        "titleLong": "Junior High Math",
+        "email": "SteveS@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732660/0217_SOUZA_STEVE_MR_01_9c3853e311.jpg"
+      },
+      {
+        "name": "Alexander Buckley",
+        "titleShort": "Teacher",
+        "titleLong": "Middle School Teacher",
+        "email": "AlexB@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732536/0068_BUCKLEY_ALEXANDER_MR_01_b7184288d9.jpg"
+      },
+      {
+        "name": "Christy Morgan",
+        "titleShort": "Science",
+        "titleLong": "Science Teacher",
+        "email": "ChristyM@tbs.org"
+      },
+      {
+        "name": "Joey Prior",
+        "titleShort": "History",
+        "titleLong": "Junior High History",
+        "email": "JoeyP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546608/joey_Main_16ccc91110.jpg"
+      }
+    ]
+  },
+  "Physical Education": {
+    "order": 9,
+    "staff": [
+      {
+        "name": "Amie Robison",
+        "titleShort": "Teacher",
+        "titleLong": "Phys Ed Teacher",
+        "email": "AmieR@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732701/0018_ROBISON_AMIE_MRS_01_8b0bb04822.jpg"
+      },
+      {
+        "name": "Daran Fraser",
+        "titleShort": "Director",
+        "titleLong": "Physical Education Director",
+        "email": "DaranF@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547695/daran_Main_95d7df9bc0.jpg"
+      },
+      {
+        "name": "Lauren Morgan",
+        "titleShort": "Teacher",
+        "titleLong": "Phys Ed Teacher",
+        "email": "Laurenm@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732680/0013_MORGAN_LAUREN_MRS_01_a9649ccb83.jpg"
+      }
+    ]
+  },
+  "Electives": {
+    "order": 10,
+    "staff": [
+      {
+        "name": "Rebecca Kelly",
+        "titleShort": "Music",
+        "titleLong": "Music Teacher",
+        "email": "RebeccaK@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548331/rebecca_Main_4aa606bc2d.jpg"
+      },
+      {
+        "name": "Buffy Downing",
+        "titleShort": "Art",
+        "titleLong": "Art Teacher",
+        "email": "BuffyD@tbs.org"
+      },
+      {
+        "name": "Judy Burmeister",
+        "titleShort": "Band",
+        "titleLong": "Band Teacher",
+        "email": "JudyB@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732397/0004_BURMEISTER_JUDY_MRS_01_3840861432.jpg"
+      },
+      {
+        "name": "Kimberlyn Schmitz",
+        "titleShort": "Computers",
+        "titleLong": "Computer Teacher",
+        "email": "KimberlynS@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg"
+      },
+      {
+        "name": "Melinda Tanguay",
+        "titleShort": "Academic Support",
+        "titleLong": "Academic Support",
+        "email": "MelindaT@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1705714033/0017_Tanguay_Melina_01_91007be6a8.jpg"
+      },
+      {
+        "name": "Cathy Colomb",
+        "titleShort": "Academic Support",
+        "titleLong": "Academic Support",
+        "email": "CathyC@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099640/cathy_Main_2a88eece33.jpg"
+      },
+      {
+        "name": "Emily Zeller",
+        "titleShort": "Academic Support",
+        "titleLong": "Academic Support",
+        "email": "emilyz@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692735239/STA_STA_ZELLER_MRS_EMILY_2018_2019_4bef210cea.jpg"
+      }
+    ]
+  },
+  "Administration": {
+    "order": 11,
+    "staff": [
+      {
+        "name": "Lesley Nutting",
+        "titleShort": "Registrar",
+        "titleLong": "Registrar & Support",
+        "email": "LesleyN@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549512/lesley_Nutting_846aabcabd.jpg"
+      },
+      {
+        "name": "Dave Pereira",
+        "titleShort": "Finance & Tech",
+        "titleLong": "Finance & Technology",
+        "email": "DaveP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732281/STA_STA_PEREIRA_DAVID_a6390d4038.jpg"
+      },
+      {
+        "name": "Laurie Pease",
+        "titleShort": "Student Services",
+        "titleLong": "Student Services Coordinator",
+        "email": "LaurieP@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549423/laurie_Main_c11cfcaed6.jpg"
+      },
+      {
+        "name": "Rebeca Shreve",
+        "titleShort": "Administrator",
+        "titleLong": "Administrator",
+        "email": "RebecaS@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098978/rebeca_Main_c534210cdf.jpg"
+      },
+      {
+        "name": "Kimberlyn Schmitz",
+        "titleShort": "Computers",
+        "titleLong": "Computer Teacher",
+        "email": "KimberlynS@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg"
+      },
+      {
+        "name": "Patti Chan",
+        "titleShort": "Finance Manager",
+        "titleLong": "Finance Manager",
+        "email": "PattiC@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549276/patti_Main_91729af5b4.jpg"
+      },
+      {
+        "name": "Vern Taylor",
+        "titleShort": "Principal",
+        "titleLong": "Principal",
+        "email": "VernT@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548902/vern_Main_2095fa4323.jpg"
+      },
+      {
+        "name": "Theresa Kukla",
+        "titleShort": "Vice Principal",
+        "titleLong": "Vice Principal",
+        "email": "TheresaK@tbs.org",
+        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg"
+      }
+    ]
+  }
+}

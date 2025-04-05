@@ -5,20 +5,7 @@ import Daycare from "@/components/campus/Daycare";
 import Athletics from "@/components/campus/Athletics";
 import Outreach from "@/components/campus/Outreach";
 
-async function getFacilitiesData() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/facilities?populate=*`
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
-
 export default async function Campus() {
-  const facilitiesResponse = await getFacilitiesData();
-  const facilitiesData = facilitiesResponse.data;
-
   return (
     <div>
       <Showcase title="Campus" image="/campus/banner.jpg" />
@@ -32,7 +19,7 @@ export default async function Campus() {
         ]}
       />
       {/* <SchoolCalendar /> */}
-      <Facilities data={facilitiesData} />
+      <Facilities />
       <Daycare />
       <Athletics />
       <Outreach />

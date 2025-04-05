@@ -1,5 +1,5 @@
-// "use client";
 import { SectionWrapper } from "@/components/common";
+
 /**
  * Fetches data server side
  * https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#fetching-data-on-the-server-with-fetch

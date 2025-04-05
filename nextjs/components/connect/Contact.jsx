@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
+import facultyDataJson from "@/data/faculty.json";
 
 import {
   SectionTitle,
@@ -12,13 +13,13 @@ import {
   ButtonGroup,
 } from "@/components/common";
 
-export default function Contact({ directoryData }) {
+export default function Contact() {
   return (
     <SectionWrapper>
       <SectionTitle title="Contact" />
       <div className="grid grid-cols-1 2xl:grid-cols-2 gap-14 mb-5">
         <SendMessageForm />
-        <StaffDirectory directoryData={directoryData} />
+        <StaffDirectory />
       </div>
     </SectionWrapper>
   );
@@ -103,28 +104,12 @@ function SendMessageForm() {
   );
 }
 
-function StaffDirectory({ directoryData }) {
+function StaffDirectory() {
   const [selected, setSelected] = useState(null);
 
-  directoryData.sort((a, b) => a.id - b.id);
-  const staffOptions = directoryData.map((group) => {
-    return group.attributes.name;
-  });
-  let staffMembers;
-  if (selected) {
-    const selectedGroup = directoryData.filter(
-      (group) => group.attributes.name === selected
-    )[0];
+  const staffOptions = Object.keys(facultyDataJson);
 
-    const staffMembersData = selectedGroup.attributes.staff_members.data;
-
-    staffMembers = staffMembersData.map((member) => ({
-      id: member.id,
-      name: member.attributes.name,
-      titleShort: member.attributes.title_short,
-      email: member.attributes.email,
-    }));
-  }
+  const staffMembers = facultyDataJson[selected]?.staff;
 
   return (
     <div className="">
@@ -134,7 +119,7 @@ function StaffDirectory({ directoryData }) {
 
       {selected ? (
         <div className="flex flex-col justify-between h-min md:h-[392px] ">
-          <div className="p-5 rounded-lg overflow-y-auto grow border rounded-lg mb-5">
+          <div className="p-5 rounded-lg overflow-y-auto grow border mb-5">
             <table className="table">
               <tbody>
                 {staffMembers.map((member) => (

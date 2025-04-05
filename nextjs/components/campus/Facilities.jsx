@@ -1,14 +1,20 @@
 "use client";
 import { useState } from "react";
 import { SectionTitle, SectionWrapper, Select } from "@/components/common";
-
+import facilityDataJson from "@/data/facility.json";
 /**
- *
  * @dev open the modal using document.getElementById('ID').showModal() method
  */
-export default function Facilities({ data }) {
-  const [selection, setSelection] = useState(0);
+export default function Facilities() {
+  const [selection, setSelection] = useState("Shade Structures");
   const [expandedImage, setExpandedImage] = useState(null);
+
+  const facilitySelectOptions = Object.keys(facilityDataJson).map((name) => {
+    return {
+      value: name,
+      label: name,
+    };
+  });
 
   return (
     <SectionWrapper>
@@ -26,28 +32,22 @@ export default function Facilities({ data }) {
           label="choose category"
           handleChange={(event) => setSelection(event.target.value)}
           defaultValue={selection}
-          options={data.map((category, idx) => {
-            return {
-              value: idx,
-              label: category.attributes.name,
-            };
-          })}
+          options={facilitySelectOptions}
         />
       </div>
 
       <>
         <p className="text-xl mb-5"></p>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
-          {data[selection].attributes.photos.data.map((photo) => {
-            const { url, caption } = photo.attributes;
+          {facilityDataJson[selection]?.images.map((image) => {
             return (
-              <div key={url}>
+              <div key={image.url}>
                 <img
                   onClick={() => {
                     document.getElementById("my_modal_2").showModal();
-                    setExpandedImage(url);
+                    setExpandedImage(image.url);
                   }}
-                  src={url}
+                  src={image.url}
                   className="object-cover h-28 sm:h-32 md:h-48 lg:h-60 rounded-xl cursor-pointer w-full"
                 />
               </div>

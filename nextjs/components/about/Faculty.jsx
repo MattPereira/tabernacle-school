@@ -3,19 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { SectionTitle, SectionWrapper, ButtonGroup } from "@/components/common";
+import facultyDataJson from "@/data/faculty.json";
 
-export default function Faculty({ facultyData }) {
+export default function Faculty() {
   const [selection, setSelection] = useState(null);
 
-  facultyData.sort((a, b) => a.id - b.id);
-  const facultyOptions = facultyData?.map((group) => {
-    return group.attributes.name;
-  });
-
-  const facultyObj = facultyData?.reduce((acc, curr) => {
-    acc[curr.attributes.name] = curr.attributes;
-    return acc;
-  }, {});
+  const facultyOptions = Object.keys(facultyDataJson);
 
   return (
     <SectionWrapper classNames="bg-alternate">
@@ -53,37 +46,31 @@ export default function Faculty({ facultyData }) {
         {selection ? (
           <div>
             <h4 className="text-center font-gothic text-4xl mb-10">
-              {facultyObj[selection].name}
+              {selection}
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
-              {facultyObj[selection].staff_members.data.map((member) => {
-                const {
-                  email,
-                  name,
-                  profile_picture,
-                  title_short: titleShort,
-                } = member.attributes;
-
-                const profilePicture = profile_picture?.data?.attributes?.url;
-                return (
-                  <div key={email}>
-                    <Link
-                      href={`/about/${email.split("@")[0]}`}
-                      className="text-center"
-                    >
-                      <p className="text-xl mb-1">{titleShort}</p>
-
-                      <div className="w-[150px] h-[150px] object-center rounded-full overflow-hidden mx-auto mb-1">
-                        <img
-                          className="w-full h-full object-center object-cover"
-                          src={profilePicture}
-                        />
-                      </div>
-                      <p className="text-xl">{name}</p>
-                    </Link>
-                  </div>
-                );
-              })}
+              {facultyDataJson[selection].staff.map(
+                ({ email, name, profilePictureUrl, titleShort }) => {
+                  return (
+                    <div key={email}>
+                      <Link
+                        href={`/about/${email.split("@")[0]}`}
+                        className="text-center"
+                      >
+                        <p className="text-xl mb-1">{titleShort}</p>
+                        <div className="w-[150px] h-[150px] object-center rounded-full overflow-hidden mx-auto mb-1">
+                          <img
+                            className="w-full h-full object-center object-cover"
+                            src={profilePictureUrl}
+                            alt={name}
+                          />
+                        </div>
+                        <p className="text-xl">{name}</p>
+                      </Link>
+                    </div>
+                  );
+                }
+              )}
             </div>
             <div className="text-center mt-10">
               <button
