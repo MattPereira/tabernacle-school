@@ -2,13 +2,18 @@
 
 ## **Getting Started**
 
+1. Clone repo and install dependencies
+
 ```
 git clone https://github.com/MattPereira/tabernacle-school
 cd tabernacle-school/
+npm install
 ```
 
+2. Start server at http://localhost:3000/
+
 ```
-cd nextjs && npm run dev
+npm run dev
 ```
 
 ## **Features**
