@@ -5,6 +5,11 @@ A web app for Tabernacle School that advertises to prospective families and prov
 ## **Getting Started**
 
 ```
+git clone https://github.com/MattPereira/tabernacle-school
+cd tabernacle-school/
+```
+
+```
 cd nextjs && npm run dev
 ```
 
