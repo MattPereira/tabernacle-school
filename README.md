@@ -27,8 +27,11 @@ npm run dev
 
 ## Development Guide
 
-- The `app/` directory structure controls the routes for pages like `/about` and `/family/discipline`
-- The `components/` directory
+- The `app/` directory structure controls the routes for pages
+  - `/about`
+  - `/academics`
+  - `/admissions`
+- The `components/` directory houses most of the stuff that is displayed on each page
 - The `data/` directory contains JSON files that control faculty info and images
 - The `public/` directory contains most of the images, but uploading images to cloudinary is preferrable
 - Learn a bit about the technology stack
