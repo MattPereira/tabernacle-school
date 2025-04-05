@@ -4,7 +4,7 @@ const path = require("path");
 async function fetchFacultyData() {
   console.log("hello world");
   const res = await fetch(
-    `https://tabernacle-cms.up.railway.app/api/staff-groups?populate[staff_members][populate][0]=profile_picture`
+    `https://tabernacle-cms.up.railway.app/api/staff-groups?populate[staff_members][populate]=*`
   );
 
   const { data } = await res.json();
@@ -13,20 +13,29 @@ async function fetchFacultyData() {
   const unsortedGroups = data.map((staffGroup) => {
     const { name, staff_members } = staffGroup.attributes;
     return {
-      name,
+      name: name.split(" ").join("-").toLowerCase(),
       order: staffGroup.id,
       staff: staff_members.data.map((member) => {
-        const { name, title_short, title_long, email, profile_picture } =
-          member.attributes;
-
-        const profile_picture_url = profile_picture?.data?.attributes?.url;
+        const {
+          name,
+          title_short,
+          title_long,
+          email,
+          photos,
+          profile_picture,
+          description,
+        } = member.attributes;
 
         return {
           name,
           titleShort: title_short,
           titleLong: title_long,
           email,
-          profilePictureUrl: profile_picture_url,
+          description,
+          images: {
+            profile: profile_picture?.data?.attributes?.url,
+            gallery: photos?.data?.map((photo) => photo.attributes.url) || [],
+          },
         };
       }),
     };

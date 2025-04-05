@@ -50,18 +50,18 @@ export default function Faculty() {
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
               {facultyDataJson[selection].staff.map(
-                ({ email, name, profilePictureUrl, titleShort }) => {
+                ({ email, name, images, titleShort }) => {
                   return (
                     <div key={email}>
                       <Link
-                        href={`/about/${email.split("@")[0]}`}
+                        href={`/about/${selection}/${email.split("@")[0]}`}
                         className="text-center"
                       >
                         <p className="text-xl mb-1">{titleShort}</p>
                         <div className="w-[150px] h-[150px] object-center rounded-full overflow-hidden mx-auto mb-1">
                           <img
                             className="w-full h-full object-center object-cover"
-                            src={profilePictureUrl}
+                            src={images.profile}
                             alt={name}
                           />
                         </div>

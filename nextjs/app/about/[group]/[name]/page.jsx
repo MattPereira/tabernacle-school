@@ -1,32 +1,13 @@
 import { SectionWrapper } from "@/components/common";
+import facultyDataJson from "@/data/faculty.json";
 
 /**
- * Fetches data server side
- * https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#fetching-data-on-the-server-with-fetch
- */
-async function getStaffMemberData(name) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/staff-members?filters[email][$eqi]=${name}@tbs.org&populate=*`,
-    { cache: "no-store" }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
-/**
- * Page component that is rendered on the client side
+ * Faculty person's profile page
  */
 export default async function ProfilePage({ params }) {
-  const response = await getStaffMemberData(params.name);
-
-  const { description, name, title_long, photos, profile_picture, email } =
-    response.data[0].attributes;
-
-  const profile_picture_url = profile_picture?.data?.attributes?.url;
+  const { description, name, images, email } = facultyDataJson[
+    params.group
+  ].staff.find((person) => person.email === params.name + "@tbs.org");
 
   return (
     <div>
@@ -45,10 +26,10 @@ export default async function ProfilePage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-8 items-center">
             <div className="col-span-3">
               <div className="rounded-xl overflow-hidden h-[275px] w-[275px] mx-auto mb-10 lg:mb-0">
-                {profile_picture_url && (
+                {images?.profile && (
                   <img
                     className="w-full h-full object-cover object-center"
-                    src={`${profile_picture_url}`}
+                    src={`${images.profile}`}
                     alt="profile picture"
                   />
                 )}
@@ -61,12 +42,12 @@ export default async function ProfilePage({ params }) {
         </SectionWrapper>
       </div>
 
-      {photos.data && (
+      {images?.gallery && (
         <div className="mb-20 px-7">
           <div className="carousel rounded-box">
-            {photos.data.map((photo, idx) => (
+            {images.gallery.map((image, idx) => (
               <div key={idx} className="carousel-item">
-                <img src={`${photo.attributes.url}`} className="h-96" />
+                <img src={`${image}`} className="h-96" />
               </div>
             ))}
           </div>

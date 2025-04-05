@@ -1,5 +1,5 @@
 {
-  "Preschool": {
+  "preschool": {
     "order": 1,
     "staff": [
       {
@@ -7,39 +7,65 @@
         "titleShort": "JK3",
         "titleLong": "Preschool Teacher",
         "email": "RebeccaH@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732719/0172_HOELLWARTH_REBECCA_MRS_01_661797e86f.jpg"
+        "description": "coming soon",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732719/0172_HOELLWARTH_REBECCA_MRS_01_661797e86f.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Onita Chavez",
         "titleShort": "JKB",
         "titleLong": "Preschool Teacher Aide",
         "email": "OnitaC@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535249/onita_Chavez_70ae36ed26a52d8a256a_7d407a524e.jpg"
+        "description": "Hello:) I feel beyond blessed to be here at Tabernacle. I have had three children start in JK and graduate 8th grade here and two more still attending. I have been working in Early Childhood education since 2002, went back for my AS after my third child finishing with my AS in ECE 2011.  I love getting outdoors, hiking, seeing new sites, and hands on history. Trusting in God to guide my steps I am excited to be here with your children. ",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535249/onita_Chavez_70ae36ed26a52d8a256a_7d407a524e.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Debbie Keough",
         "titleShort": "JKA",
         "titleLong": "Preschool Teacher",
         "email": "Deborahk@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535102/debbie_Keough_2c104ec82077225d2d6b_c2dbb8262d.jpg"
+        "description": "My name is Debbie Keough; the kids call me Mrs.K. I have been so blessed to work at Tabernacle for six years now. I have been a part of the Junior Kindergarten program for five years. I am so excited to be a part of this special program, watching the children learn and grow socially and academically, but more importantly their growth in God. I am so blessed to get a front row seat to this special time in these children's lives. Before God called me to work at Tabernacle, I was working at a high school as a paraprofessional in the special education department. \nI am married to Mr. K, who is the Bible teacher for Junior High here at Tabernacle. We have four wonderful kids and two grandsons who have absolutely stolen our hearts! I enjoy running, baking and reading my bible. Being a part of this special program is a gift from God, and I truly love it!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535102/debbie_Keough_2c104ec82077225d2d6b_c2dbb8262d.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Theresa Kukla",
         "titleShort": "Vice Principal",
         "titleLong": "Vice Principal",
         "email": "TheresaK@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg"
+        "description": "I have been at Tabernacle for 25 years. The majority of my classes have been middle school.  I look forward to taking the 8th graders to Washington DC each year to bring history and our government alive for them as well as instill a love of history. I am also a firm believer in encouraging leadership and watching our students grow to be responsible, moral leaders. \n\nGod has recently led me to work with the Preschool students.  I look forward to working with the teachers “to start children off on the way they should go” as Proverbs 22:6 says. \n\nI am a big Disney fan. I enjoy biking, reading, and scrapbooking.  My favorite verse is Philippians 4:8-9.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa4_780f47f6e7.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa3_3c7b7d6cb7.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa1_c5774f46bc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa5_dea6c20d39.png",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa2_9c8a84ffa1.jpg"
+          ]
+        }
       },
       {
         "name": "Jessie Mason",
         "titleShort": "JKB",
         "titleLong": "Preschool Teacher",
         "email": "JessyM@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535187/jessie_Mason_5dedbbeeb96b46582d6f_2cc355f620.jpg"
+        "description": "My name is Jessie Mason. Students call me Miss Mason. I have been blessed to work at Tabernacle for 13 years now. I have been teaching in the Preschool Program for five years. I love being able to teach the children about the love of God and encourage growth in their relationship with God. I am a former student of Tabernacle School and have always loved being a part of the Tabernacle family. Being a part of this special program is truly a gift from God.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535187/jessie_Mason_5dedbbeeb96b46582d6f_2cc355f620.jpg",
+          "gallery": []
+        }
       }
     ]
   },
-  "Kindergarten": {
+  "kindergarten": {
     "order": 2,
     "staff": [
       {
@@ -47,25 +73,53 @@
         "titleShort": "KB",
         "titleLong": "Kindergarten Teacher",
         "email": "CeciliaP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097990/cecilia_Main_3b71164f02.jpg"
+        "description": "I have just started my 26th year at Tabernacle School. Before coming to Tabernacle I taught Pre-School for seventeen years. I attended Western Baptist College my first year of college, then received my B.A. at C.S.U.S. in Sacramento. I have been married for 36 years to Andrew Prior who teaches Jr. High Science here at Tabernacle. I have 29-year-old twins who attended Tabernacle from K – 8th grade. I knew in my Jr. High years that I wanted to be a teacher. I love the little ones but when I had a chance to teach at Tabernacle I was excited and I have loved it from the first day. God has blessed my family and me over the years at Tabernacle. My favorite verse is found in Psalm 34:1 I will bless the Lord at all times; his praise shall continually be in my mouth.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097990/cecilia_Main_3b71164f02.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Sylvia Borde",
         "titleShort": "KA",
         "titleLong": "Kindergarten Teacher",
         "email": "Sylviab@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097940/sylvia_Main_e0ad902062.jpg"
+        "description": "I am the proud mother of two amazing children who have blessed me beyond measure and have been married to my wonderful husband David for 35 years. This past year I received my second promotion to grandma.\n\nI received my bachelor’s degree from Christian Heritage College and have been teaching kindergarten at Tabernacle for 27 years. I have the best job in the world! Every day is full of joy, laughter and learning. A verse I love is Psalm 34:8 “Taste and see that the Lord is good. Oh, the joys of those who trust him!” I will always be humbled that God chose me to teach His most precious treasures.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097940/sylvia_Main_e0ad902062.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540279/sylvia1_40267f3f73.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540279/sylvia2_6ebacf00de.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540279/sylvia4_4c91b526c8.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540279/sylvia6_60e8ecd799.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540279/sylvia7_c3c3b1414f.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540280/sylvia3_d400dbdacb.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661540280/sylvia5_24ea530ef8.jpg"
+          ]
+        }
       },
       {
         "name": "Charina Moore",
         "titleShort": "TK",
         "titleLong": "Transitional Kindergarten Teacher",
         "email": "CharinaM@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097869/charina10_64baa8ea29.jpg"
+        "description": "I have been at Tabernacle for 15 years teaching (11 years in Junior Kindergarten and 4 years in Transitional Kindergarten). I have been a part of the Tabernacle family since I was 6 years old. I continued my education at Berean Christian High School from 1999-2003. I have my BA in Interdisciplinary Studies (Liberal Studies/Early Childhood Education) from San Diego Christian College. I am a proud auntie of a handsome little boy and love doing anything crafty (card making, mixed media, painting, etc), and boxing. A fun fact: I have been boxing now for 5 years. I originally started boxing for fitness because I didn’t want to get hit in the face. Now I am a registered boxer with USA boxing and have had one amateur bout and am hoping to have more.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689097869/charina10_64baa8ea29.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533515/charina1_a9f70648c5.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533515/charina6_e74478a128.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533516/charina4_36712eb6a3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533517/charina5_84a5eca3ab.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533515/charina2_f3fafa8a0b.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533516/charina3_e4bfb9493c.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661533519/charina8_ce999615f5.jpg"
+          ]
+        }
       }
     ]
   },
-  "First Grade": {
+  "first-grade": {
     "order": 3,
     "staff": [
       {
@@ -73,25 +127,57 @@
         "titleShort": "1B",
         "titleLong": "Second Grade Teacher",
         "email": "ElsyH@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732447/0139_HERRERA_ELSY_MRS_02_6b4a0f8219.jpg"
+        "description": "Hi everyone! My name is Elsy Herrera and I am very excited to be teaching second grade this year! I was born and raised in San Francisco, I am a huge SF Giants & Warriors fan. I attended Skyline College were I obtained my associate degree in Spanish. I then attended San Francisco State University and graduated with my Bachelor’s degree in Sociology and a minor in Spanish in 2014. I have three children one boy and two girls, my son graduated from Tabernacle in 2016. My two daughters attend Tabernacle one of them is in Jr High and the other one is in second grade this year. Some of my hobbies are working out, traveling, going to the movies and spending time with my family. My oldest daughter plays travel softball and travel soccer. My youngest daughter enjoys playing the violin and swimming. I have been married to my amazing husband for 22 years. God has lead me in this direction to teach your students and share his word with your children. \"I can do all things through Christ which strengtheneth me.\" - Philippians 4:11–13. ",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732447/0139_HERRERA_ELSY_MRS_02_6b4a0f8219.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693407155/image_6483441_60ca81f77c.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693407159/image_50413825_28ea1041e6.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693407160/image_67230465_8939345fb6.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693407160/image_67506689_65cfe67d98.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693407160/image_50436609_3969ccd07e.jpg"
+          ]
+        }
       },
       {
         "name": "Betty Mason",
         "titleShort": "1C",
         "titleLong": "Preschool Director",
         "email": "Elizabethm@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098143/betty_Main_d23f9964b4.jpg"
+        "description": "I have been at Tabernacle for 19 years teaching Junior Kindergarten, Kindergarten, Transitional Kindergarten,and now First Grade. I have been the Preschool Director and now am the Assistant Preschool Director. \nI have been married for 35 years and have 7 children and 9 grandchildren with the 10th on the way. Five of my children have attended Tabernacle. We love this school. \nI graduated from California Polytechnic State University, San Luis Obispo with a Bachelor of Science Degree. I also have post-graduate classes in Early Childhood Education.\n",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098143/betty_Main_d23f9964b4.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535044/betty5_51ca037c43.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535044/betty7_5ac8f38cbc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535045/betty6_fc02e56bec.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535045/betty1_087b112a47.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535045/betty3_ff91046eeb.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535045/betty2_f1749e23fc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535045/betty4_2bcc148e23.jpg"
+          ]
+        }
       },
       {
         "name": "Alexis Jue",
         "titleShort": "1A",
         "titleLong": "First Grade Teacher",
         "email": "Alexisj@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098225/alexis_Main_51b3f5eb6a.jpg"
+        "description": "I am very excited to be teaching my 6th year at Tabernacle. I was born and raised in Concord, CA. For grades K-8 I attended public schools in the Mt. Diablo Unified School District and graduated from Clayton Valley High School. I continued my education in Southern California at Azusa Pacific University where I earned my bachelors degree in Liberal Studies with an emphasis in Special Education. During my student teaching I had the opportunity to student teach in both private and public schools and I’m thankful I have the privilege to be at a school where I can enrich children’s academics, but most importantly teach them how to love the Lord. ",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098225/alexis_Main_51b3f5eb6a.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1693266712/image_50736897_1_483ae4b71f.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661541951/alexis3_0aaa356ae5.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661541951/alexis2_8c73e74fcd.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661541952/alexis5_68c7b13279.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661541952/alexis4_7f7c959e38.jpg"
+          ]
+        }
       }
     ]
   },
-  "Second Grade": {
+  "second-grade": {
     "order": 4,
     "staff": [
       {
@@ -99,24 +185,50 @@
         "titleShort": "2B",
         "titleLong": "Second Grade Teacher",
         "email": "TracyH@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732491/0165_HERRERA_TRACY_MRS_01_3654c1a194.jpg"
+        "description": "I have had the privilege of working at Tabernacle since 2013, but I started my career in education in 2001. Since then, I have had the privilege of working with students with special needs as well as a general education teacher. It is incredible to be at Tabernacle where my passion for children’s ministry and teaching can be used at the same time. I love to listen to my class sing out their love for Jesus and have the ability to weave Biblical principals throughout our day. My college education began at California Christian College and later transferred to Patten University where I earned my BA in Liberal Studies and continued credentialing coursework. When I’m not in the classroom, I enjoy adventures with my husband, and spending time with family and friends as well as our two dogs, Ducky and Daisy.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732491/0165_HERRERA_TRACY_MRS_01_3654c1a194.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy1_bf38ebde62.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy2_45e7a39b6a.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy4_8dbcff4fbd.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy5_ba702e1e29.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy6_fa31837dc3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542873/tracy3_c91ec29d70.jpg"
+          ]
+        }
       },
       {
         "name": "Rachael Wood",
         "titleShort": "2A",
         "titleLong": "Second Grade Teacher",
-        "email": "RachaelW@tbs.org"
+        "email": "RachaelW@tbs.org",
+        "description": "Profile description coming soon...",
+        "images": {
+          "gallery": []
+        }
       },
       {
         "name": "Heather Cochnauer",
         "titleShort": "2A",
         "titleLong": "Second Grade Teacher",
         "email": "HeatherC@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098479/heather_Main_0ba587aa0d.jpg"
+        "description": "I was born and lived in Honolulu, Hawaii for the first few years of my life. Moved with my family to San Diego and in 1994 moved to Clayton, California. I was a proud Eagle and graduated from Clayton Valley High School. I continued on to college and graduated from Azusa Pacific University. Our God is a great provider! I started teaching at Tabernacle in 2006 and I have loved every moment of it!\n\nIn 2009, I married my amazing husband. He’s currently a Captain at Rodeo Hercules Fire Department. In 2013, we had our beautiful daughter Lilly, she brings us so much joy. We are so excited that she is a Tabernacle Tiger! We are beyond grateful for God’s blessings though everything. Psalm 34:1-“I will praise the Lord at all times. I will constantly speak his praises.”",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098479/heather_Main_0ba587aa0d.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather5_5b25f1c458.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather7_84a1d087b0.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather2_5e734b1674.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather3_bfbbd66cd0.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather6_d5232f5ca1.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661542643/heather1_917bee7273.jpg"
+          ]
+        }
       }
     ]
   },
-  "Third Grade": {
+  "third-grade": {
     "order": 5,
     "staff": [
       {
@@ -124,42 +236,68 @@
         "titleShort": "3A",
         "titleLong": "Third Grade Teacher",
         "email": "MegP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732739/0465_PEACOCK_LAURIE_MRS_01_1a0a9bb8b0.jpg"
+        "description": "Hey Tigers! I’m Meg Peacock and I’m so excited to be returning for my second year here at Tabernacle. Born and raised in North Carolina, I moved to California with my family after graduating high school in 2004. I attended Cal State East Bay  where I received my BA in Liberal Studies with a Multiple Subject Teaching Credential. After graduating college;  I spent the next few years teaching preschool, kindergarten, first, third, and sixth grade math/science in the public school system.\n\nMy husband Dave and I have been married 13 years this fall. We welcomed our beautiful daughter, Sadie in the fall of 2012, and five short years later our son Sutton made his grand debut. \n\nI love traveling, watching my kids play various sports, skiing, hiking, and being with my family. I’m so happy that I get the chance to be a part of your child’s education. My goal as a teacher is for your child to feel welcomed, loved, and safe to learn and flourish into the best version of themselves. I’m a firm believer that God has a perfect plan for our lives and I’m so blessed that he’s placed me here at Tabernacle. It’s going to be an amazing year!\n",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732739/0465_PEACOCK_LAURIE_MRS_01_1a0a9bb8b0.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Pamela Lucido",
         "titleShort": "3B",
         "titleLong": "Third Grade Teacher",
         "email": "Paml@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732513/0323_LUCIDO_PAMELA_MRS_01_b2d337ce0a.jpg"
+        "description": "I home schooled my children for 10 years. I then transitioned to the traditional classroom, where God led me to Tabernacle. My first year, I was a substitute teacher for Kindergarten through 8th grade. I am beginning my thirteenth year teaching 3rd grade at Tabernacle. I received my B.A. at SFSU and my Masters in Teaching through CSU Fresno. I feel blessed to teach in a school setting where God and Scripture are the center of all learning. I hope to make this year an enjoyable learning experience for my students while encouraging them to rely on God for all things. My husband and I celebrated our 29th wedding anniversary this year. We have four children, all working full time.  This year I have been blessed with a grandson. My hobbies include cooking, baking, and walking long distances.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732513/0323_LUCIDO_PAMELA_MRS_01_b2d337ce0a.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545120/pamela6_e1b57d9f1a.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545120/pamela5_69658b7b4e.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545120/pamela1_3cc7b2a705.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545120/pamela3_76b6e0cc8c.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545126/pamela2_6d9b5c897d.png"
+          ]
+        }
       }
     ]
   },
-  "Fourth Grade": {
+  "fourth-grade": {
     "order": 6,
     "staff": [
       {
         "name": "Kirsten Pauline",
         "titleShort": "4B",
         "titleLong": "Fourth Grade Teacher",
-        "email": "KirstenP@tbs.org"
+        "email": "KirstenP@tbs.org",
+        "description": "Profile description coming soon...",
+        "images": {
+          "gallery": []
+        }
       },
       {
         "name": "Carol Frost",
         "titleShort": "4A",
         "titleLong": "Fourth Grade Teacher",
         "email": "CarolF@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098678/Carol_Nissen_9863a7f545.jpg"
+        "description": "I absolutely love teaching! This will be my 12th year teaching at Tabernacle School. Spending my days seeing children make connections, learn to process information, and have successful moments brings me so much joy! I believe each child has God given gifts and talents that are evident in their personality, learning style, and approach to life. I want to guide my students in love for Jesus and others! God has brought me to Tabernacle multiple times throughout my life, first as a daycare helper in college, then a substitute teacher, Librarian, teacher in 1st, 2nd, 3rd, and now 4th grade. I'm so thankful that my three children, who are now in Junior High and High School, have had the privilege of attending here at Tabernacle over the years. When I'm not teaching, I enjoy RVing with my family, going to coffee shops and bookstores, volunteering with my kids at our church, and crafting.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098678/Carol_Nissen_9863a7f545.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Christy Morgan",
         "titleShort": "Science",
         "titleLong": "Science Teacher",
-        "email": "ChristyM@tbs.org"
+        "email": "ChristyM@tbs.org",
+        "description": "Profile description coming soon...",
+        "images": {
+          "gallery": []
+        }
       }
     ]
   },
-  "Fifth Grade": {
+  "fifth-grade": {
     "order": 7,
     "staff": [
       {
@@ -167,18 +305,34 @@
         "titleShort": "5A",
         "titleLong": "Fifth Grade Teacher",
         "email": "BrendaC@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732605/0071_CHAPMAN_BRENDA_MRS_01_8a6a55d877.jpg"
+        "description": "I am very grateful to be part of the Tabernacle team. This is an amazing school! I have been teaching in Christian Education for over 30 years. This will be my 19th year at Tabernacle. I grew up not too far from here, in Pacifica. Although I miss seeing the ocean every day, I do not miss the fog. Sunshine brought me to Concord! I attended SFSU where I earned my BA in Liberal Studies and my MA in Education. I have always wanted to be a teacher, and felt God’s calling to work in Christian Education. I have seven children, and five grandchildren.  Each one is unique and a blessing in my life.  During my free-time, I enjoy family camping trips, reading a good book, and of course Starbucks! I feel blessed each day to have an impact on young lives. Teaching them skills for the future, to be followers of Christ, and encouraging them to rely on God for all things is an awesome experience.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732605/0071_CHAPMAN_BRENDA_MRS_01_8a6a55d877.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546121/brenda4_19e4125014.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546121/brenda5_5b4de0a66c.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546122/brenda2_38a8b9eb50.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546122/brenda3_34cff8aec3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546122/brenda1_6d7c98fa45.jpg"
+          ]
+        }
       },
       {
         "name": "Aurelius Morgan",
         "titleShort": "5B",
         "titleLong": "Fifth Grade Teacher",
         "email": "AureliusM@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732557/0420_MORGAN_AURELIUS_MR_01_bbf3c849ff.jpg"
+        "description": "Hello my name is Aurelius Morgan. I graduated in 2016 with a degree in Human services with an emphasis on children and family services. I have been working with children from ages 5 - 18 for over 10 years. I have been married for 10 years and have three children . I have two dogs and enjoy taking family walks around the local trails. I have been a part of the Tabernacle family for 7 years. I enjoy working with all students and hope to impart the love of God to all of my students.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732557/0420_MORGAN_AURELIUS_MR_01_bbf3c849ff.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546190/aurelius1_c4ecdba5be.jpg"
+          ]
+        }
       }
     ]
   },
-  "Middle School": {
+  "middle-school": {
     "order": 8,
     "staff": [
       {
@@ -186,52 +340,112 @@
         "titleShort": "Science",
         "titleLong": "Junior High Science",
         "email": "AndyP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547028/andy_Main_aa853feace.jpg"
+        "description": "Hello, My name is Andrew (Andy) Prior. This is my 15th year teaching at Tabernacle school. I have been teaching for twenty-eight years. I am a graduate of California State University Sacramento with a degree in Liberal Studies. I have a California state teaching credential from National University. I live with my wife in Pittsburg California. My wife Cecilia and I have two children. Joe is a teacher. Aly is a graduate of Cal Poly Pomona and works as a veterinary technician in Los Angeles. I come from a family of teachers. Both of my grandparents were teachers as well as my mother, uncle and sister. My life verse is Matthew 6:33 “But seek first the Kingdom of God and His righteousness, and all these things will be added to you.”",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547028/andy_Main_aa853feace.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547043/andy4_e1cfec3980.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547043/andy5_c60c3152ea.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547043/andy3_a82b749e73.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547043/andy1_854ba7c82e.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547043/andy2_d3f22c42db.jpg"
+          ]
+        }
       },
       {
         "name": "Haley Max",
         "titleShort": "English",
         "titleLong": "Middle School English Teacher",
         "email": "Haleym@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732637/0355_MAX_HALEY_MRS_01_0c9766f764.jpg"
+        "description": "Hi everyone! My name is Haley Max and I am so excited for this year in junior high! Little bit about me and my school history, I have my MBA in Management and Entrepreneurship and my Minor in English. As far as my Tabernacle journey, I’ve been involved with Tabernacle since I was in first grade. I attended all the way through 8th grade and even attended Tabernacle’s high school program. I’ve also taken part in the leadership program, coaching sports, tutoring, and substitute teaching here at the school. Some of my hobbies include portrait and landscape photography, puzzles, painting, and reading. I truly believe that God has put this on my heart, and I’m excited to watch as God works in the hearts of your students this year as well. Can’t wait to meet you all!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732637/0355_MAX_HALEY_MRS_01_0c9766f764.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley5_cbe9003bce.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley2_4aaaf40130.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545388/haley1_c6a56f9867.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley4_d267c244d4.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545388/haley3_f4431cc80b.jpg"
+          ]
+        }
       },
       {
         "name": "Todd Keough",
         "titleShort": "Bible",
         "titleLong": "Junior High Bible",
         "email": "Toddk@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546831/todd_Main_9b2f2c2597.jpg"
+        "description": "My name is Todd Keough. I have been a teacher for 30 years and an ordained minister for 27 years. I am very excited to be back at Tabernacle teaching Bible, and Science. I graduated from Azusa Pacific University where I majored in Theology, Science and Art. I was a lifeguard in Southern California and continue to get to the beach anytime possible. I have been involved in Christian Education 24years. Including 4 years at Western Christian School in West Covina, Tabernacle Christian School in Concord for 4 years with the beloved Margaret Bridges, 10 years at Faith Christian High school in Yuba City Ca, and have returned to Tabernacle for the last 6 years with the Honorable and notorious Mr. Taylor. I also was involved in teaching in the Public schools for the 7 years in the Marysville School district. I am married to a beautiful and loving wife named Debbie, who is also on staff here at Tabernacle. You will see her loving and teaching in our JK classroom. We have 4 beautiful children, and 3 amazing grandchildren together and are both overwhelmed with the goodness and grace of our Lord for giving us the opportunity to work in such a blessed school. I can't believe I am a grandparent.  \nMy heart and calling is and has always been to love, guard, teach, and lead the youth to a deeper understanding of who Jesus is, and how to fulfill their own calling to become who God has destined them to be. I take this calling very seriously, and promise to lead with integrity, honor, sacrifice, and due diligence that God expects of me.\n",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546831/todd_Main_9b2f2c2597.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546855/todd5_1735de118c.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546855/todd1_babe1325fc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546855/todd6_38947f79db.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546855/todd4_0f55b846cf.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546867/todd3_5d30fdfc72.png",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546867/Todd2_20935d0104.png"
+          ]
+        }
       },
       {
         "name": "Steve Souza",
         "titleShort": "Math",
         "titleLong": "Junior High Math",
         "email": "SteveS@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732660/0217_SOUZA_STEVE_MR_01_9c3853e311.jpg"
+        "description": "I graduated from The Masters’ University in 1975. (Los Angeles Baptist College back then) I have been married to my wife, Sarah, for 41 years. We have three children, Nic, Heather, and Megan. Nic is married and lives in Brentwood. They have two children, Alice (11) and Gavin (7). Heather is married and lives in Fairfield. Megan is a stay- at- home mom. She has two children, Cambry (10) attends Tabernacle and Levi (4). This is my 46th year of teaching, two years at Berean Christian and the rest of the time here at Tabernacle. My life passage is Psalm 121.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732660/0217_SOUZA_STEVE_MR_01_9c3853e311.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546757/steve6_f42b57c8de.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546757/steve1_f768292b54.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546757/steve3_15ab6f3a98.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546758/steve4_e711ebe965.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546758/steve7_3b3b6f20e3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546758/steve2_42b3c123c4.jpg"
+          ]
+        }
       },
       {
         "name": "Alexander Buckley",
         "titleShort": "Teacher",
         "titleLong": "Middle School Teacher",
         "email": "AlexB@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732536/0068_BUCKLEY_ALEXANDER_MR_01_b7184288d9.jpg"
+        "description": "\nHello, my name is Alex Buckley and I have been working at Tabernacle for the past 9 years. I was born and raised in Concord and went to Tabernacle as a student, starting in first grade and finishing in 8th grade in 2008, and then attended De La Salle High School (Go Spartans!), where I played football for 4 years and baseball for 2. I also have a brother and sister who both attended Tabernacle from kindergarten to 8th grade, and De La Salle/Carondelet, where they both graduated as well. After graduating in 2012, I continued my education at DVC for 1 year and then moved down to San Diego to continue my education down there. About two years ago, after completing my education online, I earned my degree in Business Administration from Grand Canyon University. I currently teach PE and oversee all operations for the after school/summer daycare program. Along with teaching these students in this area of their education, I enjoy being able to coach some of the school sports including boys’ soccer and volleyball.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732536/0068_BUCKLEY_ALEXANDER_MR_01_b7184288d9.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545983/alex3_1786ef3954.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545983/alex1_4b8ad2c7cf.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545983/alex2_a59cde4482.jpg"
+          ]
+        }
       },
       {
         "name": "Christy Morgan",
         "titleShort": "Science",
         "titleLong": "Science Teacher",
-        "email": "ChristyM@tbs.org"
+        "email": "ChristyM@tbs.org",
+        "description": "Profile description coming soon...",
+        "images": {
+          "gallery": []
+        }
       },
       {
         "name": "Joey Prior",
         "titleShort": "History",
         "titleLong": "Junior High History",
         "email": "JoeyP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546608/joey_Main_16ccc91110.jpg"
+        "description": "Hello My name is Joseph Prior. This is my sixth year teaching at Tabernacle. I have been working with the students here at Tabernacle for the last fourteen school years. Both of my parents are teachers here and have helped me become the teacher I am today. I am so excited to be a part of the Tabernacle team and family. I am a graduate of Tabernacle and hope to share my passion for learning with each of the students here. My life verse is James 1:2-3 \"Consider it all pure joy my brothers when you face trials of many kinds. For you know that the testing of your faith produces perseverance.\"",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546608/joey_Main_16ccc91110.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546617/joey1_91989ac24b.jpg"
+          ]
+        }
       }
     ]
   },
-  "Physical Education": {
+  "physical-education": {
     "order": 9,
     "staff": [
       {
@@ -239,25 +453,45 @@
         "titleShort": "Teacher",
         "titleLong": "Phys Ed Teacher",
         "email": "AmieR@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732701/0018_ROBISON_AMIE_MRS_01_8b0bb04822.jpg"
+        "description": "\nHello! My name is Amie Robison and I’m so excited to be here! I’ve been married to my husband, Mark, for 14 years and have three fantastic kids, Kaitlyn(12), Lily(7) and Isaac(5)! All three of them attend Tabernacle! I graduated from Sonoma State University in 2000 where I earned my Psychology degree. I have experience teaching and working with differently abled children as well as troubled youth. My background includes working in law enforcement.\n\nI love all sports! Softball was my sport of choice and in 1987 my little league softball team represented the West and went to the Little League World Series in Kalamazoo, MI. We came in 2nd place to Florida! I continued to play softball at the college level. If I have spare time you can find me gardening in my yard with my chickens running around!\n\nOne of my favorite Bible verses: Isaiah 30:21~ Whether you turn to the right or to the left, your ears will hear a voice behind you, saying, “This is the way; walk in it.”",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732701/0018_ROBISON_AMIE_MRS_01_8b0bb04822.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Daran Fraser",
         "titleShort": "Director",
         "titleLong": "Physical Education Director",
         "email": "DaranF@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547695/daran_Main_95d7df9bc0.jpg"
+        "description": "\nGreetings; I am Daran Clinton Fraser graduate of Berean Christian High School circa 1997. I have since attained an AA degree from Diablo Valley College-Go Vikings, and proceeded to transfer to The Humboldt State University – home of the mighty Lumber Jacks – where I received a BA degree in Recreation Administration and a Minor in Business. My wife is an elementary teacher in Richmond, we have been blessed with a beautiful daughter and a handsome young son.\n\nI am entering into my 17th season at Tabernacle as an instructor of Physical Education. Through PE and coaching, it is my goal to provide positive experiences for our students. You can also find me serving your kids through being Tabernacle’s Athletic Director, coaching after school sports, providing safe transportation as the bus driver, and last but not least…manning the parking-lot as the “Crossing Guard” in the mornings! GO Tigers!!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547695/daran_Main_95d7df9bc0.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547715/daran9_89d0719063.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547715/daran4_3f99a0e6f9.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547715/daran3_56654af054.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547714/daran1_3854025c69.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547715/daran7_6b4ec61fa4.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547715/daran8_3b2609f79a.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661547716/daran11_6e2a8197ab.jpg"
+          ]
+        }
       },
       {
         "name": "Lauren Morgan",
         "titleShort": "Teacher",
         "titleLong": "Phys Ed Teacher",
         "email": "Laurenm@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732680/0013_MORGAN_LAUREN_MRS_01_a9649ccb83.jpg"
+        "description": "I love Tabernacle. I have worked with PE, coached (Softball, Volleyball, and Soccer), and taught in the preschool program. I love working with all ages! If I have ever encouraged any of my students in their faith then I’m doing my job right! I am thankful for each of my students and coworkers, and for how they make my job so fun.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732680/0013_MORGAN_LAUREN_MRS_01_a9649ccb83.jpg",
+          "gallery": []
+        }
       }
     ]
   },
-  "Electives": {
+  "electives": {
     "order": 10,
     "staff": [
       {
@@ -265,52 +499,103 @@
         "titleShort": "Music",
         "titleLong": "Music Teacher",
         "email": "RebeccaK@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548331/rebecca_Main_4aa606bc2d.jpg"
+        "description": "I was born and raised in Green Bay, Wisconsin. At the age of four, I started playing piano. Thru out my school age years, I enjoyed music through singing, playing piano, and acting in plays. I knew in high school that I wanted to pursue a degree in music. When I chose to go to college, I went to Evangel University in Springfield, Missouri. At this liberal arts school, I studied music education. This is also where I met my husband Vince. I got through five years of college, received a bachelors degree in K-12 music education, and got married in 1996.\n\nSince getting married, I’ve taught in both public and private schools, covering every subject in elementary and teaching music to grades K-12. I took time off to stay home with my kids when they were young. Now, I love being back in the groove of sharing my knowledge and passion for music.\n\nVince and I live in Oakley with our kids Kayla, Angel, Gigi, and Ian. We’ve been through many things in our twenty-five years of marriage, but God has been our foundation from the very start. It’s nearly impossible for me to pick a “favorite” Bible verse because I love the entire Bible. One verse that I love to share is Matthew 6:26, because it keeps me from getting stressed out and reminds me that God is in control. *Look at the birds of the air; they do not sow or reap or store away in barns, and yet your heavenly Father feeds them. Are you not much more valuable than they? -NIV Every child at Tabernacle is valuable, and I’m delighted to have the pleasure of teaching them.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548331/rebecca_Main_4aa606bc2d.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Buffy Downing",
         "titleShort": "Art",
         "titleLong": "Art Teacher",
-        "email": "BuffyD@tbs.org"
+        "email": "BuffyD@tbs.org",
+        "description": "Profile description coming soon...",
+        "images": {
+          "gallery": []
+        }
       },
       {
         "name": "Judy Burmeister",
         "titleShort": "Band",
         "titleLong": "Band Teacher",
         "email": "JudyB@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732397/0004_BURMEISTER_JUDY_MRS_01_3840861432.jpg"
+        "description": "I’m known as Mrs. Bee around campus.  I have been married to my wonderful husband for 40 years!  I have two beautiful and gifted daughters and a handsome grandson.  I have a Bachelor of Music degree from San Francisco State.  I enjoy playing the fiddle and conducting the CUMC Community Orchestra in Concord. God has brought me to Tabernacle with the talents He has given me to educate His children in Music, Band and Violin.  This is my 29th year at this wonderful school!  It has been my pleasure and honor to work here with these wonderful Tabernacle teachers, administrators and of course your children.  I pray for you and your family that you have a blessed year, here at Tabernacle!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732397/0004_BURMEISTER_JUDY_MRS_01_3840861432.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430410/judy5_9b9dd98ee6.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430410/judy3_87410be31f.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430410/judy6_69631668a8.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430410/judy2_ab6554a7a3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430410/judy4_b9ba77f356.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430411/judy7_347f2a8fab.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430411/judy8_fc3f00acd3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430411/judy9_afa7f1218f.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1665430373/judy1_4bb6da7659.jpg"
+          ]
+        }
       },
       {
         "name": "Kimberlyn Schmitz",
         "titleShort": "Computers",
         "titleLong": "Computer Teacher",
         "email": "KimberlynS@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg"
+        "description": "I am excited to return to Tabernacle for my twelfth year. I have enjoyed being a part of the Tabernacle family for seven years as a 5th grade teacher, one year in 3rd grade, and now back again for my fourth year in the Computer Lab! Together, we will be working on our computer skills and how to be citizens of the ever-growing digital world all while remembering our citizenship in the family of God and Tabernacle’s mission to “Teach in ALL areas of life, the Truth, as centered in the Lord Jesus of the Bible.”\nI am native California girl and was born and raised here in Concord. In college I moved to Virginia where I graduated from Liberty University with my B.S. in Elementary and Middle School Education. My husband and I have two of our own \"Tiny Tigers\" here at Tabernacle. As a family we love traveling (especially to Disney!), eating delicious foods, and working on home projects.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn1_863ee0a2d8.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn2_48dc68a1bb.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn5_a4a8d0f9bc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn3_61bf61fecd.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn4_351fc1e90d.jpg"
+          ]
+        }
       },
       {
         "name": "Melinda Tanguay",
         "titleShort": "Academic Support",
         "titleLong": "Academic Support",
         "email": "MelindaT@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1705714033/0017_Tanguay_Melina_01_91007be6a8.jpg"
+        "description": "My name is Melinda Tanguay.  The children (and most everyone else) call me \"Mrs. T.\"   I spent my early childhood in Piedmont and then moved to Paradise CA for junior/senior high school.\n\nAfter graduating from Pepperdine University Malibu, I taught 1st grade for several years.  I then decided to obtain a graduate degree as a Reading/Resource specialist.  I  have been sharing my love of reading with children in Concord since 1980.  My philosophy of reading is that learning to read should be fun and as easy as possible!  \n\nI am married to my husband Rene' and we have two grown sons.  \n\nMy favorite Bible verse is Galatians 2:20:\n\n\"I have been crucified with Christ, and I no longer live, but Christ lives in me.  The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.\n\nI am excited to join the staff at Tabernacle!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1705714033/0017_Tanguay_Melina_01_91007be6a8.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Cathy Colomb",
         "titleShort": "Academic Support",
         "titleLong": "Academic Support",
         "email": "CathyC@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099640/cathy_Main_2a88eece33.jpg"
+        "description": "My name is Cathy Colomb. I have been teaching in Christian Education for 35 years, 23 of which have been at Tabernacle. At Tabernacle I have taught 5th grade, library, Academic Support and, my favorite, computer classes. This year I am excited to be teaching Academic Support working one on one with students. I attended Cal State Hayward to earn my BS in Computer Science with a math minor. I am married and we have two daughters, a son-in-law, a son and a daughter-in-law. I am blessed to be a Grams to Ryder James, Cataleya Rose, Nicholas Lee Jr. and Rosalie Amber.  My time outside of work is spent enjoying my hobbies: quilting, sewing, bag making, riding my bike, photography and spending time with my family. It is a blessing to be at Tabernacle where I can teach what I love to the students, while teaching them to rely on Christ for everything. Philippians 4:13 \"I CAN do all things through Christ who gives me strength.\"\"",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099640/cathy_Main_2a88eece33.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy5_50fbfe7436.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy6_7af8086e08.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy1_737634de31.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy2_84d9cd88c3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy7_b4a63742a2.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548663/cathy3_793d27f6d1.jpg"
+          ]
+        }
       },
       {
         "name": "Emily Zeller",
         "titleShort": "Academic Support",
         "titleLong": "Academic Support",
         "email": "emilyz@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692735239/STA_STA_ZELLER_MRS_EMILY_2018_2019_4bef210cea.jpg"
+        "description": "My name is Emily Zeller. I graduated with my BA in Liberal Studies and my MA in Education from Azusa Pacific University. I have had the privilege of working at Tabernacle for 12 years. My passion is to see each one of our students achieve the calling God has given them. I am a mother of two girls, Elizabeth and Anna Grace, and a wife to Brad who is the owner/chef of Crescent Bistro. Following God is such an adventure! “I can do all things through Christ which strengthens me.” Philippians 4:11-13",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692735239/STA_STA_ZELLER_MRS_EMILY_2018_2019_4bef210cea.jpg",
+          "gallery": []
+        }
       }
     ]
   },
-  "Administration": {
+  "administration": {
     "order": 11,
     "staff": [
       {
@@ -318,56 +603,126 @@
         "titleShort": "Registrar",
         "titleLong": "Registrar & Support",
         "email": "LesleyN@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549512/lesley_Nutting_846aabcabd.jpg"
+        "description": "I am thrilled to be a part of the Tabernacle team again in the role of School Registrar and Administrative Support. I have worked at Tabernacle for about five years in various capacities, which has helped build a sure foundation for serving our students, parents, teachers, and staff to the best of my ability. I love to keep things tidy, read good books, and experiment in the kitchen. My favorite passage is Philippians 4:4-8.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549512/lesley_Nutting_846aabcabd.jpg",
+          "gallery": []
+        }
       },
       {
         "name": "Dave Pereira",
         "titleShort": "Finance & Tech",
         "titleLong": "Finance & Technology",
         "email": "DaveP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732281/STA_STA_PEREIRA_DAVID_a6390d4038.jpg"
+        "description": "coming soon",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732281/STA_STA_PEREIRA_DAVID_a6390d4038.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549155/dave5_1d34a32fb1.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549156/dave3_e63b24ecca.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549157/dave7_983e5edfe8.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549156/dave2_542eb862dc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549157/dave6_5fe827c4dd.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549157/dave9_8c1036926d.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549158/dave8_df37ec936f.png"
+          ]
+        }
       },
       {
         "name": "Laurie Pease",
         "titleShort": "Student Services",
         "titleLong": "Student Services Coordinator",
         "email": "LaurieP@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549423/laurie_Main_c11cfcaed6.jpg"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549423/laurie_Main_c11cfcaed6.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549443/laurie3_f4f632c7f2.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549443/laurie8_fd30ba37a3.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549443/laurie1_cfc8aa936f.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549443/laurie7_e43342fafa.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549443/laurie2_b453b9eb6a.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549444/laurie5_186a7c640e.jpg"
+          ]
+        }
       },
       {
         "name": "Rebeca Shreve",
         "titleShort": "Administrator",
         "titleLong": "Administrator",
         "email": "RebecaS@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098978/rebeca_Main_c534210cdf.jpg"
+        "description": "\nI have been part of the Tabernacle family for more than twenty years and have filled many roles throughout the years. The last thirteen years have been in the role of administrative assistant taking on various tasks in the business office along with keeping up with school HR, accreditations, and other day to day items. Along the way I have been a daycare worker, office staff, teacher and administrator. I love the variation in my tasks and the newness that each school year brings. Tabernacle’s family atmosphere and long tradition of celebrating students’ God given gifts originally attracted me to this school and it is one of the reasons I stay.\n\nIn my free time I love to travel with my family, cook, and play outdoors. It is a blessing to be able to live and play in this beautiful part of the country. Our son recently joined the Tabernacle family as a student and look forward to seeing him grow in his faith and education. We were blessed to welcome our baby girl in January of 2021 and can not wait until she becomes a Tabernacle Tiny Tiger!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098978/rebeca_Main_c534210cdf.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549216/rebeca1_bad2d7e6f4.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549216/rebeca2_bfdc8bf0ba.jpg"
+          ]
+        }
       },
       {
         "name": "Kimberlyn Schmitz",
         "titleShort": "Computers",
         "titleLong": "Computer Teacher",
         "email": "KimberlynS@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg"
+        "description": "I am excited to return to Tabernacle for my twelfth year. I have enjoyed being a part of the Tabernacle family for seven years as a 5th grade teacher, one year in 3rd grade, and now back again for my fourth year in the Computer Lab! Together, we will be working on our computer skills and how to be citizens of the ever-growing digital world all while remembering our citizenship in the family of God and Tabernacle’s mission to “Teach in ALL areas of life, the Truth, as centered in the Lord Jesus of the Bible.”\nI am native California girl and was born and raised here in Concord. In college I moved to Virginia where I graduated from Liberty University with my B.S. in Elementary and Middle School Education. My husband and I have two of our own \"Tiny Tigers\" here at Tabernacle. As a family we love traveling (especially to Disney!), eating delicious foods, and working on home projects.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689099560/kimberlyn_Main_302fa19f95.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn1_863ee0a2d8.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn2_48dc68a1bb.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn5_a4a8d0f9bc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn3_61bf61fecd.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548492/kimberlyn4_351fc1e90d.jpg"
+          ]
+        }
       },
       {
         "name": "Patti Chan",
         "titleShort": "Finance Manager",
         "titleLong": "Finance Manager",
         "email": "PattiC@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549276/patti_Main_91729af5b4.jpg"
+        "description": "My name is Patti Chan and I have been a part of the Tabernacle family for 31 years. I started in the front office and, in 1997, moved to our finance office.\n\nHere are some of my favorite Bible verses:\n2 Corinthians 5:21 “For God made Him who knew no sin to be sin for us, so we might become the righteousness of God in Him.”\nHebrews 4:15-16 “For we do not have a high priest who is unable to sympathize with our weaknesses, but One in who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in the time of need.”",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549276/patti_Main_91729af5b4.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549285/patty1_6c4381f8e0.jpg"
+          ]
+        }
       },
       {
         "name": "Vern Taylor",
         "titleShort": "Principal",
         "titleLong": "Principal",
         "email": "VernT@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548902/vern_Main_2095fa4323.jpg"
+        "description": "\nThis will be my 33rd year working at Tabernacle. It is a privilege to work at a school that is centered on the Lord Jesus. I have a BA degree from Cal State Hayward, and a Masters of Education from Grand Canyon University. My family consists of my wife Gretchen, our daughter Lauren, and our triplets: Logan, Heidi and Rance. All four of my children, as well as myself, are graduates of Tabernacle.\n\nWe have an amazing staff at Tabernacle, and I am blessed to be a part of such an amazing team. There is a true sense of family here, and this is very evident the moment you step onto our campus. We welcome you to come take a tour of our school.\n\nFavorite verse is Ephesians 6:11, “Put on the full armor of God, so that you can take your stand against the devil’s schemes.”",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548902/vern_Main_2095fa4323.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548918/vern2_d109f89fbf.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548918/vern4_b8a88d1985.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548918/vern1_e00b874667.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548918/vern3_e2ff7d48b5.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661548920/vern6_0dc93e5c67.png"
+          ]
+        }
       },
       {
         "name": "Theresa Kukla",
         "titleShort": "Vice Principal",
         "titleLong": "Vice Principal",
         "email": "TheresaK@tbs.org",
-        "profilePictureUrl": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg"
+        "description": "I have been at Tabernacle for 25 years. The majority of my classes have been middle school.  I look forward to taking the 8th graders to Washington DC each year to bring history and our government alive for them as well as instill a love of history. I am also a firm believer in encouraging leadership and watching our students grow to be responsible, moral leaders. \n\nGod has recently led me to work with the Preschool students.  I look forward to working with the teachers “to start children off on the way they should go” as Proverbs 22:6 says. \n\nI am a big Disney fan. I enjoy biking, reading, and scrapbooking.  My favorite verse is Philippians 4:8-9.",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098944/theresa_Main_72dda2de50.jpg",
+          "gallery": [
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa4_780f47f6e7.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa3_3c7b7d6cb7.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549017/theresa1_c5774f46bc.jpg",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa5_dea6c20d39.png",
+            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa2_9c8a84ffa1.jpg"
+          ]
+        }
       }
     ]
   }
