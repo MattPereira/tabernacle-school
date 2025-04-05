@@ -1,6 +1,15 @@
-# **[Tabernacle School Website](https://tabernacle.school)**
+# Tabernacle School Website
 
-## **Getting Started**
+A collaborative project offering students the chance to learn web development fundamentals
+
+## Prerequisites
+
+- Development environment setup
+- Git version control basics
+- Javascript basics
+- Tailwind CSS basics
+
+## Getting Started
 
 1. Clone repo and install dependencies
 
@@ -16,14 +25,14 @@ npm install
 npm run dev
 ```
 
-## **Features**
+## Development Guide
 
-- Forms for users to send inquiry emails to school staff
-  - Powered by postmark and vercel serverless functions
-
-## **Technology Stack**
-
-- Next.js
-- JavaScript
-- Tailwind
-- DaisyUI
+- The `app/` directory structure controls the routes for pages like `/about` and `/family/discipline`
+- The `components/` directory
+- The `data/` directory contains JSON files that control faculty info and images
+- The `public/` directory contains most of the images, but uploading images to cloudinary is preferrable
+- Learn a bit about the technology stack
+  - Javascript
+  - Tailwind
+  - DaisyUI
+  - Next.js
