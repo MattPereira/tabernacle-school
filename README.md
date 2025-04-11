@@ -29,7 +29,7 @@ npm run dev
 
 - Upload images to [cloudinary](https://console.cloudinary.com/console/c-2e398b799f1f1b4c9ec0f4f0f0c90c/media_library/homepage)
 - The `data/` directory contains JSON files that control information and images displayed on the side
-  - [faculty.json](https://github.com/MattPereira/tabernacle-school/blob/main/data/facility.json)
+  - [faculty.json](https://github.com/MattPereira/tabernacle-school/blob/main/data/faculty.json)
   - [tuition.json](https://github.com/MattPereira/tabernacle-school/blob/main/data/tuition.json)
   - [facility.json](https://github.com/MattPereira/tabernacle-school/blob/main/data/facility.json)
 - The `app/` directory structure controls the routes for pages
