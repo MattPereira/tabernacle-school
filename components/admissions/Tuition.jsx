@@ -5,16 +5,7 @@ import {
   SectionWrapper,
   SectionTitle,
 } from "@/components/common";
-
-const TUITION_PRICES = [
-  {
-    title: "Preschool & Transitional Kindergarten",
-    annual: 8200,
-    monthly: 820,
-  },
-  { title: "Grades K-5", annual: 7850, monthly: 785 },
-  { title: "Grades 6-8", annual: 8250, monthly: 825 },
-];
+import tuitionData from "@/data/tuition.json";
 
 export default function Tuition() {
   return (
@@ -31,7 +22,7 @@ export default function Tuition() {
                 <TableHead
                   headers={["Child", "Annual", "PIF Discount", "Monthly"]}
                 />
-                {TUITION_PRICES.map((group) => {
+                {tuitionData.map((group) => {
                   return (
                     <tbody key={group.title} className="text-center">
                       <tr className="bg-primary text-white">
@@ -106,7 +97,7 @@ export default function Tuition() {
             </tbody>
           </Table>
 
-          <p className="px-3 text-neutral-700 px-3 mt-3">
+          <p className="px-3 text-neutral-700 mt-3">
             *Classroom placement is secured upon payment of registration and
             consumable fee and first month's tuition. Registration is
             non-refundable. Consumable fee is non-refundable after May 1st or at
@@ -161,7 +152,7 @@ export default function Tuition() {
                 ]}
               />
               <TableRow
-                data={["Full Time Daycare", "$700/month", "Summer Months K-8"]}
+                data={["Full Time Daycare", "$850/month", "Summer Months K-8"]}
               />
               <TableRow
                 data={[

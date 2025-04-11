@@ -6,16 +6,20 @@ export default function Employment() {
       <SectionTitle title="Employment" />
       <div className="mb-14">
         <p className="text-xl">
-          We are hiring! Tabernacle School is hiring substitute teachers and
-          support staff for the 2023-2024 school year. All elementary and middle
-          school teaching staff must hold a bachelor's degree from an accredited
-          university and be able to sign the school Statement of Faith.
-          Tabernacle School is an evangelical Christian school focused on
-          providing an excellent Christ centered education in spiritual,
-          academic and extracurricular subjects. Our teachers and staff help
-          students acquire the skills and attitudes necessary to be Faithful
-          Followers of Jesus Christ, Life-Long Learners, Citizens of Character
-          and Academic Achievers.{" "}
+          We are hiring! Tabernacle School is hiring for the 2025-2026 school
+          year. Our teachers and staff help students acquire the skills and
+          attitudes necessary to be Faithful Followers of Jesus Christ,
+          Life-Long Learners, Citizens of Character and Academic Achievers.
+          Please contact Rebeca Shreve at{" "}
+          <a className="underline text-primary" href="mailto:LesleyN@tbs.org">
+            Rebecas@tbs.org
+          </a>{" "}
+          or call{" "}
+          <a className="underline text-primary" href="tel:925-685-9169">
+            925-685-9169
+          </a>{" "}
+          for more information. Applications may be picked up in the school's
+          front office.
         </p>
       </div>
       {/* <div className="text-center mb-10">
@@ -33,27 +37,16 @@ export default function Employment() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
           <div className="mb-10">
-            <h5 className="font-bold text-2xl">Open Positions</h5>
-            <p className="text-xl">
-              All applicants must hold a bachelor's degree from an accredited
-              university and be able to sign the school Statement of Faith.
-              Please contact Lesley Nutting at{" "}
-              <a
-                className="underline text-primary"
-                href="mailto:LesleyN@tbs.org"
-              >
-                LesleyN@tbs.org
-              </a>{" "}
-              or call{" "}
-              <a className="underline text-primary" href="tel:925-685-9169">
-                925-685-9169
-              </a>{" "}
-              for more information. Applications may also be picked up in the
-              school's front office.
-            </p>
+            <h5 className="font-bold text-2xl mb-3">Open Positions</h5>
+            <ul className="list-disc list-inside">
+              <li>Elementary Teacher</li>
+              <li>Junior High Teacher</li>
+              <li>Physical Education Teacher</li>
+              <li>Support Staff</li>
+            </ul>
           </div>
 
-          <h5 className="font-bold text-2xl">Required Application Materials</h5>
+          <h5 className="font-bold text-2xl mb-3">Application Materials</h5>
           <ol className="list-disc list-inside">
             <li>Completed employment application.</li>
             <li>Current Resume</li>
@@ -63,10 +56,10 @@ export default function Employment() {
         </div>
         <div>
           <div className="mb-10">
-            <h5 className="font-bold text-2xl">Spiritual Requirements</h5>
+            <h5 className="font-bold text-2xl">Requirements</h5>
             <p className="text-xl">
-              Must be a professing believer of Jesus Christ and attend a
-              Christ-centered church.
+              All applicants must hold a bachelor's degree from an accredited
+              university and be able to sign the school Statement of Faith.
             </p>
           </div>
 

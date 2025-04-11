@@ -3,39 +3,6 @@
     "order": 1,
     "staff": [
       {
-        "name": "Rebecca Hoellwoarth",
-        "titleShort": "JK3",
-        "titleLong": "Preschool Teacher",
-        "email": "RebeccaH@tbs.org",
-        "description": "coming soon",
-        "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732719/0172_HOELLWARTH_REBECCA_MRS_01_661797e86f.jpg",
-          "gallery": []
-        }
-      },
-      {
-        "name": "Onita Chavez",
-        "titleShort": "JKB",
-        "titleLong": "Preschool Teacher Aide",
-        "email": "OnitaC@tbs.org",
-        "description": "Hello:) I feel beyond blessed to be here at Tabernacle. I have had three children start in JK and graduate 8th grade here and two more still attending. I have been working in Early Childhood education since 2002, went back for my AS after my third child finishing with my AS in ECE 2011.  I love getting outdoors, hiking, seeing new sites, and hands on history. Trusting in God to guide my steps I am excited to be here with your children. ",
-        "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535249/onita_Chavez_70ae36ed26a52d8a256a_7d407a524e.jpg",
-          "gallery": []
-        }
-      },
-      {
-        "name": "Debbie Keough",
-        "titleShort": "JKA",
-        "titleLong": "Preschool Teacher",
-        "email": "Deborahk@tbs.org",
-        "description": "My name is Debbie Keough; the kids call me Mrs.K. I have been so blessed to work at Tabernacle for six years now. I have been a part of the Junior Kindergarten program for five years. I am so excited to be a part of this special program, watching the children learn and grow socially and academically, but more importantly their growth in God. I am so blessed to get a front row seat to this special time in these children's lives. Before God called me to work at Tabernacle, I was working at a high school as a paraprofessional in the special education department. \nI am married to Mr. K, who is the Bible teacher for Junior High here at Tabernacle. We have four wonderful kids and two grandsons who have absolutely stolen our hearts! I enjoy running, baking and reading my bible. Being a part of this special program is a gift from God, and I truly love it!",
-        "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535102/debbie_Keough_2c104ec82077225d2d6b_c2dbb8262d.jpg",
-          "gallery": []
-        }
-      },
-      {
         "name": "Theresa Kukla",
         "titleShort": "Vice Principal",
         "titleLong": "Vice Principal",
@@ -50,6 +17,50 @@
             "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa5_dea6c20d39.png",
             "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549018/theresa2_9c8a84ffa1.jpg"
           ]
+        }
+      },
+      {
+        "name": "Rebecca Hoellwoarth",
+        "titleShort": "JK3",
+        "titleLong": "Preschool Teacher",
+        "email": "RebeccaH@tbs.org",
+        "description": "coming soon",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732719/0172_HOELLWARTH_REBECCA_MRS_01_661797e86f.jpg",
+          "gallery": []
+        }
+      },
+      {
+        "name": "Onita Chavez",
+        "titleShort": "JKA",
+        "titleLong": "Preschool Teacher Aide",
+        "email": "OnitaC@tbs.org",
+        "description": "Hello:) I feel beyond blessed to be here at Tabernacle. I have had three children start in JK and graduate 8th grade here and two more still attending. I have been working in Early Childhood education since 2002, went back for my AS after my third child finishing with my AS in ECE 2011.  I love getting outdoors, hiking, seeing new sites, and hands on history. Trusting in God to guide my steps I am excited to be here with your children. ",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535249/onita_Chavez_70ae36ed26a52d8a256a_7d407a524e.jpg",
+          "gallery": []
+        }
+      },
+      {
+        "name": "Colleen Maramonte",
+        "titleShort": "JKA",
+        "titleLong": "Preschool Teacher Aide",
+        "email": "ColleenM@tbs.org",
+        "description": "coming soon",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/c_thumb,w_200,g_face/v1744407261/Colleen_Maramonte_mxpr2m.jpg",
+          "gallery": []
+        }
+      },
+      {
+        "name": "Audrey Parco",
+        "titleShort": "JKB",
+        "titleLong": "Preschool Teacher Aide",
+        "email": "AudreyP@tbs.org",
+        "description": "coming soon",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/c_thumb,w_200,g_face/v1744407261/Audrey_Parco_aw4vwj.jpg",
+          "gallery": []
         }
       },
       {
@@ -271,6 +282,7 @@
         "email": "KirstenP@tbs.org",
         "description": "Profile description coming soon...",
         "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/c_thumb,w_200,g_face/v1744407261/Kirsten_Pauline_tuzchb.jpg",
           "gallery": []
         }
       },
@@ -282,16 +294,6 @@
         "description": "I absolutely love teaching! This will be my 12th year teaching at Tabernacle School. Spending my days seeing children make connections, learn to process information, and have successful moments brings me so much joy! I believe each child has God given gifts and talents that are evident in their personality, learning style, and approach to life. I want to guide my students in love for Jesus and others! God has brought me to Tabernacle multiple times throughout my life, first as a daycare helper in college, then a substitute teacher, Librarian, teacher in 1st, 2nd, 3rd, and now 4th grade. I'm so thankful that my three children, who are now in Junior High and High School, have had the privilege of attending here at Tabernacle over the years. When I'm not teaching, I enjoy RVing with my family, going to coffee shops and bookstores, volunteering with my kids at our church, and crafting.",
         "images": {
           "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1689098678/Carol_Nissen_9863a7f545.jpg",
-          "gallery": []
-        }
-      },
-      {
-        "name": "Christy Morgan",
-        "titleShort": "Science",
-        "titleLong": "Science Teacher",
-        "email": "ChristyM@tbs.org",
-        "description": "Profile description coming soon...",
-        "images": {
           "gallery": []
         }
       }
@@ -353,20 +355,14 @@
         }
       },
       {
-        "name": "Haley Max",
+        "name": "Sarah Hernandez",
         "titleShort": "English",
         "titleLong": "Middle School English Teacher",
-        "email": "Haleym@tbs.org",
-        "description": "Hi everyone! My name is Haley Max and I am so excited for this year in junior high! Little bit about me and my school history, I have my MBA in Management and Entrepreneurship and my Minor in English. As far as my Tabernacle journey, I’ve been involved with Tabernacle since I was in first grade. I attended all the way through 8th grade and even attended Tabernacle’s high school program. I’ve also taken part in the leadership program, coaching sports, tutoring, and substitute teaching here at the school. Some of my hobbies include portrait and landscape photography, puzzles, painting, and reading. I truly believe that God has put this on my heart, and I’m excited to watch as God works in the hearts of your students this year as well. Can’t wait to meet you all!",
+        "email": "SarahH@tbs.org",
+        "description": "coming soon",
         "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732637/0355_MAX_HALEY_MRS_01_0c9766f764.jpg",
-          "gallery": [
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley5_cbe9003bce.jpg",
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley2_4aaaf40130.jpg",
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545388/haley1_c6a56f9867.jpg",
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545387/haley4_d267c244d4.jpg",
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661545388/haley3_f4431cc80b.jpg"
-          ]
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/c_thumb,w_200,g_face/v1744407262/Sarah_Hernandez_ezlnpk.jpg",
+          "gallery": []
         }
       },
       {
@@ -425,22 +421,21 @@
         "titleShort": "Science",
         "titleLong": "Science Teacher",
         "email": "ChristyM@tbs.org",
-        "description": "Profile description coming soon...",
+        "description": "coming soon",
         "images": {
+          "profile": "",
           "gallery": []
         }
       },
       {
-        "name": "Joey Prior",
-        "titleShort": "History",
+        "name": "Eric Utomo",
+        "titleShort": "English",
         "titleLong": "Junior High History",
-        "email": "JoeyP@tbs.org",
-        "description": "Hello My name is Joseph Prior. This is my sixth year teaching at Tabernacle. I have been working with the students here at Tabernacle for the last fourteen school years. Both of my parents are teachers here and have helped me become the teacher I am today. I am so excited to be a part of the Tabernacle team and family. I am a graduate of Tabernacle and hope to share my passion for learning with each of the students here. My life verse is James 1:2-3 \"Consider it all pure joy my brothers when you face trials of many kinds. For you know that the testing of your faith produces perseverance.\"",
+        "email": "EricU@tbs.org",
+        "description": "coming soon",
         "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546608/joey_Main_16ccc91110.jpg",
-          "gallery": [
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661546617/joey1_91989ac24b.jpg"
-          ]
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/c_thumb,w_200,g_face/v1744407261/Eric_Utomo_morzdc.jpg",
+          "gallery": []
         }
       }
     ]
@@ -448,6 +443,17 @@
   "physical-education": {
     "order": 9,
     "staff": [
+      {
+        "name": "Debbie Keough",
+        "titleShort": "JKA",
+        "titleLong": "Preschool Teacher",
+        "email": "Deborahk@tbs.org",
+        "description": "My name is Debbie Keough; the kids call me Mrs.K. I have been so blessed to work at Tabernacle for six years now. I have been a part of the Junior Kindergarten program for five years. I am so excited to be a part of this special program, watching the children learn and grow socially and academically, but more importantly their growth in God. I am so blessed to get a front row seat to this special time in these children's lives. Before God called me to work at Tabernacle, I was working at a high school as a paraprofessional in the special education department. \nI am married to Mr. K, who is the Bible teacher for Junior High here at Tabernacle. We have four wonderful kids and two grandsons who have absolutely stolen our hearts! I enjoy running, baking and reading my bible. Being a part of this special program is a gift from God, and I truly love it!",
+        "images": {
+          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661535102/debbie_Keough_2c104ec82077225d2d6b_c2dbb8262d.jpg",
+          "gallery": []
+        }
+      },
       {
         "name": "Amie Robison",
         "titleShort": "Teacher",
@@ -479,13 +485,13 @@
         }
       },
       {
-        "name": "Lauren Morgan",
+        "name": "Debbie Keough",
         "titleShort": "Teacher",
         "titleLong": "Phys Ed Teacher",
-        "email": "Laurenm@tbs.org",
-        "description": "I love Tabernacle. I have worked with PE, coached (Softball, Volleyball, and Soccer), and taught in the preschool program. I love working with all ages! If I have ever encouraged any of my students in their faith then I’m doing my job right! I am thankful for each of my students and coworkers, and for how they make my job so fun.",
+        "email": "DebbieK@tbs.org",
+        "description": "coming soon",
         "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1692732680/0013_MORGAN_LAUREN_MRS_01_a9649ccb83.jpg",
+          "profile": "",
           "gallery": []
         }
       }
@@ -538,8 +544,8 @@
       },
       {
         "name": "Kimberlyn Schmitz",
-        "titleShort": "Computers",
-        "titleLong": "Computer Teacher",
+        "titleShort": "Technology",
+        "titleLong": "Technology Teacher",
         "email": "KimberlynS@tbs.org",
         "description": "I am excited to return to Tabernacle for my twelfth year. I have enjoyed being a part of the Tabernacle family for seven years as a 5th grade teacher, one year in 3rd grade, and now back again for my fourth year in the Computer Lab! Together, we will be working on our computer skills and how to be citizens of the ever-growing digital world all while remembering our citizenship in the family of God and Tabernacle’s mission to “Teach in ALL areas of life, the Truth, as centered in the Lord Jesus of the Bible.”\nI am native California girl and was born and raised here in Concord. In college I moved to Virginia where I graduated from Liberty University with my B.S. in Elementary and Middle School Education. My husband and I have two of our own \"Tiny Tigers\" here at Tabernacle. As a family we love traveling (especially to Disney!), eating delicious foods, and working on home projects.",
         "images": {
@@ -678,16 +684,14 @@
         }
       },
       {
-        "name": "Patti Chan",
-        "titleShort": "Finance Manager",
+        "name": "",
+        "titleShort": "Finance",
         "titleLong": "Finance Manager",
-        "email": "PattiC@tbs.org",
-        "description": "My name is Patti Chan and I have been a part of the Tabernacle family for 31 years. I started in the front office and, in 1997, moved to our finance office.\n\nHere are some of my favorite Bible verses:\n2 Corinthians 5:21 “For God made Him who knew no sin to be sin for us, so we might become the righteousness of God in Him.”\nHebrews 4:15-16 “For we do not have a high priest who is unable to sympathize with our weaknesses, but One in who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in the time of need.”",
+        "email": "finance@tbs.org",
+        "description": "coming soon",
         "images": {
-          "profile": "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549276/patti_Main_91729af5b4.jpg",
-          "gallery": [
-            "https://res.cloudinary.com/tabernacle-school/image/upload/v1661549285/patty1_6c4381f8e0.jpg"
-          ]
+          "profile": "",
+          "gallery": []
         }
       },
       {

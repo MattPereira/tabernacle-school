@@ -61,7 +61,11 @@ export default function Faculty() {
                         <div className="w-[150px] h-[150px] object-center rounded-full overflow-hidden mx-auto mb-1">
                           <img
                             className="w-full h-full object-center object-cover"
-                            src={images.profile}
+                            src={
+                              images.profile === ""
+                                ? "/defaultProfilePicture.jpg"
+                                : images.profile
+                            }
                             alt={name}
                           />
                         </div>
