@@ -4,7 +4,7 @@ export default function Employment() {
   return (
     <SectionWrapper classNames="bg-alternate">
       <SectionTitle title="Employment" />
-      <div className="mb-14">
+      <div className="mb-5">
         <p className="text-xl">
           We are hiring! Tabernacle School is hiring for the 2025-2026 school
           year. Our teachers and staff help students acquire the skills and
@@ -19,24 +19,22 @@ export default function Employment() {
             925-685-9169
           </a>{" "}
           for more information. Applications may be picked up in the school's
-          front office.
+          front office or downloaded{" "}
+          <a
+            className="link text-primary"
+            href="/pdfs/employment-application.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="contained"
+          >
+            here
+          </a>
         </p>
       </div>
-      {/* <div className="text-center mb-10">
-        <a
-          className="btn btn-primary capitalize text-xl"
-          href="https://drive.google.com/file/d/155waZK-5Jq3IwcDit2wTdlNtBAxpqeKW/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          variant="contained"
-        >
-          Download Application
-        </a>
-      </div> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
-          <div className="mb-10">
+          <div className="mb-5">
             <h5 className="font-bold text-2xl mb-3">Open Positions</h5>
             <ul className="list-disc list-inside">
               <li>Elementary Teacher</li>
@@ -48,7 +46,18 @@ export default function Employment() {
 
           <h5 className="font-bold text-2xl mb-3">Application Materials</h5>
           <ol className="list-disc list-inside">
-            <li>Completed employment application.</li>
+            <li>
+              Completed{" "}
+              <a
+                className="link text-primary"
+                href="/pdfs/employment-application.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+              >
+                employment application
+              </a>
+            </li>
             <li>Current Resume</li>
             <li>Copy of College Transcripts (For Faculty Positions)</li>
             <li>Three letters of reference</li>
